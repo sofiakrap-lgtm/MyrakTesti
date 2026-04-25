@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myrak Oy — Täyden palvelun julkisivutalo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><img src="Myrak molemmat vaaka (1).pdf.svg" alt="Myrak Oy" class="nav-logo-img"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#yritys">Yritys</a></li>
+        <li class="has-dropdown">
+          <a href="#palvelut">Palvelut <span class="dropdown-arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="julkisivu.html">Julkisivu- ja parvekekorjaukset</a></li>
+            <li><a href="peltikattokorjaukset.html">Peltikattokorjaukset</a></li>
+            <li><a href="metallityot.html">Metallityöt</a></li>
+            <li><a href="koristeet.html">Seinä- ja kattokoristeet</a></li>
+            <li><a href="sisatilakorjaukset.html">Sisätilakorjaukset</a></li>
+            <li><a href="ikkunapalvelut.html">Ikkunapalvelut</a></li>
+          </ul>
+        </li>
+        <li><a href="ajankohtaista.html">Ajankohtaista</a></li>
+        <li><a href="#referenssit">Referenssit</a></li>
+        <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <a href="index.html" class="lang-link lang-active">FI</a>
+        <span class="lang-sep">/</span>
+        <a href="sv/index.html" class="lang-link">SV</a>
+        <span class="lang-sep">/</span>
+        <a href="en/index.html" class="lang-link">EN</a>
+      </div>
+      <a href="#yhteystiedot" class="nav-cta">Ota yhteyttä</a>
+      <button class="hamburger" id="hamburger" aria-label="Avaa valikko">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Täyden palvelun<br>julkisivutalo</h1>
+      <p class="hero-subtitle">Luotettavaa korjausrakentamista pääkaupunkiseudulla jo 20 vuoden ajan</p>
+      <div class="hero-buttons">
+        <a href="#yhteystiedot" class="btn btn-primary">Ota yhteyttä</a>
+        <a href="#referenssit" class="btn btn-outline">Katso referenssejä</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator"><span></span></div>
+  </section>
+
+  <!-- FAKTAT-PALKKI -->
+  <section class="facts-bar">
+    <div class="facts-container">
+      <div class="fact-item">
+        <span class="fact-number">20+</span>
+        <span class="fact-label">vuotta kokemusta</span>
+      </div>
+      <div class="fact-divider"></div>
+      <div class="fact-item">
+        <span class="fact-number">6,6 milj. €</span>
+        <span class="fact-label">liikevaihto</span>
+      </div>
+      <div class="fact-divider"></div>
+      <div class="fact-item">
+        <span class="fact-number">40+</span>
+        <span class="fact-label">ammattilaista</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- YRITYS-OSIO -->
+  <section class="about" id="yritys">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label">Yritys</span>
+          <h2 class="section-title">Tehdään mitä<br>luvataan</h2>
+          <p class="about-body">Myrak Oy on suomalainen perheyritys, joka on erikoistunut vanhojen arvokiinteistöjen vaativiin julkisivu- ja vesikattokorjauksiin. Pääasiallinen toimialue on pääkaupunkiseutu.</p>
+          <p class="about-body">Asiakkaitamme ovat taloyhtiöt, säätiöt, seurakunnat ja kiinteistösijoitusyhtiöt. Teemme jokaisen projektin alusta loppuun itse — ilman aliurakoitsijoita.</p>
+          <a href="#palvelut" class="btn btn-primary" style="margin-top: 2rem; display: inline-flex;">Tutustu palveluihin</a>
+        </div>
+        <div class="about-visual">
+          <div class="about-image fade-in">
+            <img src="8.png" alt="Myrak Oy työkohde">
+          </div>
+          <div class="about-image fade-in">
+            <img src="9.png" alt="Myrak Oy työkohde">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KARTTA -->
+  <section class="map-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">Kohteet</span>
+        <h2 class="section-title">Tutustu meidän projektiimme</h2>
+      </div>
+    </div>
+    <div id="map"></div>
+  </section>
+
+  <!-- PALVELUT-OSIO -->
+  <section class="services" id="palvelut">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label section-label--light">Palvelut</span>
+        <h2 class="section-title section-title--light">Mitä teemme</h2>
+        <p class="section-subtitle">Kattavat korjausrakentamisen palvelut yhdeltä luukulta</p>
+      </div>
+      <div class="services-grid">
+        <a href="julkisivu.html" class="service-card fade-in">
+          <div class="service-card-image">
+            <img src="2.png" alt="Julkisivu- ja parvekekorjaukset">
+          </div>
+          <div class="service-card-body">
+            <h3>Julkisivu- ja parvekekorjaukset</h3>
+            <p>Rappausten uusiminen, paikkaustyöt, muurattujen julkisivujen korjaukset ja parvekekunnostukset.</p>
+            <span class="service-card-arrow">Lue lisää →</span>
+          </div>
+        </a>
+        <a href="peltikattokorjaukset.html" class="service-card fade-in">
+          <div class="service-card-image">
+            <img src="3.png" alt="Peltikattokorjaukset">
+          </div>
+          <div class="service-card-body">
+            <h3>Peltikattokorjaukset</h3>
+            <p>Pelti- ja tiilikattojen uusimiset, paksupinnoitukset, piipunhatut ja sadevesijärjestelmät.</p>
+            <span class="service-card-arrow">Lue lisää →</span>
+          </div>
+        </a>
+        <a href="metallityot.html" class="service-card fade-in">
+          <div class="service-card-image">
+            <img src="4.png" alt="Metallityöt">
+          </div>
+          <div class="service-card-body">
+            <h3>Metallityöt</h3>
+            <p>Parveke- ja terassikaiteiden kunnostus, aidat, portit ja kattoturvatuotteet.</p>
+            <span class="service-card-arrow">Lue lisää →</span>
+          </div>
+        </a>
+        <a href="koristeet.html" class="service-card fade-in">
+          <div class="service-card-image">
+            <img src="5.png" alt="Seinä- ja kattokoristeet">
+          </div>
+          <div class="service-card-body">
+            <h3>Seinä- ja kattokoristeet</h3>
+            <p>Kipsi-, betoni- ja valumetallikoristeet julkisivu- ja sisätilakorjauksiin.</p>
+            <span class="service-card-arrow">Lue lisää →</span>
+          </div>
+        </a>
+        <a href="sisatilakorjaukset.html" class="service-card fade-in">
+          <div class="service-card-image">
+            <img src="6.png" alt="Sisätilakorjaukset">
+          </div>
+          <div class="service-card-body">
+            <h3>Sisätilakorjaukset</h3>
+            <p>Porraskäytävien ja kellaritilojen kunnostukset minimoiden häiriöt asukkaille.</p>
+            <span class="service-card-arrow">Lue lisää →</span>
+          </div>
+        </a>
+        <div class="service-card-no-link fade-in">
+          <div class="service-card-image">
+            <img src="7.png" alt="Ikkunapalvelut">
+          </div>
+          <div class="service-card-body">
+            <h3>Ikkunapalvelut</h3>
+            <p>Ikkunoiden ja ovien entisöinti sekä uusiminen ammattitaidolla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENSSIT-OSIO -->
+  <section class="references" id="referenssit">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">Referenssit</span>
+        <h2 class="section-title">Viimeisimmät kohteet</h2>
+        <p class="section-subtitle section-subtitle--dark">Olemme toteuttaneet satoja onnistuneita hankkeita ympäri pääkaupunkiseutua</p>
+      </div>
+      <div class="references-grid">
+        <div class="reference-card fade-in">
+          <div class="reference-image reference-image--1">
+            <img src="8.png" alt="Villa Peter">
+            <div class="reference-badge">Valmistunut</div>
+          </div>
+          <div class="reference-content">
+            <div class="reference-meta">
+              <span class="reference-type">Kattosaneeraus</span>
+              <span class="reference-date">18.08.2025</span>
+            </div>
+            <h3>Villa Peter</h3>
+            <p>Vesipellin uusimistyöt</p>
+            <div class="reference-footer">
+              <span class="reference-location">Helsinki</span>
+            </div>
+          </div>
+        </div>
+        <div class="reference-card fade-in">
+          <div class="reference-image reference-image--2">
+            <img src="9.png" alt="Bostads Ab Tegelbacken">
+            <div class="reference-badge">Valmistunut</div>
+          </div>
+          <div class="reference-content">
+            <div class="reference-meta">
+              <span class="reference-type">Julkisivusaneeraus</span>
+              <span class="reference-date">08.05.2025</span>
+            </div>
+            <h3>Bostads Ab Tegelbacken 2–4</h3>
+            <p>Julkisivujen kunnostus- ja pintakäsittelytyöt</p>
+            <div class="reference-footer">
+              <span class="reference-location">Helsinki</span>
+            </div>
+          </div>
+        </div>
+        <div class="reference-card fade-in">
+          <div class="reference-image">
+            <img src="1.png" alt="Villa Esplanadi">
+            <div class="reference-badge">Valmistunut</div>
+          </div>
+          <div class="reference-content">
+            <div class="reference-meta">
+              <span class="reference-type">Julkisivusaneeraus</span>
+              <span class="reference-date">18.03.2026</span>
+            </div>
+            <h3>Villa Esplanadi</h3>
+            <p>Julkisivun täysremontti — rappaustyöt, kipsikoristeet, ikkunoiden kunnostus</p>
+            <div class="reference-footer">
+              <span class="reference-location">Helsinki</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YHTEYSTIEDOT-OSIO -->
+  <section class="contact" id="yhteystiedot">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label section-label--light">Yhteystiedot</span>
+        <h2 class="section-title section-title--light">Myrak palveluksessanne</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-block">
+            <p class="contact-company">Myrak Oy</p>
+            <p>Pietarinkatu 11 A90<br>00140 Helsinki</p>
+            <p class="contact-detail">Y-tunnus: 2802156-7</p>
+          </div>
+          <div class="contact-block">
+            <a href="tel:0505813227" class="contact-link">050 581 3227</a>
+            <a href="mailto:etunimi.sukunimi@myrak.fi" class="contact-link">etunimi.sukunimi@myrak.fi</a>
+          </div>
+        </div>
+        <div class="contact-persons">
+          <div class="contact-card fade-in">
+            <div class="contact-avatar">MM</div>
+            <div class="contact-card-info">
+              <h3>Marko Mürkel</h3>
+              <p class="contact-role">Työnjohtaja, Partner</p>
+              <a href="tel:0505813227" class="contact-phone">050 581 3227</a>
+            </div>
+          </div>
+          <div class="contact-card fade-in">
+            <div class="contact-avatar">TP</div>
+            <div class="contact-card-info">
+              <h3>Triinu Pihlak</h3>
+              <p class="contact-role">Partner</p>
+              <a href="tel:0442937756" class="contact-phone">044 293 7756</a>
+            </div>
+          </div>
+          <div class="contact-card fade-in">
+            <div class="contact-avatar">AK</div>
+            <div class="contact-card-info">
+              <h3>Aleksandr Kraptsak</h3>
+              <p class="contact-role">Partner</p>
+              <a href="tel:0406888374" class="contact-phone">040 688 8374</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <span class="footer-logo"><img src="koko logo musta.svg" alt="Myrak Oy" class="footer-logo-img"></span>
+      <span class="footer-copy">© 2025 Myrak Oy — Pietarinkatu 11 A90, 00140 Helsinki</span>
+      <span class="footer-tagline">Tehdään mitä luvataan</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const map = L.map('map', { scrollWheelZoom: false }).setView([60.1699, 24.9384], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    }).addTo(map);
+
+    const icon = L.icon({
+      iconUrl: 'karttamerkki.svg',
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -34]
+    });
+
+    const kohde = (lat, lng, osoite, kuva, kuvaus, aika) => {
+      const popup = `
+        <div style="width:420px;font-family:'Barlow',system-ui,sans-serif;display:flex;align-items:flex-start;">
+          <img src="${kuva}" alt="${osoite}"
+            style="width:180px;height:160px;object-fit:cover;flex-shrink:0;display:block;">
+          <div style="padding:12px 12px 12px 14px;flex:1;">
+            <div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:7px;line-height:1.3;">${osoite}</div>
+            <div style="font-size:0.78rem;color:#444;line-height:1.6;margin-bottom:9px;">${kuvaus}</div>
+            <div style="font-size:0.74rem;color:#888;font-style:italic;">${aika}</div>
+          </div>
+        </div>`;
+      const m = L.marker([lat, lng], { icon }).addTo(map).bindPopup(popup, { maxWidth: 460 });
+      m.on('mouseover', function() { this.openPopup(); });
+      m.on('mouseout', function() { this.closePopup(); });
+    };
+
+    kohde(60.1638, 24.9384, 'Bulevardi 2–4, Helsinki', '1.png',
+      'Arvokkaan jugend-rakennuksen julkisivun täydellinen saneeraus. Rappaustyöt, ikkunoiden kunnostus ja kipsikoristeiden restaurointi.', '2023–2024');
+    kohde(60.1672, 24.9522, 'Eteläesplanadi 1, Helsinki', '2.png',
+      'Historiallisen liikerakennuksen julkisivu uusittiin kokonaisuudessaan. Erityisosaamista vaativat terastirappaukset ja koristepinnat.', '2022–2023');
+    kohde(60.1598, 24.9265, 'Hietalahdenranta 6, Helsinki', '3.png',
+      'Merenrantakiinteistön peltikaton täysremontti. Materiaalina rst-pelti, sadevesijärjestelmät uusittiin kokonaan.', '2024–2025');
+    kohde(60.1785, 24.9521, 'Santakatu 5, Helsinki', '4.png',
+      'Taloyhtiön julkisivu- ja parvekesaneeraus. Betonipinnat korjattiin ja parvekerakenteet uusittiin.', '2023');
+    kohde(60.2089, 25.0892, 'Puotilantie 7, Helsinki', '5.png',
+      'Itä-Helsingin kerrostalon peltikattokorjaus. Vanha katto purettiin ja uusittiin täysin sinkityllä peltikatollla.', '2022');
+    kohde(60.2301, 25.0456, 'Tatti 17, Helsinki', '6.png',
+      'Lähiökerrostalon parvekesaneeraus. Kaikki parvekelaatat, kaiteet ja pintakäsittelyt uusittiin.', '2021–2022');
+    kohde(60.2378, 25.0321, 'Aamuruskontie 2, Helsinki', '7.png',
+      'Julkisivu- ja ikkunaremontti. Rappaukset uusittiin ja puuikkunat kunnostettiin alkuperäistä tyyliä kunnioittaen.', '2023');
+    kohde(60.2056, 24.9812, 'Arabianpolku 3, Helsinki', '8.png',
+      'Porraskäytävien ja kellaritilojen sisätilakorjaus. Pintamateriaalit uusittiin ja valaistus modernisoitiin.', '2024');
+    kohde(60.1685, 24.9523, 'Aleksanterinkatu 10, Helsinki', '9.png',
+      'Keskustan arvokiinteistön koristerestaurointi. Kipsi- ja betonikoristeet restauroitiin alkuperäisten mallien mukaan.', '2020–2021');
+    kohde(60.1712, 24.9334, 'Mannerheimintie 5, Helsinki', '1.png',
+      'Suuren toimistokiinteistön vesikattokorjaus. Katto pinnoitettiin Enkonol-menetelmällä ja tiiviys varmistettiin.', '2021');
+  </script>
+</body>
+</html>
