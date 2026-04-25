@@ -3,33 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Myrak Oy — Fasadentreprenör med helhetslösningar</title>
+  <title>Myrak Oy — Fullservice fasadbolag</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="../index.html" class="nav-logo"><img src="../../Myrak molemmat vaaka (1).pdf.svg" alt="Myrak Oy" class="nav-logo-img"></a>
+      <a href="index.html" class="nav-logo"><img src="../Myrak molemmat vaaka (1).pdf.svg" alt="Myrak Oy" class="nav-logo-img"></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#yritys">Företaget</a></li>
+        <li><a href="#foretaget">Företaget</a></li>
         <li class="has-dropdown">
-          <a href="#palvelut">Tjänster <span class="dropdown-arrow">▾</span></a>
+          <a href="#tjanster">Tjänster <span class="dropdown-arrow">▾</span></a>
           <ul class="dropdown">
             <li><a href="../julkisivu.html">Fasad- och balkongrenovering</a></li>
-            <li><a href="../peltikattokorjaukset.html">Plåttaksrenovering</a></li>
+            <li><a href="../peltikattokorjaukset.html">Plåttaksreparationer</a></li>
             <li><a href="../metallityot.html">Metallarbeten</a></li>
-            <li><a href="../koristeet.html">Vägg- och takdekorationer</a></li>
+            <li><a href="../koristeet.html">Vägg- och takornament</a></li>
             <li><a href="../sisatilakorjaukset.html">Inomhusrenovering</a></li>
             <li><a href="../ikkunapalvelut.html">Fönsterservice</a></li>
           </ul>
         </li>
+        <li><a href="#referenserna">Referenserna</a></li>
         <li><a href="../ajankohtaista.html">Aktuellt</a></li>
-        <li><a href="#referenssit">Referensprojekt</a></li>
-        <li><a href="#yhteystiedot">Kontakt</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li class="mobile-nav-item mobile-cta-item">
+          <a href="#kontakt">Kontakta oss</a>
+        </li>
+        <li class="mobile-nav-item mobile-lang-item">
+          <a href="../index.html" class="lang-link">FI</a>
+          <span class="lang-sep">/</span>
+          <a href="index.html" class="lang-link lang-active">SV</a>
+          <span class="lang-sep">/</span>
+          <a href="../en/index.html" class="lang-link">EN</a>
+        </li>
       </ul>
       <div class="lang-switcher">
         <a href="../index.html" class="lang-link">FI</a>
@@ -38,7 +50,7 @@
         <span class="lang-sep">/</span>
         <a href="../en/index.html" class="lang-link">EN</a>
       </div>
-      <a href="#yhteystiedot" class="nav-cta">Kontakta oss</a>
+      <a href="#kontakt" class="nav-cta">Kontakta oss</a>
       <button class="hamburger" id="hamburger" aria-label="Öppna meny">
         <span></span><span></span><span></span>
       </button>
@@ -49,22 +61,22 @@
   <section class="hero" id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="hero-title" style="font-size: clamp(2.24rem, 5.6vw, 4.4rem);">Fasadentreprenör<br>med helhetslösningar</h1>
-      <p class="hero-subtitle">Pålitlig renovering i huvudstadsregionen sedan 20 år tillbaka</p>
+      <h1 class="hero-title">Fullservice<br>fasadbolag</h1>
+      <p class="hero-subtitle">Pålitlig renoveringsbyggnad i Helsingforsregionen i över 20 år</p>
       <div class="hero-buttons">
-        <a href="#yhteystiedot" class="btn btn-primary">Kontakta oss</a>
-        <a href="#referenssit" class="btn btn-outline">Se referensprojekt</a>
+        <a href="#kontakt" class="btn btn-primary">Kontakta oss</a>
+        <a href="#referenserna" class="btn btn-outline">Se referenserna</a>
       </div>
     </div>
     <div class="hero-scroll-indicator"><span></span></div>
   </section>
 
-  <!-- FAKTAT -->
+  <!-- FACTS BAR -->
   <section class="facts-bar">
     <div class="facts-container">
       <div class="fact-item">
         <span class="fact-number">20+</span>
-        <span class="fact-label">år erfarenhet</span>
+        <span class="fact-label">års erfarenhet</span>
       </div>
       <div class="fact-divider"></div>
       <div class="fact-item">
@@ -79,102 +91,125 @@
     </div>
   </section>
 
-  <!-- FÖRETAGET -->
-  <section class="about" id="yritys">
+  <!-- COMPANY SECTION -->
+  <section class="about" id="foretaget">
     <div class="section-container">
       <div class="about-grid">
         <div class="about-text">
           <span class="section-label">Företaget</span>
           <h2 class="section-title">Vi håller vad<br>vi lovar</h2>
-          <p class="about-body">Myrak Oy är ett finskt familjeföretag som är specialiserat på krävande fasad- och takrenovering av värdefulla fastigheter. Verksamhetsområdet är i huvudsak huvudstadsregionen.</p>
-          <p class="about-body">Våra kunder är bostadsbolag, stiftelser, församlingar och fastighetsbolag. Vi genomför varje projekt från start till mål — utan underentreprenörer.</p>
-          <a href="#palvelut" class="btn btn-primary" style="margin-top: 2rem; display: inline-flex;">Utforska tjänsterna</a>
+          <p class="about-body">Myrak Oy är ett finskt familjeföretag som specialiserat sig på krävande fasad- och takrenovering av värdefulla äldre fastigheter. Vårt primära verksamhetsområde är Helsingforsregionen.</p>
+          <p class="about-body">Våra kunder är bostadsbolag, stiftelser, församlingar och fastighetsbolag. Vi genomför varje projekt från början till slut — utan underentreprenörer.</p>
+          <a href="#tjanster" class="btn btn-primary" style="margin-top: 2rem; display: inline-flex;">Utforska våra tjänster</a>
         </div>
         <div class="about-visual">
           <div class="about-image fade-in">
-            <img src="../8.png" alt="Myrak Oy referensprojekt">
+            <img src="../8.png" alt="Myrak Oy arbetsplats">
           </div>
           <div class="about-image fade-in">
-            <img src="../9.png" alt="Myrak Oy referensprojekt">
+            <img src="../9.png" alt="Myrak Oy arbetsplats">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TJÄNSTER -->
-  <section class="services" id="palvelut">
+  <!-- MAP -->
+  <section class="map-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">Projekt</span>
+        <h2 class="section-title">Utforska våra projekt</h2>
+      </div>
+    </div>
+    <div id="map"></div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services" id="tjanster">
     <div class="section-container">
       <div class="section-header">
         <span class="section-label section-label--light">Tjänster</span>
         <h2 class="section-title section-title--light">Vad vi gör</h2>
-        <p class="section-subtitle">Heltäckande renoveringstjänster under ett tak</p>
+        <p class="section-subtitle">Heltäckande renoveringstjänster från ett enda ställe</p>
       </div>
       <div class="services-grid">
         <a href="../julkisivu.html" class="service-card fade-in">
-          <div class="service-card-image"><img src="../2.png" alt="Fasad- och balkongrenovering"></div>
+          <div class="service-card-image">
+            <img src="../2.png" alt="Fasad- och balkongrenovering">
+          </div>
           <div class="service-card-body">
-            <h3>Fasad- och balkongrenovering</h3>
-            <p>Förnyelse av puts, lagningsarbeten, reparationer av murade fasader och balkongrenoveringar.</p>
+            <h3>Fasad- &amp; balkongrenovering</h3>
+            <p>Förnyelse av puts, lagningsarbeten, renovering av murade fasader och balkongrenoveringar.</p>
             <span class="service-card-arrow">Läs mer →</span>
           </div>
         </a>
         <a href="../peltikattokorjaukset.html" class="service-card fade-in">
-          <div class="service-card-image"><img src="../3.png" alt="Plåttaksrenovering"></div>
+          <div class="service-card-image">
+            <img src="../3.png" alt="Plåttaksreparationer">
+          </div>
           <div class="service-card-body">
-            <h3>Plåttaksrenovering</h3>
-            <p>Förnyelse av plåt- och tegeltak, tjocklackeringar, skorstenshattar och dagvattensystem.</p>
+            <h3>Plåttaksreparationer</h3>
+            <p>Förnyelse av plåt- och tegeltak, tjockbeläggning, skorstenshattar och dagvattenssystem.</p>
             <span class="service-card-arrow">Läs mer →</span>
           </div>
         </a>
         <a href="../metallityot.html" class="service-card fade-in">
-          <div class="service-card-image"><img src="../4.png" alt="Metallarbeten"></div>
+          <div class="service-card-image">
+            <img src="../4.png" alt="Metallarbeten">
+          </div>
           <div class="service-card-body">
             <h3>Metallarbeten</h3>
-            <p>Renovering av balkong- och terrassräcken, staket, grindar och taksäkerhetsprodukter.</p>
+            <p>Renovering av balkong- och terrassräcken, staket, grindar och takskyddsprodukter.</p>
             <span class="service-card-arrow">Läs mer →</span>
           </div>
         </a>
         <a href="../koristeet.html" class="service-card fade-in">
-          <div class="service-card-image"><img src="../5.png" alt="Vägg- och takdekorationer"></div>
+          <div class="service-card-image">
+            <img src="../5.png" alt="Vägg- och takornament">
+          </div>
           <div class="service-card-body">
-            <h3>Vägg- och takdekorationer</h3>
-            <p>Gips-, betong- och gjutmetallornamenter för fasad- och inomhusrenovering.</p>
+            <h3>Vägg- &amp; takornament</h3>
+            <p>Gips-, betong- och gjutmetallornament för fasad- och inomhusrenoveringar.</p>
             <span class="service-card-arrow">Läs mer →</span>
           </div>
         </a>
         <a href="../sisatilakorjaukset.html" class="service-card fade-in">
-          <div class="service-card-image"><img src="../6.png" alt="Inomhusrenovering"></div>
+          <div class="service-card-image">
+            <img src="../6.png" alt="Inomhusrenovering">
+          </div>
           <div class="service-card-body">
             <h3>Inomhusrenovering</h3>
-            <p>Renovering av trapphus och källarlokaler med minimalt störning för de boende.</p>
+            <p>Renovering av trapphus och källarutrymmen med minimalt störande av de boende.</p>
             <span class="service-card-arrow">Läs mer →</span>
           </div>
         </a>
         <div class="service-card-no-link fade-in">
-          <div class="service-card-image"><img src="../7.png" alt="Fönsterservice"></div>
+          <div class="service-card-image">
+            <img src="../7.png" alt="Fönsterservice">
+          </div>
           <div class="service-card-body">
             <h3>Fönsterservice</h3>
-            <p>Restaurering och förnyelse av fönster och dörrar med yrkesskicklighet.</p>
+            <p>Professionell restaurering och byte av fönster och dörrar.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REFERENSPROJEKT -->
-  <section class="references" id="referenssit">
+  <!-- REFERENCES SECTION -->
+  <section class="references" id="referenserna">
     <div class="section-container">
       <div class="section-header">
-        <span class="section-label">Referensprojekt</span>
+        <span class="section-label">Referenserna</span>
         <h2 class="section-title">Senaste projekt</h2>
-        <p class="section-subtitle section-subtitle--dark">Vi har genomfört hundratals framgångsrika projekt runt om i huvudstadsregionen</p>
+        <p class="section-subtitle section-subtitle--dark">Vi har genomfört hundratals framgångsrika projekt i hela Helsingforsregionen</p>
       </div>
       <div class="references-grid">
         <div class="reference-card fade-in">
           <div class="reference-image reference-image--1">
             <img src="../8.png" alt="Villa Peter">
-            <div class="reference-badge">Slutfört</div>
+            <div class="reference-badge">Färdigställt</div>
           </div>
           <div class="reference-content">
             <div class="reference-meta">
@@ -182,7 +217,7 @@
               <span class="reference-date">18.08.2025</span>
             </div>
             <h3>Villa Peter</h3>
-            <p>Byte av plåtbeläggning</p>
+            <p>Förnyelse av plåtbeslag</p>
             <div class="reference-footer">
               <span class="reference-location">Helsingfors</span>
             </div>
@@ -191,7 +226,7 @@
         <div class="reference-card fade-in">
           <div class="reference-image reference-image--2">
             <img src="../9.png" alt="Bostads Ab Tegelbacken">
-            <div class="reference-badge">Slutfört</div>
+            <div class="reference-badge">Färdigställt</div>
           </div>
           <div class="reference-content">
             <div class="reference-meta">
@@ -199,7 +234,7 @@
               <span class="reference-date">08.05.2025</span>
             </div>
             <h3>Bostads Ab Tegelbacken 2–4</h3>
-            <p>Fasadrenovering och ytbehandlingsarbeten</p>
+            <p>Fasadreparation och ytbehandlingsarbeten</p>
             <div class="reference-footer">
               <span class="reference-location">Helsingfors</span>
             </div>
@@ -208,7 +243,7 @@
         <div class="reference-card fade-in">
           <div class="reference-image">
             <img src="../1.png" alt="Villa Esplanadi">
-            <div class="reference-badge">Slutfört</div>
+            <div class="reference-badge">Färdigställt</div>
           </div>
           <div class="reference-content">
             <div class="reference-meta">
@@ -216,7 +251,7 @@
               <span class="reference-date">18.03.2026</span>
             </div>
             <h3>Villa Esplanadi</h3>
-            <p>Totalrenovering av fasad — putsarbeten, gipsdekorationer, fönsterrenovering</p>
+            <p>Totalrenovering av fasad — putsarbeten, gipsornament, fönsterrestaurering</p>
             <div class="reference-footer">
               <span class="reference-location">Helsingfors</span>
             </div>
@@ -226,8 +261,8 @@
     </div>
   </section>
 
-  <!-- KONTAKT -->
-  <section class="contact" id="yhteystiedot">
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="kontakt">
     <div class="section-container">
       <div class="section-header">
         <span class="section-label section-label--light">Kontakt</span>
@@ -237,12 +272,12 @@
         <div class="contact-info">
           <div class="contact-block">
             <p class="contact-company">Myrak Oy</p>
-            <p>Petersgatan 11 A90<br>00140 Helsingfors</p>
+            <p>Pietarinkatu 11 A90<br>00140 Helsingfors</p>
             <p class="contact-detail">FO-nummer: 2802156-7</p>
           </div>
           <div class="contact-block">
             <a href="tel:0505813227" class="contact-link">050 581 3227</a>
-            <a href="mailto:fornamn.efternamn@myrak.fi" class="contact-link">fornamn.efternamn@myrak.fi</a>
+            <a href="mailto:etunimi.sukunimi@myrak.fi" class="contact-link">fornamn.efternamn@myrak.fi</a>
           </div>
         </div>
         <div class="contact-persons">
@@ -278,11 +313,63 @@
   <footer class="footer">
     <div class="footer-container">
       <span class="footer-logo"><img src="../koko logo musta.svg" alt="Myrak Oy" class="footer-logo-img"></span>
-      <span class="footer-copy">© 2025 Myrak Oy — Petersgatan 11 A90, 00140 Helsingfors</span>
+      <span class="footer-copy">© 2025 Myrak Oy — Pietarinkatu 11 A90, 00140 Helsingfors</span>
       <span class="footer-tagline">Vi håller vad vi lovar</span>
     </div>
   </footer>
 
   <script src="../script.js"></script>
+  <script>
+    const map = L.map('map', { scrollWheelZoom: false }).setView([60.1699, 24.9384], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    }).addTo(map);
+
+    const icon = L.icon({
+      iconUrl: '../karttamerkki.svg',
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -34]
+    });
+
+    const kohde = (lat, lng, osoite, kuva, kuvaus, aika) => {
+      const popup = `
+        <div style="width:420px;font-family:'Barlow',system-ui,sans-serif;display:flex;align-items:flex-start;">
+          <img src="${kuva}" alt="${osoite}"
+            style="width:180px;height:160px;object-fit:cover;flex-shrink:0;display:block;">
+          <div style="padding:12px 12px 12px 14px;flex:1;">
+            <div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:7px;line-height:1.3;">${osoite}</div>
+            <div style="font-size:0.78rem;color:#444;line-height:1.6;margin-bottom:9px;">${kuvaus}</div>
+            <div style="font-size:0.74rem;color:#888;font-style:italic;">${aika}</div>
+          </div>
+        </div>`;
+      const m = L.marker([lat, lng], { icon }).addTo(map).bindPopup(popup, { maxWidth: 460 });
+      m.on('mouseover', function() { this.openPopup(); });
+      m.on('mouseout', function() { this.closePopup(); });
+    };
+
+    kohde(60.1638, 24.9384, 'Bulevardi 2–4, Helsingfors', '../1.png',
+      'Total fasadrenovering av en värdefull jugendbyggnad. Putsarbeten, fönsterrestaurering och restaurering av gipsornament.', '2023–2024');
+    kohde(60.1672, 24.9522, 'Eteläesplanadi 1, Helsingfors', '../2.png',
+      'Komplett fasadförnyelse av en historisk affärsbyggnad. Specialistterrazzoputs och dekorativa ytor.', '2022–2023');
+    kohde(60.1598, 24.9265, 'Hietalahdenranta 6, Helsingfors', '../3.png',
+      'Totalrenovering av tak på en strandnära fastighet. Rostfritt stålplåt, komplett förnyelse av dagvattensystem.', '2024–2025');
+    kohde(60.1785, 24.9521, 'Santakatu 5, Helsingfors', '../4.png',
+      'Fasad- och balkongrenovering. Betongytorna reparerade och balkongkonstruktioner förnyade.', '2023');
+    kohde(60.2089, 25.0892, 'Puotilantie 7, Helsingfors', '../5.png',
+      'Plåttaksreparation på ett flervåningshus i östra Helsingfors. Gammalt tak rivit och ersatt med galvaniserat plåttak.', '2022');
+    kohde(60.2301, 25.0456, 'Tatti 17, Helsingfors', '../6.png',
+      'Balkongrenovering. Alla balkongplattor, räcken och ytbehandlingar förnyade.', '2021–2022');
+    kohde(60.2378, 25.0321, 'Aamuruskontie 2, Helsingfors', '../7.png',
+      'Fasad- och fönsterrenovering. Puts förnyad och träfönster restaurerade med respekt för originalstilen.', '2023');
+    kohde(60.2056, 24.9812, 'Arabianpolku 3, Helsingfors', '../8.png',
+      'Inomhusrenovering av trapphus och källarutrymmen. Ytmaterial förnyade och belysning moderniserad.', '2024');
+    kohde(60.1685, 24.9523, 'Aleksanterinkatu 10, Helsingfors', '../9.png',
+      'Ornamentrestaurering av en prestigefull citycentrumfastighet. Gips- och betongornament restaurerade enligt originalmodeller.', '2020–2021');
+    kohde(60.1712, 24.9334, 'Mannerheimintie 5, Helsingfors', '../1.png',
+      'Takreparation på en stor kontorsfastighet. Taket belagt med Enkonol-metoden och tätheten verifierad.', '2021');
+  </script>
 </body>
 </html>
