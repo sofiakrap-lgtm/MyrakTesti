@@ -29,10 +29,10 @@ navLinks.querySelectorAll('a:not(.has-dropdown > a)').forEach(link => {
   link.addEventListener('click', closeMenu);
 });
 
-// Mobile dropdown toggle — prevent navigation, toggle open class
+// Desktop dropdown toggle on click (mobile: no dropdown, link navigates normally)
 document.querySelectorAll('.has-dropdown > a').forEach(toggle => {
   toggle.addEventListener('click', e => {
-    if (window.innerWidth > 768) return;
+    if (window.innerWidth <= 768) return;
     e.preventDefault();
     toggle.closest('.has-dropdown').classList.toggle('open');
   });
