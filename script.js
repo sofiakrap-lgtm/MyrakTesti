@@ -8,19 +8,25 @@ window.addEventListener('scroll', () => {
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
+function closeMenu() {
+  hamburger.classList.remove('open');
+  navLinks.classList.remove('open');
+  document.body.style.overflow = '';
+  document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('open'));
+}
+
 hamburger.addEventListener('click', () => {
   const isOpen = hamburger.classList.toggle('open');
   navLinks.classList.toggle('open', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
+  if (!isOpen) {
+    document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('open'));
+  }
 });
 
 // Close mobile menu on non-dropdown link click
 navLinks.querySelectorAll('a:not(.has-dropdown > a)').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
-    document.body.style.overflow = '';
-  });
+  link.addEventListener('click', closeMenu);
 });
 
 // Mobile dropdown toggle — prevent navigation, toggle open class

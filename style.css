@@ -352,28 +352,24 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  background: none;
   border: none;
   cursor: pointer;
+  background: none;
   padding: 0;
-  margin-left: auto;
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
 }
 
 .hamburger span {
   display: block;
-  width: 28px;
-  height: 2.5px;
+  width: 25px;
+  height: 3px;
   background: #ffffff;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-.hamburger.open span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+.hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+.hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 .mobile-nav-item { display: none; }
 
@@ -1344,18 +1340,17 @@ h1, h2, h3, h4, h5, h6 {
   .nav-links {
     display: none;
     position: fixed;
-    top: 86px;
+    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100vh;
     background: #1a1a1a;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 2rem;
+    justify-content: center;
     gap: 0;
-    z-index: 99;
-    overflow-y: auto;
+    z-index: 9998;
+    overflow: visible;
   }
 
   .nav-links.open { display: flex; }
@@ -1363,8 +1358,9 @@ h1, h2, h3, h4, h5, h6 {
   .nav-links > li { width: 100%; text-align: center; }
 
   .nav-links > li > a {
-    font-size: 1.05rem;
-    padding: 0.9rem 2rem;
+    font-size: 24px;
+    color: #ffffff;
+    padding: 15px 0;
     justify-content: center;
   }
 
@@ -1374,25 +1370,23 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     visibility: visible;
     transform: none;
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.05);
     border: none;
     border-radius: 0;
     box-shadow: none;
     padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: none;
     min-width: unset;
     width: 100%;
   }
 
   .has-dropdown.open .dropdown {
-    max-height: 400px;
+    display: block;
   }
 
   .dropdown li a {
-    font-size: 0.88rem;
-    padding: 0.65rem 1.5rem;
+    font-size: 16px;
+    padding: 10px 1.5rem;
     text-align: center;
     justify-content: center;
   }
@@ -1402,7 +1396,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav-cta { display: none; }
-  .hamburger { display: flex; }
+
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 9999;
+    background: #8B2213;
+    padding: 8px;
+    border-radius: 4px;
+    gap: 6px;
+    width: auto;
+    height: auto;
+  }
 
   .mobile-nav-item {
     display: flex !important;
@@ -1411,21 +1418,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .mobile-cta-item {
-    padding: 1.5rem 2rem 0.5rem;
+    padding: 15px 0 0;
   }
 
   .mobile-cta-item a {
-    display: block;
-    width: calc(100% - 4rem);
+    display: inline-block;
     background: var(--red);
     color: var(--white);
     text-decoration: none;
     font-family: var(--font-heading);
-    font-size: 0.82rem;
+    font-size: 18px;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    padding: 0.78rem 2rem;
+    padding: 12px 2.5rem;
     border-radius: var(--radius);
     text-align: center;
     transition: background var(--transition);
@@ -1436,16 +1442,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .mobile-lang-item {
-    padding: 1.25rem 2rem 2.5rem;
-    margin-top: 0.5rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 15px 0 0;
     gap: 0.35rem;
     align-items: center;
   }
 
   .mobile-lang-item .lang-link {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.5);
+    font-size: 18px;
+    color: rgba(255,255,255,0.55);
     padding: 0.3rem 0.5rem;
   }
 
@@ -1455,8 +1459,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .mobile-lang-item .lang-sep {
-    color: rgba(255,255,255,0.22);
-    font-size: 0.7rem;
+    color: rgba(255,255,255,0.3);
+    font-size: 18px;
   }
 
   .hero-eyebrow::before,
