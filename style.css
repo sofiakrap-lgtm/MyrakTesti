@@ -1438,6 +1438,46 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(255,255,255,0.7);
   }
 
+  .mobile-lang-top {
+    padding: 14px 0 16px;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 6px;
+    width: 100%;
+    display: flex !important;
+  }
+
+  .mobile-lang-top .lang-link {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    padding: 4px 14px;
+    transition: color var(--transition);
+  }
+
+  .mobile-lang-top .lang-link.lang-active {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1.5px;
+  }
+
+  .mobile-lang-top .lang-link:hover {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .mobile-lang-top .lang-pipe {
+    color: rgba(255,255,255,0.18);
+    font-family: var(--font-heading);
+    font-size: 12px;
+    user-select: none;
+  }
+
   .mobile-lang-item {
     padding: 12px 0 0;
     gap: 0.35rem;
