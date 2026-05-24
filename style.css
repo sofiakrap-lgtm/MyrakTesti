@@ -1139,6 +1139,33 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255,255,255,0.45);
 }
 
+/* Hero counter (referenssit-sivu) */
+
+.hero-counter {
+  margin: 1.5rem 0 1.75rem;
+}
+
+.hero-counter-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--red);
+}
+
+.hero-counter-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.5rem;
+}
+
 /* Service content */
 
 .service-content {

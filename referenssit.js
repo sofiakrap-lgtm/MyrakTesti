@@ -125,10 +125,25 @@
     }
   }
 
+  function animateCount(el, target) {
+    var duration = 1800;
+    var startTime = performance.now();
+    function tick(now) {
+      var elapsed = now - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
   fetch(base + 'projects.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       all = data.projects;
+      var countEl = document.getElementById('project-count');
+      if (countEl) animateCount(countEl, all.length);
       initMap();
       buildFilters();
       renderMarkers(all);
