@@ -1165,6 +1165,46 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--gray-light);
 }
 
+/* Refs hero two-column layout */
+
+.page-hero--refs {
+  height: auto;
+  min-height: unset;
+  align-items: stretch;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+}
+
+.page-hero--refs .page-hero-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.refs-hero-grid {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.refs-hero-text {
+  padding-right: 1rem;
+}
+
+.refs-hero-map-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.refs-hero-map-wrap #refs-map {
+  height: 460px;
+  border-radius: 0;
+}
+
 /* Hero counter (referenssit-sivu) */
 
 .hero-counter {
@@ -1922,6 +1962,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  .refs-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .refs-hero-text {
+    padding-right: 0;
+  }
+
+  .refs-hero-map-wrap {
+    border-radius: 12px;
+  }
+
+  .refs-hero-map-wrap #refs-map {
+    height: 300px;
+  }
+
+  .page-hero--refs {
+    padding-top: 6rem;
+  }
+
   #refs-map { height: 350px; }
 
   .refs-project-row {
