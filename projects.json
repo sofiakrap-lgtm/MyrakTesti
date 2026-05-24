@@ -1,0 +1,164 @@
+{
+  "projects": [
+    {
+      "id": 8,
+      "lat": 60.2056,
+      "lng": 24.9812,
+      "address": "Arabianpolku 3",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "julkisivu",
+      "image": "8.png",
+      "description": {
+        "fi": "Porraskäytävien ja kellaritilojen sisätilakorjaus. Pintamateriaalit uusittiin ja valaistus modernisoitiin.",
+        "sv": "Inomhusrenovering av trapphus och källarutrymmen. Ytmaterial förnyade och belysning moderniserad.",
+        "en": "Interior renovation of stairwells and basement areas. Surface materials renewed and lighting modernised."
+      }
+    },
+    {
+      "id": 3,
+      "lat": 60.1598,
+      "lng": 24.9265,
+      "address": "Hietalahdenranta 6",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024–2025",
+      "type": "katto",
+      "image": "3.png",
+      "description": {
+        "fi": "Merenrantakiinteistön peltikaton täysremontti. Materiaalina rst-pelti, sadevesijärjestelmät uusittiin kokonaan.",
+        "sv": "Totalrenovering av plåttak på en strandnära fastighet. Rostfritt stålplåt, komplett förnyelse av dagvattensystem.",
+        "en": "Full roof renovation of a waterfront property. Stainless steel sheet metal, complete renewal of rainwater systems."
+      }
+    },
+    {
+      "id": 7,
+      "lat": 60.2378,
+      "lng": 25.0321,
+      "address": "Aamuruskontie 2",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "julkisivu",
+      "image": "7.png",
+      "description": {
+        "fi": "Julkisivu- ja ikkunaremontti. Rappaukset uusittiin ja puuikkunat kunnostettiin alkuperäistä tyyliä kunnioittaen.",
+        "sv": "Fasad- och fönsterrenovering. Puts förnyad och träfönster restaurerade med respekt för originalstilen.",
+        "en": "Facade and window renovation. Rendering renewed and wooden windows restored respecting the original style."
+      }
+    },
+    {
+      "id": 4,
+      "lat": 60.1785,
+      "lng": 24.9521,
+      "address": "Santakatu 5",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "julkisivu",
+      "image": "4.png",
+      "description": {
+        "fi": "Taloyhtiön julkisivu- ja parvekesaneeraus. Betonipinnat korjattiin ja parvekerakenteet uusittiin.",
+        "sv": "Fasad- och balkongrenovering av bostadsbolag. Betongytorna reparerade och balkongkonstruktioner förnyade.",
+        "en": "Facade and balcony renovation of a housing company. Concrete surfaces repaired and balcony structures renewed."
+      }
+    },
+    {
+      "id": 1,
+      "lat": 60.1638,
+      "lng": 24.9384,
+      "address": "Bulevardi 2–4",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023–2024",
+      "type": "julkisivu",
+      "image": "1.png",
+      "description": {
+        "fi": "Arvokkaan jugend-rakennuksen julkisivun täydellinen saneeraus. Rappaustyöt, ikkunoiden kunnostus ja kipsikoristeiden restaurointi.",
+        "sv": "Total fasadrenovering av en värdefull jugendbyggnad. Putsarbeten, fönsterrestaurering och restaurering av gipsornament.",
+        "en": "Full facade renovation of a valuable Art Nouveau building. Rendering work, window restoration and plaster ornament restoration."
+      }
+    },
+    {
+      "id": 5,
+      "lat": 60.2089,
+      "lng": 25.0892,
+      "address": "Puotilantie 7",
+      "city": "Helsinki",
+      "year": 2022,
+      "yearDisplay": "2022",
+      "type": "katto",
+      "image": "5.png",
+      "description": {
+        "fi": "Itä-Helsingin kerrostalon peltikattokorjaus. Vanha katto purettiin ja uusittiin täysin sinkityllä peltikatollla.",
+        "sv": "Plåttaksreparation på ett flervåningshus i östra Helsingfors. Gammalt tak rivit och ersatt med galvaniserat plåttak.",
+        "en": "Sheet metal roof repair on an East Helsinki apartment building. Old roof demolished and replaced with galvanised sheet metal."
+      }
+    },
+    {
+      "id": 2,
+      "lat": 60.1672,
+      "lng": 24.9522,
+      "address": "Eteläesplanadi 1",
+      "city": "Helsinki",
+      "year": 2022,
+      "yearDisplay": "2022–2023",
+      "type": "julkisivu",
+      "image": "2.png",
+      "description": {
+        "fi": "Historiallisen liikerakennuksen julkisivu uusittiin kokonaisuudessaan. Erityisosaamista vaativat terastirappaukset ja koristepinnat.",
+        "sv": "Fasaden på en historisk affärsbyggnad förnyades i sin helhet. Terrazzoputs och dekorativa ytor som kräver specialkunnande.",
+        "en": "The facade of a historic commercial building was completely renewed. Specialist terrazzo rendering and ornamental surfaces."
+      }
+    },
+    {
+      "id": 10,
+      "lat": 60.1712,
+      "lng": 24.9334,
+      "address": "Mannerheimintie 5",
+      "city": "Helsinki",
+      "year": 2021,
+      "yearDisplay": "2021",
+      "type": "katto",
+      "image": "1.png",
+      "description": {
+        "fi": "Suuren toimistokiinteistön vesikattokorjaus. Katto pinnoitettiin Enkonol-menetelmällä ja tiiviys varmistettiin.",
+        "sv": "Takreparation på en stor kontorsfastighet. Taket belagt med Enkonol-metoden och tätheten verifierad.",
+        "en": "Roof repair of a large office building. Roof coated using the Enkonol method with full waterproofing verification."
+      }
+    },
+    {
+      "id": 6,
+      "lat": 60.2301,
+      "lng": 25.0456,
+      "address": "Tatti 17",
+      "city": "Helsinki",
+      "year": 2021,
+      "yearDisplay": "2021–2022",
+      "type": "julkisivu",
+      "image": "6.png",
+      "description": {
+        "fi": "Lähiökerrostalon parvekesaneeraus. Kaikki parvekelaatat, kaiteet ja pintakäsittelyt uusittiin.",
+        "sv": "Balkongrenovering av ett flervåningshus i förorten. Alla balkongplattor, räcken och ytbehandlingar förnyade.",
+        "en": "Balcony renovation of a suburban apartment building. All balcony slabs, railings and surface finishes renewed."
+      }
+    },
+    {
+      "id": 9,
+      "lat": 60.1685,
+      "lng": 24.9523,
+      "address": "Aleksanterinkatu 10",
+      "city": "Helsinki",
+      "year": 2020,
+      "yearDisplay": "2020–2021",
+      "type": "julkisivu",
+      "image": "9.png",
+      "description": {
+        "fi": "Keskustan arvokiinteistön koristerestaurointi. Kipsi- ja betonikoristeet restauroitiin alkuperäisten mallien mukaan.",
+        "sv": "Ornamentrestaurering av en värdefull citycentrumfastighet. Gips- och betongornament restaurerade enligt originalmodeller.",
+        "en": "Ornament restoration of a prestigious city centre property. Plaster and concrete ornaments restored to original designs."
+      }
+    }
+  ]
+}
