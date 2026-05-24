@@ -266,6 +266,11 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255,255,255,0.07);
 }
 
+.nav-links > li.nav-item-active > a {
+  color: var(--white);
+  font-weight: 600;
+}
+
 /* Dropdown */
 
 .dropdown-arrow {
