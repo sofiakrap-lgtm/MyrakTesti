@@ -1799,6 +1799,141 @@ h1, h2, h3, h4, h5, h6 {
   .facts-bar { padding: 2rem 1.25rem; }
 }
 
+/* ======== FOOTER LINKS ======== */
+
+.footer-links {
+  max-width: 1200px;
+  margin: 0.6rem auto 0;
+  padding: 0.6rem 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.22);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color var(--transition);
+}
+
+.footer-link:hover {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ======== LASKUTUSOHJEET-SIVU ======== */
+
+.invoice-section {
+  background: var(--off-white);
+  padding: 5rem 0;
+}
+
+.invoice-section--alt {
+  background: var(--white);
+  border-top: 1px solid #edece8;
+  border-bottom: 1px solid #edece8;
+}
+
+.invoice-section:last-of-type {
+  padding-bottom: 7rem;
+}
+
+.invoice-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.invoice-sub-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 1.75rem 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.invoice-body {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+  max-width: 780px;
+}
+
+.invoice-list {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  margin: 0.5rem 0 1rem;
+  max-width: 780px;
+}
+
+.invoice-list li {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  color: var(--dark);
+  padding: 0.3rem 0;
+  line-height: 1.65;
+}
+
+.invoice-list li + li {
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.invoice-placeholder {
+  display: block;
+  background: #eeede9;
+  border-left: 3px solid #c5c2bb;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.7rem 1.1rem;
+  margin: 0.6rem 0;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  color: #888;
+  max-width: 560px;
+}
+
+.invoice-placeholder em {
+  font-style: italic;
+}
+
+.invoice-warning {
+  background: #fff5f3;
+  border-left: 3px solid var(--red);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.85rem 1.25rem;
+  margin: 1.25rem 0;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--dark);
+  max-width: 780px;
+}
+
+.invoice-example-inline {
+  display: inline-block;
+  background: #f0ede8;
+  border-radius: var(--radius);
+  padding: 0.15rem 0.6rem;
+  font-size: 0.88rem;
+  font-family: var(--font-heading);
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .invoice-section { padding: 3.5rem 0; }
+  .invoice-section:last-of-type { padding-bottom: 5rem; }
+  .footer-links { padding: 0.5rem 1.25rem 0; }
+}
+
 /* ======== REFERENSSIT-SIVU ======== */
 
 .refs-map-section {
