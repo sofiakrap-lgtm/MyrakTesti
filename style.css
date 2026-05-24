@@ -1165,6 +1165,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--gray-light);
 }
 
+.page-hero--light .hero-counter-number {
+  color: var(--dark);
+}
+
 /* Refs hero two-column layout */
 
 .page-hero--refs {
@@ -1196,8 +1200,13 @@ h1, h2, h3, h4, h5, h6 {
 .refs-hero-map-wrap {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.10);
   border: 1px solid rgba(0,0,0,0.08);
+}
+
+.refs-hero-map-wrap .leaflet-container {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .refs-hero-map-wrap #refs-map {
