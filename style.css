@@ -1139,6 +1139,32 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255,255,255,0.45);
 }
 
+/* Page-hero light variant (referenssit-sivu) */
+
+.page-hero--light {
+  background: var(--off-white);
+}
+
+.page-hero--light::before {
+  display: none;
+}
+
+.page-hero--light::after {
+  background: none;
+}
+
+.page-hero--light h1 {
+  color: var(--dark);
+}
+
+.page-hero--light .page-hero-subtitle {
+  color: var(--gray-light);
+}
+
+.page-hero--light .hero-counter-label {
+  color: var(--gray-light);
+}
+
 /* Hero counter (referenssit-sivu) */
 
 .hero-counter {
