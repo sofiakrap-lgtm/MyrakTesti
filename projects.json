@@ -1,163 +1,1040 @@
 {
   "projects": [
     {
+      "id": 1,
+      "lat": 60.1538,
+      "lng": 24.8662,
+      "name": "As Oy Aitio",
+      "address": "Aino Acktén tie 1, 3",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "katto",
+      "image": "1.png",
+      "description": {
+        "fi": "Katon korjaustyöt.",
+        "sv": "Takrenovering.",
+        "en": "Roof renovation."
+      }
+    },
+    {
+      "id": 2,
+      "lat": 60.1645,
+      "lng": 24.9342,
+      "name": "As Oy Bulevardinpuisto",
+      "address": "Uudenmaankatu 39",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "2.png",
+      "description": {
+        "fi": "Julkisivu- ja ikkunakorjaukset, ikkunoiden ja katon vaihto.",
+        "sv": "Fasad- och fönsterrenovering, fönster- och takbyte.",
+        "en": "Facade and window renovation, window and roof replacement."
+      }
+    },
+    {
+      "id": 3,
+      "lat": 60.1759,
+      "lng": 24.9221,
+      "name": "As Oy Cygnaeuksenkatu 10",
+      "address": "Cygnaeuksenkatu 10",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "3.png",
+      "description": {
+        "fi": "Ikkunoiden vaihto ja julkisivun korjaus.",
+        "sv": "Fönsterbyte och fasadrenovering.",
+        "en": "Window replacement and facade renovation."
+      }
+    },
+    {
+      "id": 4,
+      "lat": 60.1830,
+      "lng": 24.9550,
+      "name": "As Oy Fleminginkatu 11",
+      "address": "Fleminginkatu 11",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "4.png",
+      "description": {
+        "fi": "Ikkunoiden vaihto ja julkisivun korjaus.",
+        "sv": "Fönsterbyte och fasadrenovering.",
+        "en": "Window replacement and facade renovation."
+      }
+    },
+    {
+      "id": 5,
+      "lat": 60.1879,
+      "lng": 24.9582,
+      "name": "As Oy Hämeentie 37",
+      "address": "Hämeentie 37",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "5.png",
+      "description": {
+        "fi": "Ikkunoiden korjaustyöt.",
+        "sv": "Fönsterrenovering.",
+        "en": "Window renovation."
+      }
+    },
+    {
+      "id": 6,
+      "lat": 60.1651,
+      "lng": 24.9395,
+      "name": "As Oy Iso Roobertinkatu 42",
+      "address": "Iso Roobertinkatu 42",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "6.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 7,
+      "lat": 60.1571,
+      "lng": 24.9570,
+      "name": "As Oy Kaivopuiston Myllytie 2",
+      "address": "Myllytie 2",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "7.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
       "id": 8,
-      "lat": 60.2056,
-      "lng": 24.9812,
-      "address": "Arabianpolku 3",
+      "lat": 60.1620,
+      "lng": 24.9530,
+      "name": "As Oy Neitsytpolku 9",
+      "address": "Neitsytpolku 9",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "8.png",
+      "description": {
+        "fi": "Julkisivu-, ikkuna- ja parvekekorjaukset.",
+        "sv": "Fasad-, fönster- och balkongrenovering.",
+        "en": "Facade, window and balcony renovation."
+      }
+    },
+    {
+      "id": 9,
+      "lat": 60.1735,
+      "lng": 24.9559,
+      "name": "As Oy Soma",
+      "address": "Meritullinkatu 31 / Kruununhaankatu 3",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "9.png",
+      "description": {
+        "fi": "Ikkuna- ja julkisivukorjaukset.",
+        "sv": "Fönster- och fasadrenovering.",
+        "en": "Window and facade renovation."
+      }
+    },
+    {
+      "id": 10,
+      "lat": 60.1873,
+      "lng": 24.9114,
+      "name": "As Oy Turuntie 68",
+      "address": "Mannerheimintie 94",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "1.png",
+      "description": {
+        "fi": "Ikkuna-, julkisivu- ja kattokorjaukset.",
+        "sv": "Fönster-, fasad- och takrenovering.",
+        "en": "Window, facade and roof renovation."
+      }
+    },
+    {
+      "id": 11,
+      "lat": 60.1680,
+      "lng": 24.9377,
+      "name": "Asunto Oy Aino",
+      "address": "Yrjönkatu 12–14",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "2.png",
+      "description": {
+        "fi": "Julkisivu- ja ikkunakorjaukset.",
+        "sv": "Fasad- och fönsterrenovering.",
+        "en": "Facade and window renovation."
+      }
+    },
+    {
+      "id": 12,
+      "lat": 60.1804,
+      "lng": 24.9168,
+      "name": "Asunto Oy Carl Bostads Ab",
+      "address": "Topeliuksenkatu 19",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "3.png",
+      "description": {
+        "fi": "Julkisivu- ja parvekekorjaukset.",
+        "sv": "Fasad- och balkongrenovering.",
+        "en": "Facade and balcony renovation."
+      }
+    },
+    {
+      "id": 13,
+      "lat": 60.1663,
+      "lng": 24.9373,
+      "name": "Bostads Ab Bangatan 11–13",
+      "address": "Ratakatu 11–13",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "4.png",
+      "description": {
+        "fi": "Julkisivu-, ikkuna- ja parvekekorjaukset.",
+        "sv": "Fasad-, fönster- och balkongrenovering.",
+        "en": "Facade, window and balcony renovation."
+      }
+    },
+    {
+      "id": 14,
+      "lat": 60.1735,
+      "lng": 24.9510,
+      "name": "Helsingin Ortodoksinen Seurakunta",
+      "address": "Unioninkatu 39",
+      "city": "Helsinki",
+      "year": 2026,
+      "yearDisplay": "2026",
+      "type": "julkisivu",
+      "image": "5.png",
+      "description": {
+        "fi": "Katto-, parveke-, julkisivu- ja ikkunakorjaukset.",
+        "sv": "Tak-, balkong-, fasad- och fönsterrenovering.",
+        "en": "Roof, balcony, facade and window renovation."
+      }
+    },
+    {
+      "id": 15,
+      "lat": 60.1755,
+      "lng": 24.9135,
+      "name": "As Oy Merikannontie 3",
+      "address": "Merikannontie 3",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "6.png",
+      "description": {
+        "fi": "Julkisivu-, katto-, parveke- ja ikkunakorjaukset.",
+        "sv": "Fasad-, tak-, balkong- och fönsterrenovering.",
+        "en": "Facade, roof, balcony and window renovation."
+      }
+    },
+    {
+      "id": 16,
+      "lat": 60.1755,
+      "lng": 24.9220,
+      "name": "As Oy Mannerheimintie 40",
+      "address": "Mannerheimintie 40",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "7.png",
+      "description": {
+        "fi": "Julkisivun korjaus.",
+        "sv": "Fasadrenovering.",
+        "en": "Facade renovation."
+      }
+    },
+    {
+      "id": 17,
+      "lat": 60.1960,
+      "lng": 24.8800,
+      "name": "Bostads Ab Tegelbacka",
+      "address": "Tiilimäki 2 (Tegelbacken)",
+      "city": "Munkkiniemi, Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "8.png",
+      "description": {
+        "fi": "Julkisivu- ja kattokorjaukset.",
+        "sv": "Fasad- och takrenovering.",
+        "en": "Facade and roof renovation."
+      }
+    },
+    {
+      "id": 18,
+      "lat": 60.2130,
+      "lng": 24.9461,
+      "name": "As Oy Hauho",
+      "address": "Hauhontie 4, 6–8",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "9.png",
+      "description": {
+        "fi": "Ikkunakorjaukset.",
+        "sv": "Fönsterrenovering.",
+        "en": "Window renovation."
+      }
+    },
+    {
+      "id": 19,
+      "lat": 60.1580,
+      "lng": 24.9425,
+      "name": "K Oy Peter Villa",
+      "address": "Huvilakatu 13–15",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "katto",
+      "image": "1.png",
+      "description": {
+        "fi": "Kattokorjaukset.",
+        "sv": "Takrenovering.",
+        "en": "Roof renovation."
+      }
+    },
+    {
+      "id": 20,
+      "lat": 60.1715,
+      "lng": 24.9335,
+      "name": "As Oy Töölönkatu 2",
+      "address": "Töölönkatu 2",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "2.png",
+      "description": {
+        "fi": "Julkisivun korjaus ja katon maalaus.",
+        "sv": "Fasadrenovering och takmålning.",
+        "en": "Facade renovation and roof painting."
+      }
+    },
+    {
+      "id": 21,
+      "lat": 60.1572,
+      "lng": 24.9532,
+      "name": "As Oy Itäinen Puistotie 3",
+      "address": "Itäinen Puistotie 3",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "katto",
+      "image": "3.png",
+      "description": {
+        "fi": "Katon korjaus.",
+        "sv": "Takrenovering.",
+        "en": "Roof renovation."
+      }
+    },
+    {
+      "id": 22,
+      "lat": 60.2030,
+      "lng": 24.8920,
+      "name": "As Oy Koulutie 3",
+      "address": "Koulutie 3",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "4.png",
+      "description": {
+        "fi": "Julkisivu-, katto-, ikkuna- ja parvekekorjaukset.",
+        "sv": "Fasad-, tak-, fönster- och balkongrenovering.",
+        "en": "Facade, roof, window and balcony renovation."
+      }
+    },
+    {
+      "id": 23,
+      "lat": 60.3680,
+      "lng": 24.7470,
+      "name": "Arkadian Yhteislyseo",
+      "address": "Lepsämäntie 15",
+      "city": "Klaukkala",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "katto",
+      "image": "5.png",
+      "description": {
+        "fi": "Katon korjaus.",
+        "sv": "Takrenovering.",
+        "en": "Roof renovation."
+      }
+    },
+    {
+      "id": 24,
+      "lat": 60.1961,
+      "lng": 24.9483,
+      "name": "As Oy Mäkelänkatu 31",
+      "address": "Mäkelänkatu 31",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "6.png",
+      "description": {
+        "fi": "Julkisivu-, katto- ja parvekekorjaukset.",
+        "sv": "Fasad-, tak- och balkongrenovering.",
+        "en": "Facade, roof and balcony renovation."
+      }
+    },
+    {
+      "id": 25,
+      "lat": 60.1818,
+      "lng": 24.9180,
+      "name": "As Oy Mannerheimintie 52",
+      "address": "Mannerheimintie 52",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "7.png",
+      "description": {
+        "fi": "Julkisivu-, katto- ja ikkunakorjaukset.",
+        "sv": "Fasad-, tak- och fönsterrenovering.",
+        "en": "Facade, roof and window renovation."
+      }
+    },
+    {
+      "id": 26,
+      "lat": 60.1610,
+      "lng": 24.9400,
+      "name": "As Oy Tarkkampujankatu 14",
+      "address": "Tarkkampujankatu 14",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "8.png",
+      "description": {
+        "fi": "Julkisivun korjaus.",
+        "sv": "Fasadrenovering.",
+        "en": "Facade renovation."
+      }
+    },
+    {
+      "id": 27,
+      "lat": 60.1810,
+      "lng": 24.9510,
+      "name": null,
+      "address": "Hämeentie 6",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "9.png",
+      "description": {
+        "fi": "Ikkuna- ja julkisivukorjaukset.",
+        "sv": "Fönster- och fasadrenovering.",
+        "en": "Window and facade renovation."
+      }
+    },
+    {
+      "id": 28,
+      "lat": 60.1761,
+      "lng": 24.9210,
+      "name": null,
+      "address": "Runeberginkatu 29",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "1.png",
+      "description": {
+        "fi": "Ikkunakorjaukset.",
+        "sv": "Fönsterrenovering.",
+        "en": "Window renovation."
+      }
+    },
+    {
+      "id": 29,
+      "lat": 60.1712,
+      "lng": 24.9376,
+      "name": "Pääpostitalo",
+      "address": "Mannerheiminaukio 1",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "katto",
+      "image": "2.png",
+      "description": {
+        "fi": "Katon korjaus.",
+        "sv": "Takrenovering.",
+        "en": "Roof renovation."
+      }
+    },
+    {
+      "id": 30,
+      "lat": 60.1655,
+      "lng": 24.9293,
+      "name": null,
+      "address": "Lapinlahdenkatu 12",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "3.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 31,
+      "lat": 60.1830,
+      "lng": 24.9239,
+      "name": "Töölön yhteiskoulu",
+      "address": "Urheilukatu 10–12",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "katto",
+      "image": "4.png",
+      "description": {
+        "fi": "Kattoikkunan vaihto ja katon korjaus.",
+        "sv": "Takfönsterbyte och takrenovering.",
+        "en": "Skylight replacement and roof renovation."
+      }
+    },
+    {
+      "id": 32,
+      "lat": 60.1742,
+      "lng": 24.9542,
+      "name": null,
+      "address": "Oikokatu 11",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "5.png",
+      "description": {
+        "fi": "Sisäpihan korjaustyöt.",
+        "sv": "Innergårdsrenovering.",
+        "en": "Courtyard renovation."
+      }
+    },
+    {
+      "id": 33,
+      "lat": 60.1870,
+      "lng": 25.0130,
+      "name": "As Oy Meripuisto 5",
+      "address": "Meripuistotie 5",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "6.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 34,
+      "lat": 60.1652,
+      "lng": 24.9540,
+      "name": "Turkin suurlähetystö",
+      "address": "Satamakatu 9",
+      "city": "Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "7.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 35,
+      "lat": 60.1705,
+      "lng": 24.9290,
+      "name": "As Oy Fredrikinkatu 71",
+      "address": "Fredrikinkatu 71",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "julkisivu",
+      "image": "5.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 36,
+      "lat": 60.2128,
+      "lng": 24.9463,
+      "name": "As Oy Hauho",
+      "address": "Hauhontie 4, 6, 8",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "julkisivu",
+      "image": "6.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 38,
+      "lat": 60.1742,
+      "lng": 24.9533,
+      "name": "As Oy Mariankatu 19",
+      "address": "Mariankatu 19",
       "city": "Helsinki",
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
       "image": "8.png",
       "description": {
-        "fi": "Porraskäytävien ja kellaritilojen sisätilakorjaus. Pintamateriaalit uusittiin ja valaistus modernisoitiin.",
-        "sv": "Inomhusrenovering av trapphus och källarutrymmen. Ytmaterial förnyade och belysning moderniserad.",
-        "en": "Interior renovation of stairwells and basement areas. Surface materials renewed and lighting modernised."
+        "fi": "Katto-, parveke- ja julkisivukorjaukset, katon maalaus.",
+        "sv": "Tak-, balkong- och fasadrenovering, takmålning.",
+        "en": "Roof, balcony and facade renovation, roof painting."
       }
     },
     {
-      "id": 3,
-      "lat": 60.1598,
-      "lng": 24.9265,
-      "address": "Hietalahdenranta 6",
+      "id": 39,
+      "lat": 60.1748,
+      "lng": 24.9534,
+      "name": "As Oy Mariankatu 26",
+      "address": "Mariankatu 26",
       "city": "Helsinki",
       "year": 2024,
-      "yearDisplay": "2024–2025",
-      "type": "katto",
-      "image": "3.png",
-      "description": {
-        "fi": "Merenrantakiinteistön peltikaton täysremontti. Materiaalina rst-pelti, sadevesijärjestelmät uusittiin kokonaan.",
-        "sv": "Totalrenovering av plåttak på en strandnära fastighet. Rostfritt stålplåt, komplett förnyelse av dagvattensystem.",
-        "en": "Full roof renovation of a waterfront property. Stainless steel sheet metal, complete renewal of rainwater systems."
-      }
-    },
-    {
-      "id": 7,
-      "lat": 60.2378,
-      "lng": 25.0321,
-      "address": "Aamuruskontie 2",
-      "city": "Helsinki",
-      "year": 2023,
-      "yearDisplay": "2023",
+      "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "9.png",
       "description": {
-        "fi": "Julkisivu- ja ikkunaremontti. Rappaukset uusittiin ja puuikkunat kunnostettiin alkuperäistä tyyliä kunnioittaen.",
-        "sv": "Fasad- och fönsterrenovering. Puts förnyad och träfönster restaurerade med respekt för originalstilen.",
-        "en": "Facade and window renovation. Rendering renewed and wooden windows restored respecting the original style."
+        "fi": "Parveke-, julkisivu- ja ikkunakorjaukset.",
+        "sv": "Balkong-, fasad- och fönsterrenovering.",
+        "en": "Balcony, facade and window renovation."
       }
     },
     {
-      "id": 4,
-      "lat": 60.1785,
-      "lng": 24.9521,
-      "address": "Santakatu 5",
+      "id": 40,
+      "lat": 60.1556,
+      "lng": 24.8790,
+      "name": "As Oy Svinhufvudintie 15",
+      "address": "Svinhufvudintie 15",
       "city": "Helsinki",
-      "year": 2023,
-      "yearDisplay": "2023",
-      "type": "julkisivu",
-      "image": "4.png",
-      "description": {
-        "fi": "Taloyhtiön julkisivu- ja parvekesaneeraus. Betonipinnat korjattiin ja parvekerakenteet uusittiin.",
-        "sv": "Fasad- och balkongrenovering av bostadsbolag. Betongytorna reparerade och balkongkonstruktioner förnyade.",
-        "en": "Facade and balcony renovation of a housing company. Concrete surfaces repaired and balcony structures renewed."
-      }
-    },
-    {
-      "id": 1,
-      "lat": 60.1638,
-      "lng": 24.9384,
-      "address": "Bulevardi 2–4",
-      "city": "Helsinki",
-      "year": 2023,
-      "yearDisplay": "2023–2024",
+      "year": 2024,
+      "yearDisplay": "2024",
       "type": "julkisivu",
       "image": "1.png",
       "description": {
-        "fi": "Arvokkaan jugend-rakennuksen julkisivun täydellinen saneeraus. Rappaustyöt, ikkunoiden kunnostus ja kipsikoristeiden restaurointi.",
-        "sv": "Total fasadrenovering av en värdefull jugendbyggnad. Putsarbeten, fönsterrestaurering och restaurering av gipsornament.",
-        "en": "Full facade renovation of a valuable Art Nouveau building. Rendering work, window restoration and plaster ornament restoration."
+        "fi": "Piipun restaurointi.",
+        "sv": "Skorstensrestaurering.",
+        "en": "Chimney restoration."
       }
     },
     {
-      "id": 5,
-      "lat": 60.2089,
-      "lng": 25.0892,
-      "address": "Puotilantie 7",
+      "id": 41,
+      "lat": 60.1758,
+      "lng": 24.9258,
+      "name": null,
+      "address": "Aurorankatu 9",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "julkisivu",
+      "image": "2.png",
+      "description": {
+        "fi": "Julkisivun paikkarappaus.",
+        "sv": "Lappning av fasadputs.",
+        "en": "Facade plaster patching."
+      }
+    },
+    {
+      "id": 42,
+      "lat": 60.1675,
+      "lng": 24.9355,
+      "name": "Gården Annegaten",
+      "address": "Annankatu",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "julkisivu",
+      "image": "3.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 43,
+      "lat": 60.1543,
+      "lng": 24.9492,
+      "name": "Hss Paviljongi",
+      "address": "Liuskasaari",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "julkisivu",
+      "image": "4.png",
+      "description": {
+        "fi": "Julkisivun korjaus.",
+        "sv": "Fasadrenovering.",
+        "en": "Facade renovation."
+      }
+    },
+    {
+      "id": 44,
+      "lat": 60.1673,
+      "lng": 24.9524,
+      "name": null,
+      "address": "Kasarmikatu 26",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "katto",
+      "image": "5.png",
+      "description": {
+        "fi": "Kattoikkunat.",
+        "sv": "Takfönster.",
+        "en": "Skylights."
+      }
+    },
+    {
+      "id": 45,
+      "lat": 60.1626,
+      "lng": 24.9410,
+      "name": null,
+      "address": "Pursimiehenkatu 9",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "julkisivu",
+      "image": "6.png",
+      "description": {
+        "fi": "Julkisivu- ja parvekekorjaukset, katon maalaus.",
+        "sv": "Fasad- och balkongrenovering, takmålning.",
+        "en": "Facade and balcony renovation, roof painting."
+      }
+    },
+    {
+      "id": 46,
+      "lat": 60.1779,
+      "lng": 24.9293,
+      "name": null,
+      "address": "Töölönkatu 32b",
+      "city": "Helsinki",
+      "year": 2024,
+      "yearDisplay": "2024",
+      "type": "julkisivu",
+      "image": "7.png",
+      "description": {
+        "fi": "Julkisivun korjaus.",
+        "sv": "Fasadrenovering.",
+        "en": "Facade renovation."
+      }
+    },
+    {
+      "id": 47,
+      "lat": 60.1729,
+      "lng": 24.9550,
+      "name": "As Oy Meritullinkatu 6",
+      "address": "Meritullinkatu 6",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "katto",
+      "image": "8.png",
+      "description": {
+        "fi": "Vesikaton korjaus, ullakon korjaus, portaikon korjaus.",
+        "sv": "Vattentaksrenovering, vindsrenovering, trapphusrenovering.",
+        "en": "Roof renovation, attic renovation, stairwell renovation."
+      }
+    },
+    {
+      "id": 48,
+      "lat": 60.1572,
+      "lng": 24.9430,
+      "name": "Bostads Ab Villagatan 19–21–23",
+      "address": "Huvilakatu 19, 21, 23",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "julkisivu",
+      "image": "9.png",
+      "description": {
+        "fi": "Julkisivun korjaus, ovityöt.",
+        "sv": "Fasadrenovering, dörrarbeten.",
+        "en": "Facade renovation, doorwork."
+      }
+    },
+    {
+      "id": 49,
+      "lat": 60.1631,
+      "lng": 24.9482,
+      "name": "FAB Nedomus",
+      "address": "Korkeavuorenkatu 29",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "julkisivu",
+      "image": "1.png",
+      "description": {
+        "fi": "Julkisivu-, parveke- ja ikkunakorjaukset, katon maalaus.",
+        "sv": "Fasad-, balkong- och fönsterrenovering, takmålning.",
+        "en": "Facade, balcony and window renovation, roof painting."
+      }
+    },
+    {
+      "id": 50,
+      "lat": 60.1811,
+      "lng": 24.9512,
+      "name": "Hämeentie 6 — A",
+      "address": "Hämeentie 6",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "julkisivu",
+      "image": "2.png",
+      "description": {
+        "fi": "A-porrashuoneen kunnostustyöt: julkisivu, parveke, ovityöt.",
+        "sv": "Renovering av A-trapphus: fasad, balkong, dörrarbeten.",
+        "en": "Stairwell A renovation: facade, balcony, doorwork."
+      }
+    },
+    {
+      "id": 51,
+      "lat": 60.1576,
+      "lng": 24.9556,
+      "name": null,
+      "address": "Itäinen Puistotie 11",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "julkisivu",
+      "image": "3.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 53,
+      "lat": 60.1582,
+      "lng": 24.9530,
+      "name": null,
+      "address": "Puistokatu 11 A",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "julkisivu",
+      "image": "5.png",
+      "description": {
+        "fi": "Ikkunoiden kunnostustyöt.",
+        "sv": "Fönsterrenovering.",
+        "en": "Window renovation works."
+      }
+    },
+    {
+      "id": 54,
+      "lat": 60.1825,
+      "lng": 24.7700,
+      "name": "Suvikärki",
+      "address": "Suvikummunrinne 4",
+      "city": "Espoo",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "julkisivu",
+      "image": "6.png",
+      "description": {
+        "fi": "Julkisivu-, ikkuna- ja parvekekorjaukset, yleinen remontti.",
+        "sv": "Fasad-, fönster- och balkongrenovering, allmän renovering.",
+        "en": "Facade, window and balcony renovation, general renovation."
+      }
+    },
+    {
+      "id": 55,
+      "lat": 60.1608,
+      "lng": 24.9434,
+      "name": null,
+      "address": "Tehtaankatu 25",
+      "city": "Helsinki",
+      "year": 2023,
+      "yearDisplay": "2023",
+      "type": "katto",
+      "image": "7.png",
+      "description": {
+        "fi": "Katon korjaus.",
+        "sv": "Takrenovering.",
+        "en": "Roof renovation."
+      }
+    },
+    {
+      "id": 56,
+      "lat": 60.1838,
+      "lng": 24.9489,
+      "name": "As Oy Braahe",
+      "address": "Itäinen Brahenkatu 13",
+      "city": "Helsinki",
+      "year": 2022,
+      "yearDisplay": "2022",
+      "type": "julkisivu",
+      "image": "8.png",
+      "description": {
+        "fi": "Katto-, julkisivu-, ikkuna-, parveke- ja ovikorjaukset.",
+        "sv": "Tak-, fasad-, fönster-, balkong- och dörrarbeten.",
+        "en": "Roof, facade, window, balcony and doorwork."
+      }
+    },
+    {
+      "id": 57,
+      "lat": 60.1568,
+      "lng": 24.9433,
+      "name": "As Oy Gården Fenix",
+      "address": "Huvilakatu 27",
+      "city": "Helsinki",
+      "year": 2022,
+      "yearDisplay": "2022",
+      "type": "julkisivu",
+      "image": "9.png",
+      "description": {
+        "fi": "Julkisivu- ja ikkunakorjaukset.",
+        "sv": "Fasad- och fönsterrenovering.",
+        "en": "Facade and window renovation."
+      }
+    },
+    {
+      "id": 58,
+      "lat": 60.1558,
+      "lng": 24.8758,
+      "name": "As Oy Kaislakallio",
+      "address": "Gyldénintie 10",
+      "city": "Helsinki",
+      "year": 2022,
+      "yearDisplay": "2022",
+      "type": "julkisivu",
+      "image": "1.png",
+      "description": {
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
+      }
+    },
+    {
+      "id": 59,
+      "lat": 60.1621,
+      "lng": 24.9437,
+      "name": "As Oy Laivurinkatu 39",
+      "address": "Laivurinkatu 39",
+      "city": "Helsinki",
+      "year": 2022,
+      "yearDisplay": "2022",
+      "type": "julkisivu",
+      "image": "2.png",
+      "description": {
+        "fi": "Julkisivun korjaus.",
+        "sv": "Fasadrenovering.",
+        "en": "Facade renovation."
+      }
+    },
+    {
+      "id": 60,
+      "lat": 60.1560,
+      "lng": 24.8675,
+      "name": "As Oy Rautatulli",
+      "address": "Rusthollarintie 13",
       "city": "Helsinki",
       "year": 2022,
       "yearDisplay": "2022",
       "type": "katto",
-      "image": "5.png",
+      "image": "3.png",
       "description": {
-        "fi": "Itä-Helsingin kerrostalon peltikattokorjaus. Vanha katto purettiin ja uusittiin täysin sinkityllä peltikatollla.",
-        "sv": "Plåttaksreparation på ett flervåningshus i östra Helsingfors. Gammalt tak rivit och ersatt med galvaniserat plåttak.",
-        "en": "Sheet metal roof repair on an East Helsinki apartment building. Old roof demolished and replaced with galvanised sheet metal."
+        "fi": "Katon korjaus.",
+        "sv": "Takrenovering.",
+        "en": "Roof renovation."
       }
     },
     {
-      "id": 2,
-      "lat": 60.1672,
-      "lng": 24.9522,
-      "address": "Eteläesplanadi 1",
+      "id": 62,
+      "lat": 60.1683,
+      "lng": 24.9460,
+      "name": "K Oy Rikhard ikkunat",
+      "address": "Rikhardinkatu 2",
       "city": "Helsinki",
       "year": 2022,
-      "yearDisplay": "2022–2023",
+      "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "5.png",
       "description": {
-        "fi": "Historiallisen liikerakennuksen julkisivu uusittiin kokonaisuudessaan. Erityisosaamista vaativat terastirappaukset ja koristepinnat.",
-        "sv": "Fasaden på en historisk affärsbyggnad förnyades i sin helhet. Terrazzoputs och dekorativa ytor som kräver specialkunnande.",
-        "en": "The facade of a historic commercial building was completely renewed. Specialist terrazzo rendering and ornamental surfaces."
+        "fi": "Ikkuna- ja kattokorjaukset.",
+        "sv": "Fönster- och takrenovering.",
+        "en": "Window and roof renovation."
       }
     },
     {
-      "id": 10,
-      "lat": 60.1712,
-      "lng": 24.9334,
-      "address": "Mannerheimintie 5",
+      "id": 63,
+      "lat": 60.1613,
+      "lng": 24.9407,
+      "name": null,
+      "address": "Kapteeninkatu 5",
       "city": "Helsinki",
-      "year": 2021,
-      "yearDisplay": "2021",
-      "type": "katto",
-      "image": "1.png",
-      "description": {
-        "fi": "Suuren toimistokiinteistön vesikattokorjaus. Katto pinnoitettiin Enkonol-menetelmällä ja tiiviys varmistettiin.",
-        "sv": "Takreparation på en stor kontorsfastighet. Taket belagt med Enkonol-metoden och tätheten verifierad.",
-        "en": "Roof repair of a large office building. Roof coated using the Enkonol method with full waterproofing verification."
-      }
-    },
-    {
-      "id": 6,
-      "lat": 60.2301,
-      "lng": 25.0456,
-      "address": "Tatti 17",
-      "city": "Helsinki",
-      "year": 2021,
-      "yearDisplay": "2021–2022",
+      "year": 2022,
+      "yearDisplay": "2022",
       "type": "julkisivu",
       "image": "6.png",
       "description": {
-        "fi": "Lähiökerrostalon parvekesaneeraus. Kaikki parvekelaatat, kaiteet ja pintakäsittelyt uusittiin.",
-        "sv": "Balkongrenovering av ett flervåningshus i förorten. Alla balkongplattor, räcken och ytbehandlingar förnyade.",
-        "en": "Balcony renovation of a suburban apartment building. All balcony slabs, railings and surface finishes renewed."
+        "fi": "Julkisivun korjaus, porrashuoneen remontti.",
+        "sv": "Fasadrenovering, trapphusrenovering.",
+        "en": "Facade renovation, stairwell renovation."
       }
     },
     {
-      "id": 9,
-      "lat": 60.1685,
-      "lng": 24.9523,
-      "address": "Aleksanterinkatu 10",
+      "id": 64,
+      "lat": 60.1666,
+      "lng": 24.9498,
+      "name": null,
+      "address": "Pohjoinen Makasiinikatu 7 / Fabianinkatu 4",
       "city": "Helsinki",
-      "year": 2020,
-      "yearDisplay": "2020–2021",
+      "year": 2022,
+      "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "7.png",
       "description": {
-        "fi": "Keskustan arvokiinteistön koristerestaurointi. Kipsi- ja betonikoristeet restauroitiin alkuperäisten mallien mukaan.",
-        "sv": "Ornamentrestaurering av en värdefull citycentrumfastighet. Gips- och betongornament restaurerade enligt originalmodeller.",
-        "en": "Ornament restoration of a prestigious city centre property. Plaster and concrete ornaments restored to original designs."
+        "fi": "Korjaustyöt.",
+        "sv": "Renoveringsarbeten.",
+        "en": "Renovation works."
       }
     }
   ]

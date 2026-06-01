@@ -30,10 +30,15 @@
 
   function buildPopup(p) {
     var desc = p.description[lang] || p.description.fi;
+    var addressLine = p.address + ', ' + p.city;
+    var titleHtml = p.name
+      ? '<div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:3px;line-height:1.3;">' + p.name + '</div>' +
+        '<div style="font-size:0.72rem;color:#666;margin-bottom:6px;line-height:1.4;">' + addressLine + '</div>'
+      : '<div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:5px;line-height:1.3;">' + addressLine + '</div>';
     return '<div style="width:380px;font-family:\'Barlow\',system-ui,sans-serif;display:flex;align-items:flex-start;">' +
-      '<img src="' + base + p.image + '" alt="' + p.address + '" style="width:155px;height:135px;object-fit:cover;flex-shrink:0;display:block;">' +
+      '<img src="' + base + p.image + '" alt="' + (p.name || p.address) + '" style="width:155px;height:135px;object-fit:cover;flex-shrink:0;display:block;">' +
       '<div style="padding:10px 12px;flex:1;">' +
-      '<div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:5px;line-height:1.3;">' + p.address + ', ' + p.city + '</div>' +
+      titleHtml +
       '<div style="font-size:0.76rem;color:#444;line-height:1.6;margin-bottom:7px;">' + desc + '</div>' +
       '<div style="font-size:0.72rem;color:#888;font-style:italic;">' + p.yearDisplay + '</div>' +
       '</div></div>';
@@ -70,10 +75,15 @@
     }
     el.innerHTML = projects.map(function (p) {
       var desc = p.description[lang] || p.description.fi;
+      var addressLine = p.address + ', ' + p.city;
+      var titleHtml = p.name
+        ? '<div class="refs-project-address">' + p.name + '</div>' +
+          '<div class="refs-project-subtitle">' + addressLine + '</div>'
+        : '<div class="refs-project-address">' + addressLine + '</div>';
       return '<div class="refs-project-row fade-in">' +
-        '<div class="refs-project-img"><img src="' + base + p.image + '" alt="' + p.address + '"></div>' +
+        '<div class="refs-project-img"><img src="' + base + p.image + '" alt="' + (p.name || p.address) + '"></div>' +
         '<div class="refs-project-info">' +
-        '<div class="refs-project-address">' + p.address + ', ' + p.city + '</div>' +
+        titleHtml +
         '<div class="refs-project-year">' + p.yearDisplay + '</div>' +
         '<div class="refs-project-desc">' + desc + '</div>' +
         '</div></div>';
