@@ -401,7 +401,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/makelanrinne.jpg",
       "description": {
         "fi": "Julkisivu-, katto- ja parvekekorjaukset.",
         "sv": "Fasad-, tak- och balkongrenovering.",
@@ -1052,6 +1052,23 @@
         "fi": "Julkisivun korjaus.",
         "sv": "Fasadrenovering.",
         "en": "Facade renovation."
+      }
+    },
+    {
+      "id": 67,
+      "lat": 60.2125,
+      "lng": 25.1480,
+      "name": null,
+      "address": "Merituulinkatu 3",
+      "city": "Vuosaari, Helsinki",
+      "year": 2025,
+      "yearDisplay": "2025",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/merituuli.jpg",
+      "description": {
+        "fi": "Julkisivu-, katto- ja parvekekorjaukset.",
+        "sv": "Fasad-, tak- och balkongrenovering.",
+        "en": "Facade, roof and balcony renovation."
       }
     }
   ]
