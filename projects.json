@@ -452,7 +452,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/hameentie6.jpg",
       "description": {
         "fi": "Ikkuna- ja julkisivukorjaukset.",
         "sv": "Fönster- och fasadrenovering.",
@@ -826,7 +826,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/hameentie6.jpg",
       "description": {
         "fi": "A-porrashuoneen kunnostustyöt: julkisivu, parveke, ovityöt.",
         "sv": "Renovering av A-trapphus: fasad, balkong, dörrarbeten.",
@@ -1035,6 +1035,23 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
+      }
+    },
+    {
+      "id": 65,
+      "lat": 60.1727,
+      "lng": 24.9528,
+      "name": "As Oy Mariankatu 13",
+      "address": "Mariankatu 13",
+      "city": "Helsinki",
+      "year": 2018,
+      "yearDisplay": "2018",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/mariankatu13.jpg",
+      "description": {
+        "fi": "Julkisivun korjaus.",
+        "sv": "Fasadrenovering.",
+        "en": "Facade renovation."
       }
     }
   ]
