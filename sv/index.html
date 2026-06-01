@@ -344,13 +344,15 @@
       popupAnchor: [0, -34]
     });
 
-    const kohde = (lat, lng, osoite, kuva, kuvaus, aika) => {
+    const kohde = (lat, lng, title, address, kuva, kuvaus, aika) => {
+      const addressLine = address ? `<div style="font-size:0.74rem;color:#666;margin-bottom:7px;line-height:1.4;">${address}</div>` : '';
       const popup = `
         <div style="width:420px;font-family:'Barlow',system-ui,sans-serif;display:flex;align-items:flex-start;">
-          <img src="${kuva}" alt="${osoite}"
+          <img src="${kuva}" alt="${title}"
             style="width:180px;height:160px;object-fit:cover;flex-shrink:0;display:block;">
           <div style="padding:12px 12px 12px 14px;flex:1;">
-            <div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:7px;line-height:1.3;">${osoite}</div>
+            <div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:3px;line-height:1.3;">${title}</div>
+            ${addressLine}
             <div style="font-size:0.78rem;color:#444;line-height:1.6;margin-bottom:9px;">${kuvaus}</div>
             <div style="font-size:0.74rem;color:#888;font-style:italic;">${aika}</div>
           </div>
@@ -360,26 +362,76 @@
       m.on('mouseout', function() { this.closePopup(); });
     };
 
-    kohde(60.1638, 24.9384, 'Bulevardi 2–4, Helsingfors', '../1.png',
-      'Total fasadrenovering av en värdefull jugendbyggnad. Putsarbeten, fönsterrestaurering och restaurering av gipsornament.', '2023–2024');
-    kohde(60.1672, 24.9522, 'Eteläesplanadi 1, Helsingfors', '../2.png',
-      'Komplett fasadförnyelse av en historisk affärsbyggnad. Specialistterrazzoputs och dekorativa ytor.', '2022–2023');
-    kohde(60.1598, 24.9265, 'Hietalahdenranta 6, Helsingfors', '../3.png',
-      'Totalrenovering av tak på en strandnära fastighet. Rostfritt stålplåt, komplett förnyelse av dagvattensystem.', '2024–2025');
-    kohde(60.1785, 24.9521, 'Santakatu 5, Helsingfors', '../4.png',
-      'Fasad- och balkongrenovering. Betongytorna reparerade och balkongkonstruktioner förnyade.', '2023');
-    kohde(60.2089, 25.0892, 'Puotilantie 7, Helsingfors', '../5.png',
-      'Plåttaksreparation på ett flervåningshus i östra Helsingfors. Gammalt tak rivit och ersatt med galvaniserat plåttak.', '2022');
-    kohde(60.2301, 25.0456, 'Tatti 17, Helsingfors', '../6.png',
-      'Balkongrenovering. Alla balkongplattor, räcken och ytbehandlingar förnyade.', '2021–2022');
-    kohde(60.2378, 25.0321, 'Aamuruskontie 2, Helsingfors', '../7.png',
-      'Fasad- och fönsterrenovering. Puts förnyad och träfönster restaurerade med respekt för originalstilen.', '2023');
-    kohde(60.2056, 24.9812, 'Arabianpolku 3, Helsingfors', '../8.png',
-      'Inomhusrenovering av trapphus och källarutrymmen. Ytmaterial förnyade och belysning moderniserad.', '2024');
-    kohde(60.1685, 24.9523, 'Aleksanterinkatu 10, Helsingfors', '../9.png',
-      'Ornamentrestaurering av en prestigefull citycentrumfastighet. Gips- och betongornament restaurerade enligt originalmodeller.', '2020–2021');
-    kohde(60.1712, 24.9334, 'Mannerheimintie 5, Helsingfors', '../1.png',
-      'Takreparation på en stor kontorsfastighet. Taket belagt med Enkonol-metoden och tätheten verifierad.', '2021');
+    // 2026
+    kohde(60.1538, 24.8662, 'As Oy Aitio', 'Aino Acktés väg 1, 3, Helsingfors', '../1.png', 'Takrenovering.', '2026');
+    kohde(60.1645, 24.9342, 'As Oy Bulevardinpuisto', 'Nylandsgatan 39, Helsingfors', '../2.png', 'Fasad- och fönsterrenovering, fönster- och takbyte.', '2026');
+    kohde(60.1759, 24.9221, 'As Oy Cygnaeuksenkatu 10', 'Cygnaeusgatan 10, Helsingfors', '../3.png', 'Fönsterbyte och fasadrenovering.', '2026');
+    kohde(60.1830, 24.9550, 'As Oy Fleminginkatu 11', 'Flemingsgatan 11, Helsingfors', '../4.png', 'Fönsterbyte och fasadrenovering.', '2026');
+    kohde(60.1879, 24.9582, 'As Oy Hämeentie 37', 'Tavastvägen 37, Helsingfors', '../5.png', 'Fönsterrenovering.', '2026');
+    kohde(60.1651, 24.9395, 'As Oy Iso Roobertinkatu 42', 'Stora Robertsgatan 42, Helsingfors', '../6.png', 'Renoveringsarbeten.', '2026');
+    kohde(60.1571, 24.9570, 'As Oy Kaivopuiston Myllytie 2', 'Kvarnvägen 2, Helsingfors', '../7.png', 'Renoveringsarbeten.', '2026');
+    kohde(60.1620, 24.9530, 'As Oy Neitsytpolku 9', 'Jungfrustigen 9, Helsingfors', '../8.png', 'Fasad-, fönster- och balkongrenovering.', '2026');
+    kohde(60.1735, 24.9559, 'As Oy Soma', 'Sjötullsgatan 31 / Kronohagsgatan 3, Helsingfors', '../9.png', 'Fönster- och fasadrenovering.', '2026');
+    kohde(60.1873, 24.9114, 'As Oy Turuntie 68', 'Mannerheimvägen 94, Helsingfors', '../1.png', 'Fönster-, fasad- och takrenovering.', '2026');
+    kohde(60.1680, 24.9377, 'Asunto Oy Aino', 'Georgsgatan 12–14, Helsingfors', '../2.png', 'Fasad- och fönsterrenovering.', '2026');
+    kohde(60.1804, 24.9168, 'Asunto Oy Carl Bostads Ab', 'Topeliusgatan 19, Helsingfors', '../3.png', 'Fasad- och balkongrenovering.', '2026');
+    kohde(60.1663, 24.9373, 'Bostads Ab Bangatan 11–13', 'Bangatan 11–13, Helsingfors', '../4.png', 'Fasad-, fönster- och balkongrenovering.', '2026');
+    kohde(60.1735, 24.9510, 'Helsingfors ortodoxa församling', 'Unionsgatan 39, Helsingfors', '../5.png', 'Tak-, balkong-, fasad- och fönsterrenovering.', '2026');
+
+    // 2025
+    kohde(60.1755, 24.9135, 'As Oy Merikannontie 3', 'Merikantovägen 3, Helsingfors', '../6.png', 'Fasad-, tak-, balkong- och fönsterrenovering.', '2025');
+    kohde(60.1755, 24.9220, 'As Oy Mannerheimintie 40', 'Mannerheimvägen 40, Helsingfors', '../7.png', 'Fasadrenovering.', '2025');
+    kohde(60.1960, 24.8800, 'Bostads Ab Tegelbacka', 'Tegelbacken 2, Munksnäs, Helsingfors', '../8.png', 'Fasad- och takrenovering.', '2025');
+    kohde(60.2130, 24.9461, 'As Oy Hauho', 'Hauhovägen 4, 6–8, Helsingfors', '../9.png', 'Fönsterrenovering.', '2025');
+    kohde(60.1580, 24.9425, 'K Oy Peter Villa', 'Villagatan 13–15, Helsingfors', '../1.png', 'Takrenovering.', '2025');
+    kohde(60.1715, 24.9335, 'As Oy Töölönkatu 2', 'Tölögatan 2, Helsingfors', '../2.png', 'Fasadrenovering och takmålning.', '2025');
+    kohde(60.1572, 24.9532, 'As Oy Itäinen Puistotie 3', 'Östra Allén 3, Helsingfors', '../3.png', 'Takrenovering.', '2025');
+    kohde(60.2030, 24.8920, 'As Oy Koulutie 3', 'Skolvägen 3, Helsingfors', '../4.png', 'Fasad-, tak-, fönster- och balkongrenovering.', '2025');
+    kohde(60.3680, 24.7470, 'Arkadian Yhteislyseo', 'Lepsämävägen 15, Klaukkala', '../5.png', 'Takrenovering.', '2025');
+    kohde(60.1961, 24.9483, 'As Oy Mäkelänkatu 31', 'Backasgatan 31, Helsingfors', '../6.png', 'Fasad-, tak- och balkongrenovering.', '2025');
+    kohde(60.1818, 24.9180, 'As Oy Mannerheimintie 52', 'Mannerheimvägen 52, Helsingfors', '../7.png', 'Fasad-, tak- och fönsterrenovering.', '2025');
+    kohde(60.1610, 24.9400, 'As Oy Tarkkampujankatu 14', 'Skarpskyttegatan 14, Helsingfors', '../8.png', 'Fasadrenovering.', '2025');
+    kohde(60.1810, 24.9510, 'Hämeentie 6', 'Tavastvägen 6, Helsingfors', '../9.png', 'Fönster- och fasadrenovering.', '2025');
+    kohde(60.1761, 24.9210, 'Runeberginkatu 29', 'Runebergsgatan 29, Helsingfors', '../1.png', 'Fönsterrenovering.', '2025');
+    kohde(60.1712, 24.9376, 'Huvudposten', 'Mannerheimplatsen 1, Helsingfors', '../2.png', 'Takrenovering.', '2025');
+    kohde(60.1655, 24.9293, 'Lapinlahdenkatu 12', 'Lappviksgatan 12, Helsingfors', '../3.png', 'Renoveringsarbeten.', '2025');
+    kohde(60.1830, 24.9239, 'Tölö samskola', 'Idrottsgatan 10–12, Helsingfors', '../4.png', 'Takfönsterbyte och takrenovering.', '2025');
+    kohde(60.1742, 24.9542, 'Oikokatu 11', 'Gengatan 11, Helsingfors', '../5.png', 'Innergårdsrenovering.', '2025');
+    kohde(60.1870, 25.0130, 'As Oy Meripuisto 5', 'Havsparksvägen 5, Helsingfors', '../6.png', 'Renoveringsarbeten.', '2025');
+    kohde(60.1652, 24.9540, 'Turkiets ambassad', 'Hamngatan 9, Helsingfors', '../7.png', 'Renoveringsarbeten.', '2025');
+
+    // 2024
+    kohde(60.1705, 24.9290, 'As Oy Fredrikinkatu 71', 'Fredriksgatan 71, Helsingfors', '../5.png', 'Renoveringsarbeten.', '2024');
+    kohde(60.2128, 24.9463, 'As Oy Hauho', 'Hauhovägen 4, 6, 8, Helsingfors', '../6.png', 'Renoveringsarbeten.', '2024');
+    kohde(60.1742, 24.9533, 'As Oy Mariankatu 19', 'Mariegatan 19, Helsingfors', '../8.png', 'Tak-, balkong- och fasadrenovering, takmålning.', '2024');
+    kohde(60.1748, 24.9534, 'As Oy Mariankatu 26', 'Mariegatan 26, Helsingfors', '../9.png', 'Balkong-, fasad- och fönsterrenovering.', '2024');
+    kohde(60.1556, 24.8790, 'As Oy Svinhufvudintie 15', 'Svinhufvudsvägen 15, Helsingfors', '../1.png', 'Skorstensrestaurering.', '2024');
+    kohde(60.1758, 24.9258, 'Aurorankatu 9', 'Auroragatan 9, Helsingfors', '../2.png', 'Lappning av fasadputs.', '2024');
+    kohde(60.1675, 24.9355, 'Gården Annegaten', 'Annegatan, Helsingfors', '../3.png', 'Renoveringsarbeten.', '2024');
+    kohde(60.1543, 24.9492, 'HSS Paviljongen', 'Blekholmen, Helsingfors', '../4.png', 'Fasadrenovering.', '2024');
+    kohde(60.1673, 24.9524, 'Kasarmikatu 26', 'Kaserngatan 26, Helsingfors', '../5.png', 'Takfönster.', '2024');
+    kohde(60.1626, 24.9410, 'Pursimiehenkatu 9', 'Båtsmansgatan 9, Helsingfors', '../6.png', 'Fasad- och balkongrenovering, takmålning.', '2024');
+    kohde(60.1779, 24.9293, 'Töölönkatu 32b', 'Tölögatan 32b, Helsingfors', '../7.png', 'Fasadrenovering.', '2024');
+
+    // 2023
+    kohde(60.1729, 24.9550, 'As Oy Meritullinkatu 6', 'Sjötullsgatan 6, Helsingfors', '../8.png', 'Vattentaksrenovering, vindsrenovering, trapphusrenovering.', '2023');
+    kohde(60.1572, 24.9430, 'Bostads Ab Villagatan 19–21–23', 'Villagatan 19, 21, 23, Helsingfors', '../9.png', 'Fasadrenovering, dörrarbeten.', '2023');
+    kohde(60.1631, 24.9482, 'FAB Nedomus', 'Högbergsgatan 29, Helsingfors', '../1.png', 'Fasad-, balkong- och fönsterrenovering, takmålning.', '2023');
+    kohde(60.1811, 24.9512, 'Hämeentie 6 — A', 'Tavastvägen 6, Helsingfors', '../2.png', 'Renovering av A-trapphus: fasad, balkong, dörrarbeten.', '2023');
+    kohde(60.1576, 24.9556, 'Itäinen Puistotie 11', 'Östra Allén 11, Helsingfors', '../3.png', 'Renoveringsarbeten.', '2023');
+    kohde(60.1582, 24.9530, 'Puistokatu 11 A', 'Parkgatan 11 A, Helsingfors', '../5.png', 'Fönsterrenovering.', '2023');
+    kohde(60.1825, 24.7700, 'Suvikärki', 'Suvikummunrinne 4', '../6.png', 'Fasad-, fönster- och balkongrenovering, allmän renovering.', '2023');
+    kohde(60.1608, 24.9434, 'Tehtaankatu 25', 'Fabriksgatan 25, Helsingfors', '../7.png', 'Takrenovering.', '2023');
+
+    // 2022
+    kohde(60.1838, 24.9489, 'As Oy Braahe', 'Östra Brahegatan 13, Helsingfors', '../8.png', 'Tak-, fasad-, fönster-, balkong- och dörrarbeten.', '2022');
+    kohde(60.1568, 24.9433, 'As Oy Gården Fenix', 'Villagatan 27, Helsingfors', '../9.png', 'Fasad- och fönsterrenovering.', '2022');
+    kohde(60.1558, 24.8758, 'As Oy Kaislakallio', 'Gyldénsvägen 10, Helsingfors', '../1.png', 'Renoveringsarbeten.', '2022');
+    kohde(60.1621, 24.9437, 'As Oy Laivurinkatu 39', 'Skepparegatan 39, Helsingfors', '../2.png', 'Fasadrenovering.', '2022');
+    kohde(60.1560, 24.8675, 'As Oy Rautatulli', 'Rusthållarvägen 13', '../3.png', 'Takrenovering.', '2022');
+    kohde(60.1683, 24.9460, 'K Oy Rikhard ikkunat', 'Rikhardsgatan 2, Helsingfors', '../5.png', 'Fönster- och takrenovering.', '2022');
+    kohde(60.1613, 24.9407, 'Kapteeninkatu 5', 'Kaptensgatan 5, Helsingfors', '../6.png', 'Fasadrenovering, trapphusrenovering.', '2022');
+    kohde(60.1666, 24.9498, 'Pohjoinen Makasiinikatu 7 / Fabianinkatu 4', 'Helsingfors', '../7.png', 'Renoveringsarbeten.', '2022');
   </script>
 </body>
 </html>
