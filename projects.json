@@ -299,7 +299,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/hauho.jpg",
       "description": {
         "fi": "Ikkunakorjaukset.",
         "sv": "Fönsterrenovering.",
@@ -589,23 +589,6 @@
       "yearDisplay": "2024",
       "type": "julkisivu",
       "image": "5.png",
-      "description": {
-        "fi": "Korjaustyöt.",
-        "sv": "Renoveringsarbeten.",
-        "en": "Renovation works."
-      }
-    },
-    {
-      "id": 36,
-      "lat": 60.2128,
-      "lng": 24.9463,
-      "name": "As Oy Hauho",
-      "address": "Hauhontie 4, 6, 8",
-      "city": "Helsinki",
-      "year": 2024,
-      "yearDisplay": "2024",
-      "type": "julkisivu",
-      "image": "6.png",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -1048,6 +1031,23 @@
       "yearDisplay": "2018",
       "type": "julkisivu",
       "image": "kuvat/referenssit/mariankatu13.jpg",
+      "description": {
+        "fi": "Julkisivun korjaus.",
+        "sv": "Fasadrenovering.",
+        "en": "Facade renovation."
+      }
+    },
+    {
+      "id": 66,
+      "lat": 60.1606,
+      "lng": 24.8917,
+      "name": null,
+      "address": "Isokaari 4",
+      "city": "Lauttasaari, Helsinki",
+      "year": 2018,
+      "yearDisplay": "2018",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/isokaari.jpg",
       "description": {
         "fi": "Julkisivun korjaus.",
         "sv": "Fasadrenovering.",
