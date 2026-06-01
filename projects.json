@@ -53,15 +53,15 @@
     },
     {
       "id": 4,
-      "lat": 60.1830,
-      "lng": 24.9550,
+      "lat": 60.183,
+      "lng": 24.955,
       "name": "As Oy Fleminginkatu 11",
       "address": "Fleminginkatu 11",
       "city": "Helsinki",
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/fleminginkatu11.jpg",
       "description": {
         "fi": "Ikkunoiden vaihto ja julkisivun korjaus.",
         "sv": "Fönsterbyte och fasadrenovering.",
@@ -105,7 +105,7 @@
     {
       "id": 7,
       "lat": 60.1571,
-      "lng": 24.9570,
+      "lng": 24.957,
       "name": "As Oy Kaivopuiston Myllytie 2",
       "address": "Myllytie 2",
       "city": "Helsinki",
@@ -121,8 +121,8 @@
     },
     {
       "id": 8,
-      "lat": 60.1620,
-      "lng": 24.9530,
+      "lat": 60.162,
+      "lng": 24.953,
       "name": "As Oy Neitsytpolku 9",
       "address": "Neitsytpolku 9",
       "city": "Helsinki",
@@ -172,7 +172,7 @@
     },
     {
       "id": 11,
-      "lat": 60.1680,
+      "lat": 60.168,
       "lng": 24.9377,
       "name": "Asunto Oy Aino",
       "address": "Yrjönkatu 12–14",
@@ -224,14 +224,14 @@
     {
       "id": 14,
       "lat": 60.1735,
-      "lng": 24.9510,
+      "lng": 24.951,
       "name": "Helsingin Ortodoksinen Seurakunta",
       "address": "Unioninkatu 39",
       "city": "Helsinki",
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/unioninkatu39.jpg",
       "description": {
         "fi": "Katto-, parveke-, julkisivu- ja ikkunakorjaukset.",
         "sv": "Tak-, balkong-, fasad- och fönsterrenovering.",
@@ -258,7 +258,7 @@
     {
       "id": 16,
       "lat": 60.1755,
-      "lng": 24.9220,
+      "lng": 24.922,
       "name": "As Oy Mannerheimintie 40",
       "address": "Mannerheimintie 40",
       "city": "Helsinki",
@@ -274,8 +274,8 @@
     },
     {
       "id": 17,
-      "lat": 60.1960,
-      "lng": 24.8800,
+      "lat": 60.196,
+      "lng": 24.88,
       "name": "Bostads Ab Tegelbacka",
       "address": "Tiilimäki 2 (Tegelbacken)",
       "city": "Munkkiniemi, Helsinki",
@@ -291,7 +291,7 @@
     },
     {
       "id": 18,
-      "lat": 60.2130,
+      "lat": 60.213,
       "lng": 24.9461,
       "name": "As Oy Hauho",
       "address": "Hauhontie 4, 6–8",
@@ -308,7 +308,7 @@
     },
     {
       "id": 19,
-      "lat": 60.1580,
+      "lat": 60.158,
       "lng": 24.9425,
       "name": "K Oy Peter Villa",
       "address": "Huvilakatu 13–15",
@@ -333,7 +333,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/toolonkatu2.jpg",
       "description": {
         "fi": "Julkisivun korjaus ja katon maalaus.",
         "sv": "Fasadrenovering och takmålning.",
@@ -359,8 +359,8 @@
     },
     {
       "id": 22,
-      "lat": 60.2030,
-      "lng": 24.8920,
+      "lat": 60.203,
+      "lng": 24.892,
       "name": "As Oy Koulutie 3",
       "address": "Koulutie 3",
       "city": "Helsinki",
@@ -376,8 +376,8 @@
     },
     {
       "id": 23,
-      "lat": 60.3680,
-      "lng": 24.7470,
+      "lat": 60.368,
+      "lng": 24.747,
       "name": "Arkadian Yhteislyseo",
       "address": "Lepsämäntie 15",
       "city": "Klaukkala",
@@ -411,7 +411,7 @@
     {
       "id": 25,
       "lat": 60.1818,
-      "lng": 24.9180,
+      "lng": 24.918,
       "name": "As Oy Mannerheimintie 52",
       "address": "Mannerheimintie 52",
       "city": "Helsinki",
@@ -427,8 +427,8 @@
     },
     {
       "id": 26,
-      "lat": 60.1610,
-      "lng": 24.9400,
+      "lat": 60.161,
+      "lng": 24.94,
       "name": "As Oy Tarkkampujankatu 14",
       "address": "Tarkkampujankatu 14",
       "city": "Helsinki",
@@ -444,8 +444,8 @@
     },
     {
       "id": 27,
-      "lat": 60.1810,
-      "lng": 24.9510,
+      "lat": 60.181,
+      "lng": 24.951,
       "name": null,
       "address": "Hämeentie 6",
       "city": "Helsinki",
@@ -462,7 +462,7 @@
     {
       "id": 28,
       "lat": 60.1761,
-      "lng": 24.9210,
+      "lng": 24.921,
       "name": null,
       "address": "Runeberginkatu 29",
       "city": "Helsinki",
@@ -512,7 +512,7 @@
     },
     {
       "id": 31,
-      "lat": 60.1830,
+      "lat": 60.183,
       "lng": 24.9239,
       "name": "Töölön yhteiskoulu",
       "address": "Urheilukatu 10–12",
@@ -546,8 +546,8 @@
     },
     {
       "id": 33,
-      "lat": 60.1870,
-      "lng": 25.0130,
+      "lat": 60.187,
+      "lng": 25.013,
       "name": "As Oy Meripuisto 5",
       "address": "Meripuistotie 5",
       "city": "Helsinki",
@@ -564,7 +564,7 @@
     {
       "id": 34,
       "lat": 60.1652,
-      "lng": 24.9540,
+      "lng": 24.954,
       "name": "Turkin suurlähetystö",
       "address": "Satamakatu 9",
       "city": "Helsinki",
@@ -581,7 +581,7 @@
     {
       "id": 35,
       "lat": 60.1705,
-      "lng": 24.9290,
+      "lng": 24.929,
       "name": "As Oy Fredrikinkatu 71",
       "address": "Fredrikinkatu 71",
       "city": "Helsinki",
@@ -605,7 +605,7 @@
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/mariankatu19.jpg",
       "description": {
         "fi": "Katto-, parveke- ja julkisivukorjaukset, katon maalaus.",
         "sv": "Tak-, balkong- och fasadrenovering, takmålning.",
@@ -622,7 +622,7 @@
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/mariankatu26.jpg",
       "description": {
         "fi": "Parveke-, julkisivu- ja ikkunakorjaukset.",
         "sv": "Balkong-, fasad- och fönsterrenovering.",
@@ -632,7 +632,7 @@
     {
       "id": 40,
       "lat": 60.1556,
-      "lng": 24.8790,
+      "lng": 24.879,
       "name": "As Oy Svinhufvudintie 15",
       "address": "Svinhufvudintie 15",
       "city": "Helsinki",
@@ -717,7 +717,7 @@
     {
       "id": 45,
       "lat": 60.1626,
-      "lng": 24.9410,
+      "lng": 24.941,
       "name": null,
       "address": "Pursimiehenkatu 9",
       "city": "Helsinki",
@@ -751,7 +751,7 @@
     {
       "id": 47,
       "lat": 60.1729,
-      "lng": 24.9550,
+      "lng": 24.955,
       "name": "As Oy Meritullinkatu 6",
       "address": "Meritullinkatu 6",
       "city": "Helsinki",
@@ -768,7 +768,7 @@
     {
       "id": 48,
       "lat": 60.1572,
-      "lng": 24.9430,
+      "lng": 24.943,
       "name": "Bostads Ab Villagatan 19–21–23",
       "address": "Huvilakatu 19, 21, 23",
       "city": "Helsinki",
@@ -836,7 +836,7 @@
     {
       "id": 53,
       "lat": 60.1582,
-      "lng": 24.9530,
+      "lng": 24.953,
       "name": null,
       "address": "Puistokatu 11 A",
       "city": "Helsinki",
@@ -853,7 +853,7 @@
     {
       "id": 54,
       "lat": 60.1825,
-      "lng": 24.7700,
+      "lng": 24.77,
       "name": "Suvikärki",
       "address": "Suvikummunrinne 4",
       "city": "Espoo",
@@ -954,7 +954,7 @@
     },
     {
       "id": 60,
-      "lat": 60.1560,
+      "lat": 60.156,
       "lng": 24.8675,
       "name": "As Oy Rautatulli",
       "address": "Rusthollarintie 13",
@@ -972,7 +972,7 @@
     {
       "id": 62,
       "lat": 60.1683,
-      "lng": 24.9460,
+      "lng": 24.946,
       "name": "K Oy Rikhard ikkunat",
       "address": "Rikhardinkatu 2",
       "city": "Helsinki",
@@ -1057,7 +1057,7 @@
     {
       "id": 67,
       "lat": 60.2125,
-      "lng": 25.1480,
+      "lng": 25.148,
       "name": null,
       "address": "Merituulinkatu 3",
       "city": "Vuosaari, Helsinki",
