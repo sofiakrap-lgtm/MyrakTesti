@@ -486,7 +486,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "katto",
-      "image": "2.png",
+      "image": "kuvat/referenssit/paapostitalo.jpg",
       "description": {
         "fi": "Katon korjaus.",
         "sv": "Takrenovering.",
@@ -911,7 +911,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/brahe.jpg",
       "description": {
         "fi": "Katto-, julkisivu-, ikkuna-, parveke- ja ovikorjaukset.",
         "sv": "Tak-, fasad-, fönster-, balkong- och dörrarbeten.",
