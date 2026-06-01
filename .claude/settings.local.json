@@ -5,7 +5,12 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git remote *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(dir \"C:\\\\Users\\\\sofia\\\\Documents\\\\MyrakTesti\")",
+      "Bash(git rm *)",
+      "Bash(python3 *)",
+      "Bash(node *)",
+      "Bash(del add_nav_link.js)"
     ]
   }
 }
