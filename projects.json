@@ -316,7 +316,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "katto",
-      "image": "1.png",
+      "image": "kuvat/referenssit/huvilakatu13.jpg",
       "description": {
         "fi": "Kattokorjaukset.",
         "sv": "Takrenovering.",
@@ -571,7 +571,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/satamakatu9.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -877,7 +877,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "katto",
-      "image": "7.png",
+      "image": "kuvat/referenssit/tehtaankatu25.jpg",
       "description": {
         "fi": "Katon korjaus.",
         "sv": "Takrenovering.",
@@ -911,7 +911,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/huvilakatu27.jpg",
       "description": {
         "fi": "Julkisivu- ja ikkunakorjaukset.",
         "sv": "Fasad- och fönsterrenovering.",
