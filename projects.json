@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "id": 68,
+      "lat": 60.1773,
+      "lng": 24.9162,
+      "name": null,
+      "address": "Linnankoskenkatu 6 A",
+      "city": "Helsinki",
+      "year": "tulossa",
+      "yearDisplay": "Tulossa",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/linnankoskenkatu6a.jpg",
+      "description": {
+        "fi": "Tulossa.",
+        "sv": "Kommande.",
+        "en": "Coming soon."
+      }
+    },
+    {
       "id": 1,
       "lat": 60.1538,
       "lng": 24.8662,
