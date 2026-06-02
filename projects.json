@@ -44,7 +44,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/cygnaeuksenkatu10.jpg",
       "description": {
         "fi": "Ikkunoiden vaihto ja julkisivun korjaus.",
         "sv": "Fönsterbyte och fasadrenovering.",
@@ -112,7 +112,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/myllytie2.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -469,7 +469,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "1.png",
+      "image": "kuvat/referenssit/runeberginkatu29.jpg",
       "description": {
         "fi": "Ikkunakorjaukset.",
         "sv": "Fönsterrenovering.",
@@ -775,7 +775,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/huvilakatu19.jpg",
       "description": {
         "fi": "Julkisivun korjaus, ovityöt.",
         "sv": "Fasadrenovering, dörrarbeten.",
@@ -996,7 +996,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/kapteeninkatu5.jpg",
       "description": {
         "fi": "Julkisivun korjaus, porrashuoneen remontti.",
         "sv": "Fasadrenovering, trapphusrenovering.",
