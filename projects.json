@@ -27,7 +27,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/uudenmaankatu39.jpg",
       "description": {
         "fi": "Julkisivu- ja ikkunakorjaukset, ikkunoiden ja katon vaihto.",
         "sv": "Fasad- och fönsterrenovering, fönster- och takbyte.",
@@ -197,7 +197,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/topeliuksenkatu19.jpg",
       "description": {
         "fi": "Julkisivu- ja parvekekorjaukset.",
         "sv": "Fasad- och balkongrenovering.",
@@ -350,7 +350,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "katto",
-      "image": "3.png",
+      "image": "kuvat/referenssit/itainenpuistotie3.jpg",
       "description": {
         "fi": "Katon korjaus.",
         "sv": "Takrenovering.",
@@ -418,7 +418,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/mannerheimintie52.jpg",
       "description": {
         "fi": "Julkisivu-, katto- ja ikkunakorjaukset.",
         "sv": "Fasad-, tak- och fönsterrenovering.",
@@ -435,7 +435,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/tarkkampujankatu14.jpg",
       "description": {
         "fi": "Julkisivun korjaus.",
         "sv": "Fasadrenovering.",
@@ -724,7 +724,7 @@
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/pursimiehenkatu9.jpg",
       "description": {
         "fi": "Julkisivu- ja parvekekorjaukset, katon maalaus.",
         "sv": "Fasad- och balkongrenovering, takmålning.",
@@ -826,7 +826,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/itainenpuistotie11.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -945,7 +945,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/laivurinkatu39.jpg",
       "description": {
         "fi": "Julkisivun korjaus.",
         "sv": "Fasadrenovering.",
@@ -979,7 +979,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/rikhardinkatu2.jpg",
       "description": {
         "fi": "Ikkuna- ja kattokorjaukset.",
         "sv": "Fönster- och takrenovering.",
