@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Cake Atelier – käsintehdyt juhlakakut Helsingistä (demo)</title>
+  <meta name="description" content="The Cake Atelier – pieni designvetoinen kakkustudio Helsingissä. Käsintehdyt juhlakakut, pienissä erissä, yhdelle päivälle kerrallaan.">
+  <link rel="icon" href="assets/favicon.svg">
+  <!-- Google Fonts: Fraunces (otsikot) + Work Sans (leipäteksti) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="index.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+
+  <!-- Jaettu header injektoidaan tähän (js/main.js) -->
+  <div id="site-header"></div>
+
+  <main id="main">
+
+    <!-- HERO + CTA -->
+    <section class="wrap hero">
+      <div class="hero__content reveal">
+        <span class="eyebrow">Kakkustudio · Helsinki</span>
+        <h1>Kakkuja, jotka jäävät mieleen</h1>
+        <p class="lead">
+          Pieni, designvetoinen studio, jossa jokainen juhlakakku tehdään käsin
+          – yhdelle perheelle, yhteen päivään. Rauhassa, hyvistä raaka-aineista.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="tuotteet.html">Katso kakut</a>
+          <a class="btn btn--ghost" href="tilaa.html">Pyydä tarjous</a>
+        </div>
+      </div>
+      <div class="hero__media kuvapaikka kuvapaikka--laaja reveal">
+        <!-- Kuvapaikka: vaihda hero-kuvaan (luonnonvalo, pehmeät sävyt) -->
+        <span class="kuvapaikka__teksti">oma kuva tähän</span>
+      </div>
+    </section>
+
+    <!-- NÄIN SE TOIMII (3 vaihetta: kysely → suunnittelu → toimitus) -->
+    <section class="section band">
+      <div class="wrap">
+        <div class="center reveal" style="margin-bottom:3rem">
+          <span class="eyebrow">Näin se toimii</span>
+          <h2>Kolme rauhallista askelta</h2>
+          <p class="lead">Jokainen tilaus alkaa keskustelulla – ei kaavakkeella.</p>
+        </div>
+        <div class="steps reveal">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Kysely</h3>
+            <p>Kerro juhlasta, ihmisistä ja mauista. Kuuntelemme ja ehdotamme.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Suunnittelu</h3>
+            <p>Sovimme yhdessä ulkonäön, maut ja yksityiskohdat – sekä hinnan.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Toimitus</h3>
+            <p>Kakku valmistuu käsin pienessä erässä ja noudetaan sovittuna päivänä.</p>
+          </div>
+        </div>
+        <div class="center reveal" style="margin-top:2.5rem">
+          <a class="btn btn--primary" href="tilaa.html">Aloita kysely</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUOSIKKITUOTTEIDEN POIMINTA (renderöidään site.js:stä) -->
+    <section class="section">
+      <div class="wrap">
+        <div class="center reveal" style="margin-bottom:2.5rem">
+          <span class="eyebrow">Valikoimasta</span>
+          <h2>Poimintoja</h2>
+          <p class="lead">Valitse koko ja ruokavalio – hinta päivittyy valinnan mukaan.</p>
+        </div>
+        <div class="grid grid--3 reveal" id="suosikit"><!-- täytetään JS:llä --></div>
+        <div class="center reveal" style="margin-top:2rem">
+          <a class="btn btn--ghost" href="tuotteet.html">Katso kaikki tuotteet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASIAKASPALAUTTEET -->
+    <section class="section band">
+      <div class="wrap">
+        <div class="center reveal" style="margin-bottom:2.5rem">
+          <span class="eyebrow">Asiakkaiden sanoin</span>
+          <h2>Hetkiä, jotka jäivät mieleen</h2>
+        </div>
+        <div class="grid grid--3 reveal">
+          <blockquote class="quote">
+            <p>“Kaunein kakku, jonka olemme saaneet. Vieraat kyselivät, mistä se oli.”</p>
+            <cite>— Anni &amp; Joonas, häät</cite>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“Palvelu oli rauhallista ja henkilökohtaista. Lopputulos ylitti toiveemme.”</p>
+            <cite>— Maria, 50-vuotisjuhlat</cite>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“Juuri sellainen kuin halusimme – ei yhtään geneerinen.”</p>
+            <cite>— Petri, perhejuhla</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEISTÄ-TEASER -->
+    <section class="section">
+      <div class="wrap">
+        <div class="grid grid--2 reveal" style="align-items:center">
+          <div>
+            <span class="eyebrow">Tarinamme</span>
+            <h2>Tehty käsin, pienissä erissä</h2>
+            <p class="lead">
+              The Cake Atelier syntyi ajatuksesta, että pöydän keskellä olevan
+              kakun kuuluu merkitä jotakin. Teemme mieluummin vähemmän ja paremmin.
+            </p>
+            <a class="btn btn--ghost" href="meista.html">Lue tarinamme</a>
+          </div>
+          <div class="kuvapaikka kuvapaikka--laaja">
+            <span class="kuvapaikka__teksti">oma kuva tähän</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Jaettu footer + ostoskori injektoidaan tähän (js/main.js) -->
+  <div id="site-footer"></div>
+
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

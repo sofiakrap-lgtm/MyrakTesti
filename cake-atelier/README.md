@@ -1,4 +1,4 @@
-# Kotileipomo Karpalo – DEMO-nettisivupohja
+# The Cake Atelier – DEMO-nettisivupohja
 
 Uudelleenkäytettävä, staattinen demo-nettisivu tilauskakkuyritykselle.
 Puhdasta **HTML + CSS + vanilla JS** – ei frameworkia, ei build-vaihetta.
@@ -13,7 +13,7 @@ Toimii suoraan GitHub Pagesissa ja myös avaamalla `index.html` paikallisesti.
 ## 📁 Tiedostorakenne
 
 ```
-leipomo-demo/
+cake-atelier/
 ├── index.html            Etusivu
 ├── tuotteet.html         Verkkokauppa (haku, suodatus, kori)
 ├── tilaa.html            Räätälikakun tilauslomake
@@ -82,7 +82,11 @@ Etsi sivulta elementti, jossa on luokka `kuvapaikka`, ja muuta se kuvaksi:
 Luokka `has-img` piilottaa paikkamerkkitekstin automaattisesti.
 
 ### c) Logo
-Korvaa tiedosto **`assets/logo.svg`** omalla logollasi (sama tiedostonimi).
+Logotiedostot kansiossa `assets/`:
+- `logo.svg` – wordmark headeriin (tumma, vaalealle taustalle)
+- `logo-light.svg` – vaalea wordmark tummalle footer-taustalle
+- `favicon.svg` – pyöreä merkki selaimen välilehteen
+Korvaa nämä omilla logoillasi (säilytä samat tiedostonimet).
 
 ### 📐 Suositellut kuvakoot
 | Käyttö            | Suositeltu koko        | Suhde |
@@ -103,10 +107,12 @@ kaikki värit, fontit ja pyöristykset ovat muuttujina. Muuta vain niitä:
 
 ```css
 :root {
-  --terra: #C0633F;   /* pääväri / napit */
-  --berry: #8E3B4E;   /* aksentti */
+  --cream: #F0EAD8;   /* Almond Cream – pohja */
+  --ink:   #3C2415;   /* Espresso – teksti */
+  --terra: #B5654A;   /* Terracotta – pääväri / napit */
+  --berry: #A49775;   /* Sponge – aksentti */
   --font-otsikko: 'Fraunces', serif;
-  --font-leipa: 'Inter', sans-serif;
+  --font-leipa: 'Work Sans', sans-serif;
   /* ... */
 }
 ```
@@ -125,8 +131,8 @@ Jos vaihdat fontit, päivitä myös Google Fonts -linkki jokaisen `.html`-sivun
 5. Hetken kuluttua sivu on osoitteessa
    `https://<käyttäjänimi>.github.io/<repon-nimi>/`.
 
-> Jos demo on alikansiossa (kuten tässä repossa `leipomo-demo/`), linkki on
-> `https://<käyttäjänimi>.github.io/<repon-nimi>/leipomo-demo/`.
+> Jos demo on alikansiossa (kuten tässä repossa `cake-atelier/`), linkki on
+> `https://<käyttäjänimi>.github.io/<repon-nimi>/cake-atelier/`.
 
 ---
 

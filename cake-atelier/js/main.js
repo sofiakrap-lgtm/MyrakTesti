@@ -21,6 +21,10 @@
     return;
   }
 
+  // Merkitään että JS on käytössä (CSS-fade-in aktivoituu vasta tästä,
+  // jotta sisältö on näkyvissä myös ilman JS:ää).
+  document.body.classList.add("js");
+
   /* =======================================================================
      1. IKONIT  (yksinkertaiset SVG-merkit)
      ======================================================================= */
@@ -81,10 +85,9 @@
       // Varsinainen yläpalkki
       '<header class="site-header">' +
       '<div class="wrap nav">' +
-      '<a class="nav__logo" href="index.html">' +
-      // Logon paikka: vaihda kuva tai jätä teksti
-      '<img src="assets/logo.svg" alt="' + SITE.nimi + ' logo" onerror="this.style.display=\'none\'">' +
-      "<span>" + SITE.nimi + "</span>" +
+      '<a class="nav__logo" href="index.html" aria-label="' + SITE.nimi + '">' +
+      // Wordmark-logo (assets/logo.svg). alt-teksti toimii varatekstinä.
+      '<img src="assets/logo.svg" alt="' + SITE.nimi + '">' +
       "</a>" +
       '<button class="nav__burger" aria-label="Avaa valikko" aria-expanded="false" aria-controls="paavalikko">' +
       "<span></span><span></span><span></span>" +
@@ -137,10 +140,10 @@
       '<footer class="site-footer">' +
       '<div class="wrap">' +
       '<div class="footer-grid">' +
-      // Brändisarake
+      // Brändisarake (vaalea wordmark tummalla taustalla + englanninkielinen slogan)
       '<div class="footer-brand">' +
-      '<span class="nav__logo">' + SITE.nimi + "</span>" +
-      "<p>" + SITE.iskulause + "</p>" +
+      '<img src="assets/logo-light.svg" alt="' + SITE.nimi + '">' +
+      "<p>" + (SITE.tagline || SITE.iskulause) + "</p>" +
       '<div class="footer-social">' + some + "</div>" +
       "</div>" +
       // Kaksi toimipistettä
@@ -265,7 +268,7 @@
     if (!items || !total) return;
 
     if (kori.length === 0) {
-      items.innerHTML = '<p class="cart__empty">Korisi on tyhjä. Selaa tuotteita ja lisää suosikkisi!</p>';
+      items.innerHTML = '<p class="cart__empty">Korisi on tyhjä. Selaa tuotteita ja lisää suosikkisi.</p>';
       total.textContent = "0 €";
       return;
     }
@@ -329,10 +332,10 @@
       const items = document.getElementById("cart-items");
       items.innerHTML =
         '<div class="demo-success">' +
-        "<h3>Kiitos tilauspyynnöstäsi! 🎂</h3>" +
+        "<h3>Kiitos tilauspyynnöstäsi</h3>" +
         "<p>Tämä on <strong>demo</strong> – maksua ei veloiteta eikä tilausta " +
         "lähetetä oikeasti. Oikealla sivustolla saisit tästä vahvistuksen " +
-        "sähköpostiisi ja ottaisimme yhteyttä noudon sopimiseksi.</p>" +
+        "sähköpostiisi, ja olisimme sinuun yhteydessä noudon sopimiseksi.</p>" +
         "</div>";
       document.getElementById("cart-total").textContent = "0 €";
       localStorage.removeItem(CART_KEY);
@@ -399,13 +402,19 @@
       '<div class="product__body">' +
       '<h3 class="product__name">' + t.nimi + "</h3>" +
       '<p class="product__desc">' + t.kuvaus + "</p>" +
-      '<p class="product__meta"><span>🍰 ' + t.annos + "</span></p>" +
+      '<p class="product__meta"><span>' + t.annos + "</span></p>" +
       '<div class="opt-group"><span class="opt-group__label">Koko</span>' +
       '<div class="opt-row" data-group="koko">' + koot + "</div></div>" +
       '<div class="opt-group"><span class="opt-group__label">Ruokavalio</span>' +
       '<div class="opt-row" data-group="diet">' + ruokavaliot + "</div></div>" +
-      '<div class="opt-group"><span class="opt-group__label">Allergeenit</span>' +
-      "<div>" + allergeenit + "</div></div>" +
+      // Lisätiedot-osio (kuten Bakerikalla): laajennettava
+      '<details class="product__more"><summary>Lisätiedot</summary>' +
+      '<dl class="product__details">' +
+      "<dt>Annoskoko</dt><dd>" + t.annos + "</dd>" +
+      "<dt>Allergeenit</dt><dd>" + allergeenit + "</dd>" +
+      (t.ainesosat ? "<dt>Ainesosat</dt><dd>" + t.ainesosat + "</dd>" : "") +
+      (t.sailytys ? "<dt>Säilytys</dt><dd>" + t.sailytys + "</dd>" : "") +
+      "</dl></details>" +
       '<p class="product__price"><span class="hinta-arvo">' + euro(t.alkaen) +
       '</span> <small>alkaen</small></p>' +
       '<button class="btn btn--primary btn--block lisaa-koriin">Lisää koriin</button>' +
@@ -608,5 +617,30 @@
       });
     });
   });
+
+  /* =======================================================================
+     9. PEHMEÄT FADE-IN-ANIMAATIOT
+     – Elementit, joilla on luokka .reveal, häivähtävät näkyviin kun ne
+       tulevat näkyviin. Kunnioittaa prefers-reduced-motion -asetusta.
+     ======================================================================= */
+  const reveals = document.querySelectorAll(".reveal");
+  const liikeVahennetty = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reveals.length && !liikeVahennetty && "IntersectionObserver" in window) {
+    const obs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    reveals.forEach(function (el) { obs.observe(el); });
+  } else {
+    // Ei animaatiota: näytetään heti
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  }
 
 })();

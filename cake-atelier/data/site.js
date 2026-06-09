@@ -12,11 +12,12 @@
 
 const SITE = {
   /* --- Yrityksen perustiedot --------------------------------------------- */
-  nimi: "Kotileipomo Karpalo",
-  iskulause: "Käsintehtyjä tilauskakkuja ja leivonnaisia Helsingistä",
+  nimi: "The Cake Atelier",
+  tagline: "Cakes worth remembering",   // englanninkielinen slogan (wordmarkin pari)
+  iskulause: "Käsintehtyjä juhlakakkuja, jotka jäävät mieleen",
   kuvaus:
-    "Pieni käsityöläisleipomo, jossa jokainen kakku leivotaan tilauksesta " +
-    "hyvistä raaka-aineista – juuri sinun juhliisi.",
+    "Pieni, designvetoinen kakkustudio. Jokainen kakku tehdään käsin, " +
+    "pienissä erissä ja hyvistä raaka-aineista – yhdelle perheelle, yhteen päivään.",
 
   /* Sivuston rakentaja näkyy footerissa. Vaihda omaan nimeesi / yritykseesi. */
   rakentaja: "Sivuston rakentaja: [oma nimesi]",
@@ -24,7 +25,7 @@ const SITE = {
 
   /* --- Yhteystiedot (näkyvät footerissa ja yhteystiedot-sivulla) --------- */
   puhelin: "+358 40 123 4567",
-  sahkoposti: "tilaukset@karpalo-demo.fi",
+  sahkoposti: "hello@thecakeatelier-demo.fi",
 
   /* --- Somelinkit (jätä tyhjäksi "" jos kanavaa ei ole) ------------------ */
   some: {
@@ -37,26 +38,26 @@ const SITE = {
   /* --- Toimipisteet (kaksi toimipistettä) -------------------------------- */
   toimipisteet: [
     {
-      nimi: "Karpalo Kallio",
+      nimi: "Studio · Kallio",
       osoite: "Esimerkkikatu 12, 00530 Helsinki",
       puhelin: "+358 40 123 4567",
-      sahkoposti: "kallio@karpalo-demo.fi",
+      sahkoposti: "kallio@thecakeatelier-demo.fi",
       aukiolot: [
-        { paiva: "Ma–Pe", aika: "9–18" },
-        { paiva: "La", aika: "10–16" },
-        { paiva: "Su", aika: "Suljettu" },
+        { paiva: "Ti–Pe", aika: "10–17" },
+        { paiva: "La", aika: "10–15" },
+        { paiva: "Su–Ma", aika: "Vain tilauksesta" },
       ],
-      poikkeukset: "Juhannusaattona 19.6. suljettu. Nouto sopimuksen mukaan.",
+      poikkeukset: "Nouto ja tapaamiset sopimuksen mukaan. Juhannusaattona 19.6. suljettu.",
     },
     {
-      nimi: "Karpalo Lauttasaari",
+      nimi: "Studio · Lauttasaari",
       osoite: "Mallipolku 3, 00200 Helsinki",
       puhelin: "+358 40 765 4321",
-      sahkoposti: "lauttasaari@karpalo-demo.fi",
+      sahkoposti: "lauttasaari@thecakeatelier-demo.fi",
       aukiolot: [
-        { paiva: "Ma–Pe", aika: "10–18" },
-        { paiva: "La", aika: "10–15" },
-        { paiva: "Su", aika: "Suljettu" },
+        { paiva: "Ti–Pe", aika: "11–17" },
+        { paiva: "La", aika: "10–14" },
+        { paiva: "Su–Ma", aika: "Vain tilauksesta" },
       ],
       poikkeukset: "Heinäkuussa avoinna vain tilauksesta.",
     },
@@ -79,7 +80,9 @@ const SITE = {
     {
       id: "vintagekakku",
       nimi: "Vintagekakku",
-      kuvaus: "Klassinen reunaröyhelö ja herkät kukkakoristeet – juhlan tähti.",
+      kuvaus: "Klassinen reunaröyhelö ja herkät kukkakoristeet, käsin putkilla.",
+      ainesosat: "Vehnäjauho, voi, kananmuna, sokeri, kerma, vaniljatuubi, kausimarjat.",
+      sailytys: "Säilytä jääkaapissa ja nauti kahden vuorokauden kuluessa noudosta.",
       kategoria: "kakut",
       alkaen: 75,
       annos: "riittää n. 10 hengelle",
@@ -99,7 +102,9 @@ const SITE = {
     {
       id: "nakukakku",
       nimi: "Nakukakku",
-      kuvaus: "Rustiikkinen 'naked cake' tuoreilla marjoilla ja kermavaahdolla.",
+      kuvaus: "Rustiikkinen naked cake tuoreilla marjoilla ja kermavaahdolla.",
+      ainesosat: "Vehnäjauho, voi, kananmuna, sokeri, kerma, tuoreet marjat.",
+      sailytys: "Säilytä jääkaapissa ja nauti kahden vuorokauden kuluessa noudosta.",
       kategoria: "kakut",
       alkaen: 68,
       annos: "riittää n. 10 hengelle",
@@ -119,7 +124,9 @@ const SITE = {
     {
       id: "minivintagekakku",
       nimi: "Minivintagekakku",
-      kuvaus: "Pieni juhlakakku kahdelle – täydellinen yllätyslahja.",
+      kuvaus: "Pieni juhlakakku kahdelle, hillitty ja huolellinen yllätyslahja.",
+      ainesosat: "Vehnäjauho, voi, kananmuna, sokeri, kerma, vaniljatuubi.",
+      sailytys: "Säilytä jääkaapissa ja nauti kahden vuorokauden kuluessa noudosta.",
       kategoria: "kakut",
       alkaen: 32,
       annos: "riittää n. 2–4 hengelle",
@@ -138,7 +145,9 @@ const SITE = {
     {
       id: "kuppikakut",
       nimi: "Kuppikakut",
-      kuvaus: "Pehmeät kuppikakut kauniilla kuorrutuksella – myydään 6 kpl erissä.",
+      kuvaus: "Pehmeät kuppikakut hillityllä kuorrutuksella, kuuden kappaleen erissä.",
+      ainesosat: "Vehnäjauho, voi, kananmuna, sokeri, tuorejuusto, vaniljatuubi.",
+      sailytys: "Säilytä viileässä ja nauti tarjoilupäivänä parhaan maun vuoksi.",
       kategoria: "leivonnaiset",
       alkaen: 24,
       annos: "6 kpl / erä",
@@ -159,6 +168,8 @@ const SITE = {
       id: "gender-reveal",
       nimi: "Gender reveal -kakku",
       kuvaus: "Yllätysvärinen täyte paljastaa vauvan sukupuolen leikkaushetkellä.",
+      ainesosat: "Vehnäjauho, voi, kananmuna, sokeri, kerma, elintarvikeväri.",
+      sailytys: "Säilytä jääkaapissa ja nauti kahden vuorokauden kuluessa noudosta.",
       kategoria: "kakut",
       alkaen: 79,
       annos: "riittää n. 12 hengelle",
@@ -177,7 +188,9 @@ const SITE = {
     {
       id: "lahjakortti",
       nimi: "Lahjakortti",
-      kuvaus: "Anna lahjaksi makuelämys – lahjakortti käy kaikkiin tuotteisiin.",
+      kuvaus: "Anna lahjaksi makuelämys. Lahjakortti käy kaikkiin tuotteisiin.",
+      ainesosat: "Sähköinen tai painettu lahjakortti.",
+      sailytys: "Voimassa 12 kk ostohetkestä.",
       kategoria: "muut",
       alkaen: 25,
       annos: "voimassa 12 kk",
