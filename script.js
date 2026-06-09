@@ -96,6 +96,9 @@ if (sections.length) {
 /* ======== CONTACT FORM MODAL (mailto-based) ======== */
 (function () {
   var CONTACT_EMAIL = 'marko.murkel@myrak.fi';
+  // Formspree-endpoint. Liitä tähän tilisi osoite, esim. 'https://formspree.io/f/xxxxxxx'.
+  // Kun tämä on tyhjä, lomake käyttää varavaihtoehtona kävijän omaa sähköpostiohjelmaa (mailto).
+  var FORMSPREE_ENDPOINT = '';
   var PHONE = '050 581 3227';
   var PHONE_TEL = '0505813227';
 
@@ -108,6 +111,8 @@ if (sections.length) {
       intro: 'Täytä lomake, niin olemme yhteydessä mahdollisimman pian.',
       name: 'Nimi', email: 'Sähköposti', phone: 'Puhelin', company: 'Yritys',
       optional: '(valinnainen)', message: 'Viesti', send: 'Lähetä viesti',
+      sending: 'Lähetetään…',
+      errorMsg: 'Viestin lähetys ei onnistunut. Yritä uudelleen tai soita 050 581 3227.',
       mailSubject: 'Yhteydenotto verkkosivulta',
       thanksTitle: 'Kiitos yhteydenotostasi!',
       thanksBody: 'Viestisi on lähetetty. Yritämme vastata mahdollisimman pian.',
@@ -120,6 +125,8 @@ if (sections.length) {
       intro: 'Fyll i formuläret så kontaktar vi dig så snart som möjligt.',
       name: 'Namn', email: 'E-post', phone: 'Telefon', company: 'Företag',
       optional: '(valfritt)', message: 'Meddelande', send: 'Skicka meddelande',
+      sending: 'Skickar…',
+      errorMsg: 'Meddelandet kunde inte skickas. Försök igen eller ring 050 581 3227.',
       mailSubject: 'Kontakt via webbplatsen',
       thanksTitle: 'Tack för din kontakt!',
       thanksBody: 'Ditt meddelande har skickats. Vi försöker svara så snart som möjligt.',
@@ -132,6 +139,8 @@ if (sections.length) {
       intro: 'Fill in the form and we will get back to you as soon as possible.',
       name: 'Name', email: 'Email', phone: 'Phone', company: 'Company',
       optional: '(optional)', message: 'Message', send: 'Send message',
+      sending: 'Sending…',
+      errorMsg: 'The message could not be sent. Please try again or call 050 581 3227.',
       mailSubject: 'Contact from website',
       thanksTitle: 'Thank you for your message!',
       thanksBody: 'Your message has been sent. We will try to respond as soon as possible.',
@@ -161,6 +170,7 @@ if (sections.length) {
           '<div class="cf-field"><label>' + t.lCompany + ' <span class="cf-optional">' + t.optional + '</span></label><input type="text" name="company"></div>' +
           '<div class="cf-field"><label>' + t.lMsg + '</label><textarea name="message" required></textarea></div>' +
           '<button type="submit" class="btn btn-primary cf-submit">' + t.send + '</button>' +
+          '<p class="cf-error" role="alert" style="display:none;color:#8B2213;font-family:var(--font-heading);font-size:0.85rem;margin-top:0.9rem;text-align:center;"></p>' +
         '</form>' +
       '</div>' +
       '<div class="cf-toast-view" style="display:none;">' +
@@ -208,33 +218,66 @@ if (sections.length) {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
   });
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    var d = new FormData(form);
-    var name = (d.get('name') || '').trim();
-    var email = (d.get('email') || '').trim();
-    var phone = (d.get('phone') || '').trim();
-    var company = (d.get('company') || '').trim();
-    var message = (d.get('message') || '').trim();
+  var submitBtn = form.querySelector('.cf-submit');
+  var errorEl = form.querySelector('.cf-error');
 
-    var bodyLines = [
-      t.lName + ': ' + name,
-      t.lEmail + ': ' + email
-    ];
-    if (phone) bodyLines.push(t.lPhone + ': ' + phone);
-    if (company) bodyLines.push(t.lCompany + ': ' + company);
-    bodyLines.push('', t.lMsg + ':', message);
-
-    var mailto = 'mailto:' + CONTACT_EMAIL +
-      '?subject=' + encodeURIComponent(t.mailSubject + (company ? ' — ' + company : '')) +
-      '&body=' + encodeURIComponent(bodyLines.join('\n'));
-
-    window.location.href = mailto;
-
+  function showToast() {
     formView.style.display = 'none';
     toastView.style.display = '';
     if (dialog) dialog.scrollTop = 0;
+  }
+
+  function buildMailto(d) {
+    var company = (d.get('company') || '').trim();
+    var bodyLines = [
+      t.lName + ': ' + (d.get('name') || '').trim(),
+      t.lEmail + ': ' + (d.get('email') || '').trim()
+    ];
+    if ((d.get('phone') || '').trim()) bodyLines.push(t.lPhone + ': ' + (d.get('phone') || '').trim());
+    if (company) bodyLines.push(t.lCompany + ': ' + company);
+    bodyLines.push('', t.lMsg + ':', (d.get('message') || '').trim());
+    return 'mailto:' + CONTACT_EMAIL +
+      '?subject=' + encodeURIComponent(t.mailSubject + (company ? ' — ' + company : '')) +
+      '&body=' + encodeURIComponent(bodyLines.join('\n'));
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    errorEl.style.display = 'none';
+    var d = new FormData(form);
+
+    // Ilman Formspree-endpointia: avaa kävijän oma sähköpostiohjelma (mailto)
+    if (!FORMSPREE_ENDPOINT) {
+      window.location.href = buildMailto(d);
+      showToast();
+      return;
+    }
+
+    // Formspree: lähetä suoraan taustalla, kävijä pysyy sivulla
+    d.append('_subject', t.mailSubject + ((d.get('company') || '').trim() ? ' — ' + (d.get('company') || '').trim() : ''));
+    submitBtn.disabled = true;
+    var originalLabel = submitBtn.textContent;
+    submitBtn.textContent = t.sending;
+
+    fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: d,
+      headers: { Accept: 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        showToast();
+      } else {
+        errorEl.textContent = t.errorMsg;
+        errorEl.style.display = 'block';
+      }
+    }).catch(function () {
+      errorEl.textContent = t.errorMsg;
+      errorEl.style.display = 'block';
+    }).then(function () {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    });
   });
 
   // Bind triggers: top-bar CTA, mobile CTA, and any opt-in element
