@@ -98,7 +98,7 @@ if (sections.length) {
   var CONTACT_EMAIL = 'marko.murkel@myrak.fi';
   // Formspree-endpoint. Liitä tähän tilisi osoite, esim. 'https://formspree.io/f/xxxxxxx'.
   // Kun tämä on tyhjä, lomake käyttää varavaihtoehtona kävijän omaa sähköpostiohjelmaa (mailto).
-  var FORMSPREE_ENDPOINT = '';
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/mdavzwgy';
   var PHONE = '050 581 3227';
   var PHONE_TEL = '0505813227';
 
