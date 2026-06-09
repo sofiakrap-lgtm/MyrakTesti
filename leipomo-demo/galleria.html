@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galleria – Kotileipomo Karpalo (demo)</title>
+  <meta name="description" content="Kuvia Kotileipomo Karpalon aiemmista töistä: kakut, leivonnaiset ja juhlat.">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="galleria.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="wrap section section--tight">
+      <span class="eyebrow">Galleria</span>
+      <h1>Aiempia töitämme</h1>
+      <p class="lead">Pieni kurkistus siihen, mitä olemme saaneet loihtia asiakkaidemme juhliin.</p>
+    </section>
+
+    <section class="wrap section section--tight">
+      <!-- Galleria renderöidään site.js:stä -->
+      <div class="gallery" id="galleria"><!-- JS täyttää --></div>
+    </section>
+
+    <section class="section band">
+      <div class="wrap center">
+        <h2>Innostuitko?</h2>
+        <p class="lead">Suunnitellaan sinunkin juhliisi täydellinen kakku.</p>
+        <a class="btn btn--primary" href="tilaa.html">Tilaa oma kakku</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

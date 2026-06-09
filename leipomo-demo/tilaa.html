@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tilaa räätälikakku – Kotileipomo Karpalo (demo)</title>
+  <meta name="description" content="Tilaa juuri sinun juhliisi räätälöity kakku. Täytä lomake toiveinesi – otamme yhteyttä ja sovimme yksityiskohdat.">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tilaa.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="wrap section">
+      <span class="eyebrow">Räätälikakku</span>
+      <h1>Tilaa unelmiesi kakku</h1>
+      <p class="lead">
+        Kerro toiveesi, niin loihdimme juuri sinun juhliisi sopivan kakun.
+        Otamme yhteyttä ja vahvistamme yksityiskohdat sekä noutoajan.
+      </p>
+
+      <!-- data-demo: lomake ei lähetä oikeasti, vaan näyttää kiitosviestin -->
+      <form class="form" data-demo novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="nimi">Nimi *</label>
+            <input id="nimi" name="nimi" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Sähköposti *</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="puhelin">Puhelin *</label>
+            <input id="puhelin" name="puhelin" type="tel" required autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="noutopaiva">Noutopäivä *</label>
+            <input id="noutopaiva" name="noutopaiva" type="date" required>
+          </div>
+          <div class="field">
+            <label for="henkilomaara">Henkilömäärä *</label>
+            <input id="henkilomaara" name="henkilomaara" type="number" min="1" placeholder="esim. 12" required>
+          </div>
+          <div class="field">
+            <label for="tayte">Täyte / maku</label>
+            <input id="tayte" name="tayte" type="text" placeholder="esim. mansikka–vanilja">
+          </div>
+          <div class="field field--full">
+            <label for="ruokavalio">Ruokavalio</label>
+            <select id="ruokavalio" name="ruokavalio">
+              <option value="tavallinen">Tavallinen</option>
+              <option value="gluteeniton">Gluteeniton</option>
+              <option value="vegaaninen">Vegaaninen</option>
+              <option value="laktoositon">Laktoositon</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="toiveet">Väri- ja koristetoiveet</label>
+            <textarea id="toiveet" name="toiveet" placeholder="Kerro väreistä, teemasta, tekstistä kakkuun, kukkatoiveista…"></textarea>
+          </div>
+          <div class="field field--full">
+            <label for="allergiat">Allergiat <span class="hint">(kerro kaikki huomioitavat allergiat)</span></label>
+            <textarea id="allergiat" name="allergiat" placeholder="esim. pähkinäallergia"></textarea>
+          </div>
+        </div>
+
+        <p style="font-size:.85rem;color:var(--muted)">
+          * pakollinen kenttä. Tämä on demolomake – tietoja ei lähetetä eikä tallenneta.
+        </p>
+        <button class="btn btn--primary" type="submit">Lähetä tilauspyyntö (demo)</button>
+
+        <!-- Demo-vahvistus: näkyy lähetyksen jälkeen -->
+        <div class="demo-success" hidden role="status">
+          <h3>Kiitos tilauspyynnöstäsi! 🎂</h3>
+          <p>
+            Tämä on <strong>demo</strong>, joten lomaketta ei oikeasti lähetetty.
+            Oikealla sivustolla saisit vahvistuksen sähköpostiisi, ja ottaisimme
+            sinuun yhteyttä yksityiskohtien sopimiseksi.
+          </p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kotileipomo Karpalo – käsintehdyt tilauskakut Helsingistä (demo)</title>
+  <meta name="description" content="Kotileipomo Karpalo – käsintehtyjä tilauskakkuja, leivonnaisia ja cateringia Helsingissä. Tilaa ennakkoon ja nouda myymälästä.">
+  <link rel="icon" href="assets/logo.svg">
+  <!-- Google Fonts: Fraunces (otsikot) + Inter (leipäteksti) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="index.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+
+  <!-- Jaettu header injektoidaan tähän (js/main.js) -->
+  <div id="site-header"></div>
+
+  <main id="main">
+
+    <!-- HERO + CTA -->
+    <section class="wrap hero">
+      <div class="hero__content">
+        <span class="eyebrow">Käsityöläisleipomo · Helsinki</span>
+        <h1>Kakkuja, jotka tekevät hetkestä juhlan</h1>
+        <p class="lead">
+          Olemme pieni kotileipomo, jossa jokainen kakku leivotaan tilauksesta
+          hyvistä raaka-aineista – juuri sinun juhliisi sopivaksi.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="tilaa.html">Tilaa räätälikakku</a>
+          <a class="btn btn--ghost" href="tuotteet.html">Selaa tuotteita</a>
+        </div>
+      </div>
+      <div class="hero__media kuvapaikka kuvapaikka--laaja">
+        <!-- Kuvapaikka: vaihda hero-kuvaan -->
+        <span class="kuvapaikka__teksti">oma kuva tähän</span>
+      </div>
+    </section>
+
+    <!-- 3 NOSTOA -->
+    <section class="section band">
+      <div class="wrap">
+        <div class="grid grid--3">
+          <div class="feature card">
+            <div class="feature__ikoni" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.5 1-1a5.5 5.5 0 0 0 0-7.9z"/></svg>
+            </div>
+            <h3>Käsintehty rakkaudella</h3>
+            <p>Ei tehdasvalmistusta – jokainen leivonnainen syntyy käsityönä omassa leipomossamme.</p>
+          </div>
+          <div class="feature card">
+            <div class="feature__ikoni" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-9 16-9 0 9-3 16-9 16z"/><path d="M4 20c2-4 5-7 9-9"/></svg>
+            </div>
+            <h3>Ruokavaliot huomioiden</h3>
+            <p>Saat lähes kaikki tuotteet myös gluteenittomana, vegaanisena tai laktoosittomana.</p>
+          </div>
+          <div class="feature card">
+            <div class="feature__ikoni" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <h3>Tilaa ennakkoon</h3>
+            <p>Varaa kakkusi hyvissä ajoin ja nouda valmiina sovittuna päivänä myymälästämme.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TILAA ENNAKKOON JA NOUDA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="grid grid--2" style="align-items:center">
+          <div class="kuvapaikka kuvapaikka--laaja">
+            <span class="kuvapaikka__teksti">oma kuva tähän</span>
+          </div>
+          <div>
+            <span class="eyebrow">Helppoa ja vaivatonta</span>
+            <h2>Tilaa ennakkoon ja nouda</h2>
+            <p class="lead">
+              Valitse tuote tai täytä räätälikakun tilauslomake. Vahvistamme
+              tilauksen ja sovimme noutoajan – sinä haet valmiin herkun
+              myymälästä juuri oikeaan aikaan.
+            </p>
+            <p style="color:var(--muted)">
+              <strong>1.</strong> Valitse tai räätälöi &nbsp;·&nbsp;
+              <strong>2.</strong> Vahvistamme tilauksen &nbsp;·&nbsp;
+              <strong>3.</strong> Nouda myymälästä
+            </p>
+            <a class="btn btn--primary" href="tilaa.html">Aloita tilaus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUOSIKKITUOTTEIDEN POIMINTA (renderöidään site.js:stä) -->
+    <section class="section band">
+      <div class="wrap">
+        <div class="center" style="margin-bottom:2.5rem">
+          <span class="eyebrow">Asiakkaiden suosikit</span>
+          <h2>Poimintoja valikoimasta</h2>
+          <p class="lead">Tutustu suosituimpiin tuotteisiimme – valitse koko ja ruokavalio.</p>
+        </div>
+        <div class="grid grid--3" id="suosikit"><!-- täytetään JS:llä --></div>
+        <div class="center" style="margin-top:2rem">
+          <a class="btn btn--ghost" href="tuotteet.html">Katso kaikki tuotteet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEISTÄ-TEASER -->
+    <section class="section">
+      <div class="wrap">
+        <div class="grid grid--2" style="align-items:center">
+          <div>
+            <span class="eyebrow">Tarinamme</span>
+            <h2>Pieni leipomo, iso intohimo</h2>
+            <p class="lead">
+              Karpalo syntyi rakkaudesta leipomiseen ja kauniisiin
+              yksityiskohtiin. Leivomme pieniä eriä, jotta jokainen tuote
+              saa ansaitsemansa huomion.
+            </p>
+            <a class="btn btn--ghost" href="meista.html">Lue tarinamme</a>
+          </div>
+          <div class="kuvapaikka kuvapaikka--laaja">
+            <span class="kuvapaikka__teksti">oma kuva tähän</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Jaettu footer + ostoskori injektoidaan tähän (js/main.js) -->
+  <div id="site-footer"></div>
+
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

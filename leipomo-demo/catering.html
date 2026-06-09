@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catering – Kotileipomo Karpalo (demo)</title>
+  <meta name="description" content="Makeat tarjoilut isoihin ja yritystilaisuuksiin. Pyydä tarjous Kotileipomo Karpalolta.">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="catering.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="wrap hero">
+      <div class="hero__content">
+        <span class="eyebrow">Catering</span>
+        <h1>Makeat tarjoilut isoihin hetkiin</h1>
+        <p class="lead">
+          Häät, syntymäpäivät, valmistujaiset tai yritystilaisuus – toimitamme
+          käsintehdyt herkut juhliisi. Räätälöimme kokonaisuuden osallistuja­määrän,
+          teeman ja ruokavalioiden mukaan.
+        </p>
+        <a class="btn btn--primary" href="#tarjouspyynto">Pyydä tarjous</a>
+      </div>
+      <div class="hero__media kuvapaikka kuvapaikka--laaja"><span class="kuvapaikka__teksti">oma kuva tähän</span></div>
+    </section>
+
+    <section class="section band">
+      <div class="wrap">
+        <div class="grid grid--3">
+          <div class="card"><h3>Juhlat</h3><p>Hää- ja juhlakakut, leivospöydät ja makeat buffetit isolle vierasjoukolle.</p></div>
+          <div class="card"><h3>Yritystilaukset</h3><p>Tarjoilut kokouksiin, tapahtumiin ja henkilöstön juhliin – laskutus sopimuksen mukaan.</p></div>
+          <div class="card"><h3>Ruokavaliot</h3><p>Gluteenittomat, vegaaniset ja laktoosittomat vaihtoehdot huomioidaan aina.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARJOUSPYYNTÖ -->
+    <section class="wrap section" id="tarjouspyynto">
+      <span class="eyebrow">Tarjouspyyntö</span>
+      <h2>Pyydä tarjous</h2>
+      <p class="lead">Kerro tilaisuudestasi, niin lähetämme räätälöidyn tarjouksen.</p>
+
+      <form class="form" data-demo novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="c-nimi">Nimi / yritys *</label>
+            <input id="c-nimi" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="c-email">Sähköposti *</label>
+            <input id="c-email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="c-puhelin">Puhelin</label>
+            <input id="c-puhelin" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="c-pvm">Tilaisuuden päivä</label>
+            <input id="c-pvm" type="date">
+          </div>
+          <div class="field">
+            <label for="c-henkilot">Arvioitu henkilömäärä</label>
+            <input id="c-henkilot" type="number" min="1" placeholder="esim. 50">
+          </div>
+          <div class="field">
+            <label for="c-tyyppi">Tilaisuuden tyyppi</label>
+            <input id="c-tyyppi" type="text" placeholder="esim. häät, yritysjuhla">
+          </div>
+          <div class="field field--full">
+            <label for="c-toiveet">Toiveet ja lisätiedot</label>
+            <textarea id="c-toiveet" placeholder="Kerro teemasta, budjetista, ruokavalioista…"></textarea>
+          </div>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted)">* pakollinen kenttä. Demo – tietoja ei lähetetä.</p>
+        <button class="btn btn--primary" type="submit">Lähetä tarjouspyyntö (demo)</button>
+
+        <div class="demo-success" hidden role="status">
+          <h3>Kiitos tarjouspyynnöstä!</h3>
+          <p>Tämä on <strong>demo</strong> – pyyntöä ei lähetetty oikeasti. Oikealla sivustolla saisit tarjouksen sähköpostiisi muutaman päivän sisällä.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

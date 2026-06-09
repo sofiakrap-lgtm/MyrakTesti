@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tapahtumat – Kotileipomo Karpalo (demo)</title>
+  <meta name="description" content="Tulevat leivontakurssit, pop-upit ja tapahtumat Kotileipomo Karpalossa.">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tapahtumat.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="wrap section section--tight">
+      <span class="eyebrow">Tapahtumat</span>
+      <h1>Tulevat tapahtumat ja kurssit</h1>
+      <p class="lead">Leivontakurssit, pop-upit ja tapahtumat – tervetuloa mukaan!</p>
+    </section>
+
+    <section class="wrap section section--tight">
+      <!-- Tapahtumat renderöidään site.js:stä -->
+      <div class="grid" id="tapahtumat" style="gap:1rem"><!-- JS täyttää --></div>
+    </section>
+
+    <section class="section band">
+      <div class="wrap center">
+        <h2>Haluatko oman ryhmän kurssin?</h2>
+        <p class="lead">Järjestämme yksityisiä leivontahetkiä esimerkiksi polttareihin tai työporukalle.</p>
+        <a class="btn btn--primary" href="yhteystiedot.html">Kysy lisää</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

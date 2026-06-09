@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yhteystiedot – Kotileipomo Karpalo (demo)</title>
+  <meta name="description" content="Kotileipomo Karpalon toimipisteet, aukiolot ja yhteystiedot Helsingissä.">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="yhteystiedot.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="wrap section section--tight">
+      <span class="eyebrow">Yhteystiedot</span>
+      <h1>Löydät meidät täältä</h1>
+      <p class="lead">
+        Kaksi toimipistettä Helsingissä. Soita, laita viestiä tai poikkea
+        myymälään – autamme mielellämme!
+      </p>
+      <p>
+        <a class="btn btn--ghost btn--small" data-site-link="puhelin" href="#"></a>
+        <a class="btn btn--ghost btn--small" data-site-link="sahkoposti" href="#"></a>
+      </p>
+    </section>
+
+    <section class="wrap section section--tight">
+      <!-- Toimipisteet renderöidään site.js:stä -->
+      <div class="locations" id="locations-grid"><!-- JS täyttää --></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
