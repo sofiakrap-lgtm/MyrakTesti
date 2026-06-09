@@ -73,7 +73,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Full-service<br>facade company</h1>
-      <p class="hero-subtitle">Reliable building renovation in the Helsinki metropolitan area for over 20 years</p>
+      <p class="hero-subtitle">Reliable building renovation in the Helsinki metropolitan area for over 10 years</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Contact us</a>
         <a href="#references" class="btn btn-outline">View references</a>
@@ -86,7 +86,7 @@
   <section class="facts-bar">
     <div class="facts-container">
       <div class="fact-item">
-        <span class="fact-number">20+</span>
+        <span class="fact-number">30+</span>
         <span class="fact-label">years of experience</span>
       </div>
       <div class="fact-divider"></div>
@@ -98,6 +98,42 @@
       <div class="fact-item">
         <span class="fact-number">40+</span>
         <span class="fact-label">professionals</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATE BAND -->
+  <section class="cert-marquee" aria-label="Certificates">
+    <p class="cert-marquee-heading">Experience you can trust</p>
+    <div class="cert-track-wrap">
+      <div class="cert-track">
+        <span class="cert-item cert-item--placeholder">RALA qualification</span>
+        <span class="cert-item cert-item--placeholder">Reliable Partner</span>
+        <span class="cert-item cert-item--placeholder">Tilaajavastuu</span>
+        <span class="cert-item cert-item--placeholder">ISO 9001</span>
+        <span class="cert-item cert-item--placeholder">RALA Construction Quality</span>
+        <span class="cert-item cert-item--placeholder">Certified expertise</span>
+        <span class="cert-item cert-item--placeholder" aria-hidden="true">RALA qualification</span>
+        <span class="cert-item cert-item--placeholder" aria-hidden="true">Reliable Partner</span>
+        <span class="cert-item cert-item--placeholder" aria-hidden="true">Tilaajavastuu</span>
+        <span class="cert-item cert-item--placeholder" aria-hidden="true">ISO 9001</span>
+        <span class="cert-item cert-item--placeholder" aria-hidden="true">RALA Construction Quality</span>
+        <span class="cert-item cert-item--placeholder" aria-hidden="true">Certified expertise</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVE PROJECTS (preview) -->
+  <section class="active-projects">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label section-label--light">News</span>
+        <h2 class="section-title section-title--light">Active projects</h2>
+        <p class="section-subtitle">Our ongoing sites in 2026</p>
+      </div>
+      <div class="aproj-grid" id="active-projects-preview"></div>
+      <div class="aproj-more-wrap">
+        <a href="ajankohtaista.html" class="aproj-more-link">See more news →</a>
       </div>
     </div>
   </section>
@@ -302,6 +338,7 @@
               <p class="contact-role">Site Manager, Partner</p>
               <a href="tel:0505813227" class="contact-phone">050 581 3227</a>
             </div>
+            <a href="mailto:marko.murkel@myrak.fi" class="contact-card-email">marko.murkel@myrak.fi</a>
           </div>
           <div class="contact-card fade-in">
             <div class="contact-avatar">TP</div>
@@ -310,6 +347,7 @@
               <p class="contact-role">Partner</p>
               <a href="tel:0442937756" class="contact-phone">044 293 7756</a>
             </div>
+            <a href="mailto:triinu.pihlak@myrak.fi" class="contact-card-email">triinu.pihlak@myrak.fi</a>
           </div>
           <div class="contact-card fade-in">
             <div class="contact-avatar">AK</div>
@@ -318,6 +356,46 @@
               <p class="contact-role">Partner</p>
               <a href="tel:0406888374" class="contact-phone">040 688 8374</a>
             </div>
+            <a href="mailto:aleksandr.kraptsak@myrak.fi" class="contact-card-email">aleksandr.kraptsak@myrak.fi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREMISES -->
+  <section class="premises">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label section-label--light">Premises</span>
+        <h2 class="section-title section-title--light">Where to find us</h2>
+        <p class="section-subtitle">Head office in Eira, Helsinki and two workshops in Vantaa</p>
+      </div>
+
+      <div class="premises-hq">
+        <img src="../2.png" alt="Myrak Oy head office">
+        <div class="premises-card-text">
+          <span class="premises-tag">Head office</span>
+          <h3>Pietarinkatu 11 A90</h3>
+          <p>00140 Helsinki — office and project management</p>
+        </div>
+      </div>
+
+      <div class="premises-shops">
+        <div class="premises-shop">
+          <div class="premises-shop-img"><img src="../7.png" alt="Myrak Oy workshop in Vantaa"></div>
+          <div class="premises-card-text">
+            <span class="premises-tag">Workshop — Vantaa</span>
+            <h3>Window workshop</h3>
+            <p>Renovation and restoration of old windows.</p>
+          </div>
+        </div>
+        <div class="premises-shop">
+          <div class="premises-shop-img"><img src="../6.png" alt="Myrak Oy metal and wood workshop in Vantaa"></div>
+          <div class="premises-card-text">
+            <span class="premises-tag">Workshop — Vantaa</span>
+            <h3>Metal &amp; wood workshop</h3>
+            <p>Metalwork, ornaments and manufacturing of wooden parts.</p>
           </div>
         </div>
       </div>
@@ -336,6 +414,7 @@
   </footer>
 
   <script src="../script.js"></script>
+  <script src="../aktiiviset.js"></script>
   <script>
     const map = L.map('map', { scrollWheelZoom: false }).setView([60.1699, 24.9384], 12);
 
