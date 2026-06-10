@@ -88,6 +88,9 @@
       '<button class="nav__burger" aria-label="Avaa valikko" aria-expanded="false" aria-controls="paavalikko">' +
       "<span></span><span></span><span></span>" +
       "</button>" +
+      // Pyöreä logo vasemmalla (linkki etusivulle)
+      '<a class="nav__mark" href="index.html" aria-label="' + SITE.nimi + ' – etusivu">' +
+      '<img src="favicon.svg" alt="' + SITE.nimi + '"></a>' +
       '<ul class="nav__links" id="paavalikko">' + linkit + "</ul>" +
       '<div class="nav__actions">' +
       '<a class="btn btn--primary btn--small" href="tilaa.html">Tilaa nyt</a>' +
@@ -503,6 +506,10 @@
         ? t.allergeenit.map(function (a) { return '<span class="allergen-tag">' + a + "</span>"; }).join(" ")
         : '<span class="allergen-tag">ei merkittäviä allergeeneja</span>';
 
+      // Makuvaihtoehdot site.js:n maistamme
+      const makuOptiot = '<option value="">Valitse maku…</option>' +
+        (SITE.maut || []).map(function (m) { return "<option>" + m.nimi + "</option>"; }).join("");
+
       tuoteDetail.innerHTML =
         '<div class="tuote-sivu" data-base="' + t.alkaen + '">' +
         '<div class="tuote-sivu__kuva">' + kuvapaikka("", t.kuva, t.nimi) + "</div>" +
@@ -515,6 +522,14 @@
         '<div class="opt-row" data-group="koko">' + koot + "</div></div>" +
         '<div class="opt-group"><span class="opt-group__label">Ruokavalio</span>' +
         '<div class="opt-row" data-group="diet">' + ruokavaliot + "</div></div>" +
+        // Lisävalinnat (kuten Bakerikalla)
+        '<div class="field"><label for="td-maku">Maku</label><select id="td-maku">' + makuOptiot + "</select></div>" +
+        '<div class="field"><label for="td-koristelu">Koristelu</label><select id="td-koristelu">' +
+        "<option>Ei lisäkoristeita</option><option>Tuoreet kukat</option><option>Marjat</option><option>Kultaviimeistely</option>" +
+        "</select></div>" +
+        '<div class="field"><label for="td-vari">Väritoive</label><input id="td-vari" type="text" placeholder="esim. vaaleanpunainen"></div>' +
+        '<div class="field"><label for="td-teksti">Teksti kakkuun <span class="hint">(valinnainen)</span></label><input id="td-teksti" type="text" maxlength="30" placeholder="esim. Paljon onnea"></div>' +
+        '<div class="field"><label for="td-maara">Määrä</label><input id="td-maara" type="number" min="1" value="1" style="max-width:120px"></div>' +
         '<button class="btn btn--primary btn--block lisaa-koriin" style="margin:1.2rem 0">Lisää koriin</button>' +
         '<p class="tuote-vinkki">Vinkki: tutustu eri täytteisiin ja makuihin ' +
         '<a href="maut.html">Maut-sivulla</a> – sieltä löydät lisätietoja jokaisesta mausta.</p>' +
@@ -524,7 +539,9 @@
         (t.sailytys ? '<details class="acc"><summary>Säilytys</summary><p>' + t.sailytys + "</p></details>" : "") +
         '<details class="acc"><summary>Nouto</summary><p>Tuotteet noudetaan myymälästä sovittuna ajankohtana.</p></details>' +
         "</div>" +
-        "</div>";
+        "</div>" +
+        // Vastaavia tuotteita
+        '<div class="vastaavat"><h2>Vastaavia tuotteita</h2><div class="tuote-grid" id="vastaavat-grid"></div></div>';
 
       const sivu = tuoteDetail.querySelector(".tuote-sivu");
       sivu.querySelectorAll(".opt-row").forEach(function (rivi) {
@@ -536,14 +553,38 @@
         });
       });
       sivu.querySelector(".lisaa-koriin").addEventListener("click", function () {
-        const hinta = paivitaHinta(sivu);
+        const yksikko = paivitaHinta(sivu);
         const koko = sivu.querySelector('[data-group="koko"] [aria-pressed="true"]');
         const diet = sivu.querySelector('[data-group="diet"] [aria-pressed="true"]');
-        const valinnat = [koko ? koko.textContent : "", diet ? diet.textContent : ""]
-          .filter(function (s) { return s && s !== "—"; })
-          .join(" · ");
-        lisaaKoriin({ nimi: t.nimi, valinnat: valinnat, hinta: hinta });
+        const maku = sivu.querySelector("#td-maku");
+        const koristelu = sivu.querySelector("#td-koristelu");
+        const vari = sivu.querySelector("#td-vari");
+        const teksti = sivu.querySelector("#td-teksti");
+        const maaraEl = sivu.querySelector("#td-maara");
+        const maara = Math.max(1, parseInt(maaraEl && maaraEl.value, 10) || 1);
+        const osat = [
+          koko ? koko.textContent : "",
+          diet ? diet.textContent : "",
+          maku && maku.value ? "Maku: " + maku.value : "",
+          koristelu && koristelu.value && koristelu.value !== "Ei lisäkoristeita" ? koristelu.value : "",
+          vari && vari.value ? "Väri: " + vari.value : "",
+          teksti && teksti.value ? '"' + teksti.value + '"' : "",
+          maara > 1 ? maara + " kpl" : "",
+        ].filter(function (s) { return s && s !== "—"; });
+        lisaaKoriin({ nimi: t.nimi, valinnat: osat.join(" · "), hinta: yksikko * maara });
       });
+
+      // Vastaavia tuotteita: saman kategorian muut (max 4)
+      const vastaavatGrid = document.getElementById("vastaavat-grid");
+      if (vastaavatGrid) {
+        let vastaavat = SITE.tuotteet.filter(function (x) {
+          return x.id !== t.id && x.kategoria === t.kategoria;
+        });
+        SITE.tuotteet.forEach(function (x) {
+          if (vastaavat.length < 4 && x.id !== t.id && vastaavat.indexOf(x) === -1) vastaavat.push(x);
+        });
+        renderListaus(vastaavatGrid, vastaavat.slice(0, 4));
+      }
     }
   }
 
@@ -692,9 +733,9 @@
     myymalaKuvat.innerHTML = SITE.myymala.kuvat
       .map(function (k) {
         return (
-          "<figure>" +
-          kuvapaikka("kuvapaikka--neliö", k.kuva, k.otsikko) +
-          "<figcaption>" + k.otsikko + "</figcaption>" +
+          "<figure style=\"margin:0\">" +
+          kuvapaikka("", k.kuva, k.otsikko || "Myymälä") +
+          (k.otsikko ? "<figcaption>" + k.otsikko + "</figcaption>" : "") +
           "</figure>"
         );
       })

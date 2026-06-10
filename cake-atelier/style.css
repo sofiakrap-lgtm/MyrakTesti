@@ -182,15 +182,12 @@ img { max-width: 100%; display: block; }
 .btn--white { background: #fff; color: var(--ink); border-color: var(--line); }
 .btn--white:hover { background: var(--surface); border-color: var(--ink); }
 
-/* "Kaksi tapaa tilata" -kuva: hillitty koko (n. puolet aiemmasta) */
-.tilaa-kuva .foto { width: auto; max-width: 100%; max-height: 300px; margin: 0 auto; }
+/* "Kaksi tapaa tilata" -kuva: tekstin korkuinen (täyttää alueen) */
+.tilaa-kuva { height: 100%; }
+.tilaa-kuva .foto { width: 100%; height: 100%; object-fit: cover; }
 
-/* Tarinamme-kuvat: pienet, tasakokoiset */
-.tarina-kuva { aspect-ratio: 1 / 1; object-fit: cover; }
-.tarina-kuvat { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-
-/* Maisteluboksi-kuva: hillitty koko */
-.maisteluboksi-kuva { width: auto; max-width: 100%; max-height: 300px; margin: 0 auto; }
+/* Maisteluboksi-kuva: tekstin korkuinen */
+.maisteluboksi-kuva { width: 100%; height: 100%; object-fit: cover; }
 
 /* Asiakaspalautteet: vaakavieritettävä rivi */
 .quotes-scroll {
@@ -220,6 +217,19 @@ img { max-width: 100%; display: block; }
   line-height: 1;
 }
 .quotes__nav:hover { border-color: var(--ink); }
+/* Tähtiarvio palautteissa */
+.stars { color: var(--ink); letter-spacing: 3px; font-size: 0.95rem; margin-bottom: 0.6rem; }
+
+/* Logo-marquee: wordmark liikkuu oikealta vasemmalle */
+.logo-marquee { overflow: hidden; border-block: 1px solid var(--line); background: var(--surface); padding: 1.1rem 0; }
+.logo-marquee__track { display: flex; gap: 3.5rem; width: max-content; animation: marquee 28s linear infinite; }
+.logo-marquee img { height: 24px; width: auto; opacity: 0.7; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .logo-marquee__track { animation: none; } }
+
+/* Vastaavia tuotteita -osio tuotesivulla */
+.vastaavat { margin-top: 3.5rem; }
+.vastaavat h2 { margin-bottom: 1.5rem; }
 
 /* Pyörivä pyöreä logo (esim. palvelut-sivulla) */
 .pyoriva-logo {
@@ -414,6 +424,11 @@ img { max-width: 100%; display: block; }
 /* Yläpalkki: toiminnot oikealle */
 .nav__actions { margin-left: auto; }
 
+/* Pyöreä logo yläpalkin vasemmassa reunassa */
+.nav__mark { display: flex; align-items: center; flex-shrink: 0; }
+.nav__mark img { height: 42px; width: auto; display: block; }
+.nav__mark:hover { opacity: 0.8; }
+
 /* Läpinäkyvä yläpalkki hero-kuvan päällä (etusivu); muuttuu kiinteäksi
    nykyiseen väriin/muotoon kun aletaan vierittää alas. */
 .hero-full { margin-top: calc(-1 * var(--header-korkeus) - 1px); }
@@ -438,6 +453,7 @@ img { max-width: 100%; display: block; }
   color: #fff;
 }
 .site-header.is-transparent .btn--primary:hover { background: #fff; color: var(--ink); }
+.site-header.is-transparent .nav__mark img { filter: brightness(0) invert(1); }
 /* Mobiilivalikon pudotusvalikko pysyy aina luettavana (vaalea pohja) */
 .site-header.is-transparent .nav__links.open a { color: var(--ink); }
 
