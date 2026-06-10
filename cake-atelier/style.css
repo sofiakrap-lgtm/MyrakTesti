@@ -182,12 +182,15 @@ img { max-width: 100%; display: block; }
 .btn--white { background: #fff; color: var(--ink); border-color: var(--line); }
 .btn--white:hover { background: var(--surface); border-color: var(--ink); }
 
-/* "Kaksi tapaa tilata" -kuva täyttää tekstin korkeuden */
-.tilaa-kuva { height: 100%; }
-.tilaa-kuva .foto { width: 100%; height: 100%; object-fit: cover; }
+/* "Kaksi tapaa tilata" -kuva: hillitty koko (n. puolet aiemmasta) */
+.tilaa-kuva .foto { width: auto; max-width: 100%; max-height: 300px; margin: 0 auto; }
 
-/* Tarinamme-kuva: hieman pienempi, tasakokoinen */
+/* Tarinamme-kuvat: pienet, tasakokoiset */
 .tarina-kuva { aspect-ratio: 1 / 1; object-fit: cover; }
+.tarina-kuvat { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+
+/* Maisteluboksi-kuva: hillitty koko */
+.maisteluboksi-kuva { width: auto; max-width: 100%; max-height: 300px; margin: 0 auto; }
 
 /* Asiakaspalautteet: vaakavieritettävä rivi */
 .quotes-scroll {
@@ -202,6 +205,21 @@ img { max-width: 100%; display: block; }
   flex: 0 0 min(360px, 80%);
   scroll-snap-align: start;
 }
+/* Piilota vieritinpalkki – käytetään nuolia */
+.quotes-scroll { scrollbar-width: none; }
+.quotes-scroll::-webkit-scrollbar { display: none; }
+.quotes-nav { display: flex; gap: 0.6rem; justify-content: center; margin-top: 1.5rem; }
+.quotes__nav {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.quotes__nav:hover { border-color: var(--ink); }
 
 /* Pyörivä pyöreä logo (esim. palvelut-sivulla) */
 .pyoriva-logo {
@@ -297,30 +315,15 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 0;
-  border: 1px solid var(--line);
-  background: var(--surface);
+  border: none;
+  background: transparent;
   cursor: pointer;
   color: var(--ink);
 }
-.cart-btn:hover { border-color: var(--terra); }
-.cart-btn svg { width: 22px; height: 22px; }
-.cart-count {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 5px;
-  border-radius: 0;
-  background: var(--terra);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.cart-btn:hover { color: var(--terra-dark); }
+.cart-btn svg { width: 24px; height: 24px; }
+/* Korin määrälaskuri piilotettu (vain kori-ikoni näkyvissä) */
+.cart-count { display: none !important; }
 
 /* Hampurilaispainike (näkyy vain mobiilissa) */
 .nav__burger {
@@ -413,11 +416,11 @@ img { max-width: 100%; display: block; }
 
 /* Läpinäkyvä yläpalkki hero-kuvan päällä (etusivu); muuttuu kiinteäksi
    nykyiseen väriin/muotoon kun aletaan vierittää alas. */
-.hero-full { margin-top: calc(-1 * var(--header-korkeus)); }
+.hero-full { margin-top: calc(-1 * var(--header-korkeus) - 1px); }
 .site-header.is-transparent {
   background: transparent;
   backdrop-filter: none;
-  border-bottom-color: transparent;
+  border-bottom: none;   /* ei valkoista viivaa demopalkin ja kuvan väliin */
 }
 .site-header.is-transparent .nav__links a { color: #fff; }
 .site-header.is-transparent .nav__links a:hover { background: rgba(255, 255, 255, 0.16); }
@@ -871,12 +874,14 @@ img { max-width: 100%; display: block; }
 /* -------------------------------------------------------------------------
    12. GALLERIA
    ------------------------------------------------------------------------- */
-/* Galleria: masonry-tyylinen pystypalstoitus – kuvat näkyvät kokonaan */
+/* Galleria: ruudukko, joka täyttää ylimmän rivin aina kokonaan (4 / rivi) */
 .gallery {
-  columns: 3;
-  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
-.gallery figure { margin: 0 0 1rem; break-inside: avoid; }
+.gallery figure { margin: 0; }
+.gallery .foto { aspect-ratio: 1 / 1; object-fit: cover; }
 .gallery figcaption {
   font-size: 0.85rem;
   color: var(--muted);
@@ -1046,14 +1051,14 @@ img { max-width: 100%; display: block; }
   .nav__links li:last-child a { border-bottom: none; }
 
   .grid--3, .grid--2 { grid-template-columns: 1fr; }
-  .gallery { columns: 2; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
   .form-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .event { flex-direction: row; }
 }
 
 @media (max-width: 420px) {
-  .gallery { columns: 1; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* -------------------------------------------------------------------------

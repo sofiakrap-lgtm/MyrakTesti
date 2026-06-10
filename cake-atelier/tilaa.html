@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body data-page="tilaa.html">
   <a class="skip-link" href="#main">Siirry sisältöön</a>
@@ -48,8 +48,11 @@
             <input id="henkilomaara" name="henkilomaara" type="number" min="1" placeholder="esim. 12" required>
           </div>
           <div class="field">
-            <label for="tayte">Täyte / maku</label>
-            <input id="tayte" name="tayte" type="text" placeholder="esim. mansikka–vanilja">
+            <label for="maku">Maku <span class="hint">(valitse valikoimastamme)</span></label>
+            <select id="maku" name="maku">
+              <option value="">Valitse maku…</option>
+              <!-- makuvaihtoehdot täytetään site.js:stä (js/main.js) -->
+            </select>
           </div>
           <div class="field field--full">
             <label for="ruokavalio">Ruokavalio</label>
@@ -89,7 +92,7 @@
   </main>
 
   <div id="site-footer"></div>
-  <script src="site.js?v=6"></script>
-  <script src="main.js?v=6"></script>
+  <script src="site.js?v=7"></script>
+  <script src="main.js?v=7"></script>
 </body>
 </html>

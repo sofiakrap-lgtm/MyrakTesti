@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body data-page="index.html">
   <a class="skip-link" href="#main">Siirry sisältöön</a>
@@ -32,7 +32,7 @@
     <!-- KAKSI TAPAA TILATA (hero-kuvan alla) -->
     <section class="section">
       <div class="wrap">
-        <div class="grid grid--2" style="align-items:stretch">
+        <div class="grid grid--2" style="align-items:center">
           <div class="reveal tilaa-kuva"><img class="foto" src="referenssikuva,%20kakkuja.jpg" alt="Kakkuja"></div>
           <div class="reveal">
             <span class="eyebrow">Kaksi tapaa tilata</span>
@@ -59,9 +59,9 @@
     <section class="section">
       <div class="wrap">
         <div class="center reveal" style="margin-bottom:2.5rem">
-          <span class="eyebrow">Valikoimasta</span>
-          <h2>Poimintoja</h2>
-          <p class="lead">Valitse koko ja ruokavalio – hinta päivittyy valinnan mukaan.</p>
+          <span class="eyebrow">Verkkokauppa</span>
+          <h2>Tutustu verkkokauppaamme</h2>
+          <p class="lead">Saatavilla on myös erikoisruokavaliolle sopivia vaihtoehtoja – gluteenittomia, laktoosittomia sekä vegaanisia kakkuja.</p>
         </div>
         <div class="tuote-grid reveal" id="suosikit"><!-- täytetään JS:llä (8 tuotetta, 2 riviä) --></div>
         <div class="center reveal" style="margin-top:2rem">
@@ -77,7 +77,7 @@
           <span class="eyebrow">Asiakkaiden sanoin</span>
           <h2>Hetkiä, jotka jäivät mieleen</h2>
         </div>
-        <div class="quotes-scroll reveal">
+        <div class="quotes-scroll reveal" id="quotes-scroll">
           <blockquote class="quote">
             <p>“Kaunein kakku, jonka olemme saaneet. Vieraat kyselivät, mistä se oli.”</p>
             <cite>— Anni &amp; Joonas, häät</cite>
@@ -103,6 +103,10 @@
             <cite>— Sanna, ristiäiset</cite>
           </blockquote>
         </div>
+        <div class="quotes-nav center reveal">
+          <button class="quotes__nav" data-dir="-1" aria-label="Edellinen">&larr;</button>
+          <button class="quotes__nav" data-dir="1" aria-label="Seuraava">&rarr;</button>
+        </div>
       </div>
     </section>
 
@@ -110,7 +114,10 @@
     <section class="section band">
       <div class="wrap">
         <div class="grid grid--2" style="align-items:center">
-          <div class="reveal"><img class="foto tarina-kuva" src="kirsikka%20suklaakakku.jpg" alt="Kirsikkakakku"></div>
+          <div class="reveal tarina-kuvat">
+            <img class="foto tarina-kuva" src="kirsikka%20suklaakakku.jpg" alt="Kirsikkakakku">
+            <img class="foto tarina-kuva" src="15.jpg" alt="Juhlahetki">
+          </div>
           <div class="reveal">
             <span class="eyebrow">Tarinamme</span>
             <h2>Yhdessä teemme onnesta jaettavaa</h2>
@@ -129,7 +136,7 @@
   <!-- Jaettu footer + ostoskori injektoidaan tähän (js/main.js) -->
   <div id="site-footer"></div>
 
-  <script src="site.js?v=6"></script>
-  <script src="main.js?v=6"></script>
+  <script src="site.js?v=7"></script>
+  <script src="main.js?v=7"></script>
 </body>
 </html>

@@ -228,6 +228,19 @@
     window.addEventListener("scroll", paivitaPalkki, { passive: true });
   }
 
+  // Asiakaspalautteiden nuolet (vaakavieritys)
+  const qScroll = document.getElementById("quotes-scroll");
+  if (qScroll) {
+    document.querySelectorAll(".quotes__nav").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const dir = parseInt(btn.getAttribute("data-dir"), 10) || 1;
+        const kortti = qScroll.querySelector(".quote");
+        const askel = kortti ? kortti.offsetWidth + 24 : 360;
+        qScroll.scrollBy({ left: dir * askel, behavior: "smooth" });
+      });
+    });
+  }
+
   /* =======================================================================
      4. DEMO-OSTOSKORI
      – Tallennetaan localStorageen, jotta säilyy sivulta toiselle.
@@ -710,6 +723,17 @@
   // Myymäläsivun otsikko + esittelyteksti datasta
   const myymalaKuvaus = document.getElementById("myymala-kuvaus");
   if (myymalaKuvaus && SITE.myymala) myymalaKuvaus.textContent = SITE.myymala.kuvaus;
+
+  // Tilauslomakkeen makuvalinta (tilaa.html) – vaihtoehdot site.js:n maistamme
+  const makuSelect = document.getElementById("maku");
+  if (makuSelect && SITE.maut) {
+    SITE.maut.forEach(function (m) {
+      const opt = document.createElement("option");
+      opt.value = m.nimi;
+      opt.textContent = m.nimi;
+      makuSelect.appendChild(opt);
+    });
+  }
 
   /* =======================================================================
      8. LOMAKKEIDEN DEMO-TOIMINTA (ei lähetä – näyttää kiitosviestin)
