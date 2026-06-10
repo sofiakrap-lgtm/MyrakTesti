@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Palvelut – The Cake Atelier (demo)</title>
-  <meta name="description" content="Tilauskakut, leivonnaiset ja catering. Tutustu The Cake Atelierin palveluihin.">
+  <meta name="description" content="Tilauskakut, minit ja leivonnaiset, suolaiset tarjottavat sekä catering. Pyydä tarjous The Cake Atelierilta.">
   <link rel="icon" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,41 +16,104 @@
   <div id="site-header"></div>
 
   <main id="main">
+    <!-- Yleinen esittely palveluista -->
     <section class="wrap section section--tight">
       <span class="eyebrow">Palvelut</span>
       <h1>Mitä tarjoamme</h1>
-      <p class="lead">Käsintehtyä makeaa jokaiseen hetkeen – pienistä herkuista isoihin juhliin.</p>
+      <p class="lead">
+        Teemme käsintehtyjä kakkuja ja tarjottavia jokaiseen hetkeen – pienistä
+        herkuista isoihin juhliin. Jokainen tilaus alkaa keskustelulla ja
+        räätälöidään toiveidesi, makujen ja ruokavalioiden mukaan.
+      </p>
     </section>
 
+    <!-- Palvelut lyhyesti -->
     <section class="wrap section section--tight">
-      <div class="grid grid--3">
-        <article class="card">
-          <div class="kuvapaikka kuvapaikka--laaja" style="margin-bottom:1rem"><span class="kuvapaikka__teksti">oma kuva tähän</span></div>
+      <div class="grid grid--2">
+        <div class="card">
           <h3>Tilauskakut</h3>
-          <p>Räätälöidyt juhlakakut häihin, syntymäpäiville ja kaikkiin elämän hetkiin. Suunnittelemme kakun toiveidesi mukaan.</p>
-          <a class="btn btn--ghost btn--small" href="tilaa.html">Tilaa kakku</a>
-        </article>
-        <article class="card">
-          <div class="kuvapaikka kuvapaikka--laaja" style="margin-bottom:1rem"><span class="kuvapaikka__teksti">oma kuva tähän</span></div>
-          <h3>Leivonnaiset</h3>
-          <p>Kuppikakut, leivokset ja makeat pikkuherkut – täydellisiä tarjottavia kahvipöytään tai lahjaksi.</p>
+          <p>Räätälöidyt juhlakakut häihin, syntymäpäiville ja merkkihetkiin.
+            Valitse koko ja maku – gluteeniton, vegaaninen ja laktoositon onnistuvat.</p>
           <a class="btn btn--ghost btn--small" href="tuotteet.html">Selaa tuotteita</a>
-        </article>
-        <article class="card">
-          <div class="kuvapaikka kuvapaikka--laaja" style="margin-bottom:1rem"><span class="kuvapaikka__teksti">oma kuva tähän</span></div>
-          <h3>Catering</h3>
-          <p>Makeat tarjoilut isoihin tilaisuuksiin ja yritystapahtumiin. Pyydä tarjous ja räätälöidään kokonaisuus.</p>
-          <a class="btn btn--ghost btn--small" href="catering.html">Lue lisää</a>
-        </article>
+        </div>
+        <div class="card">
+          <h3>Minit &amp; leivonnaiset</h3>
+          <p>Pienet kakut ja makeat suupalat kahvipöytään tai tarjottavaksi –
+            täydellisiä jaettavaksi.</p>
+          <a class="btn btn--ghost btn--small" href="maut.html">Tutustu makuihin</a>
+        </div>
+        <div class="card">
+          <h3>Suolaiset tarjottavat</h3>
+          <p>Voileipäkakut, focaccia ja suolaiset minit juhlapöytään ja
+            tilaisuuksiin.</p>
+          <a class="btn btn--ghost btn--small" href="tuotteet.html">Katso valikoima</a>
+        </div>
+        <div class="card">
+          <h3>Catering &amp; juhlat</h3>
+          <p>Makeat ja suolaiset tarjoilut häihin, yritystilaisuuksiin ja isoihin
+            juhliin. Räätälöimme kokonaisuuden – pyydä tarjous alta.</p>
+          <a class="btn btn--ghost btn--small" href="#tarjouspyynto">Pyydä tarjous</a>
+        </div>
       </div>
     </section>
 
-    <section class="section band">
-      <div class="wrap center">
-        <h2>Etkö löytänyt etsimääsi?</h2>
-        <p class="lead">Kerro toiveesi, niin suunnitellaan yhdessä juuri sinulle sopiva kokonaisuus.</p>
-        <a class="btn btn--primary" href="yhteystiedot.html">Ota yhteyttä</a>
+    <!-- Kuvia töistämme -->
+    <section class="wrap section section--tight">
+      <div class="gallery">
+        <figure><img class="foto" src="referenssikuva,%20j%C3%A4%C3%A4kaappi.jpg" alt="Vitriini"></figure>
+        <figure><img class="foto" src="referenssikuva,%20kakkuja.jpg" alt="Kakkuja"></figure>
+        <figure><img class="foto" src="referenssikuva,%20kakut%20esill%C3%A4.jpg" alt="Kakut esillä"></figure>
+        <figure><img class="foto" src="suomainen,%20mini%20loki.jpg" alt="Suolaiset minit"></figure>
+        <figure><img class="foto" src="h%C3%A4%C3%A4kakku.jpg" alt="Hääkakku"></figure>
       </div>
+    </section>
+
+    <!-- AUKI OLEVA TARJOUSPYYNTÖLOMAKE -->
+    <section class="wrap section" id="tarjouspyynto">
+      <span class="eyebrow">Tarjouspyyntö</span>
+      <h2>Pyydä tarjous</h2>
+      <p class="lead">Kerro tilaisuudestasi, niin lähetämme räätälöidyn tarjouksen.</p>
+
+      <form class="form" data-demo novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="p-nimi">Nimi / yritys *</label>
+            <input id="p-nimi" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="p-email">Sähköposti *</label>
+            <input id="p-email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="p-puhelin">Puhelin</label>
+            <input id="p-puhelin" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="p-pvm">Tilaisuuden päivä</label>
+            <input id="p-pvm" type="date">
+          </div>
+          <div class="field">
+            <label for="p-henkilot">Arvioitu henkilömäärä</label>
+            <input id="p-henkilot" type="number" min="1" placeholder="esim. 40">
+          </div>
+          <div class="field">
+            <label for="p-tyyppi">Palvelu / tilaisuus</label>
+            <input id="p-tyyppi" type="text" placeholder="esim. hääkakku, catering">
+          </div>
+          <div class="field field--full">
+            <label for="p-toiveet">Toiveet ja lisätiedot</label>
+            <textarea id="p-toiveet" placeholder="Kerro maut, teema, ruokavaliot, budjetti…"></textarea>
+          </div>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted)">* pakollinen kenttä. Demo – tietoja ei lähetetä.</p>
+        <button class="btn btn--primary" type="submit">Lähetä tarjouspyyntö (demo)</button>
+
+        <div class="demo-success" hidden role="status">
+          <h3>Kiitos tarjouspyynnöstä</h3>
+          <p>Tämä on <strong>demo</strong> – pyyntöä ei lähetetty oikeasti. Oikealla
+            sivustolla saisit tarjouksen sähköpostiisi muutaman päivän sisällä.</p>
+        </div>
+      </form>
     </section>
   </main>
 
