@@ -16,9 +16,9 @@
   --ink: #2B2722;         /* lähes musta, neutraali pääteksti */
   --muted: #7C766A;       /* neutraali haalea teksti */
   --line: #DCD6C8;        /* ohut neutraali hiusviiva */
-  --terra: #B5654A;       /* ainoa aksentti (CTA / linkit) – hillitysti */
-  --terra-dark: #9A5139;  /* CTA hover */
-  --berry: #2B2722;       /* (entinen aksentti) neutralisoitu – ei pinkkiä */
+  --terra: #2B2722;       /* (entinen terrakotta) nyt tummanharmaa – napit/aksentti */
+  --terra-dark: #4A443C;  /* hover */
+  --berry: #2B2722;       /* neutralisoitu */
 
   /* Fontit – seriffi kaikkialla, neutraalit klassiset kirjainmuodot */
   --font-otsikko: 'EB Garamond', Georgia, 'Times New Roman', serif;
@@ -328,6 +328,53 @@ img { max-width: 100%; display: block; }
 }
 .hero__media { display: flex; align-items: flex-start; }
 
+/* Koko levyinen hero: iso kuva + logo valkoisena keskellä (Quietude-tyyli) */
+.hero-full {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.hero-full::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(33, 30, 26, 0.32);   /* hillitty tummennus luettavuudelle */
+}
+.hero-full__inner {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1.25rem;
+  max-width: 760px;
+}
+.hero-full__logo {
+  width: min(460px, 82vw);
+  margin: 0 auto 1.2rem;
+  display: block;
+  filter: brightness(0) invert(1);   /* logo puhtaan valkoiseksi */
+}
+.hero-full__tagline {
+  color: #fff;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  letter-spacing: 0.02em;
+  margin: 0 0 1.6rem;
+}
+.btn--hero {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+.btn--hero:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+/* Yläpalkki: toiminnot oikealle */
+.nav__actions { margin-left: auto; }
+
 /* -------------------------------------------------------------------------
    7. KUVAPAIKKA (uudelleenkäytettävä paikkamerkki)
    – Lämmin gradientti + "oma kuva tähän" + kakku-SVG
@@ -420,6 +467,73 @@ img { max-width: 100%; display: block; }
 /* -------------------------------------------------------------------------
    9. TUOTTEET (verkkokauppa)
    ------------------------------------------------------------------------- */
+
+/* Tuotelistaus: neljä riviin (kuten Bakerikalla) – kuva + nimi + hinta */
+.tuote-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 1.25rem;
+}
+.tuote-kortti {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+}
+.tuote-kortti:hover { text-decoration: none; }
+.tuote-kortti:hover .tuote-kortti__nimi { text-decoration: underline; }
+.tuote-kortti__media { line-height: 0; margin-bottom: 0.7rem; }
+.tuote-kortti__nimi { font-size: 1.15rem; margin: 0 0 0.2rem; font-weight: 500; }
+.tuote-kortti__hinta { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+/* Suosikit-ruudukko etusivulla käyttää samaa korttia kolmessa palstassa */
+#suosikit.grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+/* Tuotteen oma sivu (tuote.html) */
+.tuote-sivu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.tuote-sivu__kuva { line-height: 0; }
+.tuote-sivu__hinta {
+  font-size: 1.5rem;
+  margin: 0.2rem 0 1rem;
+}
+.tuote-vinkki {
+  font-size: 0.92rem;
+  color: var(--muted);
+  border-left: 2px solid var(--line);
+  padding-left: 0.9rem;
+  margin: 0.5rem 0 1.5rem;
+}
+/* Laajennettavat lisätieto-rivit (akordion) */
+.acc {
+  border-top: 1px solid var(--line);
+}
+.acc:last-of-type { border-bottom: 1px solid var(--line); }
+.acc summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.9rem 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.acc summary::-webkit-details-marker { display: none; }
+.acc summary::after { content: "+"; color: var(--muted); font-size: 1.2rem; }
+.acc[open] summary::after { content: "–"; }
+.acc > p { margin: 0 0 1rem; color: var(--muted); }
+
+@media (max-width: 900px) {
+  .tuote-grid { grid-template-columns: repeat(2, 1fr); }
+  .tuote-sivu { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .tuote-grid { grid-template-columns: 1fr 1fr; gap: 1rem 0.8rem; }
+}
+
 .shop-tools {
   display: flex;
   flex-wrap: wrap;
@@ -781,6 +895,7 @@ img { max-width: 100%; display: block; }
 }
 .hours-table td:last-child { text-align: right; color: var(--muted); }
 .map-placeholder { aspect-ratio: 16 / 9; }
+.kartta { width: 100%; aspect-ratio: 16 / 10; border: 1px solid var(--line); margin-top: 1rem; display: block; }
 
 /* -------------------------------------------------------------------------
    16. SISÄLTÖSIVUT (ehdot, tietosuoja, leveä teksti)

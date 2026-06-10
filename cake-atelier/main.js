@@ -82,13 +82,9 @@
       '<div class="demobar">' +
       '<strong>DEMOVERSIO</strong> — esimerkki sivustosta, kuvat ja tekstit vaihdetaan asiakkaan omiin.' +
       "</div>" +
-      // Varsinainen yläpalkki
+      // Varsinainen yläpalkki: linkit vasemmalla, toiminnot oikealla
       '<header class="site-header">' +
       '<div class="wrap nav">' +
-      '<a class="nav__logo" href="index.html" aria-label="' + SITE.nimi + '">' +
-      // Wordmark-logo (logo.svg). alt-teksti toimii varatekstinä.
-      '<img src="logo.svg" alt="' + SITE.nimi + '">' +
-      "</a>" +
       '<button class="nav__burger" aria-label="Avaa valikko" aria-expanded="false" aria-controls="paavalikko">' +
       "<span></span><span></span><span></span>" +
       "</button>" +
@@ -372,59 +368,29 @@
      5. TUOTTEIDEN RENDERÖINTI (verkkokauppa + suosikit etusivulla)
      ======================================================================= */
 
-  // Rakentaa yhden tuotekortin HTML:n
-  function tuotekortti(t) {
-    const koot = t.koot
-      .map(function (k, i) {
-        const valittu = i === 0 ? 'aria-pressed="true"' : 'aria-pressed="false"';
-        return (
-          '<button class="opt" data-koko="' + k.lisa + '" ' + valittu + ">" + k.nimi + "</button>"
-        );
-      })
-      .join("");
+  // Hakee tuotteen id:llä
+  function haeTuote(id) {
+    return SITE.tuotteet.find(function (t) { return t.id === id; });
+  }
 
-    const ruokavaliot = t.ruokavaliot
-      .map(function (r, i) {
-        const valittu = i === 0 ? 'aria-pressed="true"' : 'aria-pressed="false"';
-        return (
-          '<button class="opt" data-diet="' + r.lisa + '" ' + valittu + ">" + r.nimi + "</button>"
-        );
-      })
-      .join("");
-
-    const allergeenit = t.allergeenit.length
-      ? t.allergeenit.map(function (a) { return '<span class="allergen-tag">' + a + "</span>"; }).join(" ")
-      : '<span class="allergen-tag">ei merkittäviä allergeeneja</span>';
-
+  // Yksinkertainen listakortti (kuva + nimi + alkaen-hinta) – linkki tuotesivulle
+  function tuoteListakortti(t) {
     return (
-      '<article class="product" data-nimi="' + t.nimi.toLowerCase() + " " + t.kuvaus.toLowerCase() +
-      '" data-kategoria="' + t.kategoria + '" data-base="' + t.alkaen + '">' +
-      '<div class="product__media">' + kuvapaikka("kuvapaikka--laaja", t.kuva, t.nimi) + "</div>" +
-      '<div class="product__body">' +
-      '<h3 class="product__name">' + t.nimi + "</h3>" +
-      '<p class="product__desc">' + t.kuvaus + "</p>" +
-      '<p class="product__meta"><span>' + t.annos + "</span></p>" +
-      '<div class="opt-group"><span class="opt-group__label">Koko</span>' +
-      '<div class="opt-row" data-group="koko">' + koot + "</div></div>" +
-      '<div class="opt-group"><span class="opt-group__label">Ruokavalio</span>' +
-      '<div class="opt-row" data-group="diet">' + ruokavaliot + "</div></div>" +
-      // Lisätiedot-osio (kuten Bakerikalla): laajennettava
-      '<details class="product__more"><summary>Lisätiedot</summary>' +
-      '<dl class="product__details">' +
-      "<dt>Annoskoko</dt><dd>" + t.annos + "</dd>" +
-      "<dt>Allergeenit</dt><dd>" + allergeenit + "</dd>" +
-      (t.ainesosat ? "<dt>Ainesosat</dt><dd>" + t.ainesosat + "</dd>" : "") +
-      (t.sailytys ? "<dt>Säilytys</dt><dd>" + t.sailytys + "</dd>" : "") +
-      "</dl></details>" +
-      '<p class="product__price"><span class="hinta-arvo">' + euro(t.alkaen) +
-      '</span> <small>alkaen</small></p>' +
-      '<button class="btn btn--primary btn--block lisaa-koriin">Lisää koriin</button>' +
-      "</div>" +
-      "</article>"
+      '<a class="tuote-kortti" href="tuote.html?id=' + t.id +
+      '" data-nimi="' + (t.nimi + " " + t.kuvaus).toLowerCase() +
+      '" data-kategoria="' + t.kategoria + '">' +
+      '<div class="tuote-kortti__media">' + kuvapaikka("", t.kuva, t.nimi) + "</div>" +
+      '<h3 class="tuote-kortti__nimi">' + t.nimi + "</h3>" +
+      '<p class="tuote-kortti__hinta">alkaen ' + euro(t.alkaen) + "</p>" +
+      "</a>"
     );
   }
 
-  // Laskee ja päivittää kortin hinnan valintojen mukaan
+  function renderListaus(saiplio, tuotteet) {
+    saiplio.innerHTML = tuotteet.map(tuoteListakortti).join("");
+  }
+
+  // Laskee ja päivittää hinnan valintojen mukaan (tuotesivu)
   function paivitaHinta(kortti) {
     const base = parseFloat(kortti.getAttribute("data-base"));
     const kokoEl = kortti.querySelector('[data-group="koko"] [aria-pressed="true"]');
@@ -436,44 +402,10 @@
     return hinta;
   }
 
-  // Kytkee variaatiopainikkeet ja "lisää koriin" yhteen tuotekorttiin
-  function kytkeKortti(kortti) {
-    kortti.querySelectorAll(".opt-row").forEach(function (rivi) {
-      rivi.addEventListener("click", function (e) {
-        if (!e.target.classList.contains("opt")) return;
-        rivi.querySelectorAll(".opt").forEach(function (o) {
-          o.setAttribute("aria-pressed", "false");
-        });
-        e.target.setAttribute("aria-pressed", "true");
-        // "alkaen" pois kun käyttäjä on valinnut
-        const small = kortti.querySelector(".product__price small");
-        if (small) small.textContent = "";
-        paivitaHinta(kortti);
-      });
-    });
-
-    kortti.querySelector(".lisaa-koriin").addEventListener("click", function () {
-      const hinta = paivitaHinta(kortti);
-      const nimi = kortti.querySelector(".product__name").textContent;
-      const koko = kortti.querySelector('[data-group="koko"] [aria-pressed="true"]');
-      const diet = kortti.querySelector('[data-group="diet"] [aria-pressed="true"]');
-      const valinnat = [koko ? koko.textContent : "", diet ? diet.textContent : ""]
-        .filter(function (s) { return s && s !== "—"; })
-        .join(" · ");
-      lisaaKoriin({ nimi: nimi, valinnat: valinnat, hinta: hinta });
-    });
-  }
-
-  // Renderöi tuotelistauksen annettuun säiliöön
-  function renderTuotteet(saiplio, tuotteet) {
-    saiplio.innerHTML = tuotteet.map(tuotekortti).join("");
-    saiplio.querySelectorAll(".product").forEach(kytkeKortti);
-  }
-
-  // a) Verkkokauppasivu (tuotteet.html)
+  // a) Verkkokauppasivu (tuotteet.html) – neljä riviin, kuva + nimi + hinta
   const shopGrid = document.getElementById("shop-grid");
   if (shopGrid) {
-    renderTuotteet(shopGrid, SITE.tuotteet);
+    renderListaus(shopGrid, SITE.tuotteet);
 
     // Suodatuskategoriat (chipit)
     const filterWrap = document.getElementById("shop-filters");
@@ -495,7 +427,7 @@
       const aktChip = filterWrap ? filterWrap.querySelector('[aria-pressed="true"]') : null;
       const cat = aktChip ? aktChip.getAttribute("data-cat") : "kaikki";
 
-      shopGrid.querySelectorAll(".product").forEach(function (p) {
+      shopGrid.querySelectorAll(".tuote-kortti").forEach(function (p) {
         const osuuTeksti = p.getAttribute("data-nimi").indexOf(teksti) !== -1;
         const osuuKat = cat === "kaikki" || p.getAttribute("data-kategoria") === cat;
         p.style.display = osuuTeksti && osuuKat ? "" : "none";
@@ -518,12 +450,77 @@
   // b) Suosikkituotteet etusivulla (#suosikit)
   const suosikitGrid = document.getElementById("suosikit");
   if (suosikitGrid) {
-    const suosikit = SITE.suosikit
-      .map(function (id) {
-        return SITE.tuotteet.find(function (t) { return t.id === id; });
-      })
-      .filter(Boolean);
-    renderTuotteet(suosikitGrid, suosikit);
+    const suosikit = SITE.suosikit.map(haeTuote).filter(Boolean);
+    renderListaus(suosikitGrid, suosikit);
+  }
+
+  // c) Tuotteen oma sivu (tuote.html?id=) – iso kuva + valinnat + lisätiedot
+  const tuoteDetail = document.getElementById("tuote-detail");
+  if (tuoteDetail) {
+    const tp = new URLSearchParams(window.location.search);
+    const t = haeTuote(tp.get("id"));
+    if (!t) {
+      tuoteDetail.innerHTML =
+        '<div class="center"><h1>Tuotetta ei löytynyt</h1>' +
+        '<p class="lead">Palaa <a href="tuotteet.html">tuotteisiin</a>.</p></div>';
+    } else {
+      document.title = t.nimi + " – The Cake Atelier (demo)";
+      const koot = t.koot
+        .map(function (k, i) {
+          return '<button class="opt" data-koko="' + k.lisa + '" aria-pressed="' +
+            (i === 0 ? "true" : "false") + '">' + k.nimi + "</button>";
+        }).join("");
+      const ruokavaliot = t.ruokavaliot
+        .map(function (r, i) {
+          return '<button class="opt" data-diet="' + r.lisa + '" aria-pressed="' +
+            (i === 0 ? "true" : "false") + '">' + r.nimi + "</button>";
+        }).join("");
+      const allergeenit = t.allergeenit.length
+        ? t.allergeenit.map(function (a) { return '<span class="allergen-tag">' + a + "</span>"; }).join(" ")
+        : '<span class="allergen-tag">ei merkittäviä allergeeneja</span>';
+
+      tuoteDetail.innerHTML =
+        '<div class="tuote-sivu" data-base="' + t.alkaen + '">' +
+        '<div class="tuote-sivu__kuva">' + kuvapaikka("", t.kuva, t.nimi) + "</div>" +
+        '<div class="tuote-sivu__tiedot">' +
+        '<a href="tuotteet.html" class="eyebrow" style="text-decoration:none">← Kaikki tuotteet</a>' +
+        "<h1>" + t.nimi + "</h1>" +
+        '<p class="tuote-sivu__hinta"><span class="hinta-arvo">' + euro(t.alkaen) + "</span></p>" +
+        '<p class="lead">' + t.kuvaus + "</p>" +
+        '<div class="opt-group"><span class="opt-group__label">Koko</span>' +
+        '<div class="opt-row" data-group="koko">' + koot + "</div></div>" +
+        '<div class="opt-group"><span class="opt-group__label">Ruokavalio</span>' +
+        '<div class="opt-row" data-group="diet">' + ruokavaliot + "</div></div>" +
+        '<button class="btn btn--primary btn--block lisaa-koriin" style="margin:1.2rem 0">Lisää koriin</button>' +
+        '<p class="tuote-vinkki">Vinkki: tutustu eri täytteisiin ja makuihin ' +
+        '<a href="maut.html">Maut-sivulla</a> – sieltä löydät lisätietoja jokaisesta mausta.</p>' +
+        '<details class="acc"><summary>Annoskoko</summary><p>' + t.annos + "</p></details>" +
+        '<details class="acc"><summary>Allergeenit</summary><p>' + allergeenit + "</p></details>" +
+        (t.ainesosat ? '<details class="acc"><summary>Ainesosat</summary><p>' + t.ainesosat + "</p></details>" : "") +
+        (t.sailytys ? '<details class="acc"><summary>Säilytys</summary><p>' + t.sailytys + "</p></details>" : "") +
+        '<details class="acc"><summary>Nouto</summary><p>Tuotteet noudetaan myymälästä sovittuna ajankohtana.</p></details>' +
+        "</div>" +
+        "</div>";
+
+      const sivu = tuoteDetail.querySelector(".tuote-sivu");
+      sivu.querySelectorAll(".opt-row").forEach(function (rivi) {
+        rivi.addEventListener("click", function (e) {
+          if (!e.target.classList.contains("opt")) return;
+          rivi.querySelectorAll(".opt").forEach(function (o) { o.setAttribute("aria-pressed", "false"); });
+          e.target.setAttribute("aria-pressed", "true");
+          paivitaHinta(sivu);
+        });
+      });
+      sivu.querySelector(".lisaa-koriin").addEventListener("click", function () {
+        const hinta = paivitaHinta(sivu);
+        const koko = sivu.querySelector('[data-group="koko"] [aria-pressed="true"]');
+        const diet = sivu.querySelector('[data-group="diet"] [aria-pressed="true"]');
+        const valinnat = [koko ? koko.textContent : "", diet ? diet.textContent : ""]
+          .filter(function (s) { return s && s !== "—"; })
+          .join(" · ");
+        lisaaKoriin({ nimi: t.nimi, valinnat: valinnat, hinta: hinta });
+      });
+    }
   }
 
   /* =======================================================================
@@ -594,8 +591,9 @@
           '<table class="hours-table"><tbody>' + rivit + "</tbody></table>" +
           '<p style="font-size:.88rem;color:var(--muted);margin-top:.8rem">' +
           "<strong>Poikkeusaukiolot:</strong> " + t.poikkeukset + "</p>" +
-          '<div class="map-placeholder kuvapaikka" style="margin-top:1rem">' +
-          '<span class="kuvapaikka__teksti">kartta tähän</span></div>' +
+          '<iframe class="kartta" loading="lazy" title="Kartta: ' + t.osoite +
+          '" src="https://www.google.com/maps?q=' + encodeURIComponent(t.osoite) +
+          '&output=embed"></iframe>' +
           "</div>"
         );
       })
@@ -694,8 +692,9 @@
       "</dl>" +
       "<h3>Aukioloajat</h3>" +
       '<table class="hours-table"><tbody>' + rivit + "</tbody></table>" +
-      '<div class="map-placeholder kuvapaikka" style="margin-top:1rem">' +
-      '<span class="kuvapaikka__teksti">kartta tähän</span></div>';
+      '<iframe class="kartta" loading="lazy" title="Kartta: ' + m.osoite +
+      '" src="https://www.google.com/maps?q=' + encodeURIComponent(m.osoite) +
+      '&output=embed"></iframe>';
   }
   // Myymäläsivun otsikko + esittelyteksti datasta
   const myymalaKuvaus = document.getElementById("myymala-kuvaus");

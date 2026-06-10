@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body data-page="index.html">
   <a class="skip-link" href="#main">Siirry sisältöön</a>
@@ -20,21 +20,13 @@
 
   <main id="main">
 
-    <!-- HERO + CTA -->
-    <section class="wrap hero">
-      <div class="hero__content reveal">
-        <span class="eyebrow">Kakkustudio · Helsinki</span>
-        <h1>Kakkuja, jotka jäävät mieleen</h1>
-        <p class="lead">
-          Pieni, designvetoinen studio, jossa jokainen juhlakakku tehdään käsin
-          – yhdelle perheelle, yhteen päivään. Rauhassa, hyvistä raaka-aineista.
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="tuotteet.html">Katso kakut</a>
-          <a class="btn btn--ghost" href="tilaa.html">Pyydä tarjous</a>
-        </div>
+    <!-- HERO: koko levyinen kuva + logo valkoisena keskellä -->
+    <section class="hero-full" style="background-image:url('referenssikuva,%20kakkujen%20koristelu.jpg')">
+      <div class="hero-full__inner">
+        <img class="hero-full__logo" src="logo-light.svg" alt="The Cake Atelier">
+        <p class="hero-full__tagline">Cakes worth remembering</p>
+        <a class="btn btn--ghost btn--hero" href="tuotteet.html">Katso kakut</a>
       </div>
-      <div class="hero__media reveal"><img class="foto" src="h%C3%A4%C3%A4kakku.jpg" alt="Hääkakku"></div>
     </section>
 
     <!-- NÄIN SE TOIMII (3 vaihetta: kysely → suunnittelu → toimitus) -->
@@ -120,7 +112,7 @@
             </p>
             <a class="btn btn--ghost" href="meista.html">Lue tarinamme</a>
           </div>
-          <div class="reveal"><img class="foto" src="referenssikuva,%20kakkujen%20koristelu.jpg" alt="Kakkujen koristelua"></div>
+          <div class="reveal"><img class="foto" src="h%C3%A4%C3%A4kakku.jpg" alt="Hääkakku"></div>
         </div>
       </div>
     </section>
@@ -130,7 +122,7 @@
   <!-- Jaettu footer + ostoskori injektoidaan tähän (js/main.js) -->
   <div id="site-footer"></div>
 
-  <script src="site.js?v=3"></script>
-  <script src="main.js?v=3"></script>
+  <script src="site.js?v=4"></script>
+  <script src="main.js?v=4"></script>
 </body>
 </html>

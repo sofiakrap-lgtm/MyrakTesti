@@ -40,10 +40,10 @@ const SITE = {
   /* --- Toimipisteet (kaksi toimipistettä) -------------------------------- */
   toimipisteet: [
     {
-      nimi: "Studio · Kallio",
-      osoite: "Esimerkkikatu 12, 00530 Helsinki",
+      nimi: "Studio · Punavuori",
+      osoite: "Albertinkatu 1, 00150 Helsinki",
       puhelin: "+358 40 123 4567",
-      sahkoposti: "kallio@thecakeatelier-demo.fi",
+      sahkoposti: "punavuori@thecakeatelier-demo.fi",
       aukiolot: [
         { paiva: "Ti–Pe", aika: "10–17" },
         { paiva: "La", aika: "10–15" },
@@ -648,9 +648,9 @@ const SITE = {
   myymala: {
     otsikko: "Studio & myymälä",
     kuvaus:
-      "Pieni studiomyymälämme on paikka, jossa kakut syntyvät käsin ja jossa " +
-      "voit noutaa tilauksesi. Tervetuloa poikkeamaan – kerromme mielellämme lisää.",
-    osoite: "Esimerkkikatu 12, 00530 Helsinki",
+      "Pieni studiomyymälämme Punavuoressa on paikka, jossa kakut syntyvät käsin " +
+      "ja jossa voit noutaa tilauksesi. Tervetuloa poikkeamaan – kerromme mielellämme lisää.",
+    osoite: "Albertinkatu 1, 00150 Helsinki",
     puhelin: "+358 40 123 4567",
     sahkoposti: "hello@thecakeatelier-demo.fi",
     aukiolot: [
