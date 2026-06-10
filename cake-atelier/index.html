@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body data-page="index.html">
   <a class="skip-link" href="#main">Siirry sisältöön</a>
@@ -33,7 +33,7 @@
     <section class="section">
       <div class="wrap">
         <div class="grid grid--2" style="align-items:stretch">
-          <div class="reveal tilaa-kuva"><img class="foto" src="15.jpg" alt="Juhlakakku"></div>
+          <div class="reveal tilaa-kuva"><img class="foto" src="referenssikuva,%20kakkuja.jpg" alt="Kakkuja"></div>
           <div class="reveal">
             <span class="eyebrow">Kaksi tapaa tilata</span>
             <h2>Tilaa juuri sinun hetkeesi</h2>
@@ -42,7 +42,7 @@
               ja vegaaniset vaihtoehdot huomioiden.
             </p>
             <p><a class="btn btn--primary" href="tuotteet.html">Verkkokauppaan</a></p>
-            <p class="lead" style="margin-top:1.8rem">
+            <p class="lead" style="margin-top:1.6rem">
               Isompaan tilaisuuteen, häihin tai cateringiin räätälöimme kokonaisuuden
               toiveidesi mukaan.
             </p>
@@ -50,33 +50,15 @@
               <a class="btn btn--white" href="maut.html">Tutustu makuvalikoimaan</a>
               <a class="btn btn--white" href="catering.html">Tee tarjouspyyntö</a>
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TILAA KAKKUJA HELPOSTI – 3 vaihetta -->
-    <section class="section band">
-      <div class="wrap">
-        <div class="center reveal" style="margin-bottom:3rem">
-          <span class="eyebrow">Näin tilaat</span>
-          <h2>Tilaa kakkuja helposti</h2>
-        </div>
-        <div class="steps reveal">
-          <div class="step">
-            <div class="step__num">1</div>
-            <h3>Tee tarjouspyyntö</h3>
-            <p>Kerro mitä tarvitset – täytä lyhyt lomake tai laske arvio.</p>
-          </div>
-          <div class="step">
-            <div class="step__num">2</div>
-            <h3>Ilmoita toiveet</h3>
-            <p>Kerro maut, koko, ruokavaliot ja muut toiveesi.</p>
-          </div>
-          <div class="step">
-            <div class="step__num">3</div>
-            <h3>Nouda ja maksa</h3>
-            <p>Vahvistamme tilauksen ja sovimme noudon. Maksu noudon yhteydessä.</p>
+            <!-- Tilaa kakkuja helposti – 3 vaihetta tässä samassa osiossa -->
+            <div class="mini-steps">
+              <h3>Tilaa kakkuja helposti</h3>
+              <ol>
+                <li>Tee tarjouspyyntö</li>
+                <li>Ilmoita kaikki omat toiveet</li>
+                <li>Nouda ja maksa</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
@@ -152,16 +134,21 @@
       </div>
     </section>
 
-    <!-- TARINAMME – pelkkä teksti (kuvat poistettu) -->
+    <!-- TARINAMME – kuva toisella puolella, teksti toisella -->
     <section class="section band">
-      <div class="wrap center reveal">
-        <span class="eyebrow">Tarinamme</span>
-        <h2>Yhdessä teemme onnesta jaettavaa</h2>
-        <p class="lead">
-          Jokainen kakku on osa jonkun juhlaa. Me leivomme hetkiä, jotka jaetaan
-          rakkaiden kesken – käsin, pienissä erissä, sydämellä.
-        </p>
-        <a class="btn btn--ghost" href="meista.html">Tutustu meihin lisää</a>
+      <div class="wrap">
+        <div class="grid grid--2" style="align-items:center">
+          <div class="reveal"><img class="foto" src="15.jpg" alt="Juhlakakku"></div>
+          <div class="reveal">
+            <span class="eyebrow">Tarinamme</span>
+            <h2>Yhdessä teemme onnesta jaettavaa</h2>
+            <p class="lead">
+              Jokainen kakku on osa jonkun juhlaa. Me leivomme hetkiä, jotka jaetaan
+              rakkaiden kesken – käsin, pienissä erissä, sydämellä.
+            </p>
+            <a class="btn btn--ghost" href="meista.html">Tutustu meihin lisää</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -170,7 +157,7 @@
   <!-- Jaettu footer + ostoskori injektoidaan tähän (js/main.js) -->
   <div id="site-footer"></div>
 
-  <script src="site.js?v=10"></script>
-  <script src="main.js?v=10"></script>
+  <script src="site.js?v=11"></script>
+  <script src="main.js?v=11"></script>
 </body>
 </html>

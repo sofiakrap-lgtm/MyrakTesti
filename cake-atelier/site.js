@@ -496,7 +496,7 @@ const SITE = {
         { nimi: "100 €", lisa: 75 },
       ],
       ruokavaliot: [{ nimi: "—", lisa: 0 }],
-      kuva: "lahjakorttttikuva.jpg",
+      kuva: "lahjakortttikuva.jpg",
     },
   ],
 
@@ -689,6 +689,8 @@ const SITE = {
     { teksti: "Tuotteet", linkki: "tuotteet.html" },
     { teksti: "Maut", linkki: "maut.html" },
     { teksti: "Palvelut", linkki: "palvelut.html" },
+    { teksti: "Catering", linkki: "catering.html" },
+    { teksti: "Hääkakut", linkki: "haakakku.html" },
     { teksti: "Tapahtumat", linkki: "tapahtumat.html" },
     { teksti: "Myymälä", linkki: "myymala.html" },
     { teksti: "Meistä", linkki: "meista.html" },
