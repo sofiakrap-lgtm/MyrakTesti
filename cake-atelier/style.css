@@ -375,6 +375,33 @@ img { max-width: 100%; display: block; }
 /* Yläpalkki: toiminnot oikealle */
 .nav__actions { margin-left: auto; }
 
+/* Läpinäkyvä yläpalkki hero-kuvan päällä (etusivu); muuttuu kiinteäksi
+   nykyiseen väriin/muotoon kun aletaan vierittää alas. */
+.hero-full { margin-top: calc(-1 * var(--header-korkeus)); }
+.site-header.is-transparent {
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+}
+.site-header.is-transparent .nav__links a { color: #fff; }
+.site-header.is-transparent .nav__links a:hover { background: rgba(255, 255, 255, 0.16); }
+.site-header.is-transparent .nav__links a[aria-current="page"] { color: #fff; text-decoration: underline; }
+.site-header.is-transparent .cart-btn {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+.site-header.is-transparent .nav__burger { border-color: rgba(255, 255, 255, 0.6); }
+.site-header.is-transparent .nav__burger span { background: #fff; }
+.site-header.is-transparent .btn--primary {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.site-header.is-transparent .btn--primary:hover { background: #fff; color: var(--ink); }
+/* Mobiilivalikon pudotusvalikko pysyy aina luettavana (vaalea pohja) */
+.site-header.is-transparent .nav__links.open a { color: var(--ink); }
+
 /* -------------------------------------------------------------------------
    7. KUVAPAIKKA (uudelleenkäytettävä paikkamerkki)
    – Lämmin gradientti + "oma kuva tähän" + kakku-SVG
@@ -1048,13 +1075,12 @@ img { max-width: 100%; display: block; }
    18e. MAUT – makugalleria ja maun sivu
    ------------------------------------------------------------------------- */
 .maut-grid {
-  columns: 3;
-  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 .maku-kortti {
   display: block;
-  margin-bottom: 1.5rem;
-  break-inside: avoid;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--r-iso);
@@ -1063,6 +1089,8 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
   transition: border-color 0.25s ease;
 }
+/* Makukortin kuva tasakorkuiseksi ja hieman matalammaksi */
+.maku-kortti .foto { aspect-ratio: 4 / 5; object-fit: cover; }
 .maku-kortti:hover { border-color: var(--terra); text-decoration: none; }
 .maku-kortti__body { padding: 1.1rem 1.3rem 1.4rem; }
 .maku-kortti__body h3 { margin: 0 0 0.3rem; }
@@ -1090,10 +1118,10 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 720px) {
-  .maut-grid { columns: 2; }
+  .maut-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) {
-  .maut-grid { columns: 1; }
+  .maut-grid { grid-template-columns: 1fr; }
 }
 
 /* -------------------------------------------------------------------------

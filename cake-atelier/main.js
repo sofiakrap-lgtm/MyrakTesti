@@ -217,6 +217,17 @@
     });
   }
 
+  // Läpinäkyvä yläpalkki hero-kuvan päällä; muuttuu kiinteäksi kun vieritetään.
+  const headerEl = document.querySelector(".site-header");
+  if (headerEl && document.querySelector(".hero-full")) {
+    const paivitaPalkki = function () {
+      if (window.scrollY < 40) headerEl.classList.add("is-transparent");
+      else headerEl.classList.remove("is-transparent");
+    };
+    paivitaPalkki();
+    window.addEventListener("scroll", paivitaPalkki, { passive: true });
+  }
+
   /* =======================================================================
      4. DEMO-OSTOSKORI
      – Tallennetaan localStorageen, jotta säilyy sivulta toiselle.

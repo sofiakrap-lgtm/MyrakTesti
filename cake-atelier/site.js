@@ -509,7 +509,10 @@ const SITE = {
   ],
 
   /* Suosikkituotteet etusivulle (tuotteiden id:t) */
-  suosikit: ["kermakakku", "mansikkakakku", "marjakakku"],
+  suosikit: [
+    "kermakakku", "mansikkakakku", "marjakakku", "suklaakakku",
+    "kirsikka-suklaakakku", "marenkikakku", "mini-vanilja", "mini-suklaa",
+  ],
 
   /* --- Maut (makugalleria + maku.html?id=) – leikkauskuvat -------------- */
   maut: [
