@@ -607,11 +607,13 @@ const SITE = {
 
   /* --- Galleria (aiemmat työt – "yleinen kuvitus") ----------------------- */
   galleria: [
+    { otsikko: "Hääkakku", kuva: "h%C3%A4%C3%A4kakku.jpg" },
     { otsikko: "Hääkakku, kirsikka", kuva: "h%C3%A4%C3%A4kakku,%20kirsikka.jpg" },
     { otsikko: "Kermakakku, pinkki", kuva: "kermakakku,%20pinkki.jpg" },
     { otsikko: "Kermakakku, viikuna", kuva: "kermakakku,%20viikuna.jpg" },
     { otsikko: "Hääkakun maistelusetti", kuva: "leikkaus,%20h%C3%A4%C3%A4kakun%20maistelusetti.jpg" },
-    { otsikko: "Juhlakakku", kuva: "15.jpg" },
+    { otsikko: "Marjakakku", kuva: "marjakakku.jpg" },
+    { otsikko: "Suklaakakku", kuva: "suklaakakku.jpg" },
   ],
 
   /* --- Tapahtumat / kurssit / pop-upit ----------------------------------- */
