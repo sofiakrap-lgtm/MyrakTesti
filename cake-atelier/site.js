@@ -496,7 +496,7 @@ const SITE = {
         { nimi: "100 €", lisa: 75 },
       ],
       ruokavaliot: [{ nimi: "—", lisa: 0 }],
-      kuva: "lahjakorttikuva.jpg",
+      kuva: "lahjakorttttikuva.jpg",
     },
   ],
 

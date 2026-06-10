@@ -88,9 +88,9 @@
       '<button class="nav__burger" aria-label="Avaa valikko" aria-expanded="false" aria-controls="paavalikko">' +
       "<span></span><span></span><span></span>" +
       "</button>" +
-      // Pyöreä logo vasemmalla (linkki etusivulle)
+      // Logo (TCA) vasemmalla ylhäällä (linkki etusivulle)
       '<a class="nav__mark" href="index.html" aria-label="' + SITE.nimi + ' – etusivu">' +
-      '<img src="favicon.svg" alt="' + SITE.nimi + '"></a>' +
+      '<img src="logo.svg" alt="' + SITE.nimi + '"></a>' +
       '<ul class="nav__links" id="paavalikko">' + linkit + "</ul>" +
       '<div class="nav__actions">' +
       '<a class="btn btn--primary btn--small" href="tilaa.html">Tilaa nyt</a>' +
@@ -153,6 +153,7 @@
       "<ul>" +
       '<li><a href="galleria.html">Galleria</a></li>' +
       '<li><a href="catering.html">Catering &amp; juhlat</a></li>' +
+      '<li><a href="haakakku.html">Hääkakut</a></li>' +
       '<li><a href="ukk.html">Usein kysyttyä</a></li>' +
       '<li><a href="tilausehdot.html">Tilaus- ja toimitusehdot</a></li>' +
       '<li><a href="tietosuoja.html">Tietosuojaseloste</a></li>' +
@@ -472,6 +473,17 @@
         suodata();
       });
     }
+
+    // Esivalitse kategoria osoiteparametrista (?cat=minit / suolaiset / kakut)
+    const catParam = new URLSearchParams(window.location.search).get("cat");
+    if (catParam && filterWrap) {
+      const chip = filterWrap.querySelector('[data-cat="' + catParam + '"]');
+      if (chip) {
+        filterWrap.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
+        chip.setAttribute("aria-pressed", "true");
+        suodata();
+      }
+    }
   }
 
   // b) Suosikkituotteet etusivulla (#suosikit)
@@ -541,7 +553,8 @@
         "</div>" +
         "</div>" +
         // Vastaavia tuotteita
-        '<div class="vastaavat"><h2>Vastaavia tuotteita</h2><div class="tuote-grid" id="vastaavat-grid"></div></div>';
+        '<div class="vastaavat"><h2>Vastaavia tuotteita</h2><div class="tuote-grid" id="vastaavat-grid"></div>' +
+        '<div class="center" style="margin-top:2.2rem"><a class="btn btn--primary" href="tuotteet.html">Verkkokauppaan</a></div></div>';
 
       const sivu = tuoteDetail.querySelector(".tuote-sivu");
       sivu.querySelectorAll(".opt-row").forEach(function (rivi) {
@@ -774,6 +787,89 @@
       opt.textContent = m.nimi;
       makuSelect.appendChild(opt);
     });
+  }
+
+  /* =======================================================================
+     7e. HINTALASKURI (catering.html) – lisää tuotteita ja laskee arvion
+     ======================================================================= */
+  const laskuri = document.getElementById("laskuri");
+  if (laskuri) {
+    const rivitEl = document.getElementById("laskuri-rivit");
+    const totalEl = document.getElementById("laskuri-total");
+    const HINNAT = {
+      kakku: { "6 hlö": 45, "10 hlö": 65, "15 hlö": 95, "20 hlö": 125 },
+      mini: { "6 kpl": 24, "12 kpl": 44, "24 kpl": 84 },
+      suolainen: { "6 kpl": 26, "12 kpl": 48, "24 kpl": 90 },
+    };
+    const DIET = { Tavallinen: 0, Vegaaninen: 10, Gluteeniton: 10, Laktoositon: 5 };
+    const makuOptiot = (SITE.maut || []).map(function (m) { return "<option>" + m.nimi + "</option>"; }).join("");
+
+    function kentat(tyyppi) {
+      if (tyyppi === "kakku") {
+        return (
+          '<label>Maku<select data-f="maku"><option value="">Valitse…</option>' + makuOptiot + "</select></label>" +
+          '<label>Koko<select data-f="koko"><option>6 hlö</option><option>10 hlö</option><option>15 hlö</option><option>20 hlö</option></select></label>' +
+          '<label>Ruokavalio<select data-f="diet"><option>Tavallinen</option><option>Vegaaninen</option><option>Gluteeniton</option><option>Laktoositon</option></select></label>' +
+          '<label>Allergiat / kommentti<input data-f="kommentti" type="text" placeholder="vapaa kenttä"></label>'
+        );
+      }
+      return (
+        '<label>Määrä<select data-f="maara"><option>6 kpl</option><option>12 kpl</option><option>24 kpl</option></select></label>' +
+        '<label>Allergiat / kommentti<input data-f="kommentti" type="text" placeholder="vapaa kenttä"></label>'
+      );
+    }
+
+    function rivinHinta(rivi) {
+      const tyyppi = rivi.querySelector('[data-f="tyyppi"]').value;
+      if (tyyppi === "kakku") {
+        const koko = rivi.querySelector('[data-f="koko"]').value;
+        const diet = rivi.querySelector('[data-f="diet"]').value;
+        return (HINNAT.kakku[koko] || 0) + (DIET[diet] || 0);
+      }
+      const maara = rivi.querySelector('[data-f="maara"]').value;
+      return (HINNAT[tyyppi] && HINNAT[tyyppi][maara]) || 0;
+    }
+
+    function laske() {
+      let summa = 0;
+      rivitEl.querySelectorAll(".laskuri-rivi").forEach(function (r) {
+        const h = rivinHinta(r);
+        summa += h;
+        r.querySelector(".laskuri-rivi__hinta").textContent = euro(h);
+      });
+      totalEl.textContent = euro(summa);
+    }
+
+    function uusiRivi() {
+      const div = document.createElement("div");
+      div.className = "laskuri-rivi";
+      div.innerHTML =
+        '<div class="laskuri-rivi__head">' +
+        '<select data-f="tyyppi"><option value="kakku">Kakku</option><option value="mini">Mini</option><option value="suolainen">Suolainen</option></select>' +
+        '<button type="button" class="laskuri-poista" aria-label="Poista tuote">✕</button>' +
+        "</div>" +
+        '<div class="laskuri-rivi__kentat">' + kentat("kakku") + "</div>" +
+        '<div class="laskuri-rivi__hinta">0 €</div>';
+      rivitEl.appendChild(div);
+      laske();
+    }
+
+    rivitEl.addEventListener("change", function (e) {
+      const rivi = e.target.closest(".laskuri-rivi");
+      if (!rivi) return;
+      if (e.target.matches('[data-f="tyyppi"]')) {
+        rivi.querySelector(".laskuri-rivi__kentat").innerHTML = kentat(e.target.value);
+      }
+      laske();
+    });
+    rivitEl.addEventListener("click", function (e) {
+      if (e.target.classList.contains("laskuri-poista")) {
+        if (rivitEl.querySelectorAll(".laskuri-rivi").length > 1) e.target.closest(".laskuri-rivi").remove();
+        laske();
+      }
+    });
+    document.getElementById("laskuri-lisaa").addEventListener("click", uusiRivi);
+    uusiRivi();
   }
 
   /* =======================================================================

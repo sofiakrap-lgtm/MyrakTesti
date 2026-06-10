@@ -186,8 +186,8 @@ img { max-width: 100%; display: block; }
 .tilaa-kuva { height: 100%; }
 .tilaa-kuva .foto { width: 100%; height: 100%; object-fit: cover; }
 
-/* Maisteluboksi-kuva: tekstin korkuinen */
-.maisteluboksi-kuva { width: 100%; height: 100%; object-fit: cover; }
+/* Maisteluboksi-kuva: n. 40 % pienempi, keskitetty */
+.maisteluboksi-kuva { width: 62%; height: auto; margin: 0 auto; display: block; }
 
 /* Asiakaspalautteet: vaakavieritettävä rivi */
 .quotes-scroll {
@@ -230,6 +230,20 @@ img { max-width: 100%; display: block; }
 /* Vastaavia tuotteita -osio tuotesivulla */
 .vastaavat { margin-top: 3.5rem; }
 .vastaavat h2 { margin-bottom: 1.5rem; }
+
+/* Hintalaskuri (catering) */
+.laskuri-rivi { border: 1px solid var(--line); padding: 1.2rem; margin-bottom: 1rem; background: var(--surface); }
+.laskuri-rivi__head { display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin-bottom: 0.9rem; }
+.laskuri-rivi__head select { font: inherit; padding: 0.5rem 0.7rem; border: 1px solid var(--line); background: #fff; color: var(--ink); }
+.laskuri-poista { border: none; background: none; cursor: pointer; font-size: 1rem; color: var(--muted); }
+.laskuri-poista:hover { color: var(--ink); }
+.laskuri-rivi__kentat { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.laskuri-rivi__kentat label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; font-weight: 500; }
+.laskuri-rivi__kentat select,
+.laskuri-rivi__kentat input { font: inherit; padding: 0.55rem 0.7rem; border: 1px solid var(--line); background: #fff; color: var(--ink); }
+.laskuri-rivi__hinta { text-align: right; font-weight: 600; margin-top: 0.7rem; }
+.laskuri-summa { font-family: var(--font-otsikko); font-size: 1.4rem; font-weight: 600; margin: 1.3rem 0; }
+@media (max-width: 600px) { .laskuri-rivi__kentat { grid-template-columns: 1fr; } }
 
 /* Pyörivä pyöreä logo (esim. palvelut-sivulla) */
 .pyoriva-logo {
@@ -424,9 +438,9 @@ img { max-width: 100%; display: block; }
 /* Yläpalkki: toiminnot oikealle */
 .nav__actions { margin-left: auto; }
 
-/* Pyöreä logo yläpalkin vasemmassa reunassa */
+/* Logo yläpalkin vasemmassa reunassa (wordmark) */
 .nav__mark { display: flex; align-items: center; flex-shrink: 0; }
-.nav__mark img { height: 42px; width: auto; display: block; }
+.nav__mark img { height: 18px; width: auto; display: block; }
 .nav__mark:hover { opacity: 0.8; }
 
 /* Läpinäkyvä yläpalkki hero-kuvan päällä (etusivu); muuttuu kiinteäksi
