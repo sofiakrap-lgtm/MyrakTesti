@@ -86,8 +86,8 @@
       '<header class="site-header">' +
       '<div class="wrap nav">' +
       '<a class="nav__logo" href="index.html" aria-label="' + SITE.nimi + '">' +
-      // Wordmark-logo (assets/logo.svg). alt-teksti toimii varatekstinä.
-      '<img src="assets/logo.svg" alt="' + SITE.nimi + '">' +
+      // Wordmark-logo (logo.svg). alt-teksti toimii varatekstinä.
+      '<img src="logo.svg" alt="' + SITE.nimi + '">' +
       "</a>" +
       '<button class="nav__burger" aria-label="Avaa valikko" aria-expanded="false" aria-controls="paavalikko">' +
       "<span></span><span></span><span></span>" +
@@ -142,7 +142,7 @@
       '<div class="footer-grid">' +
       // Brändisarake (vaalea wordmark tummalla taustalla + englanninkielinen slogan)
       '<div class="footer-brand">' +
-      '<img src="assets/logo-light.svg" alt="' + SITE.nimi + '">' +
+      '<img src="logo-light.svg" alt="' + SITE.nimi + '">' +
       "<p>" + (SITE.tagline || SITE.iskulause) + "</p>" +
       '<div class="footer-social">' + some + "</div>" +
       "</div>" +
