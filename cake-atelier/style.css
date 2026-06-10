@@ -393,7 +393,7 @@ img { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(33, 30, 26, 0.22);   /* kevyt tummennus – pääkuva näkyviin */
+  background: rgba(33, 30, 26, 0.34);   /* tummennus, jotta valkoinen teksti erottuu */
 }
 .hero-full__inner {
   position: relative;
