@@ -195,6 +195,10 @@ img { max-width: 100%; display: block; }
 /* Pieni kuva (esim. yhteystiedot) */
 .kuva-pieni { max-width: 340px; aspect-ratio: 4 / 5; object-fit: cover; }
 
+/* Tarinamme-kuva n. 40 % pienempi, keskitetty */
+.tarina-kuva { max-width: 60%; margin: 0 auto; }
+@media (max-width: 720px) { .tarina-kuva { max-width: 80%; } }
+
 /* Maisteluboksi-kuva: n. 40 % pienempi, keskitetty */
 .maisteluboksi-kuva { width: 62%; height: auto; margin: 0 auto; display: block; }
 

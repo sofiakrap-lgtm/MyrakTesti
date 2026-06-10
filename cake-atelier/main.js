@@ -93,7 +93,7 @@
       '<img src="logo.svg" alt="' + SITE.nimi + '"></a>' +
       '<ul class="nav__links" id="paavalikko">' + linkit + "</ul>" +
       '<div class="nav__actions">' +
-      '<a class="btn btn--primary btn--small" href="tilaa.html">Tilaa nyt</a>' +
+      '<a class="btn btn--primary btn--small" href="hintalaskuri.html">Tilaa nyt</a>' +
       '<button class="cart-btn" id="cart-open" aria-label="Avaa ostoskori">' +
       ICONS.cart +
       '<span class="cart-count" id="cart-count" hidden>0</span>' +

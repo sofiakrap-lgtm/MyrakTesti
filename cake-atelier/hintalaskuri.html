@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hintalaskuri – The Cake Atelier (demo)</title>
+  <meta name="description" content="Laske arvio tilaisuutesi tarjoiluista ja lähetä tarjouspyyntö – The Cake Atelier.">
+  <link rel="icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=12">
+</head>
+<body data-page="hintalaskuri.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="wrap section" id="laskuri-osio">
+      <span class="eyebrow">Hintalaskuri</span>
+      <h1>Laske arvio tilaisuuteesi</h1>
+      <p class="lead">
+        Lisää tuotteita yksi kerrallaan, niin näet suuntaa-antavan arvion. Lähetä
+        lopuksi tarjouspyyntö – vahvistamme lopullisen hinnan toiveidesi mukaan.
+      </p>
+      <div id="laskuri">
+        <div id="laskuri-rivit"></div>
+        <button type="button" class="btn btn--ghost" id="laskuri-lisaa">+ Lisää tuote</button>
+        <div class="laskuri-summa">Arvio yhteensä: <span id="laskuri-total">0 €</span></div>
+        <form class="form" data-demo novalidate>
+          <div class="form-grid">
+            <div class="field"><label for="l-nimi">Nimi *</label><input id="l-nimi" type="text" required autocomplete="name"></div>
+            <div class="field"><label for="l-email">Sähköposti *</label><input id="l-email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="l-puhelin">Puhelin</label><input id="l-puhelin" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="l-pvm">Tilaisuuden päivä</label><input id="l-pvm" type="date"></div>
+          </div>
+          <p style="font-size:.85rem;color:var(--muted)">* pakollinen kenttä. Demo – arvio on suuntaa-antava, tietoja ei lähetetä.</p>
+          <button class="btn btn--primary" type="submit">Lähetä tarjouspyyntö (demo)</button>
+          <div class="demo-success" hidden role="status">
+            <h3>Kiitos tarjouspyynnöstä</h3>
+            <p>Tämä on <strong>demo</strong> – pyyntöä ei lähetetty oikeasti. Oikealla
+              sivustolla arvio ja toiveesi tulisivat mukaan viestiin.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="site.js?v=12"></script>
+  <script src="main.js?v=12"></script>
+</body>
+</html>
