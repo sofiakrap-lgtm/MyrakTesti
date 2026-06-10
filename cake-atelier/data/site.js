@@ -127,7 +127,7 @@ const SITE = {
       kuvaus: "Pieni juhlakakku kahdelle, hillitty ja huolellinen yllätyslahja.",
       ainesosat: "Vehnäjauho, voi, kananmuna, sokeri, kerma, vaniljatuubi.",
       sailytys: "Säilytä jääkaapissa ja nauti kahden vuorokauden kuluessa noudosta.",
-      kategoria: "kakut",
+      kategoria: "minit",
       alkaen: 32,
       annos: "riittää n. 2–4 hengelle",
       allergeenit: ["gluteeni", "kananmuna", "maito"],
@@ -148,7 +148,7 @@ const SITE = {
       kuvaus: "Pehmeät kuppikakut hillityllä kuorrutuksella, kuuden kappaleen erissä.",
       ainesosat: "Vehnäjauho, voi, kananmuna, sokeri, tuorejuusto, vaniljatuubi.",
       sailytys: "Säilytä viileässä ja nauti tarjoilupäivänä parhaan maun vuoksi.",
-      kategoria: "leivonnaiset",
+      kategoria: "minit",
       alkaen: 24,
       annos: "6 kpl / erä",
       allergeenit: ["gluteeni", "kananmuna", "maito"],
@@ -186,6 +186,28 @@ const SITE = {
       kuva: "",
     },
     {
+      id: "voileipakakku",
+      nimi: "Voileipäkakku",
+      kuvaus: "Suolainen juhlaklassikko, täytteet toiveidesi mukaan.",
+      ainesosat: "Vehnäleipä, tuorejuusto, kala tai kasvis, kananmuna, majoneesi.",
+      sailytys: "Säilytä jääkaapissa ja nauti vuorokauden kuluessa noudosta.",
+      kategoria: "suolaiset",
+      alkaen: 45,
+      annos: "riittää n. 10 hengelle",
+      allergeenit: ["gluteeni", "kananmuna", "maito", "kala"],
+      koot: [
+        { nimi: "10 hlö", lisa: 0 },
+        { nimi: "15 hlö", lisa: 20 },
+        { nimi: "20 hlö", lisa: 40 },
+      ],
+      ruokavaliot: [
+        { nimi: "Tavallinen", lisa: 0 },
+        { nimi: "Gluteeniton", lisa: 6 },
+        { nimi: "Kasvis", lisa: 0 },
+      ],
+      kuva: "",
+    },
+    {
       id: "lahjakortti",
       nimi: "Lahjakortti",
       kuvaus: "Anna lahjaksi makuelämys. Lahjakortti käy kaikkiin tuotteisiin.",
@@ -209,8 +231,8 @@ const SITE = {
   kategoriat: [
     { avain: "kaikki", nimi: "Kaikki" },
     { avain: "kakut", nimi: "Kakut" },
-    { avain: "leivonnaiset", nimi: "Leivonnaiset" },
-    { avain: "muut", nimi: "Muut" },
+    { avain: "minit", nimi: "Minit" },
+    { avain: "suolaiset", nimi: "Suolaiset" },
   ],
 
   /* Suosikkituotteet etusivulle (tuotteiden id:t) */
