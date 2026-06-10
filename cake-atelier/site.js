@@ -7,7 +7,7 @@
 
    KUVAPOLUT: tiedostonimissä on välilyöntejä, joten ne on koodattu
    (välilyönti = %20). Pääte oletettu .jpg. Jos kuva ei näy, tarkista että
-   tiedostonimi assets/-kansiossa täsmää tähän polkuun täsmälleen.
+   tiedostonimi juuressa täsmää tähän polkuun täsmälleen.
 
    Huom: tämä ei ole moduuli vaan tavallinen skripti (toimii myös file://).
    ========================================================================= */
@@ -91,7 +91,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 8 },
         { nimi: "Vegaaninen", lisa: 10 },
       ],
-      kuva: "assets/kermakakku,%20vanilja.jpg",
+      kuva: "kermakakku,%20vanilja.jpg",
     },
     {
       id: "kirsikka-suklaakakku",
@@ -113,7 +113,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 8 },
         { nimi: "Vegaaninen", lisa: 10 },
       ],
-      kuva: "assets/kirsikka%20suklaakakku.jpg",
+      kuva: "kirsikka%20suklaakakku.jpg",
     },
     {
       id: "mansikkakakku",
@@ -135,7 +135,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 8 },
         { nimi: "Vegaaninen", lisa: 10 },
       ],
-      kuva: "assets/mansikkakakku,%20neli%C3%B6.jpg",
+      kuva: "mansikkakakku,%20neli%C3%B6.jpg",
     },
     {
       id: "mansikkapiiras",
@@ -155,7 +155,7 @@ const SITE = {
         { nimi: "Tavallinen", lisa: 0 },
         { nimi: "Gluteeniton", lisa: 6 },
       ],
-      kuva: "assets/mansikkapiiras.jpg",
+      kuva: "mansikkapiiras.jpg",
     },
     {
       id: "marenkikakku",
@@ -176,7 +176,7 @@ const SITE = {
         { nimi: "Tavallinen", lisa: 0 },
         { nimi: "Laktoositon", lisa: 4 },
       ],
-      kuva: "assets/marenkikakku.jpg",
+      kuva: "marenkikakku.jpg",
     },
     {
       id: "marjakakku",
@@ -198,7 +198,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 8 },
         { nimi: "Vegaaninen", lisa: 10 },
       ],
-      kuva: "assets/marjakakku.jpg",
+      kuva: "marjakakku.jpg",
     },
     {
       id: "suklaakakku",
@@ -220,7 +220,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 8 },
         { nimi: "Vegaaninen", lisa: 10 },
       ],
-      kuva: "assets/suklaakakku.jpg",
+      kuva: "suklaakakku.jpg",
     },
 
     /* ---------- MINIT ---------- */
@@ -244,7 +244,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 4 },
         { nimi: "Vegaaninen", lisa: 5 },
       ],
-      kuva: "assets/mini,%20vanilja.jpg",
+      kuva: "mini,%20vanilja.jpg",
     },
     {
       id: "mini-suklaa",
@@ -266,7 +266,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 4 },
         { nimi: "Vegaaninen", lisa: 5 },
       ],
-      kuva: "assets/mini,%20suklaa.jpg",
+      kuva: "mini,%20suklaa.jpg",
     },
     {
       id: "mini-kirsikka",
@@ -288,7 +288,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 4 },
         { nimi: "Vegaaninen", lisa: 5 },
       ],
-      kuva: "assets/mini,%20kirsikka.jpg",
+      kuva: "mini,%20kirsikka.jpg",
     },
     {
       id: "mini-suklaa-kirsikka",
@@ -310,7 +310,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 4 },
         { nimi: "Vegaaninen", lisa: 5 },
       ],
-      kuva: "assets/mini,%20suklaa%20kirsikka.jpg",
+      kuva: "mini,%20suklaa%20kirsikka.jpg",
     },
     {
       id: "mini-lemon",
@@ -332,7 +332,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 4 },
         { nimi: "Vegaaninen", lisa: 5 },
       ],
-      kuva: "assets/mini,%20lemon.jpg",
+      kuva: "mini,%20lemon.jpg",
     },
     {
       id: "mini-velvet",
@@ -353,7 +353,7 @@ const SITE = {
         { nimi: "Tavallinen", lisa: 0 },
         { nimi: "Gluteeniton", lisa: 4 },
       ],
-      kuva: "assets/mini,%20velvet.jpg",
+      kuva: "mini,%20velvet.jpg",
     },
     {
       id: "mini-mix",
@@ -375,7 +375,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 4 },
         { nimi: "Vegaaninen", lisa: 5 },
       ],
-      kuva: "assets/mini,%20mix.jpg",
+      kuva: "mini,%20mix.jpg",
     },
 
     /* ---------- SUOLAISET ---------- */
@@ -399,7 +399,7 @@ const SITE = {
         { nimi: "Gluteeniton", lisa: 6 },
         { nimi: "Kasvis", lisa: 0 },
       ],
-      kuva: "assets/suolainen,%20voileip%C3%A4kakku.jpg",
+      kuva: "suolainen,%20voileip%C3%A4kakku.jpg",
     },
     {
       id: "suolainen-focaccia",
@@ -419,7 +419,7 @@ const SITE = {
         { nimi: "Tavallinen", lisa: 0 },
         { nimi: "Vegaaninen", lisa: 0 },
       ],
-      kuva: "assets/suolainen,%20focaccia.jpg",
+      kuva: "suolainen,%20focaccia.jpg",
     },
     {
       id: "suolainen-katkarapu",
@@ -438,7 +438,7 @@ const SITE = {
       ruokavaliot: [
         { nimi: "Tavallinen", lisa: 0 },
       ],
-      kuva: "assets/suolainen,%20nimi%20katkarapu.jpg",
+      kuva: "suolainen,%20nimi%20katkarapu.jpg",
     },
     {
       id: "suolainen-lohi-retiisi",
@@ -457,7 +457,7 @@ const SITE = {
       ruokavaliot: [
         { nimi: "Tavallinen", lisa: 0 },
       ],
-      kuva: "assets/suolainen%20mini,%20lohi%20ja%20retiisi.jpg",
+      kuva: "suolainen%20mini,%20lohi%20ja%20retiisi.jpg",
     },
     {
       id: "suolainen-lohi",
@@ -476,7 +476,7 @@ const SITE = {
       ruokavaliot: [
         { nimi: "Tavallinen", lisa: 0 },
       ],
-      kuva: "assets/suomainen,%20mini%20loki.jpg",
+      kuva: "suomainen,%20mini%20loki.jpg",
     },
 
     /* ---------- MUU ---------- */
@@ -520,7 +520,7 @@ const SITE = {
       sopii: "Häät, kesäjuhlat, ristiäiset",
       kuvaus: "Pehmeä vaniljapohja, tuoretta mansikkaa ja kevyttä kermavaahtoa. Suosikki, joka miellyttää kaikkia vieraita.",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "kerma", "mansikka", "sokeri"],
-      leikkauskuva: "assets/leikkaus,%20kerma%20mansikka.jpg",
+      leikkauskuva: "leikkaus,%20kerma%20mansikka.jpg",
     },
     {
       id: "suklaa-vanilja",
@@ -529,7 +529,7 @@ const SITE = {
       sopii: "Syntymäpäivät, kahvipöytä",
       kuvaus: "Täyteläinen suklaapohja ja silkkinen vaniljatäyte – klassikko, joka ei petä.",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "tumma suklaa", "vanilja", "sokeri"],
-      leikkauskuva: "assets/leikkaus,%20suklaa%20vanilja.jpg",
+      leikkauskuva: "leikkaus,%20suklaa%20vanilja.jpg",
     },
     {
       id: "mansikka-valkosuklaa",
@@ -538,7 +538,7 @@ const SITE = {
       sopii: "Häät, kevätjuhlat",
       kuvaus: "Tuore mansikka ja pehmeä valkosuklaa – herkullisen makea yhdistelmä.",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "valkosuklaa", "mansikka", "sokeri"],
-      leikkauskuva: "assets/leikkaus,%20mansikka%20valkosuklaa.jpg",
+      leikkauskuva: "leikkaus,%20mansikka%20valkosuklaa.jpg",
     },
     {
       id: "vadelma-valkosuklaa",
@@ -547,7 +547,7 @@ const SITE = {
       sopii: "Illalliset, juhlat",
       kuvaus: "Kirpeä vadelma ja samettinen valkosuklaa tasapainottavat toisiaan kauniisti.",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "valkosuklaa", "vadelma", "sokeri"],
-      leikkauskuva: "assets/leikkaus,%20vadelma%20valkosuklaa.jpg",
+      leikkauskuva: "leikkaus,%20vadelma%20valkosuklaa.jpg",
     },
     {
       id: "kirsikka-suklaa",
@@ -556,7 +556,7 @@ const SITE = {
       sopii: "Talvijuhlat, syntymäpäivät",
       kuvaus: "Tumma suklaa ja kirpeä kirsikka – runsas ja juhlava maku.",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "tumma suklaa", "kirsikka", "sokeri"],
-      leikkauskuva: "assets/leikkaus,%20kirsikka,%20suklaa.jpg",
+      leikkauskuva: "leikkaus,%20kirsikka,%20suklaa.jpg",
     },
     {
       id: "pistaasi-vadelma",
@@ -565,7 +565,7 @@ const SITE = {
       sopii: "Häät, illalliset",
       kuvaus: "Pähkinäinen pistaasi ja kirpeä vadelma – tyylikäs ja moderni valinta.",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "pistaasi", "vadelma", "sokeri"],
-      leikkauskuva: "assets/leikkaus,%20pistaasi%20vadelma.jpg",
+      leikkauskuva: "leikkaus,%20pistaasi%20vadelma.jpg",
     },
     {
       id: "oreo",
@@ -574,7 +574,7 @@ const SITE = {
       sopii: "Syntymäpäivät, lasten juhlat",
       kuvaus: "Suklaakeksiä ja vaniljakreemiä – lasten ja aikuisten suosikki.",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "kaakaokeksi", "vanilja", "sokeri"],
-      leikkauskuva: "assets/leikkaus,%20oreo.jpg",
+      leikkauskuva: "leikkaus,%20oreo.jpg",
     },
     {
       id: "snickers",
@@ -583,7 +583,7 @@ const SITE = {
       sopii: "Syntymäpäivät",
       kuvaus: "Runsas yhdistelmä suklaata, kinuskia ja maapähkinää – todellinen herkuttelu.",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "suklaa", "kinuski", "maapähkinä"],
-      leikkauskuva: "assets/leikkaus,%20snickers.jpg",
+      leikkauskuva: "leikkaus,%20snickers.jpg",
     },
     {
       id: "honey-cake",
@@ -592,7 +592,7 @@ const SITE = {
       sopii: "Kahvipöytä, juhlat",
       kuvaus: "Ohuet hunajaiset kakkukerrokset ja vaalea täyte – lämmin ja kotoisa klassikko (honey cake).",
       ainesosat: ["vehnäjauho", "voi", "kananmuna", "hunaja", "smetana", "sokeri"],
-      leikkauskuva: "assets/leikkaus,%20honey%20cake.jpg",
+      leikkauskuva: "leikkaus,%20honey%20cake.jpg",
     },
     {
       id: "porkkana",
@@ -601,17 +601,17 @@ const SITE = {
       sopii: "Syysjuhlat, ristiäiset",
       kuvaus: "Mausteinen porkkanakakku ja silkkinen tuorejuustokuorrutus – täyteläinen ympäri vuoden.",
       ainesosat: ["vehnäjauho", "porkkana", "kaneli", "tuorejuusto", "kananmuna", "öljy"],
-      leikkauskuva: "assets/laikkaus,%20porkkanakakku.jpg",
+      leikkauskuva: "laikkaus,%20porkkanakakku.jpg",
     },
   ],
 
   /* --- Galleria (aiemmat työt – "yleinen kuvitus") ----------------------- */
   galleria: [
-    { otsikko: "Hääkakku, kirsikka", kuva: "assets/h%C3%A4%C3%A4kakku,%20kirsikka.jpg" },
-    { otsikko: "Kermakakku, pinkki", kuva: "assets/kermakakku,%20pinkki.jpg" },
-    { otsikko: "Kermakakku, viikuna", kuva: "assets/kermakakku,%20viikuna.jpg" },
-    { otsikko: "Hääkakun maistelusetti", kuva: "assets/leikkaus,%20h%C3%A4%C3%A4kakun%20maistelusetti.jpg" },
-    { otsikko: "Juhlakakku", kuva: "assets/15.jpg" },
+    { otsikko: "Hääkakku, kirsikka", kuva: "h%C3%A4%C3%A4kakku,%20kirsikka.jpg" },
+    { otsikko: "Kermakakku, pinkki", kuva: "kermakakku,%20pinkki.jpg" },
+    { otsikko: "Kermakakku, viikuna", kuva: "kermakakku,%20viikuna.jpg" },
+    { otsikko: "Hääkakun maistelusetti", kuva: "leikkaus,%20h%C3%A4%C3%A4kakun%20maistelusetti.jpg" },
+    { otsikko: "Juhlakakku", kuva: "15.jpg" },
   ],
 
   /* --- Tapahtumat / kurssit / pop-upit ----------------------------------- */
@@ -657,9 +657,9 @@ const SITE = {
       { paiva: "Su–Ma", aika: "Vain tilauksesta" },
     ],
     kuvat: [
-      { otsikko: "Vitriini", kuva: "assets/referenssikuva,%20j%C3%A4%C3%A4kaappi.jpg" },
-      { otsikko: "Kakkuja", kuva: "assets/referenssikuva,%20kakkuja.jpg" },
-      { otsikko: "Hetki myymälässä", kuva: "assets/referenssikuva,%20kakun%20sy%C3%B6nti.jpg" },
+      { otsikko: "Vitriini", kuva: "referenssikuva,%20j%C3%A4%C3%A4kaappi.jpg" },
+      { otsikko: "Kakkuja", kuva: "referenssikuva,%20kakkuja.jpg" },
+      { otsikko: "Hetki myymälässä", kuva: "referenssikuva,%20kakun%20sy%C3%B6nti.jpg" },
     ],
   },
 
