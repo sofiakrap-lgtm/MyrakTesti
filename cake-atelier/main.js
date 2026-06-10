@@ -48,10 +48,10 @@
   function kuvapaikka(variantti, kuva, altTeksti) {
     const luokka = "kuvapaikka " + (variantti || "");
     if (kuva) {
-      // Oikea kuva lisätty: taustakuva + saavutettava aria-label
+      // Oikea kuva: näytetään KOKONAAN (ei rajausta) <img>-elementtinä
       return (
-        '<div class="' + luokka + ' has-img" role="img" aria-label="' +
-        (altTeksti || "") + '" style="background-image:url(\'' + kuva + "')\"></div>"
+        '<img class="foto" src="' + kuva + '" alt="' + (altTeksti || "") +
+        '" loading="lazy">'
       );
     }
     // Paikkamerkki
