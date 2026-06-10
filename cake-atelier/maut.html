@@ -3,42 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tapahtumat – The Cake Atelier (demo)</title>
-  <meta name="description" content="Tulevat leivontakurssit, pop-upit ja tapahtumat The Cake Atelierssa.">
+  <title>Maut – The Cake Atelier (demo)</title>
+  <meta name="description" content="Tutustu The Cake Atelierin makuihin. Klikkaa leikkauskuvaa ja lue maun kuvaus, sopivat tilaisuudet ja ainesosat.">
   <link rel="icon" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-page="tapahtumat.html">
+<body data-page="maut.html">
   <a class="skip-link" href="#main">Siirry sisältöön</a>
   <div id="site-header"></div>
 
   <main id="main">
     <section class="wrap section section--tight">
-      <span class="eyebrow">Workshopit &amp; tapahtumat</span>
-      <h1>Tulevat workshopit ja kurssit</h1>
+      <span class="eyebrow">Maut</span>
+      <h1>Meidän makumme</h1>
       <p class="lead">
-        Leivonta- ja koristelukurssit, pop-upit ja yhteiset hetket – tervetuloa mukaan.
-        Järjestämme myös yksityisiä workshopeja ryhmille.
-      </p>
-      <p style="color:var(--muted)">
-        Suunnitteletko häitä tai isompaa tilaisuutta? Katso
-        <a href="catering.html">catering ja juhlat</a>.
+        Klikkaa kakun leikkauskuvaa ja lue tarkemmin maun kuvaus, mihin
+        tilanteeseen se sopii ja mistä se on tehty.
       </p>
     </section>
 
     <section class="wrap section section--tight">
-      <!-- Workshopit ja tapahtumat renderöidään site.js:stä -->
-      <div class="grid" id="tapahtumat" style="gap:1rem"><!-- JS täyttää --></div>
+      <!-- Makugalleria renderöidään site.js:stä (klikattavat leikkauskuvat) -->
+      <div class="maut-grid reveal" id="maut-grid"><!-- JS täyttää --></div>
     </section>
 
     <section class="section band">
       <div class="wrap center">
-        <h2>Haluatko oman ryhmän kurssin?</h2>
-        <p class="lead">Järjestämme yksityisiä leivontahetkiä esimerkiksi polttareihin tai työporukalle.</p>
-        <a class="btn btn--primary" href="yhteystiedot.html">Kysy lisää</a>
+        <h2>Löysitkö suosikkisi?</h2>
+        <p class="lead">Yhdistämme makuja toiveidesi mukaan – kerro mistä pidät.</p>
+        <a class="btn btn--primary" href="tilaa.html">Tilaa oma kakku</a>
       </div>
     </section>
   </main>

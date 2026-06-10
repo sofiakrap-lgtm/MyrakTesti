@@ -279,16 +279,97 @@ const SITE = {
     },
   ],
 
+  /* --- Maut (makugalleria + jokaisen maun oma sivu maku.html?id=) --------
+     leikkauskuva = kuva kakun leikkauspinnasta (klikattava galleriassa).     */
+  maut: [
+    {
+      id: "vanilja-mansikka",
+      nimi: "Vanilja & mansikka",
+      lyhyt: "Raikas kesäklassikko.",
+      sopii: "Häät, kesäjuhlat, ristiäiset",
+      kuvaus:
+        "Pehmeä vaniljakakku, tuoreita mansikoita ja kevyttä kermavaahtoa. " +
+        "Hillitty ja raikas suosikki, joka miellyttää kaikkia vieraita.",
+      ainesosat: ["vehnäjauho", "voi", "kananmuna", "vanilja", "mansikka", "kerma", "sokeri"],
+      leikkauskuva: "",
+    },
+    {
+      id: "suklaa-vadelma",
+      nimi: "Suklaa & vadelma",
+      lyhyt: "Täyteläinen ja hapokas.",
+      sopii: "Syntymäpäivät, illalliset",
+      kuvaus:
+        "Tumma suklaakakku ja kirpeä vadelmatäyte – runsas mutta tasapainoinen " +
+        "yhdistelmä makeaa ja hapokasta.",
+      ainesosat: ["vehnäjauho", "tumma suklaa", "kananmuna", "voi", "vadelma", "sokeri"],
+      leikkauskuva: "",
+    },
+    {
+      id: "sitruuna-mustikka",
+      nimi: "Sitruuna & mustikka",
+      lyhyt: "Raikas ja pirteä.",
+      sopii: "Kevätjuhlat, valmistujaiset",
+      kuvaus:
+        "Sitruunainen pohja ja metsämustikkaa – kepeä ja raikas valinta " +
+        "kevään ja kesän juhliin.",
+      ainesosat: ["vehnäjauho", "sitruuna", "kananmuna", "voi", "mustikka", "sokeri"],
+      leikkauskuva: "",
+    },
+    {
+      id: "kinuski-suklaa",
+      nimi: "Kinuski & suklaa",
+      lyhyt: "Makea ja runsas.",
+      sopii: "Talvijuhlat, kahvipöytä",
+      kuvaus:
+        "Pehmeä kinuski ja maitosuklaa – lämmin ja makea klassikko, joka " +
+        "sopii erityisesti talven juhliin.",
+      ainesosat: ["vehnäjauho", "kinuski", "maitosuklaa", "kananmuna", "voi", "sokeri"],
+      leikkauskuva: "",
+    },
+    {
+      id: "porkkana-tuorejuusto",
+      nimi: "Porkkana & tuorejuusto",
+      lyhyt: "Mausteinen ja täyteläinen.",
+      sopii: "Syysjuhlat, ristiäiset",
+      kuvaus:
+        "Mausteinen porkkanakakku ja silkkinen tuorejuustokuorrutus – " +
+        "täyteläinen suosikki ympäri vuoden.",
+      ainesosat: ["vehnäjauho", "porkkana", "kaneli", "tuorejuusto", "kananmuna", "öljy", "sokeri"],
+      leikkauskuva: "",
+    },
+  ],
+
+  /* --- Myymälä (fyysinen studiomyymälä, oma sivu myymala.html) ----------- */
+  myymala: {
+    otsikko: "Studio & myymälä",
+    kuvaus:
+      "Pieni studiomyymälämme on paikka, jossa kakut syntyvät käsin ja jossa " +
+      "voit noutaa tilauksesi. Tervetuloa poikkeamaan – kerromme mielellämme lisää.",
+    osoite: "Esimerkkikatu 12, 00530 Helsinki",
+    puhelin: "+358 40 123 4567",
+    sahkoposti: "hello@thecakeatelier-demo.fi",
+    aukiolot: [
+      { paiva: "Ti–Pe", aika: "10–17" },
+      { paiva: "La", aika: "10–15" },
+      { paiva: "Su–Ma", aika: "Vain tilauksesta" },
+    ],
+    kuvat: [
+      { otsikko: "Myymälän tiski", kuva: "" },
+      { otsikko: "Studio", kuva: "" },
+      { otsikko: "Vitriini", kuva: "" },
+      { otsikko: "Sisäänkäynti", kuva: "" },
+    ],
+  },
+
   /* --- Navigaation linkit (jaettu header käyttää tätä) ------------------- */
   navi: [
     { teksti: "Etusivu", linkki: "index.html" },
     { teksti: "Tuotteet", linkki: "tuotteet.html" },
+    { teksti: "Maut", linkki: "maut.html" },
     { teksti: "Palvelut", linkki: "palvelut.html" },
-    { teksti: "Catering", linkki: "catering.html" },
     { teksti: "Tapahtumat", linkki: "tapahtumat.html" },
-    { teksti: "Galleria", linkki: "galleria.html" },
+    { teksti: "Myymälä", linkki: "myymala.html" },
     { teksti: "Meistä", linkki: "meista.html" },
-    { teksti: "UKK", linkki: "ukk.html" },
     { teksti: "Yhteystiedot", linkki: "yhteystiedot.html" },
   ],
 };

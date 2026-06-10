@@ -152,10 +152,11 @@
       '<div class="footer-links">' +
       "<h4>Tietoa</h4>" +
       "<ul>" +
+      '<li><a href="galleria.html">Galleria</a></li>' +
+      '<li><a href="catering.html">Catering &amp; juhlat</a></li>' +
+      '<li><a href="ukk.html">Usein kysyttyä</a></li>' +
       '<li><a href="tilausehdot.html">Tilaus- ja toimitusehdot</a></li>' +
       '<li><a href="tietosuoja.html">Tietosuojaseloste</a></li>' +
-      '<li><a href="ukk.html">Usein kysyttyä</a></li>' +
-      '<li><a href="yhteystiedot.html">Yhteystiedot</a></li>' +
       "</ul>" +
       "</div>" +
       "</div>" +
@@ -600,6 +601,105 @@
       })
       .join("");
   }
+
+  /* =======================================================================
+     7c. MAUT – makugalleria (maut.html) ja yksittäisen maun sivu (maku.html)
+     ======================================================================= */
+
+  // a) Makugalleria: klikattavat leikkauskuvat → maku.html?id=
+  const mautGrid = document.getElementById("maut-grid");
+  if (mautGrid && SITE.maut) {
+    mautGrid.innerHTML = SITE.maut
+      .map(function (m) {
+        return (
+          '<a class="maku-kortti" href="maku.html?id=' + m.id + '">' +
+          kuvapaikka("kuvapaikka--neliö", m.leikkauskuva, "Leikkauskuva: " + m.nimi) +
+          '<div class="maku-kortti__body">' +
+          "<h3>" + m.nimi + "</h3>" +
+          '<p>' + m.lyhyt + "</p>" +
+          '<span class="maku-kortti__linkki">Lue lisää →</span>' +
+          "</div>" +
+          "</a>"
+        );
+      })
+      .join("");
+  }
+
+  // b) Yksittäisen maun sivu: lukee ?id= ja näyttää maun tiedot
+  const makuDetail = document.getElementById("maku-detail");
+  if (makuDetail && SITE.maut) {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const maku = SITE.maut.find(function (m) { return m.id === id; });
+
+    if (!maku) {
+      makuDetail.innerHTML =
+        '<div class="center"><h1>Makua ei löytynyt</h1>' +
+        '<p class="lead">Palaa <a href="maut.html">makugalleriaan</a> ja valitse maku.</p></div>';
+    } else {
+      document.title = maku.nimi + " – The Cake Atelier (demo)";
+      const ainesosat = maku.ainesosat
+        .map(function (a) { return "<li>" + a + "</li>"; })
+        .join("");
+      makuDetail.innerHTML =
+        '<div class="grid grid--2" style="align-items:start;gap:2.5rem">' +
+        "<div>" +
+        kuvapaikka("kuvapaikka--neliö", maku.leikkauskuva, "Leikkauskuva: " + maku.nimi) +
+        "</div>" +
+        "<div>" +
+        '<a href="maut.html" class="eyebrow" style="text-decoration:none">← Kaikki maut</a>' +
+        "<h1>" + maku.nimi + "</h1>" +
+        '<p class="lead">' + maku.kuvaus + "</p>" +
+        '<div class="maku-meta">' +
+        "<h3>Mihin tilanteeseen</h3>" +
+        "<p>" + maku.sopii + "</p>" +
+        "<h3>Ainesosat</h3>" +
+        '<ul class="maku-ainesosat">' + ainesosat + "</ul>" +
+        "</div>" +
+        '<a class="btn btn--primary" href="tilaa.html">Tilaa tällä maulla</a>' +
+        "</div>" +
+        "</div>";
+    }
+  }
+
+  /* =======================================================================
+     7d. MYYMÄLÄ (myymala.html) – tiedot ja kuvat
+     ======================================================================= */
+  const myymalaKuvat = document.getElementById("myymala-kuvat");
+  if (myymalaKuvat && SITE.myymala) {
+    myymalaKuvat.innerHTML = SITE.myymala.kuvat
+      .map(function (k) {
+        return (
+          "<figure>" +
+          kuvapaikka("kuvapaikka--neliö", k.kuva, k.otsikko) +
+          "<figcaption>" + k.otsikko + "</figcaption>" +
+          "</figure>"
+        );
+      })
+      .join("");
+  }
+  const myymalaTiedot = document.getElementById("myymala-tiedot");
+  if (myymalaTiedot && SITE.myymala) {
+    const m = SITE.myymala;
+    const rivit = m.aukiolot
+      .map(function (a) { return "<tr><th>" + a.paiva + "</th><td>" + a.aika + "</td></tr>"; })
+      .join("");
+    myymalaTiedot.innerHTML =
+      '<dl style="margin:0 0 1rem">' +
+      '<div class="location__row"><dt>Osoite</dt><dd>' + m.osoite + "</dd></div>" +
+      '<div class="location__row"><dt>Puhelin</dt><dd><a href="tel:' +
+      m.puhelin.replace(/\s/g, "") + '">' + m.puhelin + "</a></dd></div>" +
+      '<div class="location__row"><dt>Sähköposti</dt><dd><a href="mailto:' +
+      m.sahkoposti + '">' + m.sahkoposti + "</a></dd></div>" +
+      "</dl>" +
+      "<h3>Aukioloajat</h3>" +
+      '<table class="hours-table"><tbody>' + rivit + "</tbody></table>" +
+      '<div class="map-placeholder kuvapaikka" style="margin-top:1rem">' +
+      '<span class="kuvapaikka__teksti">kartta tähän</span></div>';
+  }
+  // Myymäläsivun otsikko + esittelyteksti datasta
+  const myymalaKuvaus = document.getElementById("myymala-kuvaus");
+  if (myymalaKuvaus && SITE.myymala) myymalaKuvaus.textContent = SITE.myymala.kuvaus;
 
   /* =======================================================================
      8. LOMAKKEIDEN DEMO-TOIMINTA (ei lähetä – näyttää kiitosviestin)

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Myymälä – The Cake Atelier (demo)</title>
+  <meta name="description" content="Vieraile The Cake Atelierin studiomyymälässä Helsingissä. Osoite, aukioloajat ja kuvia myymälästä.">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="myymala.html">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- Hero: myymäläkuva + esittely -->
+    <section class="wrap hero">
+      <div class="hero__content reveal">
+        <span class="eyebrow">Studiomyymälä · Helsinki</span>
+        <h1>Studio &amp; myymälä</h1>
+        <p class="lead" id="myymala-kuvaus"></p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="tilaa.html">Tilaa kakku</a>
+          <a class="btn btn--ghost" href="yhteystiedot.html">Yhteystiedot</a>
+        </div>
+      </div>
+      <div class="hero__media kuvapaikka kuvapaikka--laaja reveal">
+        <span class="kuvapaikka__teksti">oma kuva tähän</span>
+      </div>
+    </section>
+
+    <!-- Tiedot + kartta -->
+    <section class="section band">
+      <div class="wrap">
+        <div class="grid grid--2" style="align-items:start">
+          <div>
+            <h2>Käy moikkaamassa</h2>
+            <div id="myymala-tiedot"><!-- JS täyttää: osoite, aukiolot, kartta --></div>
+          </div>
+          <div>
+            <h2>Myymälä kuvina</h2>
+            <div class="gallery reveal" id="myymala-kuvat"><!-- JS täyttää --></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

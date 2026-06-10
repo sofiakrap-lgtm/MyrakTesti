@@ -927,6 +927,57 @@ img { max-width: 100%; display: block; }
 }
 
 /* -------------------------------------------------------------------------
+   18e. MAUT – makugalleria ja maun sivu
+   ------------------------------------------------------------------------- */
+.maut-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.maku-kortti {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-iso);
+  overflow: hidden;
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.25s ease;
+}
+.maku-kortti:hover { border-color: var(--terra); text-decoration: none; }
+.maku-kortti__body { padding: 1.1rem 1.3rem 1.4rem; }
+.maku-kortti__body h3 { margin: 0 0 0.3rem; }
+.maku-kortti__body p { margin: 0 0 0.6rem; color: var(--muted); font-size: 0.95rem; }
+.maku-kortti__linkki { color: var(--terra); font-weight: 600; font-size: 0.92rem; }
+
+.maku-meta { margin: 1.5rem 0; }
+.maku-meta h3 { margin: 1.2rem 0 0.3rem; font-size: 1.05rem; }
+.maku-meta p { margin: 0; color: var(--muted); }
+.maku-ainesosat {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.maku-ainesosat li {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .maut-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .maut-grid { grid-template-columns: 1fr; }
+}
+
+/* -------------------------------------------------------------------------
    18d. PEHMEÄT FADE-IN-ANIMAATIOT (vain kun JS päällä; kunnioittaa
         prefers-reduced-motion -asetusta)
    ------------------------------------------------------------------------- */
