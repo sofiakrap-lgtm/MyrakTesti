@@ -7,13 +7,13 @@
 
   /* ---------- Mobile nav ---------- */
   var navToggle = document.getElementById("navToggle");
-  var navLinks = document.getElementById("navLinks");
-  if (navToggle && navLinks) {
+  var nav = navToggle ? navToggle.closest(".nav") : null;
+  if (navToggle && nav) {
     navToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("open");
+      nav.classList.toggle("open");
     });
-    navLinks.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () { navLinks.classList.remove("open"); });
+    nav.querySelectorAll(".nav-group a").forEach(function (a) {
+      a.addEventListener("click", function () { nav.classList.remove("open"); });
     });
   }
 

@@ -10,7 +10,9 @@
   --terracotta: #9C4A2D;  /* frame, marquee */
   --mustard:    #E6B23E;  /* card section, badge */
   --orange:     #DD5A26;  /* vermillion — logo, buttons, heading accents ONLY */
-  --slate:      #A6B5BD;  /* dusty blue — hero card pinstripes */
+  --slate:      #A6B5BD;  /* dusty blue */
+  --blue:       #A7C7D8;  /* powder/sky blue — hero stripes + blue pills */
+  --blue-deep:  #6E9CB4;  /* deeper blue for text on blue */
   --brown:      #3A2A21;  /* body text */
   --cream-2:    #FBF6EC;  /* lighter cream for cards on cream */
 
@@ -47,18 +49,18 @@ body {
   position: fixed;
   top: 50%;
   font-family: var(--sans);
-  font-weight: 600;
-  font-size: .72rem;
-  letter-spacing: .42em;
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .34em;
   text-transform: uppercase;
-  color: rgba(244,237,224,.85);
+  color: rgba(244,237,224,.92);
   writing-mode: vertical-rl;
   z-index: 60;
   pointer-events: none;
   white-space: nowrap;
 }
-.frame-label.left  { left: 4px;  transform: translateY(-50%) rotate(180deg); }
-.frame-label.right { right: 4px; transform: translateY(-50%); }
+.frame-label.left  { left: 2px;  transform: translateY(-50%) rotate(180deg); }
+.frame-label.right { right: 2px; transform: translateY(-50%); }
 .sheet {
   background: var(--cream);
   border-radius: 8px;
@@ -125,44 +127,55 @@ img, svg { max-width: 100%; display: block; }
 .btn--outline:hover { background: var(--orange); color: var(--cream); }
 .btn--cream { background: var(--cream); color: var(--terracotta); border-color: var(--cream); }
 .btn--cream:hover { background: #fff; border-color: #fff; }
+.btn--blue { background: var(--blue); color: var(--brown); border-color: var(--blue); }
+.btn--blue:hover { background: var(--blue-deep); border-color: var(--blue-deep); color: var(--cream); }
 .btn--lg { padding: 18px 38px; font-size: .88rem; }
 .btn--block { width: 100%; justify-content: center; }
 
-/* ---------- Navbar ---------- */
+/* ---------- Navbar (centered logo, bracketed links both sides) ---------- */
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  padding: 22px clamp(20px, 5vw, 56px);
+  padding: 26px clamp(20px, 5vw, 56px) 18px;
   position: relative;
   z-index: 50;
 }
 .brand {
   font-family: var(--round);
-  font-weight: 700;
-  font-size: 1.7rem;
+  font-weight: 800;
+  font-size: 1.9rem;
   color: var(--orange);
-  letter-spacing: -.01em;
+  letter-spacing: -.02em;
   text-transform: lowercase;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  justify-self: center;
+  white-space: nowrap;
 }
 .brand .sticker { width: 26px; height: 26px; }
-.nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
-.nav-links a {
+.nav-group { display: flex; align-items: center; gap: 26px; list-style: none; }
+.nav-group.left  { justify-self: start; }
+.nav-group.right { justify-self: end; }
+.nav-group a {
   font-family: var(--sans);
   font-weight: 600;
-  font-size: .74rem;
-  letter-spacing: .18em;
+  font-size: .7rem;
+  letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--brown);
   transition: color .15s;
+  white-space: nowrap;
 }
-.nav-links a:hover { color: var(--orange); }
-.nav-links .btn { color: var(--cream); }
-.nav-links .btn:hover { color: var(--cream); }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.nav-group a::before { content: "["; color: var(--orange); margin-right: 4px; }
+.nav-group a::after  { content: "]"; color: var(--orange); margin-left: 4px; }
+.nav-group a:hover { color: var(--orange); }
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  justify-self: end; grid-column: 3;
+}
 .nav-toggle span { width: 26px; height: 2.5px; background: var(--brown); border-radius: 3px; transition: .25s; }
 
 /* ---------- Hero ---------- */
@@ -203,13 +216,13 @@ img, svg { max-width: 100%; display: block; }
   position: relative;
   border-radius: var(--radius);
   padding: 48px 44px;
-  background-color: var(--slate);
+  background-color: var(--blue);
   background-image: repeating-linear-gradient(
       to right,
-      rgba(244,237,224,.0) 0,
-      rgba(244,237,224,.0) 11px,
-      rgba(244,237,224,.45) 11px,
-      rgba(244,237,224,.45) 13px);
+      rgba(244,237,224,0) 0,
+      rgba(244,237,224,0) 12px,
+      rgba(247,241,230,.7) 12px,
+      rgba(247,241,230,.7) 16px);
   box-shadow: inset 0 0 0 1px rgba(58,42,33,.1);
   display: flex;
   flex-direction: column;
@@ -227,15 +240,15 @@ img, svg { max-width: 100%; display: block; }
 .hero-card h1 { font-size: clamp(2.1rem, 4vw, 3rem); margin-bottom: 16px; }
 .hero-card p { font-size: 1.04rem; color: var(--brown); margin-bottom: 26px; max-width: 38ch; }
 
-/* round stamp badge */
+/* round stamp badge — static, tilted like the reference */
 .stamp {
   position: absolute;
-  width: 104px; height: 104px;
-  top: -34px; right: -22px;
+  width: 108px; height: 108px;
+  top: -36px; right: -24px;
   z-index: 5;
-  animation: spin 26s linear infinite;
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 6px 14px rgba(58,42,33,.22));
 }
-@keyframes spin { to { transform: rotate(360deg); } }
 
 /* ---------- Marquee ---------- */
 .marquee {
@@ -315,7 +328,18 @@ img, svg { max-width: 100%; display: block; }
 .step-arrow.a1 { left: 30%; }
 .step-arrow.a2 { left: 63%; }
 
-/* ---------- Dashed callout ---------- */
+/* ---------- Dashed callout with hand-drawn arrows ---------- */
+.callout-wrap { position: relative; max-width: 980px; margin: 0 auto; }
+.callout-wrap .doodle-arrow {
+  position: absolute;
+  top: 34px;
+  width: 116px; height: 66px;
+  color: var(--brown);
+  opacity: .85;
+  pointer-events: none;
+}
+.callout-wrap .doodle-arrow.l { left: -28px;  transform: rotate(20deg); }
+.callout-wrap .doodle-arrow.r { right: -28px; transform: scaleX(-1) rotate(20deg); }
 .callout {
   border: 2px dashed var(--orange);
   border-radius: var(--radius);
@@ -342,8 +366,22 @@ img, svg { max-width: 100%; display: block; }
 .callout h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin-bottom: 14px; }
 .callout p { opacity: .85; margin-bottom: 26px; max-width: 46ch; margin-left: auto; margin-right: auto; }
 
-/* ---------- 3 cards on mustard ---------- */
-.card-band { background: var(--mustard); }
+/* ---------- 3 cards on rounded mustard band ---------- */
+.band-title {
+  text-align: center;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(.82rem, 1.5vw, 1rem);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 30px;
+}
+.card-band {
+  background: var(--mustard);
+  border-radius: 30px;
+  padding: clamp(30px, 4vw, 50px);
+}
 .card-band .eyebrow { color: var(--terracotta); }
 .cards {
   display: grid;
@@ -681,34 +719,30 @@ img, svg { max-width: 100%; display: block; }
   .hero-photo { min-height: 300px; }
   .steps { grid-template-columns: 1fr; gap: 30px; }
   .step-arrow { display: none; }
+  .callout-wrap .doodle-arrow { display: none; }
   .cards { grid-template-columns: 1fr; }
   .calc-wrap { grid-template-columns: 1fr; }
   .summary { position: relative; top: 0; }
   .footer .container { grid-template-columns: 1fr; }
   .opt-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 720px) {
+@media (max-width: 760px) {
   :root { --frame: 12px; }
   .frame-label { display: none; }
-  .nav-toggle { display: flex; }
-  .nav-links {
-    position: absolute;
-    top: 70px; left: 16px; right: 16px;
-    background: var(--cream-2);
+  .nav { grid-template-columns: auto 1fr; align-items: center; row-gap: 0; }
+  .brand { justify-self: start; grid-column: 1; font-size: 1.6rem; }
+  .nav-toggle { display: flex; grid-column: 2; }
+  .nav-group {
+    grid-column: 1 / -1;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    padding: 12px 22px 20px;
-    border-radius: var(--radius);
-    border: 1px solid rgba(58,42,33,.14);
-    box-shadow: 0 18px 40px -18px rgba(58,42,33,.4);
+    width: 100%;
     display: none;
-    z-index: 80;
   }
-  .nav-links.open { display: flex; }
-  .nav-links li { width: 100%; }
-  .nav-links li a { display: block; padding: 12px 0; }
-  .nav-links .btn { margin-top: 10px; }
+  .nav-group.left { margin-top: 14px; }
+  .nav.open .nav-group { display: flex; }
+  .nav-group a { display: block; padding: 11px 0; font-size: .8rem; }
   .scope-grid { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .section { padding: 64px 0; }

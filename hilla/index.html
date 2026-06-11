@@ -87,22 +87,24 @@
   </svg>
 
   <div class="frame">
-    <span class="frame-label left">Studio Blomma · Est. 2026</span>
-    <span class="frame-label right">Verkkosivut yrittäjälle</span>
+    <span class="frame-label left">Studio Blomma — Verkkosivut yrittäjälle</span>
+    <span class="frame-label right">Tehty lämmöllä Suomessa · Est. 2026</span>
 
     <div class="sheet">
 
       <!-- ===== Nav ===== -->
       <nav class="nav">
-        <a href="index.html" class="brand">studio blomma</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Valikko"><span></span><span></span><span></span></button>
-        <ul class="nav-links" id="navLinks">
+        <ul class="nav-group left">
           <li><a href="#palvelut">Palvelut</a></li>
           <li><a href="#prosessi">Näin se toimii</a></li>
           <li><a href="#toimialat">Toimialat</a></li>
-          <li><a href="laskuri.html">Hintalaskuri</a></li>
-          <li><a href="tarjouspyynto.html" class="btn">Tee tarjouspyyntö</a></li>
         </ul>
+        <a href="index.html" class="brand">studio blomma</a>
+        <ul class="nav-group right">
+          <li><a href="laskuri.html">Hintalaskuri</a></li>
+          <li><a href="tarjouspyynto.html">Tarjouspyyntö</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Valikko"><span></span><span></span><span></span></button>
       </nav>
 
       <!-- ===== Hero ===== -->
@@ -117,8 +119,7 @@
           <div class="hero-card">
             <svg class="stamp"><use href="#s-stamp"/></svg>
             <div class="inner">
-              <div class="brand">studio blomma</div>
-              <span class="script">juuri sinun näköiset</span>
+              <span class="script">uusi tapa tehdä verkkosivut</span>
               <h1>Verkkosivut, jotka <span class="accent">tuoksuvat sinulta.</span></h1>
               <p>Suunnittelen lämpimät, selkeät ja toimivat sivut leipomoille, kahviloille, ravintoloille ja kampaamoille — yrittäjän tarpeisiin, läpinäkyvästi ja ilman teknistä hämmennystä.</p>
               <a href="laskuri.html" class="btn btn--lg">Laske hintasi →</a>
@@ -144,34 +145,49 @@
         <p>Teen <svg class="inline-sticker" style="color:var(--mustard)"><use href="#s-spark"/></svg> sinulle sivut, jotka <svg class="inline-sticker" style="color:var(--orange)"><use href="#s-heart"/></svg> myyvät puolestasi — kun sinä keskityt <svg class="inline-sticker" style="color:var(--slate)"><use href="#s-scribble"/></svg> yritykseesi.</p>
       </section>
 
-      <!-- ===== Palvelut (3 cards on mustard) ===== -->
-      <section class="section card-band" id="palvelut">
+      <!-- ===== Before you scroll: dashed price callout with hand-drawn arrows ===== -->
+      <section class="section" style="padding-top:0">
         <div class="container">
-          <div class="sec-head center reveal">
-            <span class="eyebrow">Mitä teen</span>
-            <h2>Palvelut, jotka vievät yrityksesi <span class="script">verkkoon</span></h2>
+          <div class="callout-wrap">
+            <svg class="doodle-arrow l" aria-hidden="true"><use href="#s-arrow"/></svg>
+            <svg class="doodle-arrow r" aria-hidden="true"><use href="#s-arrow"/></svg>
+            <div class="callout reveal">
+              <span class="pill-label">Ennen kuin jatkat</span>
+              <h2>Haluatko nähdä, mitä juuri <span class="script">sinun</span> sivusi maksavat?</h2>
+              <p>Ilman sitoumusta, ilman yhteydenottoa. Saat heti käsityksen hinnasta — minuutissa.</p>
+              <a href="laskuri.html" class="btn btn--lg">Avaa hintalaskuri →</a>
+            </div>
           </div>
-          <div class="cards">
-            <div class="card reveal">
-              <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-palette"/></svg>
-              <span class="eyebrow">Suunnittelu</span>
-              <h3>Verkkosivujen suunnittelu</h3>
-              <p>Räätälöidyt sivut juuri sinun yrityksesi tarpeisiin — selkeä rakenne, kaunis ulkoasu ja sisältö, joka saa asiakkaan ottamaan yhteyttä. Mobiili edellä.</p>
-              <a href="laskuri.html" class="btn btn--outline">Laske hinta</a>
-            </div>
-            <div class="card reveal">
-              <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-pencil"/></svg>
-              <span class="eyebrow">Visuaalisuus</span>
-              <h3>Visuaalinen ilme &amp; upgrade</h3>
-              <p>Logot, värimaailma, grafiikka ja kuvitukset. Päivitetään vanha ilme raikkaaksi tai rakennetaan brändisi näköinen kokonaisuus alusta asti.</p>
-              <a href="tarjouspyynto.html" class="btn btn--outline">Kysy lisää</a>
-            </div>
-            <div class="card reveal">
-              <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-tag"/></svg>
-              <span class="eyebrow">Läpinäkyvyys</span>
-              <h3>Hinta näkyvissä heti</h3>
-              <p>Alakohtaiset hintalaskurit kertovat saman tien, mitä sivut maksavat. Ei piilokuluja, ei yllätyksiä — näet hinnan ennen kuin sitoudut mihinkään.</p>
-              <a href="laskuri.html" class="btn btn--outline">Avaa laskuri</a>
+        </div>
+      </section>
+
+      <!-- ===== Palvelut (3 cards on rounded mustard band) ===== -->
+      <section class="section" id="palvelut" style="padding-top:24px">
+        <div class="container">
+          <p class="band-title reveal">Ratkaistaan tämä verkkosivujuttu yhdessä</p>
+          <div class="card-band">
+            <div class="cards">
+              <div class="card reveal">
+                <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-palette"/></svg>
+                <span class="eyebrow">Suunnittelu</span>
+                <h3>Verkkosivujen suunnittelu</h3>
+                <p>Räätälöidyt sivut juuri sinun yrityksesi tarpeisiin — selkeä rakenne, kaunis ulkoasu ja sisältö, joka saa asiakkaan ottamaan yhteyttä. Mobiili edellä.</p>
+                <a href="laskuri.html" class="btn">Laske hinta</a>
+              </div>
+              <div class="card reveal">
+                <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-pencil"/></svg>
+                <span class="eyebrow">Visuaalisuus</span>
+                <h3>Visuaalinen ilme &amp; upgrade</h3>
+                <p>Logot, värimaailma, grafiikka ja kuvitukset. Päivitetään vanha ilme raikkaaksi tai rakennetaan brändisi näköinen kokonaisuus alusta asti.</p>
+                <a href="tarjouspyynto.html" class="btn btn--blue">Kysy lisää</a>
+              </div>
+              <div class="card reveal">
+                <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-tag"/></svg>
+                <span class="eyebrow">Läpinäkyvyys</span>
+                <h3>Hinta näkyvissä heti</h3>
+                <p>Alakohtaiset hintalaskurit kertovat saman tien, mitä sivut maksavat. Ei piilokuluja, ei yllätyksiä — näet hinnan ennen kuin sitoudut mihinkään.</p>
+                <a href="laskuri.html" class="btn">Avaa laskuri</a>
+              </div>
             </div>
           </div>
         </div>
@@ -203,18 +219,6 @@
               <h3>Suunnittele sivusi</h3>
               <p>Täytä suunnittelulomake, jossa vaikutat väreihin, tyyliin ja interaktiivisiin elementteihin. Sen jälkeen rakennan sivusi valmiiksi.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== Dashed callout ===== -->
-      <section class="section" style="padding-top:0">
-        <div class="container">
-          <div class="callout reveal">
-            <span class="pill-label">Hinnat näkyvissä</span>
-            <h2>Laske unelmiesi sivujen hinta <span class="script">minuutissa</span></h2>
-            <p>Ilman sitoumusta, ilman yhteydenottoa. Saat heti käsityksen siitä, mitä juuri sinun sivusi maksavat.</p>
-            <a href="laskuri.html" class="btn btn--lg">Avaa hintalaskuri →</a>
           </div>
         </div>
       </section>
