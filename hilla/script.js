@@ -1,5 +1,5 @@
 /* =========================================================
-   Hilla Studios — shared interactions
+   Studio Blomma — shared interactions
    Works on every page; each block guards for its own elements.
    ========================================================= */
 (function () {
@@ -37,7 +37,7 @@
   /* ---------- Currency helper ---------- */
   function eur(n) { return n.toLocaleString("fi-FI") + " €"; }
 
-  var STORE_KEY = "hillaBrief";
+  var STORE_KEY = "studioBlommaBrief";
 
   /* =========================================================
      CALCULATOR (laskuri.html)
@@ -221,7 +221,7 @@
       }
 
       var L = [];
-      L.push("UUSI TARJOUSPYYNTÖ — HILLA STUDIOS");
+      L.push("UUSI TARJOUSPYYNTÖ — STUDIO BLOMMA");
       L.push("====================================");
       L.push("");
       L.push("YHTEYSTIEDOT");

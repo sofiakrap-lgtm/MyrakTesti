@@ -1,4 +1,4 @@
-# Hilla Studios — verkkosivut
+# studio blomma — verkkosivut
 
 Lämmin, 70-luvun retro-editorial-tyylinen sivusto verkkosivujen suunnittelupalvelulle.
 Pelkkä HTML + CSS + vanilla JS — ei build-vaihetta. Avaa `index.html` selaimessa.
@@ -10,25 +10,28 @@ Pelkkä HTML + CSS + vanilla JS — ei build-vaihetta. Avaa `index.html` selaime
 - `style.css` — koko design-system (värit, fontit, komponentit)
 - `script.js` — laskurin logiikka, esitäyttö lomakkeelle, lomakkeen lähetys
 
-## Brändin värit (style.css → :root)
+## Brändi
+Nimi on **studio blomma** (blomma = kukka). Tunnusmerkki on viisilehtinen kukka.
+
+### Värit (style.css → :root)
 - Kerma `#F4EDE0` · Terracotta `#9C4A2D` · Sinappi `#E6B23E`
 - Oranssi `#DD5A26` (vain korostukset) · Pölynsininen `#A6B5BD` · Ruskea teksti `#3A2A21`
 
-## Fontit (Google Fonts)
+### Fontit (Google Fonts)
 Fraunces (otsikot, serif) · Inter (leipä/labelit) · Pinyon Script (käsinkirjoitettu aksentti) ·
-Fredoka (logo-wordmark, pyöreä)
+Baloo 2 (logo-wordmark, lihava pyöreä)
 
-## Omien logojesi & kuviesi lisääminen
-Tällä hetkellä logo on tekstimuotoinen wordmark ("hilla studios") ja kaikki ikonit ovat
-inline-SVG:tä, jotta sivu toimii ilman erillisiä tiedostoja.
+## Logo & kukka
+- **Wordmark** "studio blomma" ladotaan tekstinä Baloo 2 -fontilla (`.brand`-luokka), joten se
+  skaalautuu terävänä ja sen värin voi vaihtaa CSS:llä.
+- **Kukkamerkki** on inline-SVG-symbolina (`#s-flower` täytetty, `#s-bloom` ääriviiva) sekä
+  erillisinä tiedostoina:
+  - `kukka.svg` — ääriviivakukka (kuten logossa), terracotta
+  - `kukka-taytetty.svg` — täytetty kukka, oranssi + sinappikeskusta
 
-Kun haluat omat logosi tilalle:
-1. Lisää logotiedostot tähän kansioon, esim. `paalogo.svg`, `sivulogo.svg`, `kuvalogo.svg`, `ympyralogo.svg`.
-2. Korvaa navigaation `<a class="brand">…</a>` kuvalla, esim.:
-   `<a href="index.html" class="brand"><img src="paalogo.svg" alt="Hilla Studios" style="height:38px"></a>`
-3. Hero-kuvan paikka on `.hero-photo` — vaihda taustaksi oma kuvasi:
-   `style="background-image:url('kuvasi.jpg');background-size:cover"` ja poista `.photo-note`.
-4. Pyöreän leiman (`#s-stamp`) tilalle voit halutessasi laittaa `ympyralogo.svg`:n.
+Kukan saa mihin tahansa kohtaan näin:
+`<svg class="sticker" style="color:var(--orange)"><use href="#s-flower"/></svg>`
+(tai `#s-bloom` ääriviivaversiolle). Väri tulee `color`-arvosta.
 
 ## Lomakkeen lähetys
 Lomake avaa nyt sähköpostiohjelman valmiilla viestillä (mailto). Jos haluat ottaa

@@ -1,5 +1,5 @@
 /* =========================================================
-   HILLA STUDIOS — warm 70s retro editorial design system
+   STUDIO BLOMMA — warm 70s retro editorial design system
    Brief-faithful: terracotta frame, cream base, serif heads,
    hand-drawn stickers, pinstripes, pill buttons, marquee.
    ========================================================= */
@@ -22,7 +22,7 @@
   --serif:  "Fraunces", Georgia, "Times New Roman", serif;
   --sans:   "Inter", system-ui, -apple-system, sans-serif;
   --script: "Pinyon Script", cursive;
-  --round:  "Fredoka", var(--sans);   /* logo wordmark, rounded display */
+  --round:  "Baloo 2", "Fredoka", var(--sans);   /* logo wordmark, heavy rounded display */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -139,7 +139,7 @@ img, svg { max-width: 100%; display: block; }
 }
 .brand {
   font-family: var(--round);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.7rem;
   color: var(--orange);
   letter-spacing: -.01em;
