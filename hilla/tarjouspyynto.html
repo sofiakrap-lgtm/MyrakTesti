@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjouspyyntö &amp; suunnittelu — Hilla Studios</title>
+  <meta name="description" content="Kerro toiveesi: värit, tyyli ja interaktiiviset elementit. Lähetä tarjouspyyntö Hilla Studiosille muutamassa minuutissa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="s-flower" viewBox="0 0 64 64">
+        <g fill="currentColor">
+          <circle cx="32" cy="12" r="9"/><circle cx="32" cy="52" r="9"/>
+          <circle cx="12" cy="32" r="9"/><circle cx="52" cy="32" r="9"/>
+          <circle cx="18" cy="18" r="8"/><circle cx="46" cy="18" r="8"/>
+          <circle cx="18" cy="46" r="8"/><circle cx="46" cy="46" r="8"/>
+        </g>
+        <circle cx="32" cy="32" r="9" fill="#E6B23E"/>
+      </symbol>
+      <symbol id="s-spark" viewBox="0 0 64 64"><path fill="currentColor" d="M32 6c1 13 3 18 16 20-13 2-15 7-16 20-1-13-3-18-16-20 13-2 15-7 16-20z"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="frame">
+    <span class="frame-label left">Hilla Studios · Est. 2026</span>
+    <span class="frame-label right">Kerro toiveesi</span>
+
+    <div class="sheet">
+      <nav class="nav">
+        <a href="index.html" class="brand"><svg class="sticker" style="color:var(--orange)"><use href="#s-flower"/></svg>hilla studios</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Valikko"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#palvelut">Palvelut</a></li>
+          <li><a href="index.html#prosessi">Näin se toimii</a></li>
+          <li><a href="index.html#toimialat">Toimialat</a></li>
+          <li><a href="laskuri.html">Hintalaskuri</a></li>
+          <li><a href="tarjouspyynto.html" class="btn">Tee tarjouspyyntö</a></li>
+        </ul>
+      </nav>
+
+      <section class="page-hero container">
+        <span class="script">kerro toiveesi</span>
+        <h1>Tarjouspyyntö &amp; suunnittelu</h1>
+        <p>Mitä yksityiskohtaisemmin kerrot, sitä paremmin osun maaliin. Pääset vaikuttamaan väreihin, tyyliin ja interaktiivisiin elementteihin — täytä rauhassa.</p>
+      </section>
+
+      <div class="container form-wrap">
+        <div class="prefill" id="prefillBanner" hidden>
+          <svg class="sticker" style="color:var(--terracotta)"><use href="#s-spark"/></svg>
+          <span id="prefillText">Toin valintasi hintalaskurista.</span>
+        </div>
+
+        <form id="briefForm" novalidate>
+          <!-- 1. Yhteystiedot -->
+          <div class="form-card">
+            <h3><span class="step-pill">1</span> Yhteystiedot</h3>
+            <p class="sub">Jotta voin lähettää sinulle tarjouksen.</p>
+            <div class="grid-2">
+              <div class="field"><label>Nimi *</label><input type="text" name="nimi" required></div>
+              <div class="field"><label>Yritys</label><input type="text" name="yritys"></div>
+            </div>
+            <div class="grid-2">
+              <div class="field"><label>Sähköposti *</label><input type="email" name="email" required></div>
+              <div class="field"><label>Puhelin</label><input type="tel" name="puhelin"></div>
+            </div>
+            <div class="field">
+              <label>Toimiala</label>
+              <select name="toimiala" id="toimialaSelect">
+                <option value="">Valitse…</option>
+                <option value="Leipomo">Leipomo</option>
+                <option value="Kahvila">Kahvila</option>
+                <option value="Ravintola">Ravintola</option>
+                <option value="Kampaamo">Kampaamo</option>
+                <option value="Muu">Muu</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 2. Projektisi -->
+          <div class="form-card">
+            <h3><span class="step-pill">2</span> Projektisi</h3>
+            <p class="sub">Lyhyesti siitä, mitä olet hakemassa.</p>
+            <div class="field">
+              <label>Mikä on sivuston tärkein tavoite? <span class="opt-hint">esim. lisää tilauksia, ajanvarauksia, näkyvyyttä</span></label>
+              <textarea name="tavoite"></textarea>
+            </div>
+            <div class="grid-2">
+              <div class="field"><label>Nykyiset sivut <span class="opt-hint">jos on</span></label><input type="url" name="nykyiset" placeholder="https://"></div>
+              <div class="field">
+                <label>Aikataulu</label>
+                <select name="aikataulu">
+                  <option value="">Ei kiirettä / joustava</option>
+                  <option value="1 kk">Mahdollisimman pian (n. 1 kk)</option>
+                  <option value="1–3 kk">1–3 kuukautta</option>
+                  <option value="Tietty päivä">Tiettyyn päivään mennessä</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>Budjetti <span class="opt-hint">esitäyttyy hintalaskurista, voit muokata</span></label>
+              <input type="text" name="budjetti" id="budjettiField" placeholder="esim. 990 €">
+            </div>
+          </div>
+
+          <!-- 3. Visuaalisuus -->
+          <div class="form-card">
+            <h3><span class="step-pill">3</span> Visuaalisuus</h3>
+            <p class="sub">Tästä saan kiinni tunnelmasta, jota tavoittelet.</p>
+
+            <div class="field">
+              <label>Värimaailma <span class="opt-hint">valitse 1–3 sinua puhuttelevaa sävyä</span></label>
+              <div class="swatches" id="swatches">
+                <label class="swatch"><input type="checkbox" name="vari" value="Kerma"><span class="dot" style="background:#F4EDE0"></span></label>
+                <label class="swatch"><input type="checkbox" name="vari" value="Terracotta"><span class="dot" style="background:#9C4A2D"></span></label>
+                <label class="swatch"><input type="checkbox" name="vari" value="Sinappi"><span class="dot" style="background:#E6B23E"></span></label>
+                <label class="swatch"><input type="checkbox" name="vari" value="Oranssi"><span class="dot" style="background:#DD5A26"></span></label>
+                <label class="swatch"><input type="checkbox" name="vari" value="Pölynsininen"><span class="dot" style="background:#A6B5BD"></span></label>
+                <label class="swatch"><input type="checkbox" name="vari" value="Metsänvihreä"><span class="dot" style="background:#3F6B4E"></span></label>
+                <label class="swatch"><input type="checkbox" name="vari" value="Roosa"><span class="dot" style="background:#E2A6A0"></span></label>
+                <label class="swatch"><input type="checkbox" name="vari" value="Yömusta"><span class="dot" style="background:#26201C"></span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Tyyli <span class="opt-hint">valitse mikä kuvaa toiveitasi</span></label>
+              <div class="pillbox" id="stylePills">
+                <label class="pill"><input type="checkbox" name="tyyli" value="Lämmin &amp; kotoisa"><span>Lämmin &amp; kotoisa</span></label>
+                <label class="pill"><input type="checkbox" name="tyyli" value="Retro / vintage"><span>Retro / vintage</span></label>
+                <label class="pill"><input type="checkbox" name="tyyli" value="Moderni"><span>Moderni</span></label>
+                <label class="pill"><input type="checkbox" name="tyyli" value="Elegantti"><span>Elegantti</span></label>
+                <label class="pill"><input type="checkbox" name="tyyli" value="Leikkisä"><span>Leikkisä</span></label>
+                <label class="pill"><input type="checkbox" name="tyyli" value="Minimalistinen"><span>Minimalistinen</span></label>
+                <label class="pill"><input type="checkbox" name="tyyli" value="Rohkea &amp; värikäs"><span>Rohkea &amp; värikäs</span></label>
+                <label class="pill"><input type="checkbox" name="tyyli" value="Luksus"><span>Luksus</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Typografian fiilis</label>
+              <select name="typografia">
+                <option value="">Ei väliä / ehdota minulle</option>
+                <option value="Elegantti serif">Elegantti serif (klassinen, kaunis)</option>
+                <option value="Pyöreä & ystävällinen">Pyöreä &amp; ystävällinen</option>
+                <option value="Selkeä groteski">Selkeä groteski (moderni, pelkistetty)</option>
+                <option value="Käsinkirjoitettu aksentti">Käsinkirjoitettu aksentti mukaan</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 4. Interaktiiviset elementit -->
+          <div class="form-card">
+            <h3><span class="step-pill">4</span> Interaktiiviset elementit</h3>
+            <p class="sub">Mitä toimintoja sivuilla olisi hyvä olla?</p>
+            <div class="pillbox" id="featurePills">
+              <label class="pill"><input type="checkbox" name="toiminto" value="Animaatiot"><span>Animaatiot</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Ajanvaraus"><span>Ajanvaraus</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Yhteydenottolomake"><span>Yhteydenottolomake</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Uutiskirje"><span>Uutiskirje</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Some-syöte"><span>Some-syöte</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Kartta"><span>Kartta</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Kuvagalleria"><span>Kuvagalleria</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Verkkokauppa"><span>Verkkokauppa</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Blogi / uutiset"><span>Blogi / uutiset</span></label>
+              <label class="pill"><input type="checkbox" name="toiminto" value="Ruokalista"><span>Ruokalista</span></label>
+            </div>
+          </div>
+
+          <!-- 5. Esikuvat & lisätiedot -->
+          <div class="form-card">
+            <h3><span class="step-pill">5</span> Esikuvat &amp; lisätiedot</h3>
+            <p class="sub">Onko sivustoja, joiden tyylistä pidät? Linkit auttavat valtavasti.</p>
+            <div class="grid-2">
+              <div class="field"><label>Esikuva 1</label><input type="url" name="esikuva1" placeholder="https://"></div>
+              <div class="field"><label>Esikuva 2</label><input type="url" name="esikuva2" placeholder="https://"></div>
+            </div>
+            <div class="field">
+              <label>Vapaa sana <span class="opt-hint">mitä tahansa, mistä on apua</span></label>
+              <textarea name="lisatiedot"></textarea>
+            </div>
+            <!-- Tekninen valinta laskurista kulkee mukana piilokentässä -->
+            <input type="hidden" name="laskuri_erittely" id="laskuriErittely">
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn--lg">Lähetä tarjouspyyntö →</button>
+            <p class="small">Lähetys avaa sähköpostiohjelmasi valmiiksi täytetyllä viestillä osoitteeseen sofia.krap@gmail.com.</p>
+          </div>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div>
+            <div class="brand" style="color:var(--cream)"><svg class="sticker" style="color:var(--mustard)"><use href="#s-flower"/></svg>hilla studios</div>
+            <p>Lämpimät verkkosivut ja visuaalinen ilme pienyrittäjille — selkeästi, kauniisti ja läpinäkyvästi.</p>
+          </div>
+          <div>
+            <h5>Sivut</h5>
+            <a href="index.html#palvelut">Palvelut</a>
+            <a href="laskuri.html">Hintalaskuri</a>
+            <a href="tarjouspyynto.html">Tarjouspyyntö</a>
+          </div>
+          <div>
+            <h5>Ota yhteyttä</h5>
+            <a href="mailto:sofia.krap@gmail.com">sofia.krap@gmail.com</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <span>© 2026 Hilla Studios</span>
+          <span>Tehty ❋ lämmöllä Suomessa</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Kiitos! Avaan sähköpostiviestin… ✦</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hintalaskuri — Hilla Studios</title>
+  <meta name="description" content="Laske verkkosivujesi hinta toimialan mukaan. Läpinäkyvästi ja reaaliajassa — leipomot, kahvilat, ravintolat, kampaamot ja muut yrittäjät.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="s-flower" viewBox="0 0 64 64">
+        <g fill="currentColor">
+          <circle cx="32" cy="12" r="9"/><circle cx="32" cy="52" r="9"/>
+          <circle cx="12" cy="32" r="9"/><circle cx="52" cy="32" r="9"/>
+          <circle cx="18" cy="18" r="8"/><circle cx="46" cy="18" r="8"/>
+          <circle cx="18" cy="46" r="8"/><circle cx="46" cy="46" r="8"/>
+        </g>
+        <circle cx="32" cy="32" r="9" fill="#E6B23E"/>
+      </symbol>
+      <symbol id="s-spark" viewBox="0 0 64 64"><path fill="currentColor" d="M32 6c1 13 3 18 16 20-13 2-15 7-16 20-1-13-3-18-16-20 13-2 15-7 16-20z"/></symbol>
+      <symbol id="s-bread" viewBox="0 0 64 64"><path fill="currentColor" d="M8 44c10-26 38-26 48 0-8-6-16-8-24-8s-16 2-24 8z"/><path fill="currentColor" d="M6 46c4 6 14 8 26 8s22-2 26-8c-8 5-17 6-26 6S14 51 6 46z"/></symbol>
+      <symbol id="s-cup" viewBox="0 0 64 64"><path fill="currentColor" d="M12 24h34v14a14 14 0 0 1-14 14H26a14 14 0 0 1-14-14V24z"/><path fill="none" stroke="currentColor" stroke-width="4" d="M46 28h6a6 6 0 0 1 0 12h-6"/><path fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" d="M22 8c-3 4 3 6 0 10M32 8c-3 4 3 6 0 10"/></symbol>
+      <symbol id="s-plate" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M22 8v22m-8-22v10a6 6 0 0 0 8 6v26m-8-42v14"/><path fill="currentColor" d="M44 8c-6 0-9 8-9 16 0 5 3 8 6 9v23h6V8z"/></symbol>
+      <symbol id="s-scissors" viewBox="0 0 64 64"><circle cx="14" cy="46" r="8" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="14" cy="18" r="8" fill="none" stroke="currentColor" stroke-width="4"/><path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M20 22 56 50M20 42 56 14"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="frame">
+    <span class="frame-label left">Hilla Studios · Est. 2026</span>
+    <span class="frame-label right">Läpinäkyvä hinnoittelu</span>
+
+    <div class="sheet">
+      <nav class="nav">
+        <a href="index.html" class="brand"><svg class="sticker" style="color:var(--orange)"><use href="#s-flower"/></svg>hilla studios</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Valikko"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#palvelut">Palvelut</a></li>
+          <li><a href="index.html#prosessi">Näin se toimii</a></li>
+          <li><a href="index.html#toimialat">Toimialat</a></li>
+          <li><a href="laskuri.html">Hintalaskuri</a></li>
+          <li><a href="tarjouspyynto.html" class="btn">Tee tarjouspyyntö</a></li>
+        </ul>
+      </nav>
+
+      <section class="page-hero container">
+        <span class="script">läpinäkyvästi</span>
+        <h1>Hintalaskuri</h1>
+        <p>Valitse toimialasi ja kokoa sivustosi palaset. Hinta päivittyy reaaliajassa — ja saat lopuksi vietyä valintasi suoraan tarjouspyyntöön.</p>
+      </section>
+
+      <div class="container calc-wrap">
+        <div class="calc-main">
+
+          <!-- 1. Toimiala -->
+          <div class="calc-block">
+            <h3>1. Valitse toimialasi</h3>
+            <p class="hint">Korostan alallesi sopivimmat lisäosat — voit toki valita mitä tahansa.</p>
+            <div class="chips" id="industryChips">
+              <div class="chip" data-ala="leipomo"><svg class="sticker"><use href="#s-bread"/></svg> Leipomo</div>
+              <div class="chip" data-ala="kahvila"><svg class="sticker"><use href="#s-cup"/></svg> Kahvila</div>
+              <div class="chip" data-ala="ravintola"><svg class="sticker"><use href="#s-plate"/></svg> Ravintola</div>
+              <div class="chip" data-ala="kampaamo"><svg class="sticker"><use href="#s-scissors"/></svg> Kampaamo</div>
+              <div class="chip" data-ala="muu"><svg class="sticker"><use href="#s-spark"/></svg> Muu ala</div>
+            </div>
+          </div>
+
+          <!-- 2. Laajuus -->
+          <div class="calc-block">
+            <h3>2. Sivuston laajuus</h3>
+            <p class="hint">Kuinka monta sivua tarvitset? Tämä on hinnan pohja.</p>
+            <div class="scope-grid" id="scopeGroup">
+              <label class="opt selected">
+                <input type="radio" name="scope" value="yksi" data-price="490" data-label="Yksisivuinen käyntikortti" checked>
+                <span class="opt-body"><span class="opt-title">Yksisivuinen <span class="opt-price">490 €</span></span><span class="opt-desc">Tyylikäs "käyntikortti" — kaikki olennainen yhdellä sivulla.</span></span>
+              </label>
+              <label class="opt">
+                <input type="radio" name="scope" value="pieni" data-price="990" data-label="Pieni sivusto (3–5 sivua)">
+                <span class="opt-body"><span class="opt-title">Pieni sivusto <span class="opt-price">990 €</span></span><span class="opt-desc">3–5 sivua: etusivu, palvelut, tietoa, yhteystiedot.</span></span>
+              </label>
+              <label class="opt">
+                <input type="radio" name="scope" value="laaja" data-price="1690" data-label="Laaja sivusto (6+ sivua)">
+                <span class="opt-body"><span class="opt-title">Laaja sivusto <span class="opt-price">1690 €</span></span><span class="opt-desc">6+ sivua, blogi/uutiset ja laajempi rakenne.</span></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 3. Lisäosat -->
+          <div class="calc-block">
+            <h3>3. Lisäosat ja toiminnot</h3>
+            <p class="hint">Valitse mitä yrityksesi tarvitsee. Suositukset näkyvät toimialasi mukaan.</p>
+            <div class="opt-grid" id="addonGroup">
+              <label class="opt" data-rec="leipomo">
+                <input type="checkbox" data-price="890" data-label="Verkkokauppa / tilaukset">
+                <span class="opt-body"><span class="opt-title">Verkkokauppa <span class="opt-price">+890 €</span></span><span class="opt-desc">Myynti, tilaukset ja noutoajat suoraan sivuilta.</span></span>
+              </label>
+              <label class="opt" data-rec="kampaamo,ravintola">
+                <input type="checkbox" data-price="390" data-label="Ajanvarausjärjestelmä">
+                <span class="opt-body"><span class="opt-title">Ajanvaraus <span class="opt-price">+390 €</span></span><span class="opt-desc">Asiakas varaa ajan itse, vuorokauden ympäri.</span></span>
+              </label>
+              <label class="opt" data-rec="ravintola,kahvila">
+                <input type="checkbox" data-price="190" data-label="Online-ruokalista / menu">
+                <span class="opt-body"><span class="opt-title">Ruokalista <span class="opt-price">+190 €</span></span><span class="opt-desc">Menu, jonka päivität itse hetkessä.</span></span>
+              </label>
+              <label class="opt" data-rec="kahvila,kampaamo">
+                <input type="checkbox" data-price="120" data-label="Kuvagalleria">
+                <span class="opt-body"><span class="opt-title">Kuvagalleria <span class="opt-price">+120 €</span></span><span class="opt-desc">Näytä tuotteesi, työsi tai tunnelma kuvina.</span></span>
+              </label>
+              <label class="opt" data-rec="muu">
+                <input type="checkbox" data-price="350" data-label="Logosuunnittelu">
+                <span class="opt-body"><span class="opt-title">Logosuunnittelu <span class="opt-price">+350 €</span></span><span class="opt-desc">Oma tunnistettava logo brändillesi.</span></span>
+              </label>
+              <label class="opt" data-rec="muu">
+                <input type="checkbox" data-price="450" data-label="Visuaalinen brändipäivitys">
+                <span class="opt-body"><span class="opt-title">Brändipäivitys <span class="opt-price">+450 €</span></span><span class="opt-desc">Värit, fontit ja grafiikat yhtenäiseksi ilmeeksi.</span></span>
+              </label>
+              <label class="opt">
+                <input type="checkbox" data-price="290" data-label="Sisällöntuotanto / tekstit">
+                <span class="opt-body"><span class="opt-title">Sisällöntuotanto <span class="opt-price">+290 €</span></span><span class="opt-desc">Kirjoitan sivujen tekstit puolestasi.</span></span>
+              </label>
+              <label class="opt">
+                <input type="checkbox" data-price="250" data-label="Hakukoneoptimointi (SEO)">
+                <span class="opt-body"><span class="opt-title">Hakukoneoptimointi <span class="opt-price">+250 €</span></span><span class="opt-desc">Jotta sinut löydetään Googlesta.</span></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 4. Kielet & ylläpito -->
+          <div class="calc-block">
+            <h3>4. Kielet ja ylläpito</h3>
+            <p class="hint">Monikielisyys ja jatkuva huolenpito halutessasi.</p>
+            <div class="opt-grid">
+              <div class="opt" style="cursor:default">
+                <div class="opt-body">
+                  <span class="opt-title">Lisäkielet <span class="opt-price">+220 € / kieli</span></span>
+                  <span class="opt-desc">Suomi sisältyy aina. Montako lisäkieltä (esim. SV, EN)?</span>
+                  <div class="stepper">
+                    <button type="button" id="langMinus" aria-label="Vähennä">−</button>
+                    <output id="langCount">0</output>
+                    <button type="button" id="langPlus" aria-label="Lisää">+</button>
+                  </div>
+                </div>
+              </div>
+              <label class="opt">
+                <input type="checkbox" id="upkeep" data-price="29" data-label="Ylläpito ja päivitykset">
+                <span class="opt-body"><span class="opt-title">Ylläpito <span class="opt-price">+29 € / kk</span></span><span class="opt-desc">Päivitykset, varmuuskopiot ja pienet muutokset. Veloitetaan kuukausittain.</span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <aside class="summary">
+          <h3>Arviosi</h3>
+          <p class="sub" id="summaryAla">Valitse toimiala aloittaaksesi</p>
+          <ul class="summary-lines" id="summaryLines"></ul>
+          <div class="summary-total"><span>Kertahinta yht.</span><b id="totalPrice">490 €</b></div>
+          <p class="summary-monthly" id="monthlyLine" hidden>+ ylläpito <b>29 € / kk</b></p>
+          <p class="summary-note">Arvio on suuntaa-antava (alv 0 %). Lopullinen hinta vahvistetaan tarjouksessa.</p>
+          <a href="tarjouspyynto.html" class="btn btn--block btn--lg" id="toQuote">Tee tarjouspyyntö →</a>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div>
+            <div class="brand" style="color:var(--cream)"><svg class="sticker" style="color:var(--mustard)"><use href="#s-flower"/></svg>hilla studios</div>
+            <p>Lämpimät verkkosivut ja visuaalinen ilme pienyrittäjille — selkeästi, kauniisti ja läpinäkyvästi.</p>
+          </div>
+          <div>
+            <h5>Sivut</h5>
+            <a href="index.html#palvelut">Palvelut</a>
+            <a href="index.html#prosessi">Näin se toimii</a>
+            <a href="laskuri.html">Hintalaskuri</a>
+            <a href="tarjouspyynto.html">Tarjouspyyntö</a>
+          </div>
+          <div>
+            <h5>Ota yhteyttä</h5>
+            <a href="mailto:sofia.krap@gmail.com">sofia.krap@gmail.com</a>
+            <a href="tarjouspyynto.html">Pyydä tarjous →</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <span>© 2026 Hilla Studios</span>
+          <span>Tehty ❋ lämmöllä Suomessa</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

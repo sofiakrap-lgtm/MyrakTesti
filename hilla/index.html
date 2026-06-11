@@ -3,236 +3,271 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hilla Studios — Verkkosivut yrittäjälle, juuri sinun näköisesi</title>
-  <meta name="description" content="Hilla Studios suunnittelee selkeät ja kauniit verkkosivut leipomoille, kahviloille, ravintoloille, kampaamoille ja muille yrittäjille. Läpinäkyvä hinnoittelu ja helppo tarjouspyyntö.">
+  <title>Hilla Studios — Verkkosivut yrittäjälle, juuri sinun näköiset</title>
+  <meta name="description" content="Hilla Studios suunnittelee lämpimät, kauniit verkkosivut leipomoille, kahviloille, ravintoloille ja kampaamoille. Läpinäkyvä hinnoittelu ja helppo tarjouspyyntö.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== Navbar ===== -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="brand"><span class="brand-dot"></span>Hilla Studios</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Valikko">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#palvelut">Palvelut</a></li>
-        <li><a href="#prosessi">Näin se toimii</a></li>
-        <li><a href="#toimialat">Toimialat</a></li>
-        <li><a href="laskuri.html">Hintalaskuri</a></li>
-        <li><a href="tarjouspyynto.html" class="btn btn--primary">Tee tarjouspyyntö</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- ===== Reusable hand-drawn sticker sprite (swap with your own graphics anytime) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="s-flower" viewBox="0 0 64 64">
+        <g fill="currentColor">
+          <circle cx="32" cy="12" r="9"/><circle cx="32" cy="52" r="9"/>
+          <circle cx="12" cy="32" r="9"/><circle cx="52" cy="32" r="9"/>
+          <circle cx="18" cy="18" r="8"/><circle cx="46" cy="18" r="8"/>
+          <circle cx="18" cy="46" r="8"/><circle cx="46" cy="46" r="8"/>
+        </g>
+        <circle cx="32" cy="32" r="9" fill="#E6B23E"/>
+      </symbol>
+      <symbol id="s-star" viewBox="0 0 64 64">
+        <path fill="currentColor" d="M32 4c2 12 6 16 26 22-19 5-24 10-26 34-3-23-7-29-26-34 19-6 24-10 26-22z"/>
+      </symbol>
+      <symbol id="s-heart" viewBox="0 0 64 64">
+        <path fill="currentColor" d="M32 56C12 42 6 30 6 21 6 12 13 6 21 6c5 0 9 2 11 7 2-5 6-7 11-7 8 0 15 6 15 15 0 9-6 21-26 35z"/>
+      </symbol>
+      <symbol id="s-spark" viewBox="0 0 64 64">
+        <path fill="currentColor" d="M32 6c1 13 3 18 16 20-13 2-15 7-16 20-1-13-3-18-16-20 13-2 15-7 16-20z"/>
+      </symbol>
+      <symbol id="s-arrow" viewBox="0 0 120 56">
+        <path fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"
+              d="M6 40 C 36 8, 78 8, 108 30"/>
+        <path fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
+              d="M96 18 L110 31 L96 41"/>
+      </symbol>
+      <symbol id="s-scribble" viewBox="0 0 64 40">
+        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+              d="M4 20 C 12 4, 20 36, 28 20 S 44 4, 52 20 S 58 30, 60 22"/>
+      </symbol>
+      <symbol id="s-bread" viewBox="0 0 64 64"><!-- croissant -->
+        <path fill="currentColor" d="M8 44c10-26 38-26 48 0-8-6-16-8-24-8s-16 2-24 8z"/>
+        <path fill="currentColor" d="M6 46c4 6 14 8 26 8s22-2 26-8c-8 5-17 6-26 6S14 51 6 46z"/>
+      </symbol>
+      <symbol id="s-cup" viewBox="0 0 64 64"><!-- coffee cup -->
+        <path fill="currentColor" d="M12 24h34v14a14 14 0 0 1-14 14H26a14 14 0 0 1-14-14V24z"/>
+        <path fill="none" stroke="currentColor" stroke-width="4" d="M46 28h6a6 6 0 0 1 0 12h-6"/>
+        <path fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" d="M22 8c-3 4 3 6 0 10M32 8c-3 4 3 6 0 10"/>
+      </symbol>
+      <symbol id="s-plate" viewBox="0 0 64 64"><!-- fork+knife -->
+        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M22 8v22m-8-22v10a6 6 0 0 0 8 6v26m-8-42v14"/>
+        <path fill="currentColor" d="M44 8c-6 0-9 8-9 16 0 5 3 8 6 9v23h6V8z"/>
+      </symbol>
+      <symbol id="s-scissors" viewBox="0 0 64 64"><!-- scissors -->
+        <circle cx="14" cy="46" r="8" fill="none" stroke="currentColor" stroke-width="4"/>
+        <circle cx="14" cy="18" r="8" fill="none" stroke="currentColor" stroke-width="4"/>
+        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M20 22 56 50M20 42 56 14"/>
+      </symbol>
+      <symbol id="s-palette" viewBox="0 0 64 64"><!-- design palette -->
+        <path fill="currentColor" d="M32 6C16 6 6 16 6 30c0 12 9 18 18 18 4 0 5-3 4-6-1-4 1-7 5-7h6c8 0 13-5 13-13C52 14 44 6 32 6z"/>
+        <circle cx="20" cy="22" r="3.5" fill="#F4EDE0"/><circle cx="32" cy="17" r="3.5" fill="#F4EDE0"/>
+        <circle cx="43" cy="23" r="3.5" fill="#F4EDE0"/>
+      </symbol>
+      <symbol id="s-pencil" viewBox="0 0 64 64"><!-- visual upgrade pencil -->
+        <path fill="currentColor" d="M44 8l12 12-30 30-14 4 4-14z"/>
+        <path fill="#F4EDE0" d="M16 44l4 4-8 2z"/>
+      </symbol>
+      <symbol id="s-tag" viewBox="0 0 64 64"><!-- price tag -->
+        <path fill="currentColor" d="M30 8H52v22L28 54 6 32z"/>
+        <circle cx="44" cy="20" r="4" fill="#F4EDE0"/>
+      </symbol>
+      <symbol id="s-stamp" viewBox="0 0 120 120">
+        <path id="stampcircle" fill="none" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/>
+        <circle cx="60" cy="60" r="56" fill="#E6B23E"/>
+        <circle cx="60" cy="60" r="48" fill="none" stroke="#3A2A21" stroke-width="1.5" stroke-dasharray="2 3"/>
+        <text font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="3" fill="#3A2A21">
+          <textPath href="#stampcircle" startOffset="0">HILLA STUDIOS · EST. 2026 · HILLA STUDIOS · </textPath>
+        </text>
+        <g transform="translate(60 62)">
+          <text text-anchor="middle" font-family="Fraunces, serif" font-size="30" fill="#9C4A2D" dy="6">hs</text>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
 
-  <!-- ===== Hero ===== -->
-  <header class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">✦ Verkkosivut yrittäjälle</span>
-        <h1>Sivut, jotka näyttävät <span class="hl">juuri sinulta</span> — ja tuovat <span class="hl-2">asiakkaita</span>.</h1>
-        <p class="lead">
-          Hilla Studios suunnittelee selkeät, kauniit ja toimivat verkkosivut leipomoille,
-          kahviloille, ravintoloille, kampaamoille ja muille pienyrittäjille. Läpinäkyvästi,
-          ilman teknistä hämmennystä — ja juuri sinun tarpeisiisi.
-        </p>
-        <div class="hero-cta">
-          <a href="laskuri.html" class="btn btn--primary btn--lg">Laske hinta →</a>
-          <a href="#prosessi" class="btn btn--ghost btn--lg">Näin se toimii</a>
-        </div>
-        <div class="hero-trust">
-          <span><b>Kiinteä hinta</b> — ei yllätyksiä</span>
-          <span><b>Mobiili</b> edellä suunniteltu</span>
-          <span><b>Sinun</b> brändisi näköinen</span>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="float-card fc-1">
-          <div class="fc-emoji">🥐</div>
-          <h4>Leipomon verkkokauppa</h4>
-          <p>Tilaukset ja noutoajat suoraan sivuilta.</p>
-        </div>
-        <div class="float-card fc-2">
-          <div class="fc-emoji">💇</div>
-          <h4>Ajanvaraus</h4>
-          <p>Asiakas varaa ajan ympäri vuorokauden.</p>
-        </div>
-        <div class="float-card fc-3">
-          <div class="fc-emoji">🍝</div>
-          <h4>Ruokalista verkossa</h4>
-          <p>Päivität menun itse hetkessä.</p>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div class="frame">
+    <span class="frame-label left">Hilla Studios · Est. 2026</span>
+    <span class="frame-label right">Verkkosivut yrittäjälle</span>
 
-  <!-- ===== Palvelut ===== -->
-  <section class="section" id="palvelut">
-    <div class="container">
-      <div class="sec-head center reveal">
-        <span class="tag">Palvelut</span>
-        <h2>Kaikki mitä yrityksesi tarvitsee verkossa</h2>
-        <p>Suunnittelusta julkaisuun — ja sen jälkeenkin. Autan koko matkan, selkokielellä.</p>
-      </div>
-      <div class="cards">
-        <div class="card reveal">
-          <div class="card-icon bg-berry">🎨</div>
-          <h3>Verkkosivujen suunnittelu</h3>
-          <p>Räätälöidyt sivut juuri sinun yrityksesi tarpeisiin. Selkeä rakenne, kaunis ulkoasu ja sisältö, joka saa asiakkaan ottamaan yhteyttä.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon bg-pink">✨</div>
-          <h3>Visuaalinen ilme & upgrade</h3>
-          <p>Logot, värimaailma, grafiikka ja kuvitukset. Päivitetään vanha ilme raikkaaksi tai rakennetaan brändisi näköinen kokonaisuus alusta asti.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon bg-teal">🧮</div>
-          <h3>Läpinäkyvä hinnoittelu</h3>
-          <p>Alakohtaiset hintalaskurit kertovat heti, mitä sivut maksavat. Ei piilokuluja eikä yllätyksiä — näet hinnan ennen kuin sitoudut mihinkään.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon bg-amber">🛒</div>
-          <h3>Verkkokauppa & tilaukset</h3>
-          <p>Myy tuotteita, ota vastaan tilauksia tai noutoja suoraan sivuilta. Helppo sinulle ylläpitää, helppo asiakkaalle käyttää.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon bg-teal">📅</div>
-          <h3>Ajanvaraus</h3>
-          <p>Anna asiakkaiden varata aika itse, vuorokauden ympäri. Täydellinen kampaamoille, hoitoloille ja palveluyrityksille.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon bg-pink">🔍</div>
-          <h3>Löydettävyys & ylläpito</h3>
-          <p>Hakukoneoptimointi, jotta sinut löydetään Googlesta. Halutessasi hoidan myös päivitykset ja ylläpidon puolestasi.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="sheet">
 
-  <!-- ===== Prosessi / Näin se toimii ===== -->
-  <section class="section process" id="prosessi">
-    <div class="container">
-      <div class="sec-head center reveal">
-        <span class="tag" style="color: var(--berry-2)">Näin se toimii</span>
-        <h2>Kolme askelta omiin sivuihin</h2>
-        <p>Yksinkertaista alusta loppuun. Sinä keskityt yritykseesi, minä hoidan sivut.</p>
-      </div>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step-num">1</div>
-          <h3>Laske hinta</h3>
-          <p>Valitse oma toimialasi hintalaskurista ja näe heti, mitä sivut maksavat. Voit kokeilla eri vaihtoehtoja ja nähdä hinnan reaaliajassa.</p>
-          <a href="laskuri.html" class="step-cta">Avaa hintalaskuri →</a>
-        </div>
-        <div class="step reveal">
-          <div class="step-num">2</div>
-          <h3>Tee tarjouspyyntö</h3>
-          <p>Kun olet tyytyväinen, lähetä tarjouspyyntö napin painalluksella. Valintasi siirtyvät suoraan lomakkeelle — ei tarvitse aloittaa alusta.</p>
-          <a href="tarjouspyynto.html" class="step-cta">Tee tarjouspyyntö →</a>
-        </div>
-        <div class="step reveal">
-          <div class="step-num">3</div>
-          <h3>Suunnittele sivusi</h3>
-          <p>Täytä suunnittelulomake, jossa pääset vaikuttamaan väreihin, tyyliin ja interaktiivisiin elementteihin. Sen jälkeen rakennan sivusi valmiiksi.</p>
-          <a href="tarjouspyynto.html" class="step-cta">Aloita suunnittelu →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- ===== Nav ===== -->
+      <nav class="nav">
+        <a href="index.html" class="brand"><svg class="sticker" style="color:var(--orange)"><use href="#s-flower"/></svg>hilla studios</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Valikko"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#palvelut">Palvelut</a></li>
+          <li><a href="#prosessi">Näin se toimii</a></li>
+          <li><a href="#toimialat">Toimialat</a></li>
+          <li><a href="laskuri.html">Hintalaskuri</a></li>
+          <li><a href="tarjouspyynto.html" class="btn">Tee tarjouspyyntö</a></li>
+        </ul>
+      </nav>
 
-  <!-- ===== Toimialat ===== -->
-  <section class="section" id="toimialat">
-    <div class="container">
-      <div class="sec-head center reveal">
-        <span class="tag">Toimialat</span>
-        <h2>Tehty pienyrittäjille</h2>
-        <p>Tunnen alasi tarpeet. Jokaiselle toimialalle on oma hintalaskuri valmiilla suosituksilla.</p>
-      </div>
-      <div class="industries-grid reveal">
-        <a class="ind" href="laskuri.html?ala=leipomo">
-          <div class="ind-emoji">🥐</div>
-          <h4>Leipomot</h4>
-          <p>Tilaukset & noudot</p>
-        </a>
-        <a class="ind" href="laskuri.html?ala=kahvila">
-          <div class="ind-emoji">☕</div>
-          <h4>Kahvilat</h4>
-          <p>Menu & aukioloajat</p>
-        </a>
-        <a class="ind" href="laskuri.html?ala=ravintola">
-          <div class="ind-emoji">🍝</div>
-          <h4>Ravintolat</h4>
-          <p>Ruokalista & pöytävaraus</p>
-        </a>
-        <a class="ind" href="laskuri.html?ala=kampaamo">
-          <div class="ind-emoji">💇</div>
-          <h4>Kampaamot</h4>
-          <p>Ajanvaraus & hinnasto</p>
-        </a>
-        <a class="ind" href="laskuri.html?ala=muu">
-          <div class="ind-emoji">✨</div>
-          <h4>Muut alat</h4>
-          <p>Räätälöity sinulle</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Arvot / läpinäkyvyys ===== -->
-  <section class="section section--tight" style="background: var(--cream-2)">
-    <div class="container">
-      <div class="values">
-        <div class="value reveal"><div class="num">100 %</div><p>Läpinäkyvä hinnoittelu</p></div>
-        <div class="value reveal"><div class="num">0</div><p>Piilokuluja</p></div>
-        <div class="value reveal"><div class="num">1-on-1</div><p>Henkilökohtaista palvelua</p></div>
-        <div class="value reveal"><div class="num">100 %</div><p>Sinun näköisesi sivut</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA band ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="cta-band reveal">
-        <h2>Valmis aloittamaan?</h2>
-        <p>Laske hinta omalle toimialallesi muutamassa minuutissa — ilman sitoumusta. Saat heti käsityksen siitä, mitä unelmiesi sivut maksavat.</p>
-        <a href="laskuri.html" class="btn btn--primary btn--lg">Avaa hintalaskuri →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer class="footer" id="yhteystiedot">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brand"><span class="brand-dot"></span>Hilla Studios</div>
-          <p style="max-width: 360px;">Verkkosivut ja visuaalinen ilme pienyrittäjille — selkeästi, kauniisti ja läpinäkyvästi.</p>
+      <!-- ===== Hero ===== -->
+      <header class="hero">
+        <div class="container hero-grid">
+          <div class="hero-photo">
+            <div>
+              <svg class="photo-sticker" style="color:var(--mustard)"><use href="#s-flower"/></svg>
+              <p class="photo-note">Tähän lämmin kuva — esimerkkityö, studiosi tai sinä työn äärellä. Vaihda kuva helposti.</p>
+            </div>
+          </div>
+          <div class="hero-card">
+            <svg class="stamp"><use href="#s-stamp"/></svg>
+            <div class="inner">
+              <div class="brand">hilla studios</div>
+              <span class="script">juuri sinun näköiset</span>
+              <h1>Verkkosivut, jotka <span class="accent">tuoksuvat sinulta.</span></h1>
+              <p>Suunnittelen lämpimät, selkeät ja toimivat sivut leipomoille, kahviloille, ravintoloille ja kampaamoille — yrittäjän tarpeisiin, läpinäkyvästi ja ilman teknistä hämmennystä.</p>
+              <a href="laskuri.html" class="btn btn--lg">Laske hintasi →</a>
+            </div>
+          </div>
         </div>
-        <div>
-          <h5>Sivut</h5>
-          <a href="#palvelut">Palvelut</a>
-          <a href="#prosessi">Näin se toimii</a>
-          <a href="#toimialat">Toimialat</a>
-          <a href="laskuri.html">Hintalaskuri</a>
-          <a href="tarjouspyynto.html">Tarjouspyyntö</a>
-        </div>
-        <div>
-          <h5>Ota yhteyttä</h5>
-          <a href="mailto:sofia.krap@gmail.com">sofia.krap@gmail.com</a>
-          <a href="tarjouspyynto.html">Pyydä tarjous →</a>
+      </header>
+
+      <!-- ===== Marquee ===== -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee">
+          <span>Leipomot</span><svg class="sticker"><use href="#s-flower"/></svg>
+          <span>Kahvilat</span><svg class="sticker"><use href="#s-flower"/></svg>
+          <span>Ravintolat</span><svg class="sticker"><use href="#s-flower"/></svg>
+          <span>Kampaamot</span><svg class="sticker"><use href="#s-flower"/></svg>
+          <span>Visuaalinen ilme</span><svg class="sticker"><use href="#s-flower"/></svg>
+          <span>Logot &amp; grafiikka</span><svg class="sticker"><use href="#s-flower"/></svg>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 Hilla Studios. Kaikki oikeudet pidätetään.</span>
-        <span>Tehty ❤️ Suomessa</span>
-      </div>
-    </div>
-  </footer>
+
+      <!-- ===== Big editorial statement ===== -->
+      <section class="statement container">
+        <p>Teen <svg class="inline-sticker" style="color:var(--mustard)"><use href="#s-spark"/></svg> sinulle sivut, jotka <svg class="inline-sticker" style="color:var(--orange)"><use href="#s-heart"/></svg> myyvät puolestasi — kun sinä keskityt <svg class="inline-sticker" style="color:var(--slate)"><use href="#s-scribble"/></svg> yritykseesi.</p>
+      </section>
+
+      <!-- ===== Palvelut (3 cards on mustard) ===== -->
+      <section class="section card-band" id="palvelut">
+        <div class="container">
+          <div class="sec-head center reveal">
+            <span class="eyebrow">Mitä teen</span>
+            <h2>Palvelut, jotka vievät yrityksesi <span class="script">verkkoon</span></h2>
+          </div>
+          <div class="cards">
+            <div class="card reveal">
+              <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-palette"/></svg>
+              <span class="eyebrow">Suunnittelu</span>
+              <h3>Verkkosivujen suunnittelu</h3>
+              <p>Räätälöidyt sivut juuri sinun yrityksesi tarpeisiin — selkeä rakenne, kaunis ulkoasu ja sisältö, joka saa asiakkaan ottamaan yhteyttä. Mobiili edellä.</p>
+              <a href="laskuri.html" class="btn btn--outline">Laske hinta</a>
+            </div>
+            <div class="card reveal">
+              <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-pencil"/></svg>
+              <span class="eyebrow">Visuaalisuus</span>
+              <h3>Visuaalinen ilme &amp; upgrade</h3>
+              <p>Logot, värimaailma, grafiikka ja kuvitukset. Päivitetään vanha ilme raikkaaksi tai rakennetaan brändisi näköinen kokonaisuus alusta asti.</p>
+              <a href="tarjouspyynto.html" class="btn btn--outline">Kysy lisää</a>
+            </div>
+            <div class="card reveal">
+              <svg class="card-sticker" style="color:var(--terracotta)"><use href="#s-tag"/></svg>
+              <span class="eyebrow">Läpinäkyvyys</span>
+              <h3>Hinta näkyvissä heti</h3>
+              <p>Alakohtaiset hintalaskurit kertovat saman tien, mitä sivut maksavat. Ei piilokuluja, ei yllätyksiä — näet hinnan ennen kuin sitoudut mihinkään.</p>
+              <a href="laskuri.html" class="btn btn--outline">Avaa laskuri</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Prosessi / Näin se toimii ===== -->
+      <section class="section process" id="prosessi">
+        <div class="container">
+          <div class="sec-head center reveal">
+            <span class="eyebrow">Näin se toimii</span>
+            <h2>Kolme askelta omiin sivuihin</h2>
+            <p>Yksinkertaista alusta loppuun. Sinä keskityt yritykseesi, minä hoidan sivut.</p>
+          </div>
+          <div class="steps reveal">
+            <svg class="step-arrow a1" aria-hidden="true"><use href="#s-arrow"/></svg>
+            <svg class="step-arrow a2" aria-hidden="true"><use href="#s-arrow"/></svg>
+            <div class="step">
+              <div class="step-badge">1</div>
+              <h3>Laske hinta</h3>
+              <p>Valitse toimialasi hintalaskurista ja näe heti, mitä sivut maksavat. Kokeile eri vaihtoehtoja — hinta päivittyy reaaliajassa.</p>
+            </div>
+            <div class="step">
+              <div class="step-badge">2</div>
+              <h3>Tee tarjouspyyntö</h3>
+              <p>Kun olet tyytyväinen, lähetä tarjouspyyntö yhdellä napilla. Valintasi siirtyvät suoraan lomakkeelle — ei tarvitse aloittaa alusta.</p>
+            </div>
+            <div class="step">
+              <div class="step-badge">3</div>
+              <h3>Suunnittele sivusi</h3>
+              <p>Täytä suunnittelulomake, jossa vaikutat väreihin, tyyliin ja interaktiivisiin elementteihin. Sen jälkeen rakennan sivusi valmiiksi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Dashed callout ===== -->
+      <section class="section" style="padding-top:0">
+        <div class="container">
+          <div class="callout reveal">
+            <span class="pill-label">Hinnat näkyvissä</span>
+            <h2>Laske unelmiesi sivujen hinta <span class="script">minuutissa</span></h2>
+            <p>Ilman sitoumusta, ilman yhteydenottoa. Saat heti käsityksen siitä, mitä juuri sinun sivusi maksavat.</p>
+            <a href="laskuri.html" class="btn btn--lg">Avaa hintalaskuri →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Toimialat ===== -->
+      <section class="section" id="toimialat" style="padding-top:0">
+        <div class="container">
+          <div class="sec-head center reveal">
+            <span class="eyebrow">Tehty sinulle</span>
+            <h2>Toimialat, jotka tunnen</h2>
+            <p>Jokaiselle alalle oma hintalaskuri valmiilla suosituksilla — mutta autan myös kaikkia muita yrittäjiä.</p>
+          </div>
+          <div class="ind-grid reveal">
+            <a class="ind" href="laskuri.html?ala=leipomo"><svg class="sticker" style="color:var(--terracotta)"><use href="#s-bread"/></svg><h4>Leipomot</h4><p>Tilaukset &amp; noudot</p></a>
+            <a class="ind" href="laskuri.html?ala=kahvila"><svg class="sticker" style="color:var(--terracotta)"><use href="#s-cup"/></svg><h4>Kahvilat</h4><p>Menu &amp; aukiolot</p></a>
+            <a class="ind" href="laskuri.html?ala=ravintola"><svg class="sticker" style="color:var(--terracotta)"><use href="#s-plate"/></svg><h4>Ravintolat</h4><p>Ruokalista &amp; varaus</p></a>
+            <a class="ind" href="laskuri.html?ala=kampaamo"><svg class="sticker" style="color:var(--terracotta)"><use href="#s-scissors"/></svg><h4>Kampaamot</h4><p>Ajanvaraus &amp; hinnasto</p></a>
+            <a class="ind" href="laskuri.html?ala=muu"><svg class="sticker" style="color:var(--terracotta)"><use href="#s-spark"/></svg><h4>Muut alat</h4><p>Räätälöity sinulle</p></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Footer ===== -->
+      <footer class="footer" id="yhteystiedot">
+        <div class="container">
+          <div>
+            <div class="brand" style="color:var(--cream)"><svg class="sticker" style="color:var(--mustard)"><use href="#s-flower"/></svg>hilla studios</div>
+            <p>Lämpimät verkkosivut ja visuaalinen ilme pienyrittäjille — selkeästi, kauniisti ja läpinäkyvästi.</p>
+          </div>
+          <div>
+            <h5>Sivut</h5>
+            <a href="#palvelut">Palvelut</a>
+            <a href="#prosessi">Näin se toimii</a>
+            <a href="#toimialat">Toimialat</a>
+            <a href="laskuri.html">Hintalaskuri</a>
+            <a href="tarjouspyynto.html">Tarjouspyyntö</a>
+          </div>
+          <div>
+            <h5>Ota yhteyttä</h5>
+            <a href="mailto:sofia.krap@gmail.com">sofia.krap@gmail.com</a>
+            <a href="tarjouspyynto.html">Pyydä tarjous →</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <span>© 2026 Hilla Studios</span>
+          <span>Tehty ❋ lämmöllä Suomessa</span>
+        </div>
+      </footer>
+
+    </div><!-- /sheet -->
+  </div><!-- /frame -->
 
   <script src="script.js"></script>
 </body>
