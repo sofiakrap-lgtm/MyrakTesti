@@ -44,7 +44,7 @@
       "year": 2017,
       "yearDisplay": "2017",
       "type": "katto",
-      "image": "3.png",
+      "image": "kuvat/referenssit/simonkatu10.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -78,7 +78,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/toinenlinja3.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -95,7 +95,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/koydenpunojankatu7.jpg",
       "description": {
         "fi": "Maalaustyöt, korjaustyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Målningsarbeten, renoveringsarbeten, balkongrenovering, fönsterrenovering.",
@@ -129,7 +129,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/valikatu2.jpg",
       "description": {
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, fönsterrenovering.",
@@ -163,7 +163,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/topeliuksenkatu12.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -384,7 +384,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/malminrinne.jpg",
       "description": {
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt, parvekkeiden korjaustyöt, peltityöt.",
         "sv": "Fasadarbeten, fönsterrenovering, balkongrenovering, plåtarbeten.",
@@ -401,7 +401,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/pietarinkatu5.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt.",
         "sv": "Balkongrenovering.",
@@ -707,7 +707,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "1.png",
+      "image": "kuvat/referenssit/aukio.jpg",
       "description": {
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
@@ -758,7 +758,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/runoilijakoti.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -1081,7 +1081,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/meritullinkatu6.jpg",
       "description": {
         "fi": "Julkisivutyöt, peltityöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, fönsterrenovering.",
@@ -1115,7 +1115,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/korkeavuorenkatu29.jpg",
       "description": {
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering, fönsterrenovering.",
@@ -1795,7 +1795,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/merituuli.jpg",
       "description": {
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
@@ -1846,7 +1846,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/unioninkatu39.jpg",
       "description": {
         "fi": "Julkisivutyöt, peltityöt, parvekkeiden korjaustyöt, korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, balkongrenovering, renoveringsarbeten, fönsterrenovering.",
@@ -1868,6 +1868,465 @@
         "fi": "Julkisivutyöt, peltityöt.",
         "sv": "Fasadarbeten, plåtarbeten.",
         "en": "Facade works, sheet-metal works."
+      }
+    },
+    {
+      "id": 111,
+      "lat": 60.1629567,
+      "lng": 24.9258422,
+      "name": "As Oy Nuoranpunoja",
+      "address": "Kalevankatu 54 – Köydenpunojankatu 7",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/nuoranpunoja.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 112,
+      "lat": 60.156689,
+      "lng": 24.9420308,
+      "name": "As Oy Weikkola",
+      "address": "Laivurinkatu 17-19",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/weikkola.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 113,
+      "lat": 60.179546,
+      "lng": 24.9214752,
+      "name": "Töölön kirkko",
+      "address": "Topeliuksenkatu 4",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/toolonkirkko.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 114,
+      "lat": 60.1884932,
+      "lng": 24.8846601,
+      "name": "Tamminiemi",
+      "address": "Seurasaarentie 15",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/tamminiemi.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 115,
+      "lat": 60.1599325,
+      "lng": 24.9497777,
+      "name": "As Oy Wuorimies",
+      "address": "Vuorimiehenkatu 19",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/wuorimies.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 116,
+      "lat": 60.1625244,
+      "lng": 24.9419027,
+      "name": "As Oy Ratakatu 21",
+      "address": "Ratakatu 21",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/ratakatu21.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 117,
+      "lat": 60.1648391,
+      "lng": 24.946278,
+      "name": "As Oy Korkeavuorenhelmi",
+      "address": "Korkeavuorenkatu 31-33",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/korkeavuorenhelmi.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 118,
+      "lat": 60.2436252,
+      "lng": 24.8720301,
+      "name": "As Oy Urkupillintie 7",
+      "address": "Urkupillintie 7",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu,katto",
+      "image": "kuvat/referenssit/urkupillintie7.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 119,
+      "lat": 60.1781191,
+      "lng": 24.8109213,
+      "name": "As Oy Menninkäinen",
+      "address": "Menninkäisentie 2",
+      "city": "Espoo",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/menninkainen.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 120,
+      "lat": 60.1754395,
+      "lng": 24.955158,
+      "name": "As Oy Oikokatu 11",
+      "address": "Oikokatu 11",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu,katto",
+      "image": "kuvat/referenssit/oikokatu11.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 121,
+      "lat": 60.1568875,
+      "lng": 24.9351046,
+      "name": "Speranskintie 2-4",
+      "address": "Speranskintie 2-4",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/speranskintie.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 122,
+      "lat": null,
+      "lng": null,
+      "name": "Bostads Ab Stora Allen 18",
+      "address": "",
+      "city": "",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/storaallen18.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 123,
+      "lat": 60.1794246,
+      "lng": 24.924582,
+      "name": "As Oy Tykistönkatu 9",
+      "address": "Tykistönkatu 9",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "julkisivu",
+      "image": "kuvat/referenssit/tykistonkatu9.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 124,
+      "lat": 60.1722064,
+      "lng": 24.9447456,
+      "name": "As Oy Vilhola",
+      "address": "Mikonkatu 18",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 125,
+      "lat": 60.2325568,
+      "lng": 25.0645598,
+      "name": "As Oy Kurkisuontie 11",
+      "address": "Kurkisuontie 11",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 126,
+      "lat": 60.2236426,
+      "lng": 24.9427799,
+      "name": "As Oy Tinasepäntie 41",
+      "address": "Tinasepäntie 41",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 127,
+      "lat": 60.2047659,
+      "lng": 25.035175,
+      "name": "As Oy Kettutie 5",
+      "address": "Kettutie 5",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "kuvat/referenssit/kettutie5.jpg",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 128,
+      "lat": 60.1652032,
+      "lng": 24.9347341,
+      "name": "KOy Lönnrotinkatu 19 A",
+      "address": "Lönnrotinkatu 19 A",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 129,
+      "lat": 60.1569011,
+      "lng": 24.9329313,
+      "name": "As Oy Hernesaarenkatu 7",
+      "address": "Hernesaarenkatu 7",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 130,
+      "lat": 60.1650001,
+      "lng": 24.9287158,
+      "name": "As Oy Erkintalo",
+      "address": "Eerikinkatu 29",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 131,
+      "lat": 60.2317499,
+      "lng": 24.883848,
+      "name": "KOy Pronssitie 1",
+      "address": "Pronssitie 1",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 132,
+      "lat": 60.1715096,
+      "lng": 25.0785011,
+      "name": "As Oy Kärjensivu",
+      "address": "Puuskaniementie 46",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 133,
+      "lat": 60.1884332,
+      "lng": 24.9606483,
+      "name": "As Oy Vaasankatu 3",
+      "address": "Vaasankatu 3",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 134,
+      "lat": null,
+      "lng": null,
+      "name": "As Oy Lohi",
+      "address": "",
+      "city": "",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 135,
+      "lat": 60.156663,
+      "lng": 24.9486213,
+      "name": "As Oy Heimo",
+      "address": "Laivanvarustajankatu 3",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 136,
+      "lat": 60.1924725,
+      "lng": 25.0293884,
+      "name": "Haaga liikekeskus 3",
+      "address": "Hitsaajankatu 9",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
+      }
+    },
+    {
+      "id": 137,
+      "lat": 60.1728112,
+      "lng": 25.0476766,
+      "name": "KOy VPK:n talo",
+      "address": "Svanströmintie 18",
+      "city": "Helsinki",
+      "year": null,
+      "yearDisplay": "",
+      "type": "katto",
+      "image": "",
+      "description": {
+        "fi": "",
+        "sv": "",
+        "en": ""
       }
     }
   ]
