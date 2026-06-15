@@ -21,7 +21,7 @@
   });
 
   function initMap() {
-    map = L.map('refs-map', { scrollWheelZoom: false }).setView([60.1699, 24.9384], 12);
+    map = L.map('refs-map', { scrollWheelZoom: false }).setView([60.1699, 24.9384], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       maxZoom: 19
