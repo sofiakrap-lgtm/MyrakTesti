@@ -28,15 +28,22 @@
     }).addTo(map);
   }
 
+  function imgTag(p, attrs) {
+    if (!p.image) {
+      return '<div class="refs-project-noimg"' + (attrs ? ' style="' + attrs + '"' : '') + '></div>';
+    }
+    return '<img src="' + base + p.image + '" alt="' + (p.name || p.address) + '"' + (attrs ? ' style="' + attrs + '"' : '') + '>';
+  }
+
   function buildPopup(p) {
     var desc = p.description[lang] || p.description.fi;
-    var addressLine = p.address + ', ' + p.city;
+    var addressLine = [p.address, p.city].filter(Boolean).join(', ');
     var titleHtml = p.name
       ? '<div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:3px;line-height:1.3;">' + p.name + '</div>' +
         '<div style="font-size:0.72rem;color:#666;margin-bottom:6px;line-height:1.4;">' + addressLine + '</div>'
       : '<div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:5px;line-height:1.3;">' + addressLine + '</div>';
     return '<div style="width:380px;font-family:\'Barlow\',system-ui,sans-serif;display:flex;align-items:flex-start;">' +
-      '<img src="' + base + p.image + '" alt="' + (p.name || p.address) + '" style="width:155px;height:135px;object-fit:cover;flex-shrink:0;display:block;">' +
+      imgTag(p, 'width:155px;height:135px;object-fit:cover;flex-shrink:0;display:block;') +
       '<div style="padding:10px 12px;flex:1;">' +
       titleHtml +
       '<div style="font-size:0.76rem;color:#444;line-height:1.6;margin-bottom:7px;">' + desc + '</div>' +
@@ -48,6 +55,7 @@
     markers.forEach(function (m) { map.removeLayer(m); });
     markers = [];
     projects.forEach(function (p) {
+      if (p.lat == null || p.lng == null) return;
       var m = L.marker([p.lat, p.lng], { icon: icon })
         .addTo(map)
         .bindPopup(buildPopup(p), { maxWidth: 420 });
@@ -59,7 +67,7 @@
 
   function getFiltered() {
     return all.filter(function (p) {
-      if (fType !== 'all' && p.type !== fType) return false;
+      if (fType !== 'all' && p.type.split(',').indexOf(fType) === -1) return false;
       if (fYear === 'all') return true;
       if (fYear === 'older') return p.year < 2021;
       return p.year === parseInt(fYear, 10);
@@ -75,13 +83,13 @@
     }
     el.innerHTML = projects.map(function (p) {
       var desc = p.description[lang] || p.description.fi;
-      var addressLine = p.address + ', ' + p.city;
+      var addressLine = [p.address, p.city].filter(Boolean).join(', ');
       var titleHtml = p.name
         ? '<div class="refs-project-address">' + p.name + '</div>' +
           '<div class="refs-project-subtitle">' + addressLine + '</div>'
         : '<div class="refs-project-address">' + addressLine + '</div>';
       return '<div class="refs-project-row fade-in">' +
-        '<div class="refs-project-img"><img src="' + base + p.image + '" alt="' + (p.name || p.address) + '"></div>' +
+        '<div class="refs-project-img">' + imgTag(p) + '</div>' +
         '<div class="refs-project-info">' +
         titleHtml +
         '<div class="refs-project-year">' + p.yearDisplay + '</div>' +
