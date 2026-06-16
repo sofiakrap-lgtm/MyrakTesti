@@ -755,14 +755,13 @@
     var title = post.title[lang] || post.title.fi;
     var excerpt = post.excerpt[lang] || post.excerpt.fi;
     var badge = isLatest ? '<span class="news-card-latest">' + t.latest + '</span>' : '';
-    return '<article class="news-card fade-in">' +
-      '<div class="news-card-image">' + badge + '<img src="' + base + post.image + '" alt="' + esc(title) + '"></div>' +
+    return '<article class="news-card news-card--text fade-in">' +
       '<div class="news-card-content">' +
+      badge +
       '<div class="news-card-meta"><span class="news-card-category">' + esc(cat) + '</span>' +
       '<span class="news-card-date">' + esc(post.date) + '</span></div>' +
       '<h3>' + esc(title) + '</h3>' +
       '<p>' + esc(excerpt) + '</p>' +
-      '<a class="news-card-link" href="' + base + 'tiedote.html?p=' + p.slug + '&n=' + i + '">' + t.readMore + ' →</a>' +
       '</div></article>';
   }
 
@@ -803,13 +802,11 @@
       var m = /(\d+)\.(\d+)\.(\d+)/.exec(d || '');
       return m ? new Date(+m[3], +m[2] - 1, +m[1]).getTime() : 0;
     };
-    var latestIdx = 0;
-    p.posts.forEach(function (post, i) {
-      if (parseDate(post.date) >= parseDate(p.posts[latestIdx].date)) latestIdx = i;
-    });
+    // Uusin ensin (vasen yläkulma); ensimmäinen on aina ajankohtaisin
+    var sorted = p.posts.slice().sort(function (a, b) { return parseDate(b.date) - parseDate(a.date); });
 
-    var grid = p.posts.length
-      ? '<div class="news-grid">' + p.posts.map(function (post, i) { return postCard(p, post, i, i === latestIdx); }).join('') + '</div>'
+    var grid = sorted.length
+      ? '<div class="news-grid">' + sorted.map(function (post, i) { return postCard(p, post, i, i === 0); }).join('') + '</div>'
       : '<p class="refs-no-results">' + t.noNews + '</p>';
 
     var posts = '<section class="news-section"><div class="section-container">' +
