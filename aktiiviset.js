@@ -186,46 +186,59 @@
     }
   ];
 
-  /* ---- Oikeat tiedotteet projektidokumenteista (fi; sv/en käyttävät fi-fallbackia) ---- */
+  /* ---- Oikeat tiedotteet projektidokumenteista (fi/sv/en) ---- */
   var REAL_POSTS = {
     aitio: [
-      {
-        date: '26.5.2026',
-        category: { fi: 'Aloitus' },
-        image: 'kuvat/sivut/meritullinkatu6-peltikatto.jpg',
-        title: { fi: 'Urakan aloitus — vesikattojen uusimistyöt' },
-        excerpt: { fi: 'Vesikattojen uusimistyöt alkavat 1.6.2026 työmaan perustamisella ja telineiden pystytyksellä. Työt aloitetaan Ida Ekmannin tie 5 ja 3 taloista.' },
-        body: { fi: [
-          'Myrak Oy tiedottaa, että maanantaina 1.6.2026 aloitetaan As Oy Aition vesikattojen uusimistyöt. Työt alkavat työmaan perustamisella ja telineiden pystytyksellä, ja ne aloitetaan Ida Ekmannin tie 5 ja 3 taloista. Muiden talojen työt etenevät aikataulun mukaisesti.',
-          'Telinerunko asennetaan talon ympärille, minkä jälkeen katolle nostetaan sääsuoja. Telinepystytyksen aikana kaikki autopaikat ja autotallit ovat pois käytöstä; käyttöön palaavista paikoista ilmoitetaan erikseen. Pihaterassit ja ylimmät parvekkeet tulee tyhjentää.',
-          '27.5.2026 ullakoille jaetaan suojamuovit ja teipit ullakkokomeroiden suojausta varten. Suojaukset ovat vapaaehtoisia mutta suositeltavia, sillä vesikaton purun aikana syntyy pölyä. Mahdolliset arvotavarat pyydetään siirtämään pois ullakolta — urakoitsija ei vastaa tavaroille aiheutuvista vaurioista.',
-          'Aikataulu: aloitus kesäkuussa 2026, valmistuminen joulukuussa 2026. Työaika arkisin klo 7–18 (meluavat työt klo 8 alkaen) ja lauantaisin klo 9–16. Lisätiedot: työnjohto Marko Mürkel, p. 050 581 3227.'
-        ] }
-      },
-      {
-        date: '9.6.2026',
-        category: { fi: 'Tilannetiedote' },
-        image: 'kuvat/sivut/rikhardinkatu1-peltityot.jpg',
-        title: { fi: 'Tilannetiedote — purkutyöt käynnissä' },
-        excerpt: { fi: 'E-talon vesikaton purkutyöt ovat käynnissä ja F-talon telineasennus etenee. F-talon vesikaton purku alkaa viikolla 27.' },
-        body: { fi: [
-          'Käynnissä olevat työvaiheet: E-talon vesikaton purkutyöt sekä F-talon telineiden asennustyöt.',
-          'Alkavat työvaiheet: E-talon vesikaton vauriokorjaukset ja pohjatyöt, F-talon sääsuojan asennus sekä F-talon vesikaton purkutyöt, jotka aloitetaan viikolla 27.',
-          'Työmaahäiriöt: työaika arkisin klo 7–18 (meluavat työt klo 8 alkaen) ja lauantaisin klo 9–16. Työstä aiheutuu pölyä ja työmaaliikennettä; siivoamme alueen säännöllisesti.'
-        ] }
-      },
-      {
-        date: '10.6.2026',
-        category: { fi: 'Asukastiedote' },
-        image: 'kuvat/sivut/peltikatto.jpg',
-        title: { fi: 'Vinttikomeroiden tyhjennys — Ida Ekmannin tie 3 ja 5' },
-        excerpt: { fi: 'Ida Ekmannin tie 3 ja 5: tyhjennä oma vinttikomerosi tarpeettomista tavaroista 15.6.2026 mennessä.' },
-        body: { fi: [
-          'Osoitteissa Ida Ekmannin tie 3 ja 5 suoritetaan vinttitilojen siivous. Asukkaita pyydetään käymään läpi omat vinttikomeronsa ja poistamaan niistä tarpeettomat tavarat.',
-          'Poistettavat tavarat viedään niille varatulle poisheittolavalle 15.6.2026 mennessä.',
-          'Vinttikomeroihin jäävät tavarat suositellaan suojaamaan suojamuovilla ja teipillä. Asukkaat vastaavat omien tavaroidensa suojaamisesta; siirto ja suojaus tulee hoitaa ennen 15.6.2026.'
-        ] }
-      }
+      { date: '26.5.2026', image: 'kuvat/sivut/meritullinkatu6-peltikatto.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Urakan aloitus — vesikattojen uusiminen', sv: 'Entreprenaden inleds — takförnyelse', en: 'Project start — roof renewal' },
+        excerpt: { fi: 'Vesikattojen uusimistyöt alkavat 1.6.2026 työmaan perustamisella ja telineiden pystytyksellä. Työt aloitetaan Ida Ekmannin tie 5 ja 3 taloista.', sv: 'Takförnyelsen inleds 1.6.2026 med etablering och ställningar. Arbetet börjar med husen Ida Ekmans väg 5 och 3.', en: 'The roof renewal begins on 1 June 2026 with site setup and scaffolding. Work starts with the buildings at Ida Ekmannin tie 5 and 3.' } },
+      { date: '9.6.2026', image: 'kuvat/sivut/rikhardinkatu1-peltityot.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote — purkutyöt käynnissä', sv: 'Lägesrapport — rivning pågår', en: 'Status update — demolition under way' },
+        excerpt: { fi: 'E-talon vesikaton purkutyöt ovat käynnissä ja F-talon telineasennus etenee. F-talon katon purku alkaa viikolla 27.', sv: 'Rivningen av E-husets tak pågår och ställningsmonteringen vid F-huset framskrider. F-husets tak rivs från vecka 27.', en: 'Demolition of building E’s roof is under way and scaffolding at building F is progressing. Building F’s roof demolition starts in week 27.' } },
+      { date: '10.6.2026', image: 'kuvat/sivut/peltikatto.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Vinttikomeroiden tyhjennys — Ida Ekmannin tie 3 ja 5', sv: 'Tömning av vindsförråd — Ida Ekmans väg 3 och 5', en: 'Emptying of attic storage — Ida Ekmannin tie 3 and 5' },
+        excerpt: { fi: 'Tyhjennä oma vinttikomerosi tarpeettomista tavaroista 15.6.2026 mennessä. Komeroihin jäävät tavarat suositellaan suojaamaan.', sv: 'Töm ditt vindsförråd på onödiga föremål senast 15.6.2026. Kvarlämnade föremål rekommenderas att skyddas.', en: 'Please clear your attic storage of unnecessary items by 15 June 2026. Items left behind should be protected.' } }
+    ],
+    bulevardinpuisto: [
+      { date: '3.3.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Mallityön aloitus', sv: 'Modellarbetet inleds', en: 'Sample work begins' },
+        excerpt: { fi: 'Aloitamme terastirappauksen mallialueen työt sisäpihalla 3.3.2026. Mallialue toteutetaan sääsuojan alla, eikä se vaikuta liikenteeseen tai pysäköintiin.', sv: 'Vi inleder provytan för ädelputs på gården 3.3.2026. Provytan utförs under väderskydd och påverkar inte trafik eller parkering.', en: 'We begin the noble-render sample area in the courtyard on 3 March 2026. It is carried out under weather protection and does not affect traffic or parking.' } },
+      { date: '26.3.2026', image: 'kuvat/referenssit/uudenmaankatu39.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Työmaan aloitus', sv: 'Byggarbetet inleds', en: 'Site work begins' },
+        excerpt: { fi: 'Julkisivutyöt alkavat viikolla 13 (26.3.2026) työmaan perustamisella ja sähköistyksellä. Telineet rakennetaan viikolla 14, ja autopaikat ovat pois käytöstä 26.3. alkaen.', sv: 'Fasadarbetena börjar vecka 13 (26.3.2026) med etablering och el. Ställningarna byggs vecka 14 och parkeringsplatserna är ur bruk från 26.3.', en: 'Facade work starts in week 13 (26 March 2026) with site setup and electrical installation. Scaffolding goes up in week 14, and parking is out of use from 26 March.' } },
+      { date: '22.4.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Julkisivujen purkutyöt', sv: 'Rivning av fasader', en: 'Facade demolition' },
+        excerpt: { fi: 'Julkisivujen suojaus- ja purkutyöt alkavat ja kestävät noin kuukauden. Työ aiheuttaa melua ja pölyä; ikkunat ja ovet suojataan ulkopuolelta.', sv: 'Skydds- och rivningsarbetena på fasaderna inleds och pågår cirka en månad. Arbetet orsakar buller och damm; fönster och dörrar skyddas utifrån.', en: 'Protection and demolition of the facades begins and lasts about a month. The work causes noise and dust; windows and doors are protected from the outside.' } },
+      { date: '26.4.2026', image: 'kuvat/referenssit/uudenmaankatu39.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Parvekkeiden tyhjennys', sv: 'Tömning av balkonger', en: 'Clearing of balconies' },
+        excerpt: { fi: 'Parvekkeet on tyhjennettävä kaikista tavaroista viikonloppuun 26.4.2026 mennessä. Parvekkeiden ovet teipataan ja parvekkeet ovat suljettuina urakan loppuun asti.', sv: 'Balkongerna måste tömmas på alla föremål senast veckoslutet 26.4.2026. Balkongdörrarna tejpas och balkongerna är stängda till entreprenadens slut.', en: 'Balconies must be cleared of all items by the weekend of 26 April 2026. Balcony doors are taped shut and balconies stay closed until the end of the contract.' } },
+      { date: '30.4.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'IV-kierros ja asuntokäynnit 6.5.', sv: 'Ventilationsrunda och bostadsbesök 6.5.', en: 'Ventilation round and apartment visits 6 May' },
+        excerpt: { fi: '6.5.2026 tehdään asunnoissa ilmanvaihdon tarkastuskierros ja kuvataan ikkunapielet. Asuntoihin tullaan yleisavaimella — varmistathan, että turvalukot ovat auki.', sv: 'Den 6.5.2026 görs en ventilationskontroll i bostäderna och fönstersmygarna fotograferas. Bostäderna nås med huvudnyckel — se till att säkerhetslåsen är öppna.', en: 'On 6 May 2026 a ventilation inspection is carried out in the apartments and window reveals are photographed. Apartments are accessed with a master key — please keep security locks open.' } },
+      { date: '30.4.2026', image: 'kuvat/referenssit/uudenmaankatu39.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Ullakkokoppien avaaminen siivousta varten', sv: 'Öppning av vindsförråd för städning', en: 'Opening attic storages for cleaning' },
+        excerpt: { fi: 'Vesikaton purkutöistä on kulkeutunut pölyä ullakkokoppeihin. Pyydämme avaamaan ullakkokopit 2.–4.5.2026, jolloin tilat siivotaan ja tavarat suojataan.', sv: 'Damm från takrivningen har spridit sig till vindsförråden. Vi ber er öppna vindsförråden 2–4.5.2026, då utrymmena städas och föremålen skyddas.', en: 'Dust from the roof demolition has spread into the attic storages. Please open them on 2–4 May 2026, when the spaces will be cleaned and belongings protected.' } },
+      { date: '4.5.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote — viikot 19–21', sv: 'Lägesrapport — vecka 19–21', en: 'Status update — weeks 19–21' },
+        excerpt: { fi: 'Viikoilla 19–21 puretaan vanha rappaus ja parvekkeet, puhdistetaan pinnat ja valmistaudutaan uusien parvekkeiden rakentamiseen sekä rappaustöiden aloitukseen.', sv: 'Under vecka 19–21 rivs den gamla putsen och balkongerna, ytorna rengörs och man förbereder nya balkonger och putsarbetenas start.', en: 'During weeks 19–21 the old rendering and balconies are removed, surfaces cleaned, and preparations made for new balconies and the start of rendering.' } },
+      { date: '13.5.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Mittauskierros', sv: 'Mätningsrunda', en: 'Measurement round' },
+        title: { fi: 'Ikkunoiden mittauskierros asunnoissa', sv: 'Fönstermätning i bostäderna', en: 'Window measurements in apartments' },
+        excerpt: { fi: 'Ikkunoiden mittaukset tehdään asunnoissa 27.–28.5.2026 klo 9 alkaen yleisavaimella. Varmistathan, että turvalukot ovat auki; uusintakäynnistä veloitetaan 400 €.', sv: 'Fönstermätningar görs i bostäderna 27–28.5.2026 från kl. 9 med huvudnyckel. Se till att säkerhetslåsen är öppna; ett upprepat besök debiteras 400 €.', en: 'Window measurements take place in the apartments on 27–28 May 2026 from 9 a.m. using a master key. Please keep security locks open; a repeat visit is charged €400.' } },
+      { date: '18.6.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Mittauskierros', sv: 'Mätningsrunda', en: 'Measurement round' },
+        title: { fi: 'Ikkunoiden mittauskierros 17.–18.6.', sv: 'Fönstermätning 17–18.6', en: 'Window measurements 17–18 June' },
+        excerpt: { fi: 'Toinen ikkunoiden mittauskierros tehdään asunnoissa 17.–18.6.2026. Käynti kestää noin 20 minuuttia ja asuntoihin tullaan yleisavaimella.', sv: 'En andra fönstermätningsrunda görs i bostäderna 17–18.6.2026. Besöket tar cirka 20 minuter och bostäderna nås med huvudnyckel.', en: 'A second window measurement round takes place on 17–18 June 2026. The visit takes about 20 minutes and apartments are accessed with a master key.' } }
     ]
   };
 
@@ -456,7 +469,7 @@
     var post = p.posts[n];
     var cat = post.category[lang] || post.category.fi;
     var title = post.title[lang] || post.title.fi;
-    var body = post.body[lang] || post.body.fi;
+    var body = (post.body && (post.body[lang] || post.body.fi)) || [post.excerpt[lang] || post.excerpt.fi];
     document.title = title + ' — Myrak Oy';
 
     var hero = '<section class="page-hero page-hero--steel"><div class="page-hero-content">' +
