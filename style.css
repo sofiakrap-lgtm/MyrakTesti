@@ -1092,6 +1092,25 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255,255,255,0.28);
 }
 
+.footer-contact {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.5);
+  display: inline-flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-contact a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #e8b4a8;
+}
+
 .footer-tagline {
   font-family: var(--font-heading);
   font-size: 0.74rem;
