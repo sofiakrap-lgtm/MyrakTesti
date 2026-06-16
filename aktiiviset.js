@@ -323,12 +323,18 @@
       '<p class="page-hero-subtitle">' + esc(p.address) + '</p>' +
       '</div></section>';
 
-    var introSec = '<section class="project-intro"><div class="section-container"><div class="project-intro-inner">' +
+    var introSec = '<section class="project-intro"><div class="section-container">' +
       '<span class="section-label">' + t.whatWeDo + '</span>' +
       '<h2>' + esc(p.company) + '</h2>' +
-      '<p class="project-intro-address">' + esc(p.address) + '</p>' +
-      '<p>' + esc(intro) + '</p>' +
-      '</div></div></section>';
+      '<div class="project-intro-top">' +
+        '<div class="project-intro-top-text">' +
+          '<p class="project-intro-address">' + esc(p.address) + '</p>' +
+        '</div>' +
+        '<figure class="project-intro-figure"><img src="' + base + p.image + '" alt="' + esc(p.company) + '"></figure>' +
+      '</div>' +
+      '<p class="project-intro-body">' + esc(intro) + '</p>' +
+      '<hr class="project-divider">' +
+      '</div></section>';
 
     var posts = '<section class="news-section"><div class="section-container">' +
       '<div class="section-header"><span class="section-label">' + t.sectionLabel + '</span>' +
