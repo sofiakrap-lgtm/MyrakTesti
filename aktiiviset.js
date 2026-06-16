@@ -31,6 +31,7 @@
       backToProject: '← Takaisin projektiin',
       seeAll: 'Katso kaikki ajankohtaiset',
       notFound: 'Valittua projektia ei löytynyt.',
+      noNews: 'Tästä projektista ei ole vielä julkaistu tiedotteita.',
       sectionLabel: 'Ajankohtaista',
       sectionTitle: 'Aktiiviset projektit',
       sectionSub: 'Vuoden 2026 käynnissä olevat kohteemme'
@@ -47,6 +48,7 @@
       backToProject: '← Tillbaka till projektet',
       seeAll: 'Se allt aktuellt',
       notFound: 'Det valda projektet hittades inte.',
+      noNews: 'Inga meddelanden har ännu publicerats om detta projekt.',
       sectionLabel: 'Aktuellt',
       sectionTitle: 'Aktiva projekt',
       sectionSub: 'Våra pågående objekt under 2026'
@@ -63,6 +65,7 @@
       backToProject: '← Back to project',
       seeAll: 'See all news',
       notFound: 'The selected project was not found.',
+      noNews: 'No bulletins have been published for this project yet.',
       sectionLabel: 'News',
       sectionTitle: 'Active projects',
       sectionSub: 'Our ongoing sites in 2026'
@@ -604,7 +607,10 @@
   var POST_IMAGES = ['8.png', '9.png', '2.png', '6.png', '3.png', '7.png'];
 
   function buildPosts(p, idx) {
-    if (REAL_POSTS[p.slug]) return REAL_POSTS[p.slug];
+    return REAL_POSTS[p.slug] || [];
+  }
+
+  function buildDemoPosts(p, idx) {
     var img1 = POST_IMAGES[idx % POST_IMAGES.length];
     var img2 = POST_IMAGES[(idx + 2) % POST_IMAGES.length];
     var a = p.address;
@@ -802,10 +808,14 @@
       if (parseDate(post.date) >= parseDate(p.posts[latestIdx].date)) latestIdx = i;
     });
 
+    var grid = p.posts.length
+      ? '<div class="news-grid">' + p.posts.map(function (post, i) { return postCard(p, post, i, i === latestIdx); }).join('') + '</div>'
+      : '<p class="refs-no-results">' + t.noNews + '</p>';
+
     var posts = '<section class="news-section"><div class="section-container">' +
       '<div class="section-header"><span class="section-label">' + t.sectionLabel + '</span>' +
       '<h2 class="section-title">' + t.updates + '</h2></div>' +
-      '<div class="news-grid">' + p.posts.map(function (post, i) { return postCard(p, post, i, i === latestIdx); }).join('') + '</div>' +
+      grid +
       '<div class="project-back-wrap"><a class="project-back" href="' + base + 'ajankohtaista.html">' + t.back + '</a></div>' +
       '</div></section>';
 
