@@ -921,7 +921,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-cert {
   display: block;
-  width: 200px;
+  width: 250px;
   height: auto;
   margin-top: 3rem;
   filter: brightness(0) invert(1);
@@ -932,7 +932,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .contact-cert {
     margin-top: 2.5rem;
-    width: 180px;
+    width: 225px;
   }
 }
 
@@ -2614,8 +2614,9 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  margin-bottom: 1.5rem;
-  min-height: 360px;
+  margin: 0 auto 1.1rem;
+  max-width: 820px;
+  min-height: 250px;
   display: flex;
   align-items: flex-end;
 }
@@ -2672,14 +2673,16 @@ h1, h2, h3, h4, h5, h6 {
 .premises-shops {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.1rem;
+  max-width: 820px;
+  margin: 0 auto;
 }
 
 .premises-shop {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  min-height: 230px;
+  min-height: 160px;
   display: flex;
   align-items: flex-end;
 }
