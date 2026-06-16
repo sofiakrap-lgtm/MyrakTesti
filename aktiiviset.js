@@ -186,10 +186,54 @@
     }
   ];
 
+  /* ---- Oikeat tiedotteet projektidokumenteista (fi; sv/en käyttävät fi-fallbackia) ---- */
+  var REAL_POSTS = {
+    aitio: [
+      {
+        date: '26.5.2026',
+        category: { fi: 'Aloitus' },
+        image: 'kuvat/sivut/meritullinkatu6-peltikatto.jpg',
+        title: { fi: 'Urakan aloitus — vesikattojen uusimistyöt' },
+        excerpt: { fi: 'Vesikattojen uusimistyöt alkavat 1.6.2026 työmaan perustamisella ja telineiden pystytyksellä. Työt aloitetaan Ida Ekmannin tie 5 ja 3 taloista.' },
+        body: { fi: [
+          'Myrak Oy tiedottaa, että maanantaina 1.6.2026 aloitetaan As Oy Aition vesikattojen uusimistyöt. Työt alkavat työmaan perustamisella ja telineiden pystytyksellä, ja ne aloitetaan Ida Ekmannin tie 5 ja 3 taloista. Muiden talojen työt etenevät aikataulun mukaisesti.',
+          'Telinerunko asennetaan talon ympärille, minkä jälkeen katolle nostetaan sääsuoja. Telinepystytyksen aikana kaikki autopaikat ja autotallit ovat pois käytöstä; käyttöön palaavista paikoista ilmoitetaan erikseen. Pihaterassit ja ylimmät parvekkeet tulee tyhjentää.',
+          '27.5.2026 ullakoille jaetaan suojamuovit ja teipit ullakkokomeroiden suojausta varten. Suojaukset ovat vapaaehtoisia mutta suositeltavia, sillä vesikaton purun aikana syntyy pölyä. Mahdolliset arvotavarat pyydetään siirtämään pois ullakolta — urakoitsija ei vastaa tavaroille aiheutuvista vaurioista.',
+          'Aikataulu: aloitus kesäkuussa 2026, valmistuminen joulukuussa 2026. Työaika arkisin klo 7–18 (meluavat työt klo 8 alkaen) ja lauantaisin klo 9–16. Lisätiedot: työnjohto Marko Mürkel, p. 050 581 3227.'
+        ] }
+      },
+      {
+        date: '9.6.2026',
+        category: { fi: 'Tilannetiedote' },
+        image: 'kuvat/sivut/rikhardinkatu1-peltityot.jpg',
+        title: { fi: 'Tilannetiedote — purkutyöt käynnissä' },
+        excerpt: { fi: 'E-talon vesikaton purkutyöt ovat käynnissä ja F-talon telineasennus etenee. F-talon vesikaton purku alkaa viikolla 27.' },
+        body: { fi: [
+          'Käynnissä olevat työvaiheet: E-talon vesikaton purkutyöt sekä F-talon telineiden asennustyöt.',
+          'Alkavat työvaiheet: E-talon vesikaton vauriokorjaukset ja pohjatyöt, F-talon sääsuojan asennus sekä F-talon vesikaton purkutyöt, jotka aloitetaan viikolla 27.',
+          'Työmaahäiriöt: työaika arkisin klo 7–18 (meluavat työt klo 8 alkaen) ja lauantaisin klo 9–16. Työstä aiheutuu pölyä ja työmaaliikennettä; siivoamme alueen säännöllisesti.'
+        ] }
+      },
+      {
+        date: '10.6.2026',
+        category: { fi: 'Asukastiedote' },
+        image: 'kuvat/sivut/peltikatto.jpg',
+        title: { fi: 'Vinttikomeroiden tyhjennys — Ida Ekmannin tie 3 ja 5' },
+        excerpt: { fi: 'Ida Ekmannin tie 3 ja 5: tyhjennä oma vinttikomerosi tarpeettomista tavaroista 15.6.2026 mennessä.' },
+        body: { fi: [
+          'Osoitteissa Ida Ekmannin tie 3 ja 5 suoritetaan vinttitilojen siivous. Asukkaita pyydetään käymään läpi omat vinttikomeronsa ja poistamaan niistä tarpeettomat tavarat.',
+          'Poistettavat tavarat viedään niille varatulle poisheittolavalle 15.6.2026 mennessä.',
+          'Vinttikomeroihin jäävät tavarat suositellaan suojaamaan suojamuovilla ja teipillä. Asukkaat vastaavat omien tavaroidensa suojaamisesta; siirto ja suojaus tulee hoitaa ennen 15.6.2026.'
+        ] }
+      }
+    ]
+  };
+
   /* ---- Demo bulletins generated per project ---- */
   var POST_IMAGES = ['8.png', '9.png', '2.png', '6.png', '3.png', '7.png'];
 
   function buildPosts(p, idx) {
+    if (REAL_POSTS[p.slug]) return REAL_POSTS[p.slug];
     var img1 = POST_IMAGES[idx % POST_IMAGES.length];
     var img2 = POST_IMAGES[(idx + 2) % POST_IMAGES.length];
     var a = p.address;
