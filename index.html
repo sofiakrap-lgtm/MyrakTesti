@@ -402,10 +402,10 @@
 
     const kohde = (lat, lng, title, address, kuva, kuvaus, aika) => {
       const addressLine = address ? `<div style="font-size:0.74rem;color:#666;margin-bottom:7px;line-height:1.4;">${address}</div>` : '';
+      const imgTag = kuva ? `<img src="${kuva}" alt="${title}" style="width:180px;height:160px;object-fit:cover;flex-shrink:0;display:block;">` : '';
       const popup = `
-        <div style="width:420px;font-family:'Barlow',system-ui,sans-serif;display:flex;align-items:flex-start;">
-          <img src="${kuva}" alt="${title}"
-            style="width:180px;height:160px;object-fit:cover;flex-shrink:0;display:block;">
+        <div style="width:${kuva ? '420px' : '260px'};font-family:'Barlow',system-ui,sans-serif;display:flex;align-items:flex-start;">
+          ${imgTag}
           <div style="padding:12px 12px 12px 14px;flex:1;">
             <div style="font-weight:700;font-size:0.85rem;color:#1a1a1a;margin-bottom:3px;line-height:1.3;">${title}</div>
             ${addressLine}
@@ -418,76 +418,18 @@
       m.on('mouseout', function() { this.closePopup(); });
     };
 
-    // 2026
-    kohde(60.1538, 24.8662, 'As Oy Aitio', 'Aino Acktén tie 1, 3, Helsinki', '1.png', 'Katon korjaustyöt.', '2026');
-    kohde(60.1645, 24.9342, 'As Oy Bulevardinpuisto', 'Uudenmaankatu 39, Helsinki', 'kuvat/referenssit/uudenmaankatu39.jpg', 'Julkisivu- ja ikkunakorjaukset, ikkunoiden ja katon vaihto.', '2026');
-    kohde(60.1759, 24.9221, 'As Oy Cygnaeuksenkatu 10', 'Cygnaeuksenkatu 10, Helsinki', 'kuvat/referenssit/cygnaeuksenkatu10.jpg', 'Ikkunoiden vaihto ja julkisivun korjaus.', '2026');
-    kohde(60.1830, 24.9550, 'As Oy Fleminginkatu 11', 'Fleminginkatu 11, Helsinki', 'kuvat/referenssit/fleminginkatu11.jpg', 'Ikkunoiden vaihto ja julkisivun korjaus.', '2026');
-    kohde(60.1879, 24.9582, 'As Oy Hämeentie 37', 'Hämeentie 37, Helsinki', 'kuvat/referenssit/hameentie37.jpg', 'Ikkunoiden korjaustyöt.', '2026');
-    kohde(60.1651, 24.9395, 'As Oy Iso Roobertinkatu 42', 'Iso Roobertinkatu 42, Helsinki', 'kuvat/referenssit/isoroobertinkatu42.jpg', 'Korjaustyöt.', '2026');
-    kohde(60.1571, 24.9570, 'As Oy Kaivopuiston Myllytie 2', 'Myllytie 2, Helsinki', 'kuvat/referenssit/myllytie2.jpg', 'Korjaustyöt.', '2026');
-    kohde(60.1620, 24.9530, 'As Oy Neitsytpolku 9', 'Neitsytpolku 9, Helsinki', '8.png', 'Julkisivu-, ikkuna- ja parvekekorjaukset.', '2026');
-    kohde(60.1735, 24.9559, 'As Oy Soma', 'Meritullinkatu 31 / Kruununhaankatu 3, Helsinki', 'kuvat/referenssit/merituuli.jpg', 'Ikkuna- ja julkisivukorjaukset.', '2026');
-    kohde(60.1873, 24.9114, 'As Oy Turuntie 68', 'Mannerheimintie 94, Helsinki', '1.png', 'Ikkuna-, julkisivu- ja kattokorjaukset.', '2026');
-    kohde(60.1680, 24.9377, 'Asunto Oy Aino', 'Yrjönkatu 12–14, Helsinki', '2.png', 'Julkisivu- ja ikkunakorjaukset.', '2026');
-    kohde(60.1804, 24.9168, 'Asunto Oy Carl Bostads Ab', 'Topeliuksenkatu 19, Helsinki', 'kuvat/referenssit/topeliuksenkatu19.jpg', 'Julkisivu- ja parvekekorjaukset.', '2026');
-    kohde(60.1663, 24.9373, 'Bostads Ab Bangatan 11–13', 'Ratakatu 11–13, Helsinki', '4.png', 'Julkisivu-, ikkuna- ja parvekekorjaukset.', '2026');
-    kohde(60.1735, 24.9510, 'Helsingin Ortodoksinen Seurakunta', 'Unioninkatu 39, Helsinki', 'kuvat/referenssit/unioninkatu39.jpg', 'Katto-, parveke-, julkisivu- ja ikkunakorjaukset.', '2026');
-
-    // 2025
-    kohde(60.1755, 24.9135, 'As Oy Merikannontie 3', 'Merikannontie 3, Helsinki', '6.png', 'Julkisivu-, katto-, parveke- ja ikkunakorjaukset.', '2025');
-    kohde(60.1755, 24.9220, 'As Oy Mannerheimintie 40', 'Mannerheimintie 40, Helsinki', 'kuvat/referenssit/mannerheimintie40.jpg', 'Julkisivun korjaus.', '2025');
-    kohde(60.1960, 24.8800, 'Bostads Ab Tegelbacka', 'Tiilimäki 2 (Tegelbacken), Munkkiniemi, Helsinki', '8.png', 'Julkisivu- ja kattokorjaukset.', '2025');
-    kohde(60.2130, 24.9461, 'As Oy Hauho', 'Hauhontie 4, 6–8, Helsinki', 'kuvat/referenssit/hauho.jpg', 'Ikkunakorjaukset.', '2025');
-    kohde(60.1580, 24.9425, 'K Oy Peter Villa', 'Huvilakatu 13–15, Helsinki', 'kuvat/referenssit/huvilakatu13.jpg', 'Kattokorjaukset.', '2025');
-    kohde(60.1715, 24.9335, 'As Oy Töölönkatu 2', 'Töölönkatu 2, Helsinki', 'kuvat/referenssit/toolonkatu2.jpg', 'Julkisivun korjaus ja katon maalaus.', '2025');
-    kohde(60.1572, 24.9532, 'As Oy Itäinen Puistotie 3', 'Itäinen Puistotie 3, Helsinki', 'kuvat/referenssit/itainenpuistotie3.jpg', 'Katon korjaus.', '2025');
-    kohde(60.2030, 24.8920, 'As Oy Koulutie 3', 'Koulutie 3, Helsinki', '4.png', 'Julkisivu-, katto-, ikkuna- ja parvekekorjaukset.', '2025');
-    kohde(60.3680, 24.7470, 'Arkadian Yhteislyseo', 'Lepsämäntie 15, Klaukkala', '5.png', 'Katon korjaus.', '2025');
-    kohde(60.1961, 24.9483, 'As Oy Mäkelänkatu 31', 'Mäkelänkatu 31, Helsinki', 'kuvat/referenssit/makelanrinne.jpg', 'Julkisivu-, katto- ja parvekekorjaukset.', '2025');
-    kohde(60.1818, 24.9180, 'As Oy Mannerheimintie 52', 'Mannerheimintie 52, Helsinki', 'kuvat/referenssit/mannerheimintie52.jpg', 'Julkisivu-, katto- ja ikkunakorjaukset.', '2025');
-    kohde(60.1610, 24.9400, 'As Oy Tarkkampujankatu 14', 'Tarkkampujankatu 14, Helsinki', 'kuvat/referenssit/tarkkampujankatu14.jpg', 'Julkisivun korjaus.', '2025');
-    kohde(60.1810, 24.9510, 'Hämeentie 6', 'Hämeentie 6, Helsinki', 'kuvat/referenssit/hameentie6.jpg', 'Ikkuna- ja julkisivukorjaukset.', '2025');
-    kohde(60.1761, 24.9210, 'Runeberginkatu 29', 'Runeberginkatu 29, Helsinki', 'kuvat/referenssit/runeberginkatu29.jpg', 'Ikkunakorjaukset.', '2025');
-    kohde(60.1712, 24.9376, 'Pääpostitalo', 'Mannerheiminaukio 1, Helsinki', 'kuvat/referenssit/paapostitalo.jpg', 'Katon korjaus.', '2025');
-    kohde(60.1655, 24.9293, 'Lapinlahdenkatu 12', 'Lapinlahdenkatu 12, Helsinki', '3.png', 'Korjaustyöt.', '2025');
-    kohde(60.1830, 24.9239, 'Töölön yhteiskoulu', 'Urheilukatu 10–12, Helsinki', 'kuvat/referenssit/urheilukatu10.jpg', 'Kattoikkunan vaihto ja katon korjaus.', '2025');
-    kohde(60.1742, 24.9542, 'Oikokatu 11', 'Oikokatu 11, Helsinki', 'kuvat/referenssit/oikokatu11.jpg', 'Sisäpihan korjaustyöt.', '2025');
-    kohde(60.1870, 25.0130, 'As Oy Meripuisto 5', 'Meripuistotie 5, Helsinki', '6.png', 'Korjaustyöt.', '2025');
-    kohde(60.1652, 24.9540, 'Turkin suurlähetystö', 'Satamakatu 9, Helsinki', 'kuvat/referenssit/satamakatu9.jpg', 'Korjaustyöt.', '2025');
-
-    // 2024
-    kohde(60.1705, 24.9290, 'As Oy Fredrikinkatu 71', 'Fredrikinkatu 71, Helsinki', '5.png', 'Korjaustyöt.', '2024');
-    kohde(60.2128, 24.9463, 'As Oy Hauho', 'Hauhontie 4, 6, 8, Helsinki', 'kuvat/referenssit/hauho.jpg', 'Korjaustyöt.', '2024');
-    kohde(60.1742, 24.9533, 'As Oy Mariankatu 19', 'Mariankatu 19, Helsinki', 'kuvat/referenssit/mariankatu19.jpg', 'Katto-, parveke- ja julkisivukorjaukset, katon maalaus.', '2024');
-    kohde(60.1748, 24.9534, 'As Oy Mariankatu 26', 'Mariankatu 26, Helsinki', 'kuvat/referenssit/mariankatu26.jpg', 'Parveke-, julkisivu- ja ikkunakorjaukset.', '2024');
-    kohde(60.1556, 24.8790, 'As Oy Svinhufvudintie 15', 'Svinhufvudintie 15, Helsinki', '1.png', 'Piipun restaurointi.', '2024');
-    kohde(60.1758, 24.9258, 'Aurorankatu 9', 'Aurorankatu 9, Helsinki', 'kuvat/referenssit/aurorankatu9.jpg', 'Julkisivun paikkarappaus.', '2024');
-    kohde(60.1675, 24.9355, 'Gården Annegaten', 'Annankatu, Helsinki', '3.png', 'Korjaustyöt.', '2024');
-    kohde(60.1543, 24.9492, 'Hss Paviljongi', 'Liuskasaari, Helsinki', '4.png', 'Julkisivun korjaus.', '2024');
-    kohde(60.1673, 24.9524, 'Kasarmikatu 26', 'Kasarmikatu 26, Helsinki', 'kuvat/referenssit/kasarmikatu26.jpg', 'Kattoikkunat.', '2024');
-    kohde(60.1626, 24.9410, 'Pursimiehenkatu 9', 'Pursimiehenkatu 9, Helsinki', 'kuvat/referenssit/pursimiehenkatu9.jpg', 'Julkisivu- ja parvekekorjaukset, katon maalaus.', '2024');
-    kohde(60.1779, 24.9293, 'Töölönkatu 32b', 'Töölönkatu 32b, Helsinki', '7.png', 'Julkisivun korjaus.', '2024');
-
-    // 2023
-    kohde(60.1729, 24.9550, 'As Oy Meritullinkatu 6', 'Meritullinkatu 6, Helsinki', 'kuvat/referenssit/meritullinkatu6.jpg', 'Vesikaton korjaus, ullakon korjaus, portaikon korjaus.', '2023');
-    kohde(60.1572, 24.9430, 'Bostads Ab Villagatan 19–21–23', 'Huvilakatu 19, 21, 23, Helsinki', 'kuvat/referenssit/huvilakatu19.jpg', 'Julkisivun korjaus, ovityöt.', '2023');
-    kohde(60.1631, 24.9482, 'FAB Nedomus', 'Korkeavuorenkatu 29, Helsinki', 'kuvat/referenssit/korkeavuorenkatu29.jpg', 'Julkisivu-, parveke- ja ikkunakorjaukset, katon maalaus.', '2023');
-    kohde(60.1811, 24.9512, 'Hämeentie 6 — A', 'Hämeentie 6, Helsinki', 'kuvat/referenssit/hameentie6.jpg', 'A-porrashuoneen kunnostustyöt: julkisivu, parveke, ovityöt.', '2023');
-    kohde(60.1576, 24.9556, 'Itäinen Puistotie 11', 'Itäinen Puistotie 11, Helsinki', 'kuvat/referenssit/itainenpuistotie11.jpg', 'Korjaustyöt.', '2023');
-    kohde(60.1582, 24.9530, 'Puistokatu 11 A', 'Puistokatu 11 A, Helsinki', 'kuvat/referenssit/puistokatu11a.jpg', 'Ikkunoiden kunnostustyöt.', '2023');
-    kohde(60.1825, 24.7700, 'Suvikärki', 'Suvikummunrinne 4', 'kuvat/referenssit/suvikarki.jpg', 'Julkisivu-, ikkuna- ja parvekekorjaukset, yleinen remontti.', '2023');
-    kohde(60.1608, 24.9434, 'Tehtaankatu 25', 'Tehtaankatu 25, Helsinki', 'kuvat/referenssit/tehtaankatu25.jpg', 'Katon korjaus.', '2023');
-
-    // 2022
-    kohde(60.1838, 24.9489, 'As Oy Braahe', 'Itäinen Brahenkatu 13, Helsinki', 'kuvat/referenssit/brahe.jpg', 'Katto-, julkisivu-, ikkuna-, parveke- ja ovikorjaukset.', '2022');
-    kohde(60.1568, 24.9433, 'As Oy Gården Fenix', 'Huvilakatu 27, Helsinki', 'kuvat/referenssit/huvilakatu27.jpg', 'Julkisivu- ja ikkunakorjaukset.', '2022');
-    kohde(60.1558, 24.8758, 'As Oy Kaislakallio', 'Gyldénintie 10, Helsinki', '1.png', 'Korjaustyöt.', '2022');
-    kohde(60.1621, 24.9437, 'As Oy Laivurinkatu 39', 'Laivurinkatu 39, Helsinki', 'kuvat/referenssit/laivurinkatu39.jpg', 'Julkisivun korjaus.', '2022');
-    kohde(60.1560, 24.8675, 'As Oy Rautatulli', 'Rusthollarintie 13', '3.png', 'Katon korjaus.', '2022');
-    kohde(60.1683, 24.9460, 'K Oy Rikhard ikkunat', 'Rikhardinkatu 2, Helsinki', 'kuvat/referenssit/rikhardinkatu2.jpg', 'Ikkuna- ja kattokorjaukset.', '2022');
-    kohde(60.1613, 24.9407, 'Kapteeninkatu 5', 'Kapteeninkatu 5, Helsinki', 'kuvat/referenssit/kapteeninkatu5.jpg', 'Julkisivun korjaus, porrashuoneen remontti.', '2022');
-    kohde(60.1666, 24.9498, 'Pohjoinen Makasiinikatu 7 / Fabianinkatu 4', 'Helsinki', '7.png', 'Korjaustyöt.', '2022');
+    // Kaikki kohteet projects.json:sta
+    fetch('projects.json')
+      .then(r => r.json())
+      .then(data => {
+        (data.projects || []).forEach(p => {
+          if (p.lat == null || p.lng == null) return;
+          const addr = [p.address, p.city].filter(Boolean).join(', ');
+          const desc = (p.description && p.description.fi) || '';
+          kohde(p.lat, p.lng, p.name, addr, p.image || '', desc, p.yearDisplay || '');
+        });
+      })
+      .catch(e => console.error('projects.json load error', e));
   </script>
 </body>
 </html>
