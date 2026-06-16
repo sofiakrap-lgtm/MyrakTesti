@@ -329,10 +329,10 @@
       '<div class="project-intro-top">' +
         '<div class="project-intro-top-text">' +
           '<p class="project-intro-address">' + esc(p.address) + '</p>' +
+          '<p class="project-intro-body">' + esc(intro) + '</p>' +
         '</div>' +
         '<figure class="project-intro-figure"><img src="' + base + p.image + '" alt="' + esc(p.company) + '"></figure>' +
       '</div>' +
-      '<p class="project-intro-body">' + esc(intro) + '</p>' +
       '<hr class="project-divider">' +
       '</div></section>';
 
