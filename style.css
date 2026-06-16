@@ -684,6 +684,10 @@ h1, h2, h3, h4, h5, h6 {
   filter: brightness(0.85);
 }
 
+.service-card-image img.img-pos-bottom {
+  object-position: bottom;
+}
+
 .service-card:hover .service-card-image img,
 .service-card-no-link:hover .service-card-image img {
   transform: scale(1.04);
