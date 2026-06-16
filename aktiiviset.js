@@ -328,13 +328,13 @@
       '<h2>' + esc(p.company) + '</h2>' +
       '<p class="project-intro-address">' + esc(p.address) + '</p>' +
       '<p>' + esc(intro) + '</p>' +
-      '<a class="project-back" href="' + base + 'ajankohtaista.html">' + t.back + '</a>' +
       '</div></div></section>';
 
     var posts = '<section class="news-section"><div class="section-container">' +
       '<div class="section-header"><span class="section-label">' + t.sectionLabel + '</span>' +
       '<h2 class="section-title">' + t.updates + '</h2></div>' +
       '<div class="news-grid">' + p.posts.map(function (post, i) { return postCard(p, post, i); }).join('') + '</div>' +
+      '<div class="project-back-wrap"><a class="project-back" href="' + base + 'ajankohtaista.html">' + t.back + '</a></div>' +
       '</div></section>';
 
     main.innerHTML = hero + introSec + posts;

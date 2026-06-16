@@ -2363,7 +2363,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-intro {
   background: var(--off-white);
-  padding: 5rem 0 4rem;
+  padding: 4rem 0 1.5rem;
 }
 
 .project-intro-inner {
@@ -2414,6 +2414,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-back:hover { color: var(--red-dark); }
+
+.project-back-wrap {
+  text-align: center;
+  margin-top: 3rem;
+}
 
 /* News card link + footer button reused for project updates */
 .news-card-link {
