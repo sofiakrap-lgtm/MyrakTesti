@@ -908,6 +908,29 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid var(--border);
 }
 
+.contact .section-container {
+  position: relative;
+}
+
+.contact-cert {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 190px;
+  height: auto;
+  filter: brightness(0);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .contact-cert {
+    position: static;
+    margin-top: 2.5rem;
+    width: 150px;
+  }
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
