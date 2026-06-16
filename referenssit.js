@@ -11,6 +11,22 @@
   };
   var t = labels[lang] || labels.fi;
 
+  // Työkategoriat (suodatus avainsanoilla kuvauksesta/tyypistä)
+  var cats = [
+    { value: 'korjaus',   fi: 'Korjaustyöt',              sv: 'Reparationsarbeten', en: 'Repair works',      kw: ['korjaus', 'saneeraus', 'kunnostus', 'remontti', 'restaur', 'entisöin'] },
+    { value: 'pelti',     fi: 'Peltityöt',                sv: 'Plåtarbeten',        en: 'Sheet metal works', kw: ['pelti', 'katto', 'vesikat'] },
+    { value: 'julkisivu', fi: 'Julkisivutyöt',            sv: 'Fasadarbeten',       en: 'Facade works',      kw: ['julkisivu', 'rappau'] },
+    { value: 'ikkuna',    fi: 'Ikkunoiden korjaustyöt',   sv: 'Fönsterarbeten',     en: 'Window works',      kw: ['ikkun'] },
+    { value: 'parveke',   fi: 'Parvekkeiden korjaustyöt', sv: 'Balkongarbeten',     en: 'Balcony works',     kw: ['parvek'] }
+  ];
+  function catMatch(p, value) {
+    var cat;
+    for (var i = 0; i < cats.length; i++) { if (cats[i].value === value) { cat = cats[i]; break; } }
+    if (!cat) return true;
+    var hay = ((p.type || '') + ' ' + ((p.description && p.description.fi) || '')).toLowerCase();
+    return cat.kw.some(function (k) { return hay.indexOf(k) !== -1; });
+  }
+
   var map, markers = [], all = [], fType = 'all', fYear = 'all';
 
   var icon = L.icon({
@@ -67,7 +83,7 @@
 
   function getFiltered() {
     return all.filter(function (p) {
-      if (fType !== 'all' && p.type.split(',').indexOf(fType) === -1) return false;
+      if (fType !== 'all' && !catMatch(p, fType)) return false;
       if (fYear === 'all') return true;
       if (fYear === 'older') return p.year < 2021;
       return p.year === parseInt(fYear, 10);
@@ -120,8 +136,7 @@
 
     if (ts) {
       ts.innerHTML = '<option value="all">' + t.allTypes + '</option>' +
-        '<option value="julkisivu">' + t.facade + '</option>' +
-        '<option value="katto">' + t.roof + '</option>';
+        cats.map(function (c) { return '<option value="' + c.value + '">' + (c[lang] || c.fi) + '</option>'; }).join('');
       ts.addEventListener('change', function () { fType = ts.value; applyFilters(); });
     }
     if (ys) {
