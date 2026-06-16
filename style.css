@@ -1088,6 +1088,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5rem;
 }
 
+.page-hero--slim {
+  height: 43vh;
+  min-height: 320px;
+  padding-bottom: 2.5rem;
+}
+
 .page-hero--blue {
   background: linear-gradient(135deg, #0d0d0d 0%, #181820 45%, #141e2e 75%, #1e3050 100%);
 }
