@@ -25,6 +25,7 @@
       whatWeDo: 'Mitä projektissa tehdään',
       updates: 'Tiedotteet projektista',
       latest: 'Ajankohtaisin',
+      building: 'Valmistumassa',
       readMore: 'Lue lisää',
       back: '← Takaisin ajankohtaisiin',
       backToProject: '← Takaisin projektiin',
@@ -40,6 +41,7 @@
       whatWeDo: 'Vad som görs i projektet',
       updates: 'Nyheter om projektet',
       latest: 'Senaste',
+      building: 'Pågående',
       readMore: 'Läs mer',
       back: '← Tillbaka till aktuellt',
       backToProject: '← Tillbaka till projektet',
@@ -55,6 +57,7 @@
       whatWeDo: 'What the project involves',
       updates: 'Project updates',
       latest: 'Latest',
+      building: 'In progress',
       readMore: 'Read more',
       back: '← Back to news',
       backToProject: '← Back to project',
@@ -291,6 +294,41 @@
     reveal(el);
   }
 
+  function refType(p) {
+    var s = (p.intro.fi || '').toLowerCase(), key = 'korjaus';
+    if (s.indexOf('katto') !== -1 || s.indexOf('pelti') !== -1) key = 'katto';
+    else if (s.indexOf('julkisivu') !== -1 || s.indexOf('rappau') !== -1) key = 'julkisivu';
+    else if (s.indexOf('ikkun') !== -1) key = 'ikkuna';
+    else if (s.indexOf('parvek') !== -1) key = 'parveke';
+    var L = {
+      fi: { katto: 'Kattosaneeraus', julkisivu: 'Julkisivusaneeraus', ikkuna: 'Ikkunatyöt', parveke: 'Parvekekorjaukset', korjaus: 'Korjaustyöt' },
+      sv: { katto: 'Takrenovering', julkisivu: 'Fasadrenovering', ikkuna: 'Fönsterarbeten', parveke: 'Balkongrenovering', korjaus: 'Reparationer' },
+      en: { katto: 'Roof renovation', julkisivu: 'Facade renovation', ikkuna: 'Window works', parveke: 'Balcony renovation', korjaus: 'Repairs' }
+    };
+    return (L[lang] || L.fi)[key];
+  }
+
+  function referenceCard(p) {
+    return '<a class="reference-card fade-in" href="' + base + 'projekti.html?p=' + p.slug + '">' +
+      '<div class="reference-image">' +
+      '<img src="' + base + p.image + '" alt="' + esc(p.company) + '">' +
+      '<div class="reference-badge">' + t.building + '</div>' +
+      '</div>' +
+      '<div class="reference-content">' +
+      '<div class="reference-meta"><span class="reference-type">' + refType(p) + '</span>' +
+      '<span class="reference-date">2026</span></div>' +
+      '<h3>' + esc(p.company) + '</h3>' +
+      '<p>' + esc(p.address.replace(', Helsinki', '')) + '</p>' +
+      '</div></a>';
+  }
+
+  function renderReferences() {
+    var el = document.getElementById('latest-projects-grid');
+    if (!el) return;
+    el.innerHTML = PROJECTS.slice(0, 3).map(referenceCard).join('');
+    reveal(el);
+  }
+
   function postCard(p, post, i, isLatest) {
     var cat = post.category[lang] || post.category.fi;
     var title = post.title[lang] || post.title.fi;
@@ -397,6 +435,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     if (document.getElementById('active-projects-preview')) renderGrid('active-projects-preview', 3);
     if (document.getElementById('active-projects-all')) renderGrid('active-projects-all', 0);
+    renderReferences();
     renderProjectPage();
     renderTiedotePage();
   });
