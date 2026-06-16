@@ -425,6 +425,24 @@
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Tilannetiedote — ikkunapielet ja rappaus', sv: 'Lägesrapport — smygar och puts', en: 'Status update — reveals and rendering' },
         excerpt: { fi: 'Uudenmaankadun ikkunapielien työt ja julkisivun rappaustyöt ovat käynnissä aikataulun mukaisesti.', sv: 'Arbetena på Nylandsgatans fönstersmygar och fasadputsen pågår enligt tidtabell.', en: 'Work on the Uudenmaankatu window reveals and the facade rendering is under way on schedule.' } }
+    ],
+    turuntie68: [
+      { date: '7.4.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Urakan aloitus', sv: 'Entreprenaden inleds', en: 'Project start' },
+        excerpt: { fi: 'Julkisivun kunnostustyöt alkavat telineiden asennuksella 7.4.2026. Telineet ovat alikuljettavia, joten pääsy liiketiloihin säilyy.', sv: 'Fasadrenoveringen inleds med ställningsmontering 7.4.2026. Ställningarna är genomgångsbara, så tillträdet till affärslokalerna bevaras.', en: 'Facade repairs begin with scaffolding on 7 April 2026. The scaffolding is walk-through, so access to the shops is maintained.' } },
+      { date: '23.4.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Mannerheimintien julkisivun purkutyöt', sv: 'Rivning av fasaden mot Mannerheimvägen', en: 'Mannerheimintie facade demolition' },
+        excerpt: { fi: 'Telineiden suojaustyöt ja Mannerheimintien julkisivun rappaus- ja purkutyöt käynnistyvät. Työ aiheuttaa melua ja pölyä.', sv: 'Skyddsarbetena på ställningarna och puts- och rivningsarbetena på Mannerheimvägens fasad inleds. Arbetet orsakar buller och damm.', en: 'Scaffolding covering and the rendering and demolition of the Mannerheimintie facade begin. The work causes noise and dust.' } },
+      { date: '23.4.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        excerpt: { fi: 'Käynnissä ovat telineiden suojaustyöt ja Mannerheimintien julkisivun rappaustyöt. Seuraavat työvaiheet ovat alkamassa.', sv: 'Pågående: skyddsarbeten på ställningarna och putsarbeten på Mannerheimvägens fasad. Nästa skeden inleds snart.', en: 'Under way: scaffolding covering and rendering of the Mannerheimintie facade. The next phases are starting.' } },
+      { date: '4.6.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Ikkunoiden suojaus- ja eristystyöt', sv: 'Skydd och tätning av fönster', en: 'Window protection and sealing' },
+        excerpt: { fi: 'Telineet on asennettu ja ikkunoiden suojaus- ja eristystyöt ovat käynnissä. Vanhat tilkkeet poistetaan ja ikkunakarmien pielirakenteet kunnostetaan.', sv: 'Ställningarna är monterade och skydds- och tätningsarbetena på fönstren pågår. Gamla drev avlägsnas och fönsterkarmarnas smygkonstruktioner renoveras.', en: 'Scaffolding is in place and window protection and sealing are under way. Old caulking is removed and the window-frame reveal structures are repaired.' } }
     ]
   };
 
