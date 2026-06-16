@@ -729,24 +729,31 @@
     return (L[lang] || L.fi)[key];
   }
 
-  function referenceCard(p) {
+  function referenceCard(p, post) {
+    var cat = post.category[lang] || post.category.fi;
+    var title = post.title[lang] || post.title.fi;
     return '<a class="reference-card fade-in" href="' + base + 'projekti.html?p=' + p.slug + '">' +
       '<div class="reference-image">' +
       '<img src="' + base + p.image + '" alt="' + esc(p.company) + '">' +
       '<div class="reference-badge">' + t.building + '</div>' +
       '</div>' +
       '<div class="reference-content">' +
-      '<div class="reference-meta"><span class="reference-type">' + refType(p) + '</span>' +
-      '<span class="reference-date">2026</span></div>' +
+      '<div class="reference-meta"><span class="reference-type">' + esc(cat) + '</span>' +
+      '<span class="reference-date">' + esc(post.date) + '</span></div>' +
       '<h3>' + esc(p.company) + '</h3>' +
-      '<p>' + esc(p.address.replace(', Helsinki', '')) + '</p>' +
+      '<p>' + esc(title) + '</p>' +
       '</div></a>';
   }
 
+  // Etusivun "Viimeisimmät tiedotteet": 3 uusinta tiedotetta KAIKISTA projekteista
   function renderReferences() {
     var el = document.getElementById('latest-projects-grid');
     if (!el) return;
-    el.innerHTML = PROJECTS.slice(0, 3).map(referenceCard).join('');
+    var parseDate = function (d) { var m = /(\d+)\.(\d+)\.(\d+)/.exec(d || ''); return m ? new Date(+m[3], +m[2] - 1, +m[1]).getTime() : 0; };
+    var all = [];
+    PROJECTS.forEach(function (p) { (p.posts || []).forEach(function (post) { all.push({ p: p, post: post }); }); });
+    all.sort(function (a, b) { return parseDate(b.post.date) - parseDate(a.post.date); });
+    el.innerHTML = all.slice(0, 3).map(function (x) { return referenceCard(x.p, x.post); }).join('');
     reveal(el);
   }
 
