@@ -2261,7 +2261,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: none;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
@@ -2278,7 +2278,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .aproj-card:hover .aproj-card-overlay {
-  background: linear-gradient(180deg, rgba(139,34,19,0.35) 0%, rgba(0,0,0,0.65) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 .aproj-card-text {
