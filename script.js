@@ -304,3 +304,41 @@ if (sections.length) {
   }
   bindTriggers();
 })();
+
+// Yhteystieto-osio jokaisen sivun alapalkkiin (etusivulla se on jo valmiina)
+(function () {
+  if (document.querySelector('.contact')) return;
+  var footer = document.querySelector('.footer');
+  if (!footer) return;
+  var lang = document.documentElement.lang || 'fi';
+  var base = (location.pathname.indexOf('/sv/') !== -1 || location.pathname.indexOf('/en/') !== -1) ? '../' : '';
+  var L = ({
+    fi: { label: 'Yhteystiedot', heading: 'Myrak palveluksessanne', lead: 'Työnjohtaja, Partner' },
+    sv: { label: 'Kontakt', heading: 'Myrak till er tjänst', lead: 'Arbetsledare, Partner' },
+    en: { label: 'Contact', heading: 'Myrak at your service', lead: 'Site manager, Partner' }
+  })[lang] || { label: 'Yhteystiedot', heading: 'Myrak palveluksessanne', lead: 'Työnjohtaja, Partner' };
+  function card(av, name, role, tel, telDisp, email) {
+    return '<div class="contact-card"><div class="contact-avatar">' + av + '</div>' +
+      '<div class="contact-card-info"><h3>' + name + '</h3><p class="contact-role">' + role + '</p>' +
+      '<a href="tel:' + tel + '" class="contact-phone">' + telDisp + '</a></div>' +
+      '<a href="mailto:' + email + '" class="contact-card-email">' + email + '</a></div>';
+  }
+  var html =
+    '<section class="contact" id="yhteystiedot"><div class="section-container">' +
+    '<div class="section-header"><span class="section-label section-label--light">' + L.label + '</span>' +
+    '<h2 class="section-title section-title--light">' + L.heading + '</h2></div>' +
+    '<div class="contact-grid">' +
+    '<div class="contact-info">' +
+    '<div class="contact-block"><p class="contact-company">Myrak Oy</p><p>Pietarinkatu 11 A90<br>00140 Helsinki</p>' +
+    '<p class="contact-detail">Y-tunnus: 2802156-7</p></div>' +
+    '<div class="contact-block"><a href="tel:0505813227" class="contact-link">050 581 3227</a>' +
+    '<a href="mailto:etunimi.sukunimi@myrak.fi" class="contact-link">etunimi.sukunimi@myrak.fi</a></div>' +
+    '<img src="' + base + 'kuvat/sertifikaatit/asiakastieto.svg" alt="Suomen Asiakastieto -sertifikaatti" class="contact-cert">' +
+    '</div>' +
+    '<div class="contact-persons">' +
+    card('MM', 'Marko Mürkel', L.lead, '0505813227', '050 581 3227', 'marko.murkel@myrak.fi') +
+    card('TP', 'Triinu Pihlak', 'Partner', '0442937756', '044 293 7756', 'triinu.pihlak@myrak.fi') +
+    card('AK', 'Aleksandr Kraptsak', 'Partner', '0406888374', '040 688 8374', 'aleksandr.kraptsak@myrak.fi') +
+    '</div></div></div></section>';
+  footer.insertAdjacentHTML('beforebegin', html);
+})();
