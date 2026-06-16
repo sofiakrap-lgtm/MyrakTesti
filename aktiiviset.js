@@ -333,6 +333,36 @@
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Ikkunoiden uusimistyön eteneminen ja aikataulu', sv: 'Fönsterbytets framskridande och tidtabell', en: 'Window replacement progress and schedule' },
         excerpt: { fi: 'Tiedote ikkunoiden uusimistyön etenemisestä ja aikataulun tulkinnasta asukkaille.', sv: 'Information till de boende om fönsterbytets framskridande och tolkningen av tidtabellen.', en: 'An update for residents on the progress of the window replacement and how to read the schedule.' } }
+    ],
+    neitsytpolku9: [
+      { date: '9.4.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Parvekehanke ja julkisivusaneeraus alkaa', sv: 'Balkongprojekt och fasadrenovering inleds', en: 'Balcony project and facade renovation begins' },
+        excerpt: { fi: 'Parvekkeiden rakentaminen ja julkisivusaneeraus alkavat huhtikuussa 2026 telineiden pystytyksellä. Urakassa rakennetaan uudet jälkiasenteiset huoneistoparvekkeet.', sv: 'Byggandet av balkonger och fasadrenoveringen inleds i april 2026 med ställningsmontering. Nya efterhandsmonterade lägenhetsbalkonger byggs.', en: 'Balcony construction and facade renovation begin in April 2026 with scaffolding. New retrofitted apartment balconies will be built.' } },
+      { date: '15.4.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Urakan aloitus', sv: 'Entreprenaden inleds', en: 'Project start' },
+        excerpt: { fi: 'Sisäpihojen parvekkeiden uusiminen sekä ikkunoiden ja julkisivujen kunnostustyöt käynnistyvät työmaan perustamisella ja telineillä.', sv: 'Förnyelsen av gårdsbalkongerna samt renoveringen av fönster och fasader inleds med etablering och ställningar.', en: 'Renewal of the courtyard balconies and repair of windows and facades begins with site setup and scaffolding.' } },
+      { date: '22.4.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Polkupyörät pois sisäpihoilta', sv: 'Cyklar bort från gårdarna', en: 'Bicycles to be removed from courtyards' },
+        excerpt: { fi: 'Pyydämme siirtämään polkupyörät pois sisäpihoilta telineiden ja parveketöiden tieltä.', sv: 'Vi ber er flytta cyklarna bort från gårdarna för ställningarna och balkongarbetena.', en: 'Please move bicycles away from the courtyards to make way for scaffolding and balcony work.' } },
+      { date: '22.4.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        excerpt: { fi: 'Telineiden pystytys ja työmaan valmistelut etenevät sisäpihoilla suunnitellusti.', sv: 'Ställningsmonteringen och förberedelserna på gårdarna framskrider planenligt.', en: 'Scaffolding and site preparations in the courtyards are progressing as planned.' } },
+      { date: '18.5.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Mittauskierros', sv: 'Mätningsrunda', en: 'Measurement round' },
+        title: { fi: 'Parvekeovien mittauskierros', sv: 'Mätning av balkongdörrar', en: 'Balcony door measurements' },
+        excerpt: { fi: 'Asunnoissa tehdään parvekeovien mittauskierros. Jos kotona ei ole ketään, asuntoon tullaan yleisavaimella.', sv: 'En mätning av balkongdörrarna görs i bostäderna. Om ingen är hemma används huvudnyckel.', en: 'Balcony doors are measured in the apartments. If no one is home, a master key is used.' } },
+      { date: '21.5.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Sisäpihojen julkisivujen purkutyöt', sv: 'Rivning av gårdsfasaderna', en: 'Courtyard facade demolition' },
+        excerpt: { fi: 'Sisäpihojen julkisivujen purkutyöt alkavat. Työ aiheuttaa melua ja pölyä työalueen läheisyydessä.', sv: 'Rivningen av gårdsfasaderna inleds. Arbetet orsakar buller och damm nära arbetsområdet.', en: 'Demolition of the courtyard facades begins. The work causes noise and dust near the work area.' } },
+      { date: '4.6.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        excerpt: { fi: 'Parveke- ja julkisivutyöt etenevät sisäpihoilla. Tiedotamme seuraavista työvaiheista erikseen.', sv: 'Balkong- och fasadarbetena framskrider på gårdarna. Vi informerar om kommande skeden separat.', en: 'Balcony and facade work is progressing in the courtyards. We will announce the next phases separately.' } }
     ]
   };
 
