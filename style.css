@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: url('Itäinen Brahenkatu 13, koko kuva.jpg') center / cover no-repeat;
+  background: url('kuvat/sivut/hero-brahenkatu.jpg') center / cover no-repeat;
 }
 
 .hero::before {
