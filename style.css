@@ -1771,6 +1771,23 @@ h1, h2, h3, h4, h5, h6 {
   height: 220px;
   overflow: hidden;
   flex-shrink: 0;
+  position: relative;
+}
+
+.news-card-latest {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 2;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2rem;
 }
 
 .news-card-image img {

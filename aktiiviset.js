@@ -24,6 +24,7 @@
       addressLabel: 'Osoite',
       whatWeDo: 'Mitä projektissa tehdään',
       updates: 'Tiedotteet projektista',
+      latest: 'Ajankohtaisin',
       readMore: 'Lue lisää',
       back: '← Takaisin ajankohtaisiin',
       backToProject: '← Takaisin projektiin',
@@ -38,6 +39,7 @@
       addressLabel: 'Adress',
       whatWeDo: 'Vad som görs i projektet',
       updates: 'Nyheter om projektet',
+      latest: 'Senaste',
       readMore: 'Läs mer',
       back: '← Tillbaka till aktuellt',
       backToProject: '← Tillbaka till projektet',
@@ -52,6 +54,7 @@
       addressLabel: 'Address',
       whatWeDo: 'What the project involves',
       updates: 'Project updates',
+      latest: 'Latest',
       readMore: 'Read more',
       back: '← Back to news',
       backToProject: '← Back to project',
@@ -288,12 +291,13 @@
     reveal(el);
   }
 
-  function postCard(p, post, i) {
+  function postCard(p, post, i, isLatest) {
     var cat = post.category[lang] || post.category.fi;
     var title = post.title[lang] || post.title.fi;
     var excerpt = post.excerpt[lang] || post.excerpt.fi;
+    var badge = isLatest ? '<span class="news-card-latest">' + t.latest + '</span>' : '';
     return '<article class="news-card fade-in">' +
-      '<div class="news-card-image"><img src="' + base + post.image + '" alt="' + esc(title) + '"></div>' +
+      '<div class="news-card-image">' + badge + '<img src="' + base + post.image + '" alt="' + esc(title) + '"></div>' +
       '<div class="news-card-content">' +
       '<div class="news-card-meta"><span class="news-card-category">' + esc(cat) + '</span>' +
       '<span class="news-card-date">' + esc(post.date) + '</span></div>' +
@@ -336,10 +340,19 @@
       '<hr class="project-divider">' +
       '</div></section>';
 
+    var parseDate = function (d) {
+      var m = /(\d+)\.(\d+)\.(\d+)/.exec(d || '');
+      return m ? new Date(+m[3], +m[2] - 1, +m[1]).getTime() : 0;
+    };
+    var latestIdx = 0;
+    p.posts.forEach(function (post, i) {
+      if (parseDate(post.date) >= parseDate(p.posts[latestIdx].date)) latestIdx = i;
+    });
+
     var posts = '<section class="news-section"><div class="section-container">' +
       '<div class="section-header"><span class="section-label">' + t.sectionLabel + '</span>' +
       '<h2 class="section-title">' + t.updates + '</h2></div>' +
-      '<div class="news-grid">' + p.posts.map(function (post, i) { return postCard(p, post, i); }).join('') + '</div>' +
+      '<div class="news-grid">' + p.posts.map(function (post, i) { return postCard(p, post, i, i === latestIdx); }).join('') + '</div>' +
       '<div class="project-back-wrap"><a class="project-back" href="' + base + 'ajankohtaista.html">' + t.back + '</a></div>' +
       '</div></section>';
 
