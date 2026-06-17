@@ -2262,23 +2262,6 @@
       }
     },
     {
-      "id": 134,
-      "lat": null,
-      "lng": null,
-      "name": "As Oy Lohi",
-      "address": "",
-      "city": "",
-      "year": null,
-      "yearDisplay": "",
-      "type": "katto",
-      "image": "",
-      "description": {
-        "fi": "",
-        "sv": "",
-        "en": ""
-      }
-    },
-    {
       "id": 135,
       "lat": 60.156663,
       "lng": 24.9486213,
