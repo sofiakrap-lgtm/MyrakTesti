@@ -1430,87 +1430,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
 }
 
-/* Service contact */
-
-.service-contact {
-  background: var(--dark-2);
-  padding: 5.5rem 0;
-  border-top: 1px solid var(--border);
-}
-
-.service-contact-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.service-contact-text .section-label {
-  display: none;
-  text-align: left;
-  margin-bottom: 0.85rem;
-}
-
-.service-contact-text .section-title {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.service-contact-text p {
-  font-family: var(--font-heading);
-  color: rgba(255,255,255,0.48);
-  font-size: 0.9rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.contact-card-single {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: var(--dark);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 2rem 2rem;
-  transition: border-color var(--transition);
-}
-
-.contact-card-single:hover {
-  border-color: rgba(255,255,255,0.18);
-}
-
-.contact-card-single .contact-avatar {
-  width: 58px;
-  height: 58px;
-  font-size: 0.82rem;
-}
-
-.contact-card-single h3 {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--white);
-  margin-bottom: 0.18rem;
-}
-
-.contact-card-single .contact-role {
-  margin-bottom: 0.7rem;
-}
-
-.contact-card-single a {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.55);
-  text-decoration: none;
-  padding: 0.1rem 0;
-  transition: color var(--transition);
-}
-
-.contact-card-single a:hover {
-  color: var(--white);
-}
-
 /* ======== RESPONSIVE ======== */
 
 @media (max-width: 1024px) {
@@ -1717,9 +1636,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .myrak-section { padding: 4rem 0; }
   .myrak-grid { grid-template-columns: 1fr; }
-
-  .service-contact { padding: 4rem 0; }
-  .service-contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
 
   .footer-container { flex-direction: column; text-align: center; gap: 0.7rem; }
   .footer-logo { margin-right: 0; }
