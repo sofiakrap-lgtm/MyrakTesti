@@ -10,7 +10,7 @@
       "year": 2017,
       "yearDisplay": "2017",
       "type": "julkisivu",
-      "image": "1.png",
+      "image": "kuvat/referenssit/isokaari2.jpg",
       "description": {
         "fi": "Jätehuoneen rakennus.",
         "sv": "Byggande av soprum.",
@@ -27,7 +27,7 @@
       "year": 2017,
       "yearDisplay": "2017",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/runeberginkatu59.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt.",
         "sv": "Balkongrenovering.",
@@ -61,7 +61,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/bulevardi19.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -180,7 +180,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/jarvenpaantie640.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -197,7 +197,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "1.png",
+      "image": "kuvat/referenssit/unioninkatu45.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -214,7 +214,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/bulevardi12.jpg",
       "description": {
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering.",
@@ -231,7 +231,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "katto",
-      "image": "3.png",
+      "image": "kuvat/referenssit/pirttipolku2.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -248,7 +248,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/linnankatu5.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -265,7 +265,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "katto",
-      "image": "5.png",
+      "image": "kuvat/referenssit/tahtelantie527.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -282,7 +282,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/lonnrotinkatu18.jpg",
       "description": {
         "fi": "Ikkunoiden korjaustyöt, peltityöt.",
         "sv": "Fönsterrenovering, plåtarbeten.",
@@ -299,7 +299,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/stenbackinkatu12a1.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -316,7 +316,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/pohjoisranta20.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -333,7 +333,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/fredrikinkatu35.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -350,7 +350,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "katto",
-      "image": "1.png",
+      "image": "kuvat/referenssit/jaakarinkatu6a.jpg",
       "description": {
         "fi": "Katon peltityöt.",
         "sv": "Takplåtsarbeten.",
@@ -418,7 +418,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/rantapolku15.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -435,7 +435,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/runeberginkatu50.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -452,7 +452,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/sinivuorentie11.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -469,7 +469,7 @@
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/puistotie2.jpg",
       "description": {
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
@@ -486,7 +486,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/kajaaninlinnantie1.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt, ikkunoiden korjaustyöt, peltityöt.",
         "sv": "Balkongrenovering, fönsterrenovering, plåtarbeten.",
@@ -503,7 +503,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/kolmaslinja21.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt, julkisivutyöt.",
         "sv": "Balkongrenovering, fasadarbeten.",
@@ -520,7 +520,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "1.png",
+      "image": "kuvat/referenssit/kruunuvuorenkatu5.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -537,7 +537,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/freesenkatu.jpg",
       "description": {
         "fi": "Peltityöt, korjaustyöt.",
         "sv": "Plåtarbeten, renoveringsarbeten.",
@@ -554,7 +554,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/bulevardi21.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -571,7 +571,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/kolmaslinja30.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -605,7 +605,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/kasarmikatu28.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -622,7 +622,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/mannerheimintie11.jpg",
       "description": {
         "fi": "Julkisivutyöt, peltityöt.",
         "sv": "Fasadarbeten, plåtarbeten.",
@@ -639,7 +639,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/neljaslinja20.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -673,7 +673,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "katto",
-      "image": "8.png",
+      "image": "kuvat/referenssit/fabianinkatu8.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -690,7 +690,7 @@
       "year": 2020,
       "yearDisplay": "2020",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/nuottapolku2.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -724,7 +724,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/itainenpuistotie4.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt.",
         "sv": "Balkongrenovering.",
@@ -741,7 +741,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/tehtaankatu34.jpg",
       "description": {
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
@@ -775,7 +775,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/kristianinkatu2.jpg",
       "description": {
         "fi": "Peltityöt, julkisivutyöt.",
         "sv": "Plåtarbeten, fasadarbeten.",
@@ -792,7 +792,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/kauppaneuvoksentie8.jpg",
       "description": {
         "fi": "Korjaustyöt, peltityöt.",
         "sv": "Renoveringsarbeten, plåtarbeten.",
@@ -826,7 +826,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/fredrikinkatu77.jpg",
       "description": {
         "fi": "Betonikoristeet.",
         "sv": "Betongdekorationer.",
@@ -843,7 +843,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/peramiehenkatu2.jpg",
       "description": {
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, fönsterrenovering.",
@@ -860,7 +860,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/apollonkatu18.jpg",
       "description": {
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt, peltityöt.",
         "sv": "Fasadarbeten, fönsterrenovering, plåtarbeten.",
@@ -911,7 +911,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "katto",
-      "image": "1.png",
+      "image": "kuvat/referenssit/gyldenintie10.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -928,7 +928,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/kruunuvuorenkatu10.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -962,7 +962,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "katto",
-      "image": "3.png",
+      "image": "kuvat/referenssit/rusthollarintie13.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -996,7 +996,7 @@
       "year": 2022,
       "yearDisplay": "2020, 2022",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/kauppiaankatu13.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -1030,7 +1030,7 @@
       "year": 2022,
       "yearDisplay": "2022",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/pohjoinenmakasiinikatu7.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt.",
         "sv": "Balkongrenovering.",
@@ -1047,7 +1047,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/kapteeninkatu11.jpg",
       "description": {
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt, parvekkeiden korjaustyöt, peltityöt.",
         "sv": "Fasadarbeten, fönsterrenovering, balkongrenovering, plåtarbeten.",
@@ -1064,7 +1064,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/mannerheimintie19.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt, julkisivutyöt, korjaustyöt.",
         "sv": "Balkongrenovering, fasadarbeten, renoveringsarbeten.",
@@ -1149,7 +1149,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "katto",
-      "image": "1.png",
+      "image": "kuvat/referenssit/kanisterinkuja7.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -1234,7 +1234,7 @@
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/topeliuksenkatu1.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -1251,7 +1251,7 @@
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/liuskasaarihsspaviljonki.jpg",
       "description": {
         "fi": "Korjaustyöt, julkisivutyöt.",
         "sv": "Renoveringsarbeten, fasadarbeten.",
@@ -1302,7 +1302,7 @@
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/svinhufvudintie15.jpg",
       "description": {
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
@@ -1387,7 +1387,7 @@
       "year": 2024,
       "yearDisplay": "2024",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/toolonkatu32b.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -1421,7 +1421,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/merikannontie3.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt, julkisivutyöt, korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Balkongrenovering, fasadarbeten, renoveringsarbeten, fönsterrenovering.",
@@ -1455,7 +1455,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/tiilimaki2.jpg",
       "description": {
         "fi": "Julkisivutyöt, peltityöt, ovien korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, dörrenovering.",
@@ -1506,7 +1506,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/tusentientie30.jpg",
       "description": {
         "fi": "Julkisivutyöt, peltityöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, balkongrenovering, fönsterrenovering.",
@@ -1523,7 +1523,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "katto",
-      "image": "9.png",
+      "image": "kuvat/referenssit/lepsamantie15.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -1625,7 +1625,7 @@
       "year": 2025,
       "yearDisplay": "2025",
       "type": "julkisivu",
-      "image": "1.png",
+      "image": "kuvat/referenssit/meripuistotie5.jpg",
       "description": {
         "fi": "Korjaustyöt, parvekkeiden korjaustyöt.",
         "sv": "Renoveringsarbeten, balkongrenovering.",
@@ -1659,7 +1659,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/idaekmanintie5.jpg",
       "description": {
         "fi": "Peltityöt, korjaustyöt.",
         "sv": "Plåtarbeten, renoveringsarbeten.",
@@ -1778,7 +1778,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/neitsytpolku9.jpg",
       "description": {
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering, fönsterrenovering.",
@@ -1829,7 +1829,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/ratakatu1113.jpg",
       "description": {
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering, fönsterrenovering.",
@@ -1863,7 +1863,7 @@
       "year": 2026,
       "yearDisplay": "2026",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/yrjonkatu1214.jpg",
       "description": {
         "fi": "Julkisivutyöt, peltityöt.",
         "sv": "Fasadarbeten, plåtarbeten.",
@@ -2101,7 +2101,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/mikonkatu18.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2118,7 +2118,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/kurkisuontie11.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2135,7 +2135,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/tinasepantie41.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2169,7 +2169,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/lonnrotinkatu19a.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2186,7 +2186,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/hernesaarenkatu7.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2203,7 +2203,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/eerikinkatu29.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2220,7 +2220,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/pronssitie1.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2237,7 +2237,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/puuskaniementie46.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2254,7 +2254,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/vaasankatu3.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2271,7 +2271,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/laivanvarustajankatu3.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2288,7 +2288,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/hitsaajankatu9.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2305,7 +2305,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/svanstromintie18.jpg",
       "description": {
         "fi": "",
         "sv": "",
