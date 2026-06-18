@@ -44,7 +44,7 @@
       "year": 2017,
       "yearDisplay": "2017",
       "type": "katto",
-      "image": "3.png",
+      "image": "kuvat/referenssit/simonkatu10.jpg",
       "description": {
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
@@ -78,7 +78,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "5.png",
+      "image": "kuvat/referenssit/toinenlinja3.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -95,7 +95,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "6.png",
+      "image": "kuvat/referenssit/koydenpunojankatu7.jpg",
       "description": {
         "fi": "Maalaustyöt, korjaustyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Målningsarbeten, renoveringsarbeten, balkongrenovering, fönsterrenovering.",
@@ -129,7 +129,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "7.png",
+      "image": "kuvat/referenssit/valikatu2.jpg",
       "description": {
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, fönsterrenovering.",
@@ -163,7 +163,7 @@
       "year": 2018,
       "yearDisplay": "2018",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/topeliuksenkatu12.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -384,7 +384,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "2.png",
+      "image": "kuvat/referenssit/malminrinne.jpg",
       "description": {
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt, parvekkeiden korjaustyöt, peltityöt.",
         "sv": "Fasadarbeten, fönsterrenovering, balkongrenovering, plåtarbeten.",
@@ -401,7 +401,7 @@
       "year": 2019,
       "yearDisplay": "2019",
       "type": "julkisivu",
-      "image": "3.png",
+      "image": "kuvat/referenssit/pietarinkatu5.jpg",
       "description": {
         "fi": "Parvekkeiden korjaustyöt.",
         "sv": "Balkongrenovering.",
@@ -707,7 +707,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "1.png",
+      "image": "kuvat/referenssit/aukio.jpg",
       "description": {
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
@@ -758,7 +758,7 @@
       "year": 2021,
       "yearDisplay": "2021",
       "type": "julkisivu",
-      "image": "4.png",
+      "image": "kuvat/referenssit/runoilijakoti.jpg",
       "description": {
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
@@ -1081,7 +1081,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "8.png",
+      "image": "kuvat/referenssit/meritullinkatu6.jpg",
       "description": {
         "fi": "Julkisivutyöt, peltityöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, fönsterrenovering.",
@@ -1115,7 +1115,7 @@
       "year": 2023,
       "yearDisplay": "2023",
       "type": "julkisivu",
-      "image": "9.png",
+      "image": "kuvat/referenssit/korkeavuorenkatu29.jpg",
       "description": {
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering, fönsterrenovering.",
@@ -1880,7 +1880,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/nuoranpunoja.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -1897,7 +1897,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/weikkola.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -1914,7 +1914,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/toolonkirkko.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -1931,7 +1931,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/tamminiemi.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -1948,7 +1948,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/wuorimies.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -1965,7 +1965,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/ratakatu21.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -1982,7 +1982,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/korkeavuorenhelmi.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -1999,7 +1999,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu,katto",
-      "image": "",
+      "image": "kuvat/referenssit/urkupillintie7.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2016,7 +2016,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/menninkainen.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2033,7 +2033,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu,katto",
-      "image": "",
+      "image": "kuvat/referenssit/oikokatu11.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2050,7 +2050,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/speranskintie.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2067,7 +2067,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/storaallen18.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2084,7 +2084,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "julkisivu",
-      "image": "",
+      "image": "kuvat/referenssit/tykistonkatu9.jpg",
       "description": {
         "fi": "",
         "sv": "",
@@ -2152,7 +2152,7 @@
       "year": null,
       "yearDisplay": "",
       "type": "katto",
-      "image": "",
+      "image": "kuvat/referenssit/kettutie5.jpg",
       "description": {
         "fi": "",
         "sv": "",
