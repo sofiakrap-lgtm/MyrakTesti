@@ -1460,6 +1460,7 @@ h1, h2, h3, h4, h5, h6 {
 .gallery-card {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .gallery-card-img {
