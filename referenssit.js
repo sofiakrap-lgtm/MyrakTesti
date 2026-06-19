@@ -87,6 +87,9 @@
       if (fYear === 'all') return true;
       if (fYear === 'older') return p.year < 2021;
       return p.year === parseInt(fYear, 10);
+    }).sort(function (a, b) {
+      // Nostetaan tärkeät referenssit (featured) aina kärkeen; muuten säilytetään järjestys
+      return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
     });
   }
 
@@ -179,8 +182,7 @@
       if (countEl) animateCount(countEl, all.length);
       initMap();
       buildFilters();
-      renderMarkers(all);
-      renderList(all);
+      applyFilters();
     })
     .catch(function (e) { console.error('projects.json load error', e); });
 })();
