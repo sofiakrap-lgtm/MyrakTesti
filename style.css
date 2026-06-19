@@ -1433,8 +1433,17 @@ h1, h2, h3, h4, h5, h6 {
 /* ======== GALLERIA ======== */
 
 .gallery-section {
-  padding: 6rem 0 7rem;
+  padding: 10rem 0 7rem;
   background: var(--white);
+}
+
+.gallery-page-title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 2.5rem;
 }
 
 .gallery-intro {
@@ -1507,7 +1516,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  .gallery-section { padding: 4rem 0 5rem; }
+  .gallery-section { padding: 7rem 0 5rem; }
+  .gallery-page-title { margin-bottom: 1.75rem; }
   .gallery-intro { margin-bottom: 3rem; }
   .gallery-grid { grid-template-columns: 1fr; row-gap: 3rem; }
   .gallery-card-title { font-size: 1.3rem; }
