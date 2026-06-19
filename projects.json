@@ -644,8 +644,7 @@
         "fi": "Julkisivutyöt, peltityöt.",
         "sv": "Fasadarbeten, plåtarbeten.",
         "en": "Facade works, sheet-metal works."
-      },
-      "featured": true
+      }
     },
     {
       "id": 38,
@@ -1356,8 +1355,7 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      },
-      "featured": true
+      }
     },
     {
       "id": 79,
