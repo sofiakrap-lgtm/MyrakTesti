@@ -248,7 +248,7 @@ if (sections.length) {
     if (company) bodyLines.push(t.lCompany + ': ' + company);
     bodyLines.push('', t.lMsg + ':', (d.get('message') || '').trim());
     return 'mailto:' + CONTACT_EMAIL +
-      '?subject=' + encodeURIComponent(t.mailSubject + (company ? ' — ' + company : '')) +
+      '?subject=' + encodeURIComponent(t.mailSubject + (company ? ' - ' + company : '')) +
       '&body=' + encodeURIComponent(bodyLines.join('\n'));
   }
 
@@ -266,7 +266,7 @@ if (sections.length) {
     }
 
     // Formspree: lähetä suoraan taustalla, kävijä pysyy sivulla
-    d.append('_subject', t.mailSubject + ((d.get('company') || '').trim() ? ' — ' + (d.get('company') || '').trim() : ''));
+    d.append('_subject', t.mailSubject + ((d.get('company') || '').trim() ? ' - ' + (d.get('company') || '').trim() : ''));
     submitBtn.disabled = true;
     var originalLabel = submitBtn.textContent;
     submitBtn.textContent = t.sending;
