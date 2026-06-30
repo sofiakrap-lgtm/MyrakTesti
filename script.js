@@ -291,18 +291,9 @@ if (sections.length) {
     });
   });
 
-  // Bind triggers: top-bar CTA, mobile CTA, and any opt-in element
-  function bindTriggers() {
-    var triggers = document.querySelectorAll('.nav-cta, .mobile-cta-item a, [data-contact-open]');
-    triggers.forEach(function (el) {
-      el.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        openModal();
-      }, true);
-    });
-  }
-  bindTriggers();
+  // "Ota yhteyttä" -napit avaavat suoraan kävijän oman sähköpostiohjelman
+  // (mailto: marko.murkel@myrak.fi). Lomake-modaalia ei enää avata näistä
+  // napeista, joten jätetään natiivi mailto-linkki toimimaan sellaisenaan.
 })();
 
 // Yhteystieto-osio jokaisen sivun alapalkkiin (etusivulla se on jo valmiina)
