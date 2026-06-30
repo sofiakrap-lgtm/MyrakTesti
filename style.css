@@ -2954,3 +2954,21 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 640px) {
   .service-gallery { columns: 2 150px; }
 }
+
+
+/* ===== invoice-value (täytetyt verkkolaskutiedot) ===== */
+.invoice-value {
+  display: block;
+  background: #f7f6f3;
+  border-left: 3px solid #b5281b;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.7rem 1.1rem;
+  margin: 0.6rem 0;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  max-width: 560px;
+}
+.invoice-value a { color: #b5281b; text-decoration: none; }
+.invoice-value a:hover { text-decoration: underline; }
