@@ -2918,3 +2918,38 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .cf-dialog { padding: 2.25rem 1.5rem 1.75rem; }
 }
+
+
+/* ===== service-gallery ===== */
+.service-gallery-section { padding: 5rem 0; background: #fff; }
+.service-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.service-gallery-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #ececec;
+}
+.service-gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.service-gallery-item:hover img { transform: scale(1.05); }
+.service-gallery-item.is-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  background: #f4f4f4;
+  border: 1px dashed #c7c7c7;
+}
+.service-gallery-item.is-placeholder span {
+  color: #9a9a9a; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+}
+@media (max-width: 640px) {
+  .service-gallery { grid-template-columns: repeat(2, 1fr); }
+}
