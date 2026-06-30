@@ -23,7 +23,9 @@
     var cat;
     for (var i = 0; i < cats.length; i++) { if (cats[i].value === value) { cat = cats[i]; break; } }
     if (!cat) return true;
-    var hay = ((p.type || '') + ' ' + ((p.description && p.description.fi) || '')).toLowerCase();
+    // Suodatetaan projektin todellisen työn (kuvaus) perusteella, EI type-kentän,
+    // koska type on epätarkka (moni on tagattu 'julkisivu' vaikka työ on muuta).
+    var hay = ((p.description && p.description.fi) || '').toLowerCase();
     return cat.kw.some(function (k) { return hay.indexOf(k) !== -1; });
   }
 
