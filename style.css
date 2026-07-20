@@ -2266,9 +2266,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .refs-project-img {
-    height: 220px;
+    height: auto;
     width: 100%;
     margin: 1.25rem 0 0;
+  }
+
+  /* Mobiilissa referenssikuvat näytetään kokonaisina (ei rajausta) */
+  .refs-project-img img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .refs-project-noimg {
+    min-height: 200px;
   }
 
   .refs-project-info {

@@ -15,7 +15,8 @@
         "fi": "Jätehuoneen rakennus.",
         "sv": "Byggande av soprum.",
         "en": "Waste-room construction."
-      }
+      },
+      "rating": 2
     },
     {
       "id": 2,
@@ -32,7 +33,8 @@
         "fi": "Parvekkeiden korjaustyöt.",
         "sv": "Balkongrenovering.",
         "en": "Balcony renovation."
-      }
+      },
+      "rating": 1
     },
     {
       "id": 3,
@@ -50,7 +52,8 @@
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
       },
-      "featured": true
+      "featured": true,
+      "rating": 1
     },
     {
       "id": 4,
@@ -67,7 +70,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 5,
@@ -85,7 +89,8 @@
         "sv": "Fasadarbeten.",
         "en": "Facade works."
       },
-      "featured": true
+      "featured": true,
+      "rating": 4
     },
     {
       "id": 6,
@@ -103,7 +108,8 @@
         "sv": "Målningsarbeten, renoveringsarbeten, balkongrenovering, fönsterrenovering.",
         "en": "Painting works, renovation works, balcony renovation, window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 1
     },
     {
       "id": 7,
@@ -121,7 +127,8 @@
         "sv": "Fasadarbeten, balkongrenovering.",
         "en": "Facade works, balcony renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 4
     },
     {
       "id": 8,
@@ -139,7 +146,8 @@
         "sv": "Fasadarbeten, fönsterrenovering.",
         "en": "Facade works, window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 9,
@@ -157,7 +165,8 @@
         "sv": "Fasadarbeten.",
         "en": "Facade works."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 10,
@@ -174,7 +183,8 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      }
+      },
+      "rating": 3
     },
     {
       "id": 11,
@@ -191,7 +201,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 12,
@@ -209,7 +220,8 @@
         "sv": "Fasadarbeten.",
         "en": "Facade works."
       },
-      "featured": true
+      "featured": true,
+      "rating": 1
     },
     {
       "id": 13,
@@ -227,7 +239,8 @@
         "sv": "Fasadarbeten, balkongrenovering.",
         "en": "Facade works, balcony renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 14,
@@ -244,7 +257,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 15,
@@ -261,7 +275,8 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 16,
@@ -278,7 +293,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 17,
@@ -295,7 +311,8 @@
         "fi": "Ikkunoiden korjaustyöt, peltityöt.",
         "sv": "Fönsterrenovering, plåtarbeten.",
         "en": "Window renovation, sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 18,
@@ -313,7 +330,8 @@
         "sv": "Fasadarbeten.",
         "en": "Facade works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 19,
@@ -330,7 +348,8 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 20,
@@ -348,7 +367,8 @@
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 21,
@@ -365,7 +385,8 @@
         "fi": "Katon peltityöt.",
         "sv": "Takplåtsarbeten.",
         "en": "Roof sheet-metal works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 22,
@@ -383,7 +404,8 @@
         "sv": "Fasadarbeten, balkongrenovering.",
         "en": "Facade works, balcony renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 23,
@@ -401,7 +423,8 @@
         "sv": "Fasadarbeten, fönsterrenovering, balkongrenovering, plåtarbeten.",
         "en": "Facade works, window renovation, balcony renovation, sheet-metal works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 24,
@@ -419,7 +442,8 @@
         "sv": "Balkongrenovering.",
         "en": "Balcony renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 25,
@@ -436,7 +460,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 26,
@@ -453,7 +478,8 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 27,
@@ -471,7 +497,8 @@
         "sv": "Fasadarbeten.",
         "en": "Facade works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 28,
@@ -488,7 +515,8 @@
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
         "en": "Window renovation."
-      }
+      },
+      "rating": null
     },
     {
       "id": 29,
@@ -505,7 +533,8 @@
         "fi": "Parvekkeiden korjaustyöt, ikkunoiden korjaustyöt, peltityöt.",
         "sv": "Balkongrenovering, fönsterrenovering, plåtarbeten.",
         "en": "Balcony renovation, window renovation, sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 30,
@@ -522,7 +551,8 @@
         "fi": "Parvekkeiden korjaustyöt, julkisivutyöt.",
         "sv": "Balkongrenovering, fasadarbeten.",
         "en": "Balcony renovation, facade works."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 31,
@@ -540,7 +570,8 @@
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 32,
@@ -557,7 +588,8 @@
         "fi": "Peltityöt, korjaustyöt.",
         "sv": "Plåtarbeten, renoveringsarbeten.",
         "en": "Sheet-metal works, renovation works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 33,
@@ -574,7 +606,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 34,
@@ -591,7 +624,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 35,
@@ -609,7 +643,8 @@
         "sv": "Balkongrenovering.",
         "en": "Balcony renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 36,
@@ -627,7 +662,8 @@
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 37,
@@ -644,7 +680,8 @@
         "fi": "Julkisivutyöt, peltityöt.",
         "sv": "Fasadarbeten, plåtarbeten.",
         "en": "Facade works, sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 38,
@@ -661,7 +698,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 39,
@@ -678,7 +716,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 40,
@@ -695,7 +734,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 41,
@@ -712,7 +752,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 42,
@@ -730,7 +771,8 @@
         "sv": "Fönsterrenovering.",
         "en": "Window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 43,
@@ -748,7 +790,8 @@
         "sv": "Balkongrenovering.",
         "en": "Balcony renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 44,
@@ -766,7 +809,8 @@
         "sv": "Fönsterrenovering.",
         "en": "Window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 45,
@@ -783,7 +827,8 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 46,
@@ -800,7 +845,8 @@
         "fi": "Peltityöt, julkisivutyöt.",
         "sv": "Plåtarbeten, fasadarbeten.",
         "en": "Sheet-metal works, facade works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 47,
@@ -817,7 +863,8 @@
         "fi": "Korjaustyöt, peltityöt.",
         "sv": "Renoveringsarbeten, plåtarbeten.",
         "en": "Renovation works, sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 48,
@@ -835,7 +882,8 @@
         "sv": "Fönsterrenovering, fasadarbeten.",
         "en": "Window renovation, facade works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 49,
@@ -852,7 +900,8 @@
         "fi": "Betonikoristeet.",
         "sv": "Betongdekorationer.",
         "en": "Concrete decorations."
-      }
+      },
+      "rating": null
     },
     {
       "id": 50,
@@ -869,7 +918,8 @@
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, fönsterrenovering.",
         "en": "Facade works, window renovation."
-      }
+      },
+      "rating": null
     },
     {
       "id": 51,
@@ -886,7 +936,8 @@
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt, peltityöt.",
         "sv": "Fasadarbeten, fönsterrenovering, plåtarbeten.",
         "en": "Facade works, window renovation, sheet-metal works."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 52,
@@ -904,7 +955,8 @@
         "sv": "Fasadarbeten, fönsterrenovering, balkongrenovering, plåtarbeten.",
         "en": "Facade works, window renovation, balcony renovation, sheet-metal works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 53,
@@ -922,7 +974,8 @@
         "sv": "Fasadarbeten, plåtarbeten.",
         "en": "Facade works, sheet-metal works."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 54,
@@ -939,7 +992,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 55,
@@ -956,7 +1010,8 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 56,
@@ -974,7 +1029,8 @@
         "sv": "Fasadarbeten.",
         "en": "Facade works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 57,
@@ -991,7 +1047,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 58,
@@ -1008,7 +1065,8 @@
         "fi": "Korjaustyöt, peltityöt, julkisivutyöt.",
         "sv": "Renoveringsarbeten, plåtarbeten, fasadarbeten.",
         "en": "Renovation works, sheet-metal works, facade works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 59,
@@ -1026,7 +1084,8 @@
         "sv": "Fasadarbeten.",
         "en": "Facade works."
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 60,
@@ -1043,7 +1102,8 @@
         "fi": "Ikkunoiden korjaustyöt, parvekkeiden korjaustyöt.",
         "sv": "Fönsterrenovering, balkongrenovering.",
         "en": "Window renovation, balcony renovation."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 61,
@@ -1060,7 +1120,8 @@
         "fi": "Parvekkeiden korjaustyöt.",
         "sv": "Balkongrenovering.",
         "en": "Balcony renovation."
-      }
+      },
+      "rating": null
     },
     {
       "id": 62,
@@ -1077,7 +1138,8 @@
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt, parvekkeiden korjaustyöt, peltityöt.",
         "sv": "Fasadarbeten, fönsterrenovering, balkongrenovering, plåtarbeten.",
         "en": "Facade works, window renovation, balcony renovation, sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 63,
@@ -1094,7 +1156,8 @@
         "fi": "Parvekkeiden korjaustyöt, julkisivutyöt, korjaustyöt.",
         "sv": "Balkongrenovering, fasadarbeten, renoveringsarbeten.",
         "en": "Balcony renovation, facade works, renovation works."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 64,
@@ -1112,7 +1175,8 @@
         "sv": "Fasadarbeten, plåtarbeten, fönsterrenovering.",
         "en": "Facade works, sheet-metal works, window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 65,
@@ -1130,7 +1194,8 @@
         "sv": "Fasadarbeten, fönsterrenovering.",
         "en": "Facade works, window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 66,
@@ -1148,7 +1213,8 @@
         "sv": "Fasadarbeten, balkongrenovering, fönsterrenovering.",
         "en": "Facade works, balcony renovation, window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 4
     },
     {
       "id": 67,
@@ -1166,7 +1232,8 @@
         "sv": "Fasadarbeten, balkongrenovering, plåtarbeten.",
         "en": "Facade works, balcony renovation, sheet-metal works."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 68,
@@ -1183,7 +1250,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 69,
@@ -1200,7 +1268,8 @@
         "fi": "Ikkunoiden korjaustyöt, korjaustyöt.",
         "sv": "Fönsterrenovering, renoveringsarbeten.",
         "en": "Window renovation, renovation works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 70,
@@ -1218,7 +1287,8 @@
         "sv": "Fasadarbeten, fönsterrenovering.",
         "en": "Facade works, window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 71,
@@ -1235,7 +1305,8 @@
         "fi": "Ikkunoiden korjaustyöt, peltityöt, julkisivutyöt.",
         "sv": "Fönsterrenovering, plåtarbeten, fasadarbeten.",
         "en": "Window renovation, sheet-metal works, facade works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 72,
@@ -1252,7 +1323,8 @@
         "fi": "Julkisivutyöt, korjaustyöt.",
         "sv": "Fasadarbeten, renoveringsarbeten.",
         "en": "Facade works, renovation works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 73,
@@ -1269,7 +1341,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": 1
     },
     {
       "id": 74,
@@ -1286,7 +1359,8 @@
         "fi": "Korjaustyöt, julkisivutyöt.",
         "sv": "Renoveringsarbeten, fasadarbeten.",
         "en": "Renovation works, facade works."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 75,
@@ -1303,7 +1377,8 @@
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering, fönsterrenovering.",
         "en": "Facade works, balcony renovation, window renovation."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 76,
@@ -1321,7 +1396,8 @@
         "sv": "Fönsterrenovering, dörrenovering, fasadarbeten, renoveringsarbeten, plåtarbeten.",
         "en": "Window renovation, door renovation, facade works, renovation works, sheet-metal works."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 77,
@@ -1338,7 +1414,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": 2
     },
     {
       "id": 78,
@@ -1355,7 +1432,8 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      }
+      },
+      "rating": 1
     },
     {
       "id": 79,
@@ -1373,7 +1451,8 @@
         "sv": "Fönsterrenovering, renoveringsarbeten.",
         "en": "Window renovation, renovation works."
       },
-      "featured": true
+      "featured": true,
+      "rating": 3
     },
     {
       "id": 80,
@@ -1390,7 +1469,8 @@
         "fi": "Korjaustyöt, parvekkeiden korjaustyöt.",
         "sv": "Renoveringsarbeten, balkongrenovering.",
         "en": "Renovation works, balcony renovation."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 81,
@@ -1407,7 +1487,8 @@
         "fi": "Kattoikkunan korjaustyöt.",
         "sv": "Takfönsterrenovering.",
         "en": "Skylight renovation."
-      }
+      },
+      "rating": 2
     },
     {
       "id": 82,
@@ -1424,7 +1505,8 @@
         "fi": "Julkisivutyöt.",
         "sv": "Fasadarbeten.",
         "en": "Facade works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 83,
@@ -1442,7 +1524,8 @@
         "sv": "Plåtarbeten, renoveringsarbeten, fönsterrenovering.",
         "en": "Sheet-metal works, renovation works, window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 84,
@@ -1460,7 +1543,8 @@
         "sv": "Balkongrenovering, fasadarbeten, renoveringsarbeten, fönsterrenovering.",
         "en": "Balcony renovation, facade works, renovation works, window renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 85,
@@ -1477,7 +1561,8 @@
         "fi": "Ikkunoiden korjaustyöt, peltityöt.",
         "sv": "Fönsterrenovering, plåtarbeten.",
         "en": "Window renovation, sheet-metal works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 86,
@@ -1494,7 +1579,8 @@
         "fi": "Julkisivutyöt, peltityöt, ovien korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, dörrenovering.",
         "en": "Facade works, sheet-metal works, door renovation."
-      }
+      },
+      "rating": null
     },
     {
       "id": 87,
@@ -1512,7 +1598,8 @@
         "sv": "Plåtarbeten, fasadarbeten, fönsterrenovering, renoveringsarbeten, balkongrenovering.",
         "en": "Sheet-metal works, facade works, window renovation, renovation works, balcony renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 5
     },
     {
       "id": 88,
@@ -1529,7 +1616,8 @@
         "fi": "Julkisivutyöt, peltityöt, korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, renoveringsarbeten.",
         "en": "Facade works, sheet-metal works, renovation works."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 89,
@@ -1546,7 +1634,8 @@
         "fi": "Julkisivutyöt, peltityöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, balkongrenovering, fönsterrenovering.",
         "en": "Facade works, sheet-metal works, balcony renovation, window renovation."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 90,
@@ -1563,7 +1652,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": null
     },
     {
       "id": 91,
@@ -1580,7 +1670,8 @@
         "fi": "Peltityöt, julkisivutyöt, korjaustyöt, ikkunoiden korjaustyöt, ovien korjaustyöt.",
         "sv": "Plåtarbeten, fasadarbeten, renoveringsarbeten, fönsterrenovering, dörrenovering.",
         "en": "Sheet-metal works, facade works, renovation works, window renovation, door renovation."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 92,
@@ -1597,7 +1688,8 @@
         "fi": "Julkisivutyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, fönsterrenovering.",
         "en": "Facade works, window renovation."
-      }
+      },
+      "rating": 3
     },
     {
       "id": 93,
@@ -1614,7 +1706,8 @@
         "fi": "Julkisivutyöt, korjaustyöt.",
         "sv": "Fasadarbeten, renoveringsarbeten.",
         "en": "Facade works, renovation works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 94,
@@ -1631,7 +1724,8 @@
         "fi": "Ikkunoiden korjaustyöt, peltityöt, julkisivutyöt, korjaustyöt.",
         "sv": "Fönsterrenovering, plåtarbeten, fasadarbeten, renoveringsarbeten.",
         "en": "Window renovation, sheet-metal works, facade works, renovation works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 95,
@@ -1648,7 +1742,8 @@
         "fi": "Peltityöt.",
         "sv": "Plåtarbeten.",
         "en": "Sheet-metal works."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 96,
@@ -1666,7 +1761,8 @@
         "sv": "Renoveringsarbeten, balkongrenovering.",
         "en": "Renovation works, balcony renovation."
       },
-      "featured": true
+      "featured": true,
+      "rating": 1
     },
     {
       "id": 97,
@@ -1683,7 +1779,8 @@
         "fi": "Julkisivutyöt, korjaustyöt.",
         "sv": "Fasadarbeten, renoveringsarbeten.",
         "en": "Facade works, renovation works."
-      }
+      },
+      "rating": 3
     },
     {
       "id": 98,
@@ -1700,7 +1797,8 @@
         "fi": "Peltityöt, korjaustyöt.",
         "sv": "Plåtarbeten, renoveringsarbeten.",
         "en": "Sheet-metal works, renovation works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 99,
@@ -1717,7 +1815,8 @@
         "fi": "Julkisivutyöt, peltityöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, balkongrenovering, fönsterrenovering.",
         "en": "Facade works, sheet-metal works, balcony renovation, window renovation."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 100,
@@ -1734,7 +1833,8 @@
         "fi": "Ikkunoiden korjaustyöt, peltityöt.",
         "sv": "Fönsterrenovering, plåtarbeten.",
         "en": "Window renovation, sheet-metal works."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 101,
@@ -1751,7 +1851,8 @@
         "fi": "Julkisivutyöt, peltityöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, fönsterrenovering.",
         "en": "Facade works, sheet-metal works, window renovation."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 102,
@@ -1768,7 +1869,8 @@
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
         "en": "Window renovation."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 103,
@@ -1785,7 +1887,8 @@
         "fi": "Korjaustyöt.",
         "sv": "Renoveringsarbeten.",
         "en": "Renovation works."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 104,
@@ -1802,7 +1905,8 @@
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
         "en": "Window renovation."
-      }
+      },
+      "rating": 3
     },
     {
       "id": 105,
@@ -1819,7 +1923,8 @@
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering, fönsterrenovering.",
         "en": "Facade works, balcony renovation, window renovation."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 106,
@@ -1836,7 +1941,8 @@
         "fi": "Ikkunoiden korjaustyöt.",
         "sv": "Fönsterrenovering.",
         "en": "Window renovation."
-      }
+      },
+      "rating": null
     },
     {
       "id": 107,
@@ -1853,7 +1959,8 @@
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering.",
         "en": "Facade works, balcony renovation."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 108,
@@ -1870,7 +1977,8 @@
         "fi": "Julkisivutyöt, parvekkeiden korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, balkongrenovering, fönsterrenovering.",
         "en": "Facade works, balcony renovation, window renovation."
-      }
+      },
+      "rating": 4
     },
     {
       "id": 109,
@@ -1887,7 +1995,8 @@
         "fi": "Julkisivutyöt, peltityöt, parvekkeiden korjaustyöt, korjaustyöt, ikkunoiden korjaustyöt.",
         "sv": "Fasadarbeten, plåtarbeten, balkongrenovering, renoveringsarbeten, fönsterrenovering.",
         "en": "Facade works, sheet-metal works, balcony renovation, renovation works, window renovation."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 110,
@@ -1904,7 +2013,8 @@
         "fi": "Julkisivutyöt, peltityöt.",
         "sv": "Fasadarbeten, plåtarbeten.",
         "en": "Facade works, sheet-metal works."
-      }
+      },
+      "rating": 5
     },
     {
       "id": 111,
@@ -1922,7 +2032,8 @@
         "sv": "",
         "en": ""
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 112,
@@ -1939,7 +2050,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 113,
@@ -1957,7 +2069,8 @@
         "sv": "",
         "en": ""
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 114,
@@ -1975,7 +2088,8 @@
         "sv": "",
         "en": ""
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 115,
@@ -1992,7 +2106,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 116,
@@ -2009,7 +2124,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 117,
@@ -2027,7 +2143,8 @@
         "sv": "",
         "en": ""
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 118,
@@ -2044,7 +2161,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 119,
@@ -2061,7 +2179,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 120,
@@ -2078,7 +2197,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 121,
@@ -2096,7 +2216,8 @@
         "sv": "",
         "en": ""
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 122,
@@ -2113,7 +2234,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 123,
@@ -2130,7 +2252,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 124,
@@ -2148,7 +2271,8 @@
         "sv": "",
         "en": ""
       },
-      "featured": true
+      "featured": true,
+      "rating": null
     },
     {
       "id": 125,
@@ -2165,7 +2289,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 126,
@@ -2182,7 +2307,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 127,
@@ -2199,7 +2325,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 128,
@@ -2216,7 +2343,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 129,
@@ -2233,7 +2361,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 130,
@@ -2250,7 +2379,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 131,
@@ -2267,7 +2397,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 132,
@@ -2284,7 +2415,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 133,
@@ -2301,7 +2433,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 135,
@@ -2318,7 +2451,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 136,
@@ -2335,7 +2469,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     },
     {
       "id": 137,
@@ -2352,7 +2487,8 @@
         "fi": "",
         "sv": "",
         "en": ""
-      }
+      },
+      "rating": null
     }
   ]
 }

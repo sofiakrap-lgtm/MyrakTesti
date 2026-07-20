@@ -90,7 +90,10 @@
       if (fYear === 'older') return p.year < 2021;
       return p.year === parseInt(fYear, 10);
     }).sort(function (a, b) {
-      // Nostetaan tärkeät referenssit (featured) aina kärkeen; muuten säilytetään järjestys
+      // Lajittelu arvosanan mukaan: paras (5) kärkeen ... (1), ja
+      // arvostelemattomat (ei rating-kenttää) aina viimeiseksi.
+      var ra = a.rating || 0, rb = b.rating || 0;
+      if (rb !== ra) return rb - ra;
       return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
     });
   }
