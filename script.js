@@ -129,7 +129,8 @@ if (sections.length) {
       thanksBody: 'Viestisi on lähetetty. Yritämme vastata mahdollisimman pian.',
       urgent: 'Kiireellisissä tilanteissa olkaa yhteydessä puhelimitse:',
       close: 'Sulje',
-      lName: 'Nimi', lEmail: 'Sähköposti', lPhone: 'Puhelin', lCompany: 'Yritys', lMsg: 'Viesti'
+      lName: 'Nimi', lEmail: 'Sähköposti', lPhone: 'Puhelin', lCompany: 'Yritys', lMsg: 'Viesti',
+      privacy: 'Lähettämällä hyväksyt <a href="tietosuojaseloste.html" target="_blank" rel="noopener">tietosuojaselosteen</a>.'
     },
     sv: {
       eyebrow: 'Kontakta oss', title: 'Skicka meddelande',
@@ -143,7 +144,8 @@ if (sections.length) {
       thanksBody: 'Ditt meddelande har skickats. Vi försöker svara så snart som möjligt.',
       urgent: 'I brådskande fall, kontakta oss per telefon:',
       close: 'Stäng',
-      lName: 'Namn', lEmail: 'E-post', lPhone: 'Telefon', lCompany: 'Företag', lMsg: 'Meddelande'
+      lName: 'Namn', lEmail: 'E-post', lPhone: 'Telefon', lCompany: 'Företag', lMsg: 'Meddelande',
+      privacy: 'Genom att skicka godkänner du <a href="tietosuojaseloste.html" target="_blank" rel="noopener">dataskyddsbeskrivningen</a>.'
     },
     en: {
       eyebrow: 'Contact us', title: 'Send a message',
@@ -157,7 +159,8 @@ if (sections.length) {
       thanksBody: 'Your message has been sent. We will try to respond as soon as possible.',
       urgent: 'In urgent cases, please contact us by phone:',
       close: 'Close',
-      lName: 'Name', lEmail: 'Email', lPhone: 'Phone', lCompany: 'Company', lMsg: 'Message'
+      lName: 'Name', lEmail: 'Email', lPhone: 'Phone', lCompany: 'Company', lMsg: 'Message',
+      privacy: 'By submitting you accept the <a href="tietosuojaseloste.html" target="_blank" rel="noopener">privacy policy</a>.'
     }
   };
   var t = S[lang];
@@ -181,6 +184,7 @@ if (sections.length) {
           '<div class="cf-field"><label>' + t.lCompany + ' <span class="cf-optional">' + t.optional + '</span></label><input type="text" name="company"></div>' +
           '<div class="cf-field"><label>' + t.lMsg + '</label><textarea name="message" required></textarea></div>' +
           '<button type="submit" class="btn btn-primary cf-submit">' + t.send + '</button>' +
+          '<p class="cf-privacy" style="font-size:0.78rem;color:var(--gray-light);margin-top:0.8rem;text-align:center;">' + t.privacy + '</p>' +
           '<p class="cf-error" role="alert" style="display:none;color:#8B2213;font-family:var(--font-heading);font-size:0.85rem;margin-top:0.9rem;text-align:center;"></p>' +
         '</form>' +
       '</div>' +
