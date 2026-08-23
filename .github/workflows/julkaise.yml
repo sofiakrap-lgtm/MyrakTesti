@@ -1,0 +1,68 @@
+# Julkaisee myrak.fi:n Zonerille aina kun main-haaraan tulee muutoksia.
+#
+# Vaatii kolme salaisuutta (Settings -> Secrets and variables -> Actions):
+#   FTP_SERVER    palvelimen osoite, esim. www76.zoner.fi
+#   FTP_USERNAME  FTP-kayttajatunnus
+#   FTP_PASSWORD  FTP-salasana
+#
+# Vapaaehtoiset muuttujat (sama sivu, Variables-valilehti):
+#   FTP_SERVER_DIR  sivuston juurikansio palvelimella, oletus alla
+#   FTP_PROTOCOL    ftps (oletus), ftp tai sftp
+
+name: Julkaise myrak.fi
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Kokeiluajo - nayta mita siirtyisi, ala siirra mitaan"
+        type: boolean
+        default: true
+
+concurrency:
+  group: julkaise-myrak
+  cancel-in-progress: false
+
+jobs:
+  julkaise:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hae repo
+        uses: actions/checkout@v4
+
+      - name: Tarkista etta salaisuudet on asetettu
+        env:
+          S: ${{ secrets.FTP_SERVER }}
+          U: ${{ secrets.FTP_USERNAME }}
+          P: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          puuttuu=""
+          [ -z "$S" ] && puuttuu="$puuttuu FTP_SERVER"
+          [ -z "$U" ] && puuttuu="$puuttuu FTP_USERNAME"
+          [ -z "$P" ] && puuttuu="$puuttuu FTP_PASSWORD"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Naita salaisuuksia ei ole asetettu:$puuttuu"
+            echo "Lisaa ne: Settings -> Secrets and variables -> Actions -> New repository secret"
+            exit 1
+          fi
+          echo "Salaisuudet kunnossa."
+
+      - name: Siirra tiedostot Zonerille
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          server-dir: ${{ vars.FTP_SERVER_DIR || '/domains/myrak.fi/public_html/' }}
+          dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          # Kehitystiedostot jaavat pois; kaikki sivuston oma sisalto menee mukaan.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.claude/**
+            **/node_modules/**
+            **/*.md
