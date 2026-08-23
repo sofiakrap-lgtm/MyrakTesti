@@ -6,7 +6,9 @@
      - projekti.html (+ sv/en)                      (project detail)
      - tiedote.html (+ sv/en)                       (single bulletin)
 
-   NOTE: Images and bulletin texts below are DEMO content.
+   NOTE: Bulletin texts in REAL_POSTS are compiled from Myrak Oy's project
+   documents. Images are generic site photos from the shared image library
+   and are not necessarily from the project in question.
    ============================================================ */
 (function () {
   'use strict';
@@ -34,7 +36,11 @@
       noNews: 'Tästä projektista ei ole vielä julkaistu tiedotteita.',
       sectionLabel: 'Ajankohtaista',
       sectionTitle: 'Aktiiviset projektit',
-      sectionSub: 'Vuoden 2026 käynnissä olevat kohteemme'
+      sectionSub: 'Vuoden 2026 käynnissä olevat kohteemme',
+      openImages: 'Avaa kuvat',
+      prevImage: 'Edellinen kuva',
+      nextImage: 'Seuraava kuva',
+      closeGallery: 'Sulje'
     },
     sv: {
       eyebrow: 'Aktivt projekt 2026',
@@ -51,7 +57,11 @@
       noNews: 'Inga meddelanden har ännu publicerats om detta projekt.',
       sectionLabel: 'Aktuellt',
       sectionTitle: 'Aktiva projekt',
-      sectionSub: 'Våra pågående objekt under 2026'
+      sectionSub: 'Våra pågående objekt under 2026',
+      openImages: 'Öppna bilder',
+      prevImage: 'Föregående bild',
+      nextImage: 'Nästa bild',
+      closeGallery: 'Stäng'
     },
     en: {
       eyebrow: 'Active project 2026',
@@ -68,7 +78,11 @@
       noNews: 'No bulletins have been published for this project yet.',
       sectionLabel: 'News',
       sectionTitle: 'Active projects',
-      sectionSub: 'Our ongoing sites in 2026'
+      sectionSub: 'Our ongoing sites in 2026',
+      openImages: 'Open images',
+      prevImage: 'Previous image',
+      nextImage: 'Next image',
+      closeGallery: 'Close'
     }
   };
   var t = UI[lang];
@@ -89,6 +103,14 @@
         fi: 'Laaja julkisivu- ja ikkunakorjaus, johon kuuluu ikkunoiden ja katon vaihto. Rappaukset paikataan ja pinnat käsitellään, ikkunat uusitaan ja vesikatto rakennetaan uudelleen.',
         sv: 'Omfattande fasad- och fönsterrenovering inklusive byte av fönster och tak. Putsen lagas och ytorna behandlas, fönstren förnyas och yttertaket byggs om.',
         en: 'Extensive facade and window renovation including window and roof replacement. Plaster is patched and surfaces treated, windows are renewed and the roof is rebuilt.'
+      }
+    },
+    {
+      slug: 'centrum', company: 'Bost Ab Centrum i Helsingfors', address: 'Kasarmikatu 38, Helsinki', image: 'kuvat/referenssit/kasarmikatu28.jpg',
+      intro: {
+        fi: 'Tuuletusparvekelinjojen ikkunoiden ja ovien kunnostus- ja pintakäsittelytyöt. Rappukäytävien parvekeovet ja -ikkunat kunnostetaan ja pintakäsitellään rappu kerrallaan.',
+        sv: 'Renovering och ytbehandling av fönster och dörrar i vädringsbalkongernas linjer. Trapphusens balkongdörrar och -fönster renoveras och ytbehandlas ett trapphus i taget.',
+        en: 'Renovation and surface treatment of the windows and doors along the ventilation-balcony lines. The stairwells’ balcony doors and windows are restored and finished one stairwell at a time.'
       }
     },
     {
@@ -156,6 +178,14 @@
       }
     },
     {
+      slug: 'uudenmaankatu29', company: 'As Oy Uudenmaankatu 29', address: 'Uudenmaankatu 29, Helsinki', image: 'kuvat/referenssit/uudenmaankatu29.jpg',
+      intro: {
+        fi: 'Sisäpihan rakennuksen vesikaton uusimistyöt. Vanha vesikatto puretaan sääsuojan alla ja tilalle rakennetaan uusi; telineet pystytetään talon ympärille ja ullakkotilat suojataan pölyltä.',
+        sv: 'Förnyelse av yttertaket på gårdsbyggnaden. Det gamla taket rivs under väderskydd och ett nytt byggs; ställningar reses runt huset och vindsutrymmena skyddas mot damm.',
+        en: 'Roof renewal of the courtyard building. The old roof is demolished under weather protection and a new one built; scaffolding is erected around the building and the attic spaces are protected from dust.'
+      }
+    },
+    {
       slug: 'aino', company: 'Asunto Oy Aino', address: 'Yrjönkatu 12–14, Helsinki', image: 'kuvat/referenssit/yrjonkatu1214.jpg',
       intro: {
         fi: 'Julkisivu- ja ikkunakorjaukset keskeisellä paikalla. Rappaukset paikataan ja maalataan, ikkunat kunnostetaan ja kadunpuoleinen julkisivu palautetaan edustavaan kuntoon.',
@@ -203,7 +233,30 @@
       { date: '10.6.2026', image: 'kuvat/sivut/peltikatto.jpg',
         category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
         title: { fi: 'Vinttikomeroiden tyhjennys - Ida Ekmannin tie 3 ja 5', sv: 'Tömning av vindsförråd - Ida Ekmans väg 3 och 5', en: 'Emptying of attic storage - Ida Ekmannin tie 3 and 5' },
-        excerpt: { fi: 'Tyhjennä oma vinttikomerosi tarpeettomista tavaroista 15.6.2026 mennessä. Komeroihin jäävät tavarat suositellaan suojaamaan.', sv: 'Töm ditt vindsförråd på onödiga föremål senast 15.6.2026. Kvarlämnade föremål rekommenderas att skyddas.', en: 'Please clear your attic storage of unnecessary items by 15 June 2026. Items left behind should be protected.' } }
+        excerpt: { fi: 'Tyhjennä oma vinttikomerosi tarpeettomista tavaroista 15.6.2026 mennessä. Komeroihin jäävät tavarat suositellaan suojaamaan.', sv: 'Töm ditt vindsförråd på onödiga föremål senast 15.6.2026. Kvarlämnade föremål rekommenderas att skyddas.', en: 'Please clear your attic storage of unnecessary items by 15 June 2026. Items left behind should be protected.' } },
+      { date: '6.8.2026', image: 'kuvat/sivut/rikhardinkatu1-peltityot.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Ida Ekmannin tie 5 ja 3 - suojausten poisto', sv: 'Ida Ekmans väg 5 och 3 - skydden avlägsnas', en: 'Ida Ekmannin tie 5 and 3 - removing protective covers' },
+        excerpt: { fi: 'Asukkaiden tekemiä suojauksia voi poistaa 10.8. alkaen. Suojamuovit jätetään urakoitsijan säkkeihin 17.8. mennessä, ja rakennusimuri on käytettävissä 10.-17.8. ullakkotilojen ovien vieressä.', sv: 'De boende kan avlägsna sina skydd från 10.8. Skyddsplasten lämnas i entreprenörens säckar senast 17.8, och en byggdammsugare finns tillgänglig 10-17.8 vid vindsdörrarna.', en: 'Residents may remove their protective covers from 10 Aug. Plastic sheeting goes into the contractor’s bags by 17 Aug, and a construction vacuum is available 10-17 Aug next to the attic doors.' } },
+      { date: '3.8.2026', image: 'kuvat/sivut/meritullinkatu6-peltikatto.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Urakan aloitus - Ida Ekmannin tie 1 ja vinttikomeroiden tyhjennys', sv: 'Entreprenaden inleds - Ida Ekmans väg 1 och tömning av vindsförråd', en: 'Project start - Ida Ekmannin tie 1 and attic storage clearing' },
+        excerpt: { fi: 'Ida Ekmannin tie 1 vesikaton uusiminen alkaa 10.8. telineiden pystytyksellä (n. 3 vk); pihaterassit ja ylimmät parvekkeet on tyhjennettävä. Samalla siivotaan vinttitilat - tyhjennä komerosi ja siirrä poistettavat tavarat käytävälle 17.8. mennessä.', sv: 'Takförnyelsen på Ida Ekmans väg 1 börjar 10.8 med ställningar (ca 3 v); gårdsterrasser och översta balkonger ska tömmas. Samtidigt städas vindsutrymmena - töm ditt förråd och för onödiga föremål till korridoren senast 17.8.', en: 'Roof renewal at Ida Ekmannin tie 1 starts 10 Aug with scaffolding (approx. 3 weeks); patios and top-floor balconies must be cleared. Attic spaces are also cleaned - clear your storage and move unwanted items to the corridor by 17 Aug.' } },
+      { date: '3.8.2026', image: 'kuvat/sivut/peltikatto.jpg',
+        gallery: ['kuvat/tiedotteet/aitio-2026-08-03-1.jpg', 'kuvat/tiedotteet/aitio-2026-08-03-2.jpg', 'kuvat/tiedotteet/aitio-2026-08-03-3.jpg', 'kuvat/tiedotteet/aitio-2026-08-03-4.jpg', 'kuvat/tiedotteet/aitio-2026-08-03-5.jpg'],
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - vesikattotyöt käynnissä', sv: 'Lägesrapport - takarbetena pågår', en: 'Status update - roof work under way' },
+        excerpt: { fi: 'Ida Ekmannin tie 5 peltityöt 50 % ja tie 3 alusta valmis (peltityöt 25 %). Tie 2 purku 50 % ja alustan kunnostus käynnissä. Tie 1 telineet asennetaan 10.8. alkaen.', sv: 'Ida Ekmans väg 5 plåtarbeten 50 % och väg 3 underlag klart (plåt 25 %). Väg 2 rivning 50 % och underlagsrenovering pågår. Väg 1 ställningar monteras från 10.8.', en: 'Ida Ekmannin tie 5 sheet-metal work 50% and tie 3 substrate complete (sheet-metal 25%). Tie 2 demolition 50% with substrate repair under way. Tie 1 scaffolding installed from 10 Aug.' } },
+      { date: '20.8.2026', image: 'kuvat/sivut/meritullinkatu6-peltikatto.jpg',
+        gallery: ['kuvat/tiedotteet/aitio-2026-08-20-1.jpg', 'kuvat/tiedotteet/aitio-2026-08-20-2.jpg', 'kuvat/tiedotteet/aitio-2026-08-20-3.jpg'],
+        category: { fi: 'Aloitus', sv: 'Uppstart', en: 'Project start' },
+        title: { fi: 'Urakan aloitus - Aino Acktén tie 3 ja vinttikomeroiden tyhjennys', sv: 'Entreprenadstart - Aino Acktén tie 3 och tömning av vindsförråden', en: 'Project start - Aino Acktén tie 3 and attic storage clearance' },
+        excerpt: { fi: 'Aino Acktén tie 3 vesikaton uusiminen alkaa viikolla 35 telineiden pystytyksellä (n. 3 vk). Autopaikat ovat pois käytöstä, ja pihaterassit sekä ylimmät parvekkeet on tyhjennettävä. Tyhjennä vinttikomerosi ja siirrä poistettavat tavarat käytävälle 7.9. mennessä.', sv: 'Takrenoveringen på Aino Acktén tie 3 inleds under vecka 35 med ställningsmontage som tar cirka 3 veckor. Alla parkeringsplatser är ur bruk och gårdsterrasser samt de översta balkongerna ska tömmas. Töm ditt vindsförråd och flytta det som ska slängas till korridoren senast 7.9.', en: 'Roof renewal at Aino Acktén tie 3 begins in week 35 with scaffolding, taking about 3 weeks. All parking spaces will be out of use, and yard terraces and top-floor balconies must be cleared. Empty your attic storage and move discarded items to the corridor by 7 September.' } },
+      { date: '18.8.2026', image: 'kuvat/sivut/rikhardinkatu1-peltityot.jpg',
+        gallery: ['kuvat/tiedotteet/aitio-2026-08-18-1.jpg'],
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - peltityöt ja telineasennukset', sv: 'Lägesrapport - plåtarbeten och ställningsmontage', en: 'Status update - sheet metal work and scaffolding' },
+        excerpt: { fi: 'Ida Ekmannin tie 5 ja 3: vesikattopeltien asennus on loppuvaiheessa, ja katolle asennetaan lumiesteitä, kattosiltoja sekä riippukouruja. Tie 2: puutyöt käynnissä ja peltiasennus aloitettu. Tie 1: telineet ja sääsuoja asennuksessa.', sv: 'Ida Ekmannin tie 5 och 3: monteringen av takplåtar är i slutskedet, och snörasskydd, taksäkerhetsbryggor samt hängrännor installeras. Tie 2: träarbeten pågår och plåtmontaget har inletts. Tie 1: ställningar och väderskydd monteras.', en: 'Ida Ekmannin tie 5 and 3: roof sheet installation is in its final stage, with snow guards, roof walkways and gutters being fitted. Tie 2: carpentry underway and sheet installation started. Tie 1: scaffolding and weather protection being erected.' } }
     ],
     bulevardinpuisto: [
       { date: '3.3.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
@@ -241,7 +294,51 @@
       { date: '18.6.2026', image: 'kuvat/sivut/ikkunat.jpg',
         category: { fi: 'Mittauskierros', sv: 'Mätningsrunda', en: 'Measurement round' },
         title: { fi: 'Ikkunoiden mittauskierros 17.–18.6.', sv: 'Fönstermätning 17–18.6', en: 'Window measurements 17–18 June' },
-        excerpt: { fi: 'Toinen ikkunoiden mittauskierros tehdään asunnoissa 17.–18.6.2026. Käynti kestää noin 20 minuuttia ja asuntoihin tullaan yleisavaimella.', sv: 'En andra fönstermätningsrunda görs i bostäderna 17–18.6.2026. Besöket tar cirka 20 minuter och bostäderna nås med huvudnyckel.', en: 'A second window measurement round takes place on 17–18 June 2026. The visit takes about 20 minutes and apartments are accessed with a master key.' } }
+        excerpt: { fi: 'Toinen ikkunoiden mittauskierros tehdään asunnoissa 17.–18.6.2026. Käynti kestää noin 20 minuuttia ja asuntoihin tullaan yleisavaimella.', sv: 'En andra fönstermätningsrunda görs i bostäderna 17–18.6.2026. Besöket tar cirka 20 minuter och bostäderna nås med huvudnyckel.', en: 'A second window measurement round takes place on 17–18 June 2026. The visit takes about 20 minutes and apartments are accessed with a master key.' } },
+      { date: '11.8.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Ullakkokomeroiden siivous ja tyhjennys 28.8.', sv: 'Städning och tömning av vindsförråd 28.8.', en: 'Attic storage cleaning and clearing 28 Aug' },
+        excerpt: { fi: 'Ullakkotilojen siivous- ja imurointityöt tehdään pe 28.8. Avaa oma ullakkokomerosi kyseiseksi päiväksi ja siirrä poistettavat tavarat käytävälle 27.8. mennessä. Sähkölaitteita ja ongelmajätettä ei oteta jätelavalle.', sv: 'Städning och dammsugning av vindsutrymmena görs fre 28.8. Öppna ditt vindsförråd den dagen och för onödiga föremål till korridoren senast 27.8. Elapparater och problemavfall tas inte emot.', en: 'Attic cleaning and vacuuming take place on Fri 28 Aug. Open your attic storage for that day and move items for disposal to the corridor by 27 Aug. Electrical devices and hazardous waste are not accepted.' } },
+      { date: '5.8.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Ikkunatyöt', sv: 'Fönsterarbeten', en: 'Window works' },
+        title: { fi: '5. kerroksen ikkunoiden asennus alkaa 13.8.', sv: 'Fönstermonteringen i 5:e våningen börjar 13.8.', en: '5th-floor window installation starts 13 Aug' },
+        excerpt: { fi: '6. kerroksen ikkuna-asennukset päättyvät 12.8. ja 5. kerroksen työt alkavat 13.8. klo 8. Turvalukot auki, ikkunan edestä n. 1,5 m vapaata ja huonekalut suojattava. Ikkunaa ei saa avata 24 h asennuksen jälkeen.', sv: 'Fönstermonteringen i 6:e våningen slutar 12.8 och 5:e våningen börjar 13.8 kl. 8. Säkerhetslås öppna, ca 1,5 m fritt framför fönstret och möblerna skyddade. Fönstret får inte öppnas 24 h efter monteringen.', en: '6th-floor window installation ends 12 Aug and 5th-floor work starts 13 Aug at 8:00. Keep safety locks open, leave approx. 1.5 m clear in front and cover furniture. Do not open the window for 24 h after installation.' } },
+      { date: '4.8.2026', image: 'kuvat/referenssit/uudenmaankatu39.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - vesikaton viimeistely ja ikkunat', sv: 'Lägesrapport - takets slutarbeten och fönster', en: 'Status update - roof finishing and windows' },
+        excerpt: { fi: 'Käynnissä: vesikaton viimeistely, erkkerikatosten pohja- ja pellitystyöt, räystäslistojen korjaus, seinien rappaus ja 6. kerroksen ikkuna-asennukset. Seuraavaksi vesikaton maalaus ja ikkunapielien kunnostus.', sv: 'Pågår: takets slutarbeten, burspråkens tak- och plåtarbeten, takfotslister, väggputs och fönstermontering i 6:e våningen. Härnäst takmålning och renovering av fönstersmygar.', en: 'Under way: roof finishing, bay-window canopy base and sheet-metal work, eaves trims, wall rendering and 6th-floor window installation. Next: roof painting and window-reveal repairs.' } },
+      { date: '1.8.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Turvallisuustiedote', sv: 'Säkerhetsmeddelande', en: 'Safety notice' },
+        title: { fi: 'Murto työmaan kautta - turvallisuustoimenpiteet', sv: 'Inbrott via arbetsplatsen - säkerhetsåtgärder', en: 'Break-in via the site - safety measures' },
+        excerpt: { fi: 'Työmaalla on tapahtunut murto telineiden kautta. Urakoitsija on tehostanut telineiden suojausta, kulunvalvontaa ja valaistusta. Pidäthän ikkunat ja parvekkeen ovet lukittuina ja ilmoita epäilyttävästä toiminnasta.', sv: 'Ett inbrott har skett via ställningarna. Entreprenören har förstärkt ställningsskyddet, tillträdeskontrollen och belysningen. Håll fönster och balkongdörrar låsta och anmäl misstänkt aktivitet.', en: 'A break-in occurred via the scaffolding. The contractor has reinforced scaffold protection, access control and lighting. Please keep windows and balcony doors locked and report any suspicious activity.' } },
+      { date: '28.7.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Ikkunatyöt', sv: 'Fönsterarbeten', en: 'Window works' },
+        title: { fi: 'Ikkunoiden asennukset alkavat 30.7.', sv: 'Fönstermonteringen börjar 30.7.', en: 'Window installations start 30 Jul' },
+        excerpt: { fi: 'Uusien ikkunoiden asennus alkaa to 30.7. klo 8, ylimmästä kerroksesta alaspäin (n. viikko/kerros). Turvalukot auki, ikkunan edestä n. 1,5 m vapaata ja huonekalut suojattava. Ikkunaa ei avata 24 h asennuksen jälkeen.', sv: 'Monteringen av nya fönster börjar to 30.7 kl. 8, uppifrån och ner (ca en vecka/våning). Säkerhetslås öppna, ca 1,5 m fritt framför fönstret och möblerna skyddade. Fönstret öppnas inte 24 h efter monteringen.', en: 'Installation of new windows starts Thu 30 Jul at 8:00, from the top floor down (approx. one week per floor). Keep safety locks open, approx. 1.5 m clear in front and cover furniture. Do not open the window for 24 h after installation.' } },
+      { date: '27.7.2026', image: 'kuvat/referenssit/uudenmaankatu39.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - vesikatto ja ikkunat alkamassa', sv: 'Lägesrapport - tak och fönster inleds', en: 'Status update - roof and windows starting' },
+        excerpt: { fi: 'Käynnissä: vesikaton asennus valmistuu lähiaikoina, julkisivujen pohjarappaus ja parvekkeiden valutyöt tehty. Seuraavaksi vesikaton maalaus ja ikkunoiden asennus.', sv: 'Pågår: takmonteringen färdig inom kort, fasadernas grundputs och balkongernas gjutningar klara. Härnäst takmålning och fönstermontering.', en: 'Under way: roof installation completing shortly, facade base rendering and balcony castings done. Next: roof painting and window installation.' } },
+      { date: '30.6.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - aikataulu päivitetty 30.6.', sv: 'Lägesrapport - tidtabellen uppdaterad 30.6.', en: 'Status update - schedule updated 30 Jun' },
+        excerpt: { fi: 'Käynnissä: vesikaton pohjatyöt, julkisivujen pohjan kunnostus sekä parvekkeiden muotitus, raudoitus ja valutyöt. Seuraavaksi rappaus, vesikaton pellitys ja ikkunoiden asennus.', sv: 'Pågår: takets grundarbeten, fasadernas grundrenovering samt balkongernas formning, armering och gjutning. Härnäst puts, takplåt och fönstermontering.', en: 'Under way: roof base work, facade base repair and balcony formwork, reinforcement and casting. Next: rendering, roof sheeting and window installation.' } },
+      { date: '22.8.2026', image: 'kuvat/referenssit/uudenmaankatu39.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - ikkuna- ja julkisivutyöt', sv: 'Lägesrapport - fönster- och fasadarbeten', en: 'Status update - window and facade work' },
+        excerpt: { fi: 'Käynnissä ovat vesikaton maalaustyöt, julkisivun pohjarappausten viimeistely, ikkunapielien mallien teko sekä 3. kerroksen ikkuna-asennukset. Seuraavaksi alkavat 2. kerroksen asennukset, ikkunapielien rappaus, ikkunapenkkien pellitys ja parvekkeiden ruiskubetonointi.', sv: 'Pågående: målning av yttertaket, finslipning av fasadens grundputs, modellarbeten för fönstersmygar och fönstermontage på våning 3. Härnäst inleds montaget på våning 2, putsning av fönstersmygar, plåtning av fönsterbänkar och sprutbetongering av balkongerna.', en: 'Underway: roof painting, finishing of the facade base rendering, window reveal sample work and window installation on floor 3. Next: installation on floor 2, rendering of window reveals, sheet metal for window sills and shotcreting of balconies.' } },
+      { date: '20.8.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Ikkunatyöt', sv: 'Fönsterarbeten', en: 'Window works' },
+        title: { fi: '2. kerroksen ikkuna-asennukset alkavat 26.8.', sv: 'Fönstermontaget på våning 2 inleds 26.8.', en: 'Window installation on floor 2 starts 26 August' },
+        excerpt: { fi: 'Uusien ikkunoiden asennus 2. kerroksessa alkaa keskiviikkona 26.8. klo 8.00 ja kestää noin 1,5 viikkoa. Jätä turvalukot auki ja varaa ikkunan eteen 1,5 metriä vapaata tilaa. Ikkunoita ei saa avata 24 tuntiin asennuksen jälkeen.', sv: 'Monteringen av nya fönster på våning 2 inleds onsdagen 26.8 kl. 8.00 och tar cirka 1,5 veckor. Lämna säkerhetslåsen öppna och se till att det finns 1,5 meter fritt utrymme framför fönstret. Fönstren får inte öppnas under 24 timmar efter monteringen.', en: 'Installation of new windows on floor 2 starts Wednesday 26 August at 8.00 and takes about 1.5 weeks. Leave security locks open and keep 1.5 metres of free space in front of the window. Windows must not be opened for 24 hours after installation.' } },
+      { date: '20.8.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Ikkunatyöt', sv: 'Fönsterarbeten', en: 'Window works' },
+        title: { fi: 'Ikkunapielien kunnostustyöt alkavat 24.8.', sv: 'Renoveringen av fönstersmygarna inleds 24.8.', en: 'Window reveal repairs start 24 August' },
+        excerpt: { fi: 'Ikkunavaihdon yhteydessä vaurioituneiden alueiden korjaustyöt alkavat maanantaina 24.8. Työt aloitetaan ylimmästä kerroksesta ja edetään kerros kerrallaan alaspäin, noin 2 viikkoa kerrosta kohti. Työt tehdään ma-pe klo 8–17, ja asunnossa käydään useampana päivänä.', sv: 'Reparationen av områden som skadats i samband med fönsterbytet inleds måndagen 24.8. Arbetet startar på översta våningen och fortsätter våning för våning nedåt, cirka 2 veckor per våning. Arbetet utförs må-fre kl. 8–17 och lägenheten besöks under flera dagar.', en: 'Repairs to areas damaged during the window replacement start on Monday 24 August. Work begins on the top floor and moves down one floor at a time, about 2 weeks per floor. Work is carried out Mon-Fri 8.00–17.00 and each flat is visited on several days.' } },
+      { date: '14.8.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Ikkunatyöt', sv: 'Fönsterarbeten', en: 'Window works' },
+        title: { fi: '3. kerroksen ikkuna-asennukset alkavat 20.8.', sv: 'Fönstermontaget på våning 3 inleds 20.8.', en: 'Window installation on floor 3 starts 20 August' },
+        excerpt: { fi: 'Uusien ikkunoiden asennus 3. kerroksessa alkaa torstaina 20.8. klo 8.00 ja kestää noin viikon. Jätä turvalukot auki, varaa ikkunan eteen 1,5 metriä vapaata tilaa ja suojaa huonekalut muovilla. Ikkunoita ei saa avata 24 tuntiin asennuksen jälkeen.', sv: 'Monteringen av nya fönster på våning 3 inleds torsdagen 20.8 kl. 8.00 och tar cirka en vecka. Lämna säkerhetslåsen öppna, se till att det finns 1,5 meter fritt utrymme framför fönstret och skydda möblerna med plast. Fönstren får inte öppnas under 24 timmar efter monteringen.', en: 'Installation of new windows on floor 3 starts Thursday 20 August at 8.00 and takes about one week. Leave security locks open, keep 1.5 metres of free space in front of the window and cover furniture with plastic. Windows must not be opened for 24 hours after installation.' } }
     ],
     cygnaeuksenkatu10: [
       { date: '12.2.2026', image: 'kuvat/referenssit/cygnaeuksenkatu10.jpg',
@@ -271,7 +368,27 @@
       { date: '5.6.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
         category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
         title: { fi: 'A-rapun ikkunapielien kunnostustyöt', sv: 'Renovering av fönstersmygar i trapphus A', en: 'Window reveal repairs in stairwell A' },
-        excerpt: { fi: 'A-rapussa korjataan ikkunanvaihdon yhteydessä vaurioituneet ikkunapielet ylimmästä kerroksesta alaspäin.', sv: 'I trapphus A repareras de fönstersmygar som skadats vid fönsterbytet, uppifrån och ned.', en: 'In stairwell A, window reveals damaged during the window replacement are repaired from the top floor down.' } }
+        excerpt: { fi: 'A-rapussa korjataan ikkunanvaihdon yhteydessä vaurioituneet ikkunapielet ylimmästä kerroksesta alaspäin.', sv: 'I trapphus A repareras de fönstersmygar som skadats vid fönsterbytet, uppifrån och ned.', en: 'In stairwell A, window reveals damaged during the window replacement are repaired from the top floor down.' } },
+      { date: '24.6.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'IV-kartoituskäynti 24.6. peruttu', sv: 'IV-kartläggningen 24.6 inställd', en: 'Ventilation survey on 24 June cancelled' },
+        excerpt: { fi: 'Keskiviikoksi 24.6.2026 klo 8–14 suunniteltu IV-kartoituskäynti on peruttu sairastumisen vuoksi. Käynnille sovitaan uusi ajankohta, josta tiedotetaan asukkaille vähintään viikkoa ennen.', sv: 'Den IV-kartläggning som planerats till onsdag 24.6.2026 kl. 8–14 är inställd på grund av sjukdom. En ny tid avtalas och meddelas de boende minst en vecka i förväg.', en: 'The ventilation survey planned for Wednesday 24 June 2026, 8 a.m.–2 p.m., has been cancelled due to illness. A new date will be arranged and announced to residents at least a week in advance.' } },
+      { date: '24.6.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'B-rapun ikkunapielien kunnostustyöt', sv: 'Renovering av fönstersmygar i trapphus B', en: 'Window reveal repairs in stairwell B' },
+        excerpt: { fi: 'B-rapussa aloitetaan 29.6.2026 ikkunanvaihdon yhteydessä vaurioituneiden ikkunapielien korjaustyöt ylimmästä kerroksesta alaspäin. Kesto noin 2 viikkoa, työt ma–pe klo 8–17. Siirrä tavarat pois ikkunan edestä ja jätä turvalukot auki – asuntoihin tullaan yleisavaimella.', sv: 'I trapphus B inleds 29.6.2026 reparationen av de fönstersmygar som skadats vid fönsterbytet, uppifrån och ned. Arbetet tar cirka 2 veckor och utförs mån–fre kl. 8–17. Flytta undan föremål framför fönstret och lämna säkerhetslåsen öppna – bostäderna nås med huvudnyckel.', en: 'In stairwell B, repairs to window reveals damaged during the window replacement start on 29 June 2026, from the top floor down. The work takes about 2 weeks, Mon–Fri 8 a.m.–5 p.m. Clear items from in front of the window and leave safety locks open – apartments are entered with a master key.' } },
+      { date: '3.7.2026', image: 'kuvat/referenssit/cygnaeuksenkatu10.jpg',
+        category: { fi: 'Mittauskierros', sv: 'Mätningsrunda', en: 'Measurement round' },
+        title: { fi: 'IV-kartoituskäynti 8.7. klo 9 alkaen', sv: 'IV-kartläggning 8.7 från kl. 9', en: 'Ventilation survey 8 July from 9 a.m.' },
+        excerpt: { fi: 'Kaikissa asunnoissa tehdään IV-tarkastuskierros ke 8.7.2026 klo 9 alkaen A-rapun ylimmästä kerroksesta. Kierroksella kartoitetaan julkisivun tuloilmaventtiilien kunto ja tyyppi; käynti kestää n. 15 min asuntoa kohden. Asuntoihin tullaan yleisavaimella – jätäthän turvalukot auki.', sv: 'En IV-inspektion görs i alla bostäder ons 8.7.2026 från kl. 9, med start i trapphus A:s översta våning. Tilluftsventilernas skick och typ kartläggs; besöket tar ca 15 min per bostad. Bostäderna nås med huvudnyckel – lämna säkerhetslåsen öppna.', en: 'A ventilation inspection is carried out in all apartments on Wed 8 July 2026 from 9 a.m., starting from the top floor of stairwell A. The condition and type of the facade supply-air valves are surveyed; the visit takes approx. 15 min per apartment. Apartments are entered with a master key – please leave safety locks open.' } },
+      { date: '5.8.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Ikkunatyöt', sv: 'Fönsterarbeten', en: 'Window works' },
+        title: { fi: 'Ikkunoiden pesutyöt alkavat 11.8.', sv: 'Fönstertvätten börjar 11.8.', en: 'Window cleaning starts 11 Aug' },
+        excerpt: { fi: 'Ikkunoiden pesutyöt alkavat ti 11.8.2026 klo 8 ylimmästä asunnosta ja kestävät noin viikon (ma–pe klo 8–16). Ikkunat pestään ulkoa ja sisältä, lukot öljytään ja asukkaille annetaan huolto-ohjeet. Siirrä huonekalut, verhot ja kasvit pois ikkunoiden edestä ja jätä turvalukot auki.', sv: 'Fönstertvätten inleds tis 11.8.2026 kl. 8 från den översta bostaden och pågår cirka en vecka (mån–fre kl. 8–16). Fönstren tvättas utifrån och inifrån, låsen oljas och de boende får skötselanvisningar. Flytta undan möbler, gardiner och växter framför fönstren och lämna säkerhetslåsen öppna.', en: 'Window cleaning begins on Tue 11 Aug 2026 at 8 a.m. from the top apartment and lasts about a week (Mon–Fri 8 a.m.–4 p.m.). Windows are washed inside and out, locks are oiled and residents are given maintenance instructions. Move furniture, curtains and plants away from the windows and leave safety locks open.' } },
+      { date: '12.8.2026', image: 'kuvat/referenssit/cygnaeuksenkatu10.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - katujulkisivu ja sisäpiha', sv: 'Lägesrapport - gatufasad och innergård', en: 'Status update - street facade and courtyard' },
+        excerpt: { fi: 'Käynnissä ovat katujulkisivun puhdistus- ja maalaustyöt sekä sisäpihan rappaustyöt ja parvekkeiden kunnostus. Seuraavaksi alkavat katujulkisivun telineiden purku ja liiketilaikkunoiden kunnostustyöt. Aikataulu päivitetty 11.8.2026.', sv: 'Pågående: rengöring och målning av gatufasaden samt putsarbeten och balkongrenovering på innergården. Härnäst inleds rivning av ställningarna på gatufasaden och renovering av affärslokalernas fönster. Tidtabellen uppdaterad 11.8.2026.', en: 'Underway: cleaning and painting of the street facade, plus rendering work and balcony repairs in the courtyard. Next: dismantling of the street facade scaffolding and renovation of the commercial premises’ windows. Schedule updated 11 August 2026.' } }
     ],
     fleminginkatu11: [
       { date: '30.3.2026', image: 'kuvat/referenssit/fleminginkatu11.jpg',
@@ -305,7 +422,27 @@
       { date: '8.6.2026', image: 'kuvat/sivut/ikkunat.jpg',
         category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
         title: { fi: 'Suodatinkankaan asennustyöt', sv: 'Montering av filterduk', en: 'Filter fabric installation' },
-        excerpt: { fi: 'Jokaisen asunnon tuuletusikkunaan asennetaan suodatinkangas. Työt tehdään ulkopuolelta telineiltä.', sv: 'En filterduk monteras i varje bostads vädringsfönster. Arbetet utförs utifrån från ställningarna.', en: 'A filter fabric is installed in each apartment’s ventilation window. The work is done from the outside on scaffolding.' } }
+        excerpt: { fi: 'Jokaisen asunnon tuuletusikkunaan asennetaan suodatinkangas. Työt tehdään ulkopuolelta telineiltä.', sv: 'En filterduk monteras i varje bostads vädringsfönster. Arbetet utförs utifrån från ställningarna.', en: 'A filter fabric is installed in each apartment’s ventilation window. The work is done from the outside on scaffolding.' } },
+      { date: '26.6.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - tiilisaumaus ja hiekkapuhallus', sv: 'Lägesrapport - tegelfogning och blästring', en: 'Status update - repointing and blasting' },
+        excerpt: { fi: 'Käynnissä: katujulkisivujen tiilisaumaustyöt ja tuuletusparvekkeiden hiekkapuhallustyöt. Seuraavaksi alkavat sokkelikerroksen rappaustyöt.', sv: 'Pågår: tegelfogning på gatufasaderna och blästring av vädringsbalkongerna. Härnäst inleds putsarbetena på sockelvåningen.', en: 'Under way: brick repointing on the street facades and sandblasting of the ventilation balconies. Next: rendering of the plinth level.' } },
+      { date: '16.7.2026', image: 'kuvat/referenssit/fleminginkatu11.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - maantasokerroksen rappaustyöt', sv: 'Lägesrapport - putsarbeten på bottenvåningen', en: 'Status update - ground-floor rendering' },
+        excerpt: { fi: 'Käynnissä: kerrospellin purku- ja kaatovalutyöt sekä katujulkisivun maantasokerroksen linjaukset, täyttörappaukset ja roilotustyöt. Seuraavaksi päädyn ja pihajulkisivun maantasokerroksen tartunta-, linjaus- ja täyttörappaustyöt.', sv: 'Pågår: rivning och gjutning av våningslisten samt riktning, fyllnadsputs och spårfräsning på gatufasadens bottenvåning. Härnäst vidhäftnings-, riktnings- och fyllnadsputs på gaveln och gårdsfasadens bottenvåning.', en: 'Under way: demolition and levelling casts of the floor flashing, plus alignment, filler rendering and chasing on the street facade ground level. Next: bonding, alignment and filler rendering on the gable and courtyard facade ground level.' } },
+      { date: '5.8.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - aikataulu päivitetty 5.8.', sv: 'Lägesrapport - tidtabellen uppdaterad 5.8.', en: 'Status update - schedule updated 5 Aug' },
+        excerpt: { fi: 'Käynnissä: ylimmäisen kerroslistan kaatovalutyöt, pihajulkisivun maantasokerroksen linjaukset ja täyttörappaukset sekä katujulkisivun rappukäytävän smyygin mallityöt. Seuraavaksi asennetaan naapuripäädyn telineet.', sv: 'Pågår: gjutning av den översta våningslisten, riktning och fyllnadsputs på gårdsfasadens bottenvåning samt provarbete på trapphusets smyg i gatufasadens bottenvåning. Härnäst monteras ställningar vid grannens gavel.', en: 'Under way: levelling casts of the topmost floor trim, alignment and filler rendering on the courtyard facade ground level, and sample work on the stairwell reveal at street level. Next: scaffolding at the neighbouring gable.' } },
+      { date: '21.8.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Boendeinfo', en: 'Resident notice' },
+        title: { fi: 'Tuuletusparvekkeiden purkutyöt alkavat 25.8.', sv: 'Rivningen av luftningsbalkongerna inleds 25.8.', en: 'Demolition of ventilation balconies starts 25 August' },
+        excerpt: { fi: 'Tuuletusparvekkeiden purkutyöt aloitetaan tiistaina 25.8.2026. Työt kestävät noin 2–3 viikkoa ja aiheuttavat meteliä. Työaika arkisin klo 8–18 ja lauantaisin klo 9–16.', sv: 'Rivningen av luftningsbalkongerna inleds tisdagen 25.8.2026. Arbetet tar cirka 2–3 veckor och orsakar buller. Arbetstid vardagar kl. 8–18 och lördagar kl. 9–16.', en: 'Demolition of the ventilation balconies starts on Tuesday 25 August 2026. The work takes about 2–3 weeks and causes noise. Working hours are weekdays 8.00–18.00 and Saturdays 9.00–16.00.' } },
+      { date: '19.8.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - pellitys- ja rappaustyöt', sv: 'Lägesrapport - plåt- och putsarbeten', en: 'Status update - sheet metal and rendering work' },
+        excerpt: { fi: 'Käynnissä ovat ylimmäisen kerroslistan pellitystyöt, pihajulkisivun maantasokerroksen linjaukset ja täyttörappaus sekä katujulkisivun rappukäytävän smyygin mallityöt. Seuraavaksi alkavat naapuripäädyn telineiden asennus ja autotallin korjaustyöt. Aikataulu päivitetty 19.8.2026.', sv: 'Pågående: plåtning av den översta våningslisten, linjeringar och fyllnadsputs på gårdsfasadens markplan samt modellarbeten för trapphusets smyg på gatufasaden. Härnäst: ställningsmontage vid grannens gavel och reparation av garaget. Tidtabellen uppdaterad 19.8.2026.', en: 'Underway: sheet metal work on the top floor cornice, alignment and filler rendering on the courtyard facade ground floor, and reveal sample work in the street facade stairwell. Next: scaffolding at the neighbouring gable and garage repairs. Schedule updated 19 August 2026.' } }
     ],
     hameentie37: [
       { date: '18.2.2026', image: 'kuvat/referenssit/hameentie37.jpg',
@@ -335,7 +472,11 @@
       { date: '15.6.2026', image: 'kuvat/referenssit/hameentie37.jpg',
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Ikkunoiden uusimistyön eteneminen ja aikataulu', sv: 'Fönsterbytets framskridande och tidtabell', en: 'Window replacement progress and schedule' },
-        excerpt: { fi: 'Tiedote ikkunoiden uusimistyön etenemisestä ja aikataulun tulkinnasta asukkaille.', sv: 'Information till de boende om fönsterbytets framskridande och tolkningen av tidtabellen.', en: 'An update for residents on the progress of the window replacement and how to read the schedule.' } }
+        excerpt: { fi: 'Tiedote ikkunoiden uusimistyön etenemisestä ja aikataulun tulkinnasta asukkaille.', sv: 'Information till de boende om fönsterbytets framskridande och tolkningen av tidtabellen.', en: 'An update for residents on the progress of the window replacement and how to read the schedule.' } },
+      { date: '11.8.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Ikkunatyöt', sv: 'Fönsterarbeten', en: 'Window works' },
+        title: { fi: 'Ikkunoiden viimeistelytyöt asunnoissa', sv: 'Slutarbeten på fönstren i lägenheterna', en: 'Window finishing work in the flats' },
+        excerpt: { fi: 'Asunnoissa asennetaan ikkunoiden sisäpuolen alalistat ja ulkopuolen liitospellit. Työ on pölytöntä eikä vaadi suojakoppia tai asunnon peittämistä. Aikataulu: B-rappu 13.–14.8. (kerrokset 8–9), A-rappu 17.8., B-rappu 18.8. ja C-rappu 19.8. (kerrokset 7–1).', sv: 'I lägenheterna monteras fönstrens invändiga underlister och utvändiga anslutningsplåtar. Arbetet är dammfritt och kräver varken skyddsbås eller övertäckning av lägenheten. Tidtabell: trapphus B 13.–14.8 (våning 8–9), trapphus A 17.8, trapphus B 18.8 och trapphus C 19.8 (våning 7–1).', en: 'Interior bottom trims and exterior connecting flashings will be installed on the windows. The work is dust-free and requires no protective enclosure or covering of the flat. Schedule: stairwell B 13–14 August (floors 8–9), stairwell A 17 August, stairwell B 18 August and stairwell C 19 August (floors 7–1).' } }
     ],
     neitsytpolku9: [
       { date: '9.4.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
@@ -365,7 +506,31 @@
       { date: '4.6.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
-        excerpt: { fi: 'Parveke- ja julkisivutyöt etenevät sisäpihoilla. Tiedotamme seuraavista työvaiheista erikseen.', sv: 'Balkong- och fasadarbetena framskrider på gårdarna. Vi informerar om kommande skeden separat.', en: 'Balcony and facade work is progressing in the courtyards. We will announce the next phases separately.' } }
+        excerpt: { fi: 'Parveke- ja julkisivutyöt etenevät sisäpihoilla. Tiedotamme seuraavista työvaiheista erikseen.', sv: 'Balkong- och fasadarbetena framskrider på gårdarna. Vi informerar om kommande skeden separat.', en: 'Balcony and facade work is progressing in the courtyards. We will announce the next phases separately.' } },
+      { date: '18.6.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - purkutyöt valmiit', sv: 'Lägesrapport - rivningen klar', en: 'Status update - demolition complete' },
+        excerpt: { fi: 'Julkisivujen purkutyöt ovat valmistuneet ja purkujätteen siivous on käynnissä. Julkisivun pesutyöt tehdään 19.–20.6. klo 9–16, pohjien kunnostus alkaa viikolla 26 ja rappaustyöt viikolla 27.', sv: 'Rivningen av fasaderna är klar och städningen av rivningsavfallet pågår. Fasadtvätt utförs 19–20.6 kl. 9–16, grundrenoveringen börjar vecka 26 och putsarbetena vecka 27.', en: 'Facade demolition is complete and clearing of demolition waste is under way. Facade washing takes place 19–20 June, 9 a.m.–4 p.m., substrate repairs start in week 26 and rendering in week 27.' } },
+      { date: '30.6.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - aikataulu päivitetty 30.6.', sv: 'Lägesrapport - tidtabellen uppdaterad 30.6.', en: 'Status update - schedule updated 30 Jun' },
+        excerpt: { fi: 'Käynnissä: julkisivujen pohja-, linjaus- ja rappaustyöt. Seuraavaksi edellä mainitut työt jatkuvat ja malli-ikkuna valmistetaan.', sv: 'Pågår: fasadernas grund-, riktnings- och putsarbeten. Härnäst fortsätter arbetena och ett provfönster tillverkas.', en: 'Under way: facade base, alignment and rendering work. Next: the above continues and a sample window is produced.' } },
+      { date: '2.7.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Ikkunoiden alaosan muovituksen avaaminen', sv: 'Plasten i fönstrens nedre del öppnas', en: 'Opening the plastic on the lower windows' },
+        excerpt: { fi: 'Julkisivun tartuntarappaustöiden valmistuttua ikkunoiden alaosan muovitus avataan, jolloin asuntoa voi tuulettaa työpäivän päätyttyä. Tuulettaminen tapahtuu omalla vastuulla – työmaa on yhä käynnissä ja avoimesta ikkunasta voi kulkeutua rakennuspölyä.', sv: 'När fasadens vidhäftningsputs är klar öppnas plasten i fönstrens nedre del, varefter bostaden kan vädras efter arbetsdagens slut. Vädring sker på eget ansvar – bygget pågår fortfarande och byggdamm kan komma in genom ett öppet fönster.', en: 'Once the facade bonding render is complete, the plastic covering on the lower part of the windows is opened, allowing apartments to be aired after the working day. Airing is at your own risk – the site is still active and construction dust can enter through an open window.' } },
+      { date: '31.7.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Ilmalämpöpumput osakasmuutostöinä parvekkeille', sv: 'Luftvärmepumpar på balkongerna som aktieägarändring', en: 'Balcony heat pumps as shareholder alterations' },
+        excerpt: { fi: 'Parvekkeille voi asennuttaa viilennykseen tarkoitetun ilmalämpöpumpun osakasmuutostyönä julkisivuremontin valmistuttua. Osakas tekee muutostyöilmoituksen isännöitsijälle ja sopii asennuksesta taloyhtiön kanssa. Ulkoseinän läpivientivarauksen voi tilata Myrak Oy:ltä 200 €/asunto elokuun loppuun mennessä.', sv: 'Efter fasadrenoveringen kan en luftvärmepump för kylning installeras på balkongen som en aktieägarändring. Aktieägaren gör en ändringsanmälan till disponenten och avtalar om installationen med bolaget. Genomföring i ytterväggen kan beställas av Myrak Oy för 200 €/bostad fram till slutet av augusti.', en: 'After the facade renovation, an air-source heat pump for cooling may be installed on the balcony as a shareholder alteration. The shareholder files an alteration notice with the property manager and agrees the installation with the housing company. A wall penetration can be ordered from Myrak Oy for €200 per apartment until the end of August.' } },
+      { date: '19.8.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Boendeinfo', en: 'Resident notice' },
+        title: { fi: 'Sisäänkäyntien rappausten purkutyöt viikolla 35', sv: 'Rivning av entréernas puts under vecka 35', en: 'Demolition of entrance rendering in week 35' },
+        excerpt: { fi: 'Talon sisäänkäyntien rappausten purkutyöt tehdään viikolla 35, ja sisäänkäynteihin tulee tilapäisiä käyttökatkoja. A-E-rapuissa kuljetaan tarvittaessa toisen sisäänkäyntioven kautta. F-rapussa sisäänkäynti suljetaan lyhyiksi ajoiksi, koska vaihtoehtoista kulkureittiä ei ole.', sv: 'Rivningen av putsen vid husets entréer utförs under vecka 35 och entréerna stängs tillfälligt. I trapphusen A-E sker in- och utpassage vid behov genom den andra entrédörren. I trapphus F stängs entrén korta stunder, eftersom alternativ ingång saknas.', en: 'Rendering at the building entrances will be demolished during week 35, causing temporary closures. In stairwells A-E, access is via the second entrance door when needed. In stairwell F the entrance will be closed for short periods, as there is no alternative route.' } },
+      { date: '12.8.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - julkisivut ja osakasparvekkeet', sv: 'Lägesrapport - fasader och aktielägenheternas balkonger', en: 'Status update - facades and shareholder balconies' },
+        excerpt: { fi: 'Julkisivujen pohjarappaustyöt ovat 70 % valmiit, ja ikkunapielien sekä kerroslistan rappaustyöt ovat käynnissä. Osakasparvekkeilla tehdään muottien pohjatöitä ja raudoitusten asennusta. Seuraavaksi alkavat sisäänkäyntien rappausten purku, pintarappaus ja parvekkeiden valutyöt.', sv: 'Fasadernas grundputs är till 70 % färdig och putsningen av fönstersmygar och våningslister pågår. På balkongerna görs grundarbeten för formar och armering monteras. Härnäst inleds rivning av entréernas puts, ytputsning och gjutning av balkongerna.', en: 'Base rendering of the facades is 70 % complete, and rendering of window reveals and floor cornices is underway. On the balconies, formwork groundwork and reinforcement installation are in progress. Next: demolition of entrance rendering, surface rendering and balcony casting.' } }
     ],
     aino: [
       { date: '30.1.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
@@ -427,7 +592,23 @@
       { date: '16.6.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Tilannetiedote - ikkunapielet ja rappaus', sv: 'Lägesrapport - smygar och puts', en: 'Status update - reveals and rendering' },
-        excerpt: { fi: 'Uudenmaankadun ikkunapielien työt ja julkisivun rappaustyöt ovat käynnissä aikataulun mukaisesti.', sv: 'Arbetena på Nylandsgatans fönstersmygar och fasadputsen pågår enligt tidtabell.', en: 'Work on the Uudenmaankatu window reveals and the facade rendering is under way on schedule.' } }
+        excerpt: { fi: 'Uudenmaankadun ikkunapielien työt ja julkisivun rappaustyöt ovat käynnissä aikataulun mukaisesti.', sv: 'Arbetena på Nylandsgatans fönstersmygar och fasadputsen pågår enligt tidtabell.', en: 'Work on the Uudenmaankatu window reveals and the facade rendering is under way on schedule.' } },
+      { date: '30.6.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - pintarappaus ja vesikaton maalaus', sv: 'Lägesrapport - ytputs och takmålning', en: 'Status update - surface render and roof painting' },
+        excerpt: { fi: 'Käynnissä: Yrjönkadun julkisivun pintarappaustyöt, ikkunapeltien asennus ja vesikaton maalaustyöt. Seuraavaksi Yrjönkadun alimmaisen kerroslistan purku ja täyttörappaus sekä Uudenmaankadun koristeiden ja paikkarappausten työt.', sv: 'Pågår: ytputs på Georgsgatans fasad, montering av fönsterplåtar och takmålning. Härnäst rivning och fyllnadsputs av den nedersta våningslisten på Georgsgatan samt dekor- och lagningsputs på Nylandsgatan.', en: 'Under way: surface rendering of the Yrjönkatu facade, installation of window flashings and roof painting. Next: demolition and filler rendering of the lowest floor trim on Yrjönkatu, plus ornament and patch rendering on Uudenmaankatu.' } },
+      { date: '14.7.2026', image: 'kuvat/sivut/meritullinkatu6-peltikatto.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Vesikaton maalaustyöt 22.–24.7. - autopaikat pois käytöstä', sv: 'Takmålning 22–24.7 - parkeringsplatserna ur bruk', en: 'Roof painting 22–24 July - parking out of use' },
+        excerpt: { fi: 'Vesikaton maalaustyöt tehdään ke–pe 22.–24.7.2026 nosturilta, minkä vuoksi kaikki sisäpihan autopaikat ovat pois käytöstä näiden päivien ajan. Asukkailta tai osakkailta ei edellytetä toimenpiteitä työn aikana.', sv: 'Takmålningen utförs ons–fre 22–24.7.2026 från kran, och därför är alla parkeringsplatser på gården ur bruk under dessa dagar. Inga åtgärder krävs av de boende eller aktieägarna under arbetet.', en: 'Roof painting takes place Wed–Fri 22–24 July 2026 from a crane, so all courtyard parking spaces are out of use during those days. No action is required from residents or shareholders.' } },
+      { date: '16.7.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - maalaustyöt alkamassa', sv: 'Lägesrapport - målningsarbetena inleds', en: 'Status update - painting about to start' },
+        excerpt: { fi: 'Käynnissä: Yrjönkadun julkisivun pintarappaus, ikkunoiden valmistelu huoltomaalausta varten, telineiden siivous ja vesikaton maalaus. Seuraavaksi Yrjönkadun julkisivun maalaustyöt sekä Uudenmaankadun koristelistojen ja paikkarappauskohtien täyttörappaus.', sv: 'Pågår: ytputs på Georgsgatans fasad, förberedelser av fönstren för underhållsmålning, städning av ställningarna och takmålning. Härnäst målning av Georgsgatans fasad samt fyllnadsputs av dekorlister och lagningsställen på Nylandsgatan.', en: 'Under way: surface rendering of the Yrjönkatu facade, preparation of the windows for maintenance painting, scaffolding clean-up and roof painting. Next: painting of the Yrjönkatu facade plus filler rendering of the Uudenmaankatu ornament trims and patch areas.' } },
+      { date: '20.8.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - julkisivujen ja vesikaton kunnostus', sv: 'Lägesrapport - renovering av fasader och yttertak', en: 'Status update - facade and roof renovation' },
+        excerpt: { fi: 'Käynnissä ovat Yrjönkadun julkisivun maalaustyöt, Uudenmaankadun ikkunapeltien liitosten viimeistelyrappaukset, vesikaton maalaus sekä asuntoikkunoiden kunnostus ja parvekelaattojen korjaus. Seuraavaksi alkavat peltien maalaus, parvekkeiden kaiteiden asennus ja Yrjönkadun telineiden purku. Aikataulu päivitetty 20.8.2026.', sv: 'Pågående: målning av fasaden mot Yrjögatan, finputsning av fönsterplåtarnas anslutningar mot Nylandsgatan, målning av yttertaket samt renovering av lägenhetsfönstren och reparation av balkongplattorna. Härnäst: målning av plåtarna, montering av balkongräcken och rivning av ställningarna vid Yrjögatan. Tidtabellen uppdaterad 20.8.2026.', en: 'Underway: painting of the Yrjönkatu facade, finishing rendering of the window flashing joints on the Uudenmaankatu side, roof painting, plus renovation of flat windows and repair of balcony slabs. Next: painting of the sheet metal, installation of balcony railings and dismantling of the Yrjönkatu scaffolding. Schedule updated 20 August 2026.' } }
     ],
     turuntie68: [
       { date: '7.4.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
@@ -445,7 +626,27 @@
       { date: '4.6.2026', image: 'kuvat/sivut/ikkunat.jpg',
         category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
         title: { fi: 'Ikkunoiden suojaus- ja eristystyöt', sv: 'Skydd och tätning av fönster', en: 'Window protection and sealing' },
-        excerpt: { fi: 'Telineet on asennettu ja ikkunoiden suojaus- ja eristystyöt ovat käynnissä. Vanhat tilkkeet poistetaan ja ikkunakarmien pielirakenteet kunnostetaan.', sv: 'Ställningarna är monterade och skydds- och tätningsarbetena på fönstren pågår. Gamla drev avlägsnas och fönsterkarmarnas smygkonstruktioner renoveras.', en: 'Scaffolding is in place and window protection and sealing are under way. Old caulking is removed and the window-frame reveal structures are repaired.' } }
+        excerpt: { fi: 'Telineet on asennettu ja ikkunoiden suojaus- ja eristystyöt ovat käynnissä. Vanhat tilkkeet poistetaan ja ikkunakarmien pielirakenteet kunnostetaan.', sv: 'Ställningarna är monterade och skydds- och tätningsarbetena på fönstren pågår. Gamla drev avlägsnas och fönsterkarmarnas smygkonstruktioner renoveras.', en: 'Scaffolding is in place and window protection and sealing are under way. Old caulking is removed and the window-frame reveal structures are repaired.' } },
+      { date: '10.6.2026', image: 'kuvat/referenssit/mannerheimintie94.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Julkisivujen alaosien purkutyöt 18.–20.6.', sv: 'Rivning av fasadernas nedre delar 18–20.6', en: 'Demolition of lower facades 18–20 June' },
+        excerpt: { fi: 'Julkisivujen alaosien purkutyöt tehdään to 18.6. Mannerheimintien puolella ja pe 19.6. Nordenskiöldinkadun puolella. Telineiden alikulku on suljettu koko päivän – käytäthän sisäpihan sisäänkäyntiä. K-kaupan sisäänkäynnin purkutyöt tehdään la 20.6. klo 7–9.', sv: 'Rivningen av fasadernas nedre delar utförs tors 18.6 på Mannerheimvägens sida och fre 19.6 på Nordenskiöldsgatans sida. Passagen under ställningarna är stängd hela dagen – använd gårdens ingång. Rivningen vid K-butikens ingång görs lör 20.6 kl. 7–9.', en: 'Demolition of the lower facade sections takes place on Thu 18 June on the Mannerheimintie side and Fri 19 June on the Nordenskiöldinkatu side. The passage under the scaffolding is closed all day – please use the courtyard entrance. Demolition at the K-store entrance is done on Sat 20 June, 7–9 a.m.' } },
+      { date: '16.6.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Korjaus - purkutyöt siirtyvät 24.–26.6.', sv: 'Rättelse - rivningen flyttas till 24–26.6', en: 'Correction - demolition moved to 24–26 June' },
+        excerpt: { fi: 'Aiemmin tiedotetut julkisivujen alaosien purkutyöt siirtyvät. Työt tehdään ke 24.6. Mannerheimintien puolella sekä to–pe 25.–26.6. Nordenskiöldinkadun puolella. Telineiden alikulku on suljettu töiden ajan – käytäthän sisäpihan sisäänkäyntiä.', sv: 'De tidigare meddelade rivningsarbetena på fasadernas nedre delar flyttas. Arbetet utförs ons 24.6 på Mannerheimvägens sida och tors–fre 25–26.6 på Nordenskiöldsgatans sida. Passagen under ställningarna är stängd under arbetet – använd gårdens ingång.', en: 'The previously announced demolition of the lower facade sections has been rescheduled. The work is done on Wed 24 June on the Mannerheimintie side and Thu–Fri 25–26 June on the Nordenskiöldinkatu side. The passage under the scaffolding is closed during the work – please use the courtyard entrance.' } },
+      { date: '30.6.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - katutason pohjatyöt', sv: 'Lägesrapport - grundarbeten i gatuplan', en: 'Status update - street-level base work' },
+        excerpt: { fi: 'Käynnissä: Nordenskiöldinkadun puoleisten ikkunakaulureiden rappaustyöt ja julkisivujen katutason pohjatyöt. Seuraavaksi alkavat julkisivujen katutasojen rappaustyöt.', sv: 'Pågår: putsning av fönsterkragarna på Nordenskiöldsgatans sida och grundarbeten i fasadernas gatuplan. Härnäst inleds putsarbetena i fasadernas gatuplan.', en: 'Under way: rendering of the window collars on the Nordenskiöldinkatu side and base work on the street-level facades. Next: rendering of the street-level facades.' } },
+      { date: '14.7.2026', image: 'kuvat/referenssit/mannerheimintie94.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - maantasokerroksen rappaus ja pellitykset', sv: 'Lägesrapport - puts och plåtarbeten i bottenvåningen', en: 'Status update - ground-floor rendering and flashings' },
+        excerpt: { fi: 'Käynnissä: molempien julkisivujen maantasokerroksen pohjarappaustyöt, K-kaupan edustan seinän vesipeltien asennus, Nordenskiöldinkadun ikkunakaulureiden rappaus sekä maantasokerrosten ikkunoiden pellitys- ja kaulureiden rappaustyöt. Seuraavaksi alkavat ikkunoiden huoltomaalaus, julkisivujen maalaus, räystäskourun maalaus ja betonisen ylälistan rappaus.', sv: 'Pågår: grundputs i bottenvåningen på båda fasaderna, montering av vattenplåtar på väggen framför K-butiken, putsning av fönsterkragarna på Nordenskiöldsgatan samt plåtarbeten och kragputs vid bottenvåningens fönster. Härnäst: underhållsmålning av fönstren, målning av fasaderna och takrännan samt putsning av den övre betonglisten.', en: 'Under way: base rendering at ground level on both facades, installation of flashings on the wall in front of the K-store, rendering of the Nordenskiöldinkatu window collars, and flashing and collar rendering at the ground-floor windows. Next: maintenance painting of windows, painting of the facades and gutter, and rendering of the upper concrete cornice.' } },
+      { date: '29.7.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Autotallin käyttökatko 3.–24.8.', sv: 'Garaget ur bruk 3–24.8', en: 'Garage closed 3–24 Aug' },
+        excerpt: { fi: 'Autotalli on poissa käytöstä 3.–24.8.2026 sisäänkäynnin rappaustöiden vuoksi. Tänä aikana autotalliin ei voi ajaa eikä sinne voi pysäköidä – varaathan ajoneuvolle vaihtoehtoisen pysäköintipaikan. Ilmoitamme heti, kun autotalli on jälleen käytettävissä.', sv: 'Garaget är ur bruk 3–24.8.2026 på grund av putsarbeten vid infarten. Under den tiden går det inte att köra in eller parkera i garaget – ordna en alternativ parkeringsplats för fordonet. Vi meddelar genast när garaget är tillgängligt igen.', en: 'The garage is out of use from 3 to 24 Aug 2026 due to rendering work at the entrance. During this time it is not possible to drive in or park there – please arrange alternative parking. We will announce as soon as the garage is available again.' } }
     ],
     carl: [
       { date: '30.1.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
@@ -495,7 +696,23 @@
       { date: '11.6.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
         category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
         title: { fi: 'Läpivientien poraukset tehty - tulppaus alkaa', sv: 'Genomföringarna borrade - tätning inleds', en: 'Penetrations drilled - sealing begins' },
-        excerpt: { fi: 'Läpivientien poraukset on tehty. Ensi viikon alussa aloitetaan läpivientien tulppaus.', sv: 'Genomföringarna är borrade. I början av nästa vecka inleds tätningen av genomföringarna.', en: 'The penetrations have been drilled. Sealing of the penetrations begins early next week.' } }
+        excerpt: { fi: 'Läpivientien poraukset on tehty. Ensi viikon alussa aloitetaan läpivientien tulppaus.', sv: 'Genomföringarna är borrade. I början av nästa vecka inleds tätningen av genomföringarna.', en: 'The penetrations have been drilled. Sealing of the penetrations begins early next week.' } },
+      { date: '30.6.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - betonikorjaukset ja pohjarappaus', sv: 'Lägesrapport - betongreparation och grundputs', en: 'Status update - concrete repairs and base rendering' },
+        excerpt: { fi: 'Käynnissä: parvekkeiden ja kerroslistan betonikorjaustyöt, Topeliuksenkadun pohjarappaus ja vesipeltien asennus. Seuraavaksi alkavat julkisivujen pintarappaustyöt.', sv: 'Pågår: betongreparationer på balkongerna och våningslisten, grundputs på Topeliusgatan och montering av vattenplåtar. Härnäst inleds ytputsen på fasaderna.', en: 'Under way: concrete repairs to the balconies and floor trim, base rendering on Topeliuksenkatu and installation of flashings. Next: surface rendering of the facades.' } },
+      { date: '30.6.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Mittauskierros', sv: 'Mätningsrunda', en: 'Measurement round' },
+        title: { fi: 'Liiketilaikkunoiden mittauskierros 2.7.', sv: 'Mätning av affärslokalernas fönster 2.7.', en: 'Commercial premises window measurements 2 July' },
+        excerpt: { fi: 'Kaikissa liiketiloissa tehdään ikkunoiden mittakierros to 2.7.2026 klo 9 alkaen tulevia uusimistöitä varten. Käynti kestää noin 5 minuuttia; liiketiloihin saavutaan tarvittaessa yleisavaimella, joten turvalukot ja varmuusketjut on jätettävä auki.', sv: 'En fönstermätning görs i alla affärslokaler tors 2.7.2026 från kl. 9 inför den kommande förnyelsen. Besöket tar cirka 5 minuter; lokalerna nås vid behov med huvudnyckel, så säkerhetslås och kedjor ska lämnas öppna.', en: 'A window measurement round is carried out in all commercial premises on Thu 2 July 2026 from 9 a.m. ahead of the upcoming replacement. The visit takes about 5 minutes; premises are entered with a master key if needed, so safety locks and chains must be left open.' } },
+      { date: '7.7.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Naapuripihan seinäpinnan korjaustyöt 13.–18.7.', sv: 'Reparation av väggytan mot grannens gård 13–18.7', en: 'Wall repairs on the neighbouring yard 13–18 July' },
+        excerpt: { fi: 'Naapuripihan puoleisen seinäpinnan purku-, pesu- ja rappaustyöt tehdään 13.–18.7.2026. Työ aiheuttaa melua ja pölyä työalueen läheisyydessä.', sv: 'Rivning, tvätt och putsning av väggytan mot grannens gård utförs 13–18.7.2026. Arbetet orsakar buller och damm i närheten av arbetsområdet.', en: 'Demolition, washing and rendering of the wall surface facing the neighbouring yard take place 13–18 July 2026. The work causes noise and dust near the work area.' } },
+      { date: '27.7.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - pihajulkisivun viimeistely', sv: 'Lägesrapport - gårdsfasaden slutförs', en: 'Status update - courtyard facade finishing' },
+        excerpt: { fi: 'Pihajulkisivun pintarappaus valmistuu viikolla 31, jonka jälkeen alkavat julkisivun pesu- ja puhdistustyöt. Ikkunoiden muovit poistetaan heinä-elokuun vaihteessa ja telineiden purku on suunniteltu elokuun loppupuolelle. Käynnissä: parvekkeiden ja kerroslistan betonikorjaukset katujulkisivulla sekä Topeliuksenkadun pohjarappaus.', sv: 'Ytputsen på gårdsfasaden blir klar under vecka 31, varefter tvätt- och rengöringsarbetena inleds. Plasten på fönstren avlägsnas vid månadsskiftet juli–augusti och ställningarna rivs enligt planen i slutet av augusti. Pågår: betongreparationer på balkonger och våningslist mot gatan samt grundputs på Topeliusgatan.', en: 'Surface rendering of the courtyard facade completes in week 31, after which facade washing and cleaning begin. Window plastic is removed at the turn of July and August, and scaffolding removal is planned for late August. Under way: concrete repairs to the balconies and floor trim on the street facade, plus base rendering on Topeliuksenkatu.' } }
     ],
     bangatan: [
       { date: '3.3.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
@@ -533,7 +750,19 @@
       { date: '16.6.2026', image: 'kuvat/sivut/ratakatu21-parvekkeet.jpg',
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
-        excerpt: { fi: 'Julkisivujen pintarappaus ja parvekkeiden sekä ikkunoiden työt etenevät aikataulun mukaisesti.', sv: 'Fasadernas ytputs samt balkong- och fönsterarbetena framskrider enligt tidtabell.', en: 'The facade finish rendering and the balcony and window work are progressing on schedule.' } }
+        excerpt: { fi: 'Julkisivujen pintarappaus ja parvekkeiden sekä ikkunoiden työt etenevät aikataulun mukaisesti.', sv: 'Fasadernas ytputs samt balkong- och fönsterarbetena framskrider enligt tidtabell.', en: 'The facade finish rendering and the balcony and window work are progressing on schedule.' } },
+      { date: '30.6.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - aikataulu päivitetty 30.6.', sv: 'Lägesrapport - tidtabellen uppdaterad 30.6.', en: 'Status update - schedule updated 30 Jun' },
+        excerpt: { fi: 'Sisäpiha 1:n ylälistan rappaus on valmistumassa ja pohjia valmistellaan pintarappausta varten. Sisäpiha 2:n täyttörappauksesta on tehty 75 %, ja naapurin puoleisen päätyjulkisivun maalaustyöt ovat käynnissä. Seuraavaksi alkavat sisäpiha 1:n pintarappaus- ja ikkunoiden kunnostustyöt.', sv: 'Putsen på överlisten på gård 1 är snart klar och underlagen förbereds för ytputs. På gård 2 är fyllnadsputsen 75 % färdig, och målningen av gavelfasaden mot grannen pågår. Härnäst inleds ytputs och fönsterrenovering på gård 1.', en: 'Rendering of the upper trim in courtyard 1 is nearing completion and the substrates are being prepared for surface rendering. Filler rendering in courtyard 2 is 75% complete, and painting of the gable facade facing the neighbour is under way. Next: surface rendering and window restoration in courtyard 1.' } },
+      { date: '9.7.2026', image: 'kuvat/sivut/koydenpunojankatu7.jpg',
+        category: { fi: 'Mittauskierros', sv: 'Mätningsrunda', en: 'Measurement round' },
+        title: { fi: 'Liiketilojen IV-kierros 14.7.', sv: 'IV-kartläggning i affärslokalerna 14.7.', en: 'Ventilation survey in commercial premises 14 July' },
+        excerpt: { fi: 'Kaikissa liiketiloissa tehdään ilmanvaihdon tarkastuskierros ti 14.7.2026 klo 9 alkaen, jolloin kartoitetaan julkisivun tuloilmaventtiilien kunto ja tyyppi. Käynti kestää noin 15 minuuttia; liiketiloihin saavutaan yleisavaimella, joten turvalukot on jätettävä auki.', sv: 'En IV-inspektion görs i alla affärslokaler tis 14.7.2026 från kl. 9, då tilluftsventilernas skick och typ i fasaden kartläggs. Besöket tar cirka 15 minuter; lokalerna nås med huvudnyckel, så säkerhetslåsen ska lämnas öppna.', en: 'A ventilation inspection is carried out in all commercial premises on Tue 14 July 2026 from 9 a.m., surveying the condition and type of the facade supply-air valves. The visit takes about 15 minutes; premises are entered with a master key, so safety locks must be left open.' } },
+      { date: '30.6.2026', image: 'kuvat/referenssit/ratakatu1113.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - Ratakatu 11 ja 13', sv: 'Lägesrapport - Bangatan 11 och 13', en: 'Status update - Ratakatu 11 and 13' },
+        excerpt: { fi: 'Ratakatu 11: parvekepohjat on puhallettu ja pesty, tasoitustyöt käynnissä. Pintarappaukset, ylälista ja telineputsaus ovat valmiit, ja maalaustyöt alkavat torstaina. Ratakatu 13: ylälistan rappaustyöt valmistuvat tällä viikolla ja pintarappaus alkaa ensi viikolla.', sv: 'Bangatan 11: balkongbottnarna är blästrade och tvättade, spacklingsarbeten pågår. Ytputsen, övre listen och rengöringen av ställningarna är klara, och målningen inleds på torsdag. Bangatan 13: putsningen av övre listen blir klar denna vecka och ytputsen inleds nästa vecka.', en: 'Ratakatu 11: balcony bases have been blasted and washed, levelling work underway. Surface rendering, upper cornice and scaffold cleaning are complete, and painting starts on Thursday. Ratakatu 13: rendering of the upper cornice finishes this week and surface rendering starts next week.' } }
     ],
     ortodoksinen: [
       { date: '19.8.2025', image: 'kuvat/referenssit/unioninkatu39.jpg',
@@ -599,7 +828,45 @@
       { date: '2.6.2026', image: 'kuvat/sivut/huvilankatu27-julkisivu.jpg',
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Tilannetiedote - maalaustyöt', sv: 'Lägesrapport - målningsarbeten', en: 'Status update - painting' },
-        excerpt: { fi: 'Vaihe 1:n julkisivun maalaustyöt ovat käynnissä ja muiden vaiheiden rappaus- ja ikkunatyöt etenevät.', sv: 'Skede 1:s fasadmålning pågår och övriga skedens puts- och fönsterarbeten framskrider.', en: 'Phase 1 facade painting is under way and the rendering and window work of the other phases is progressing.' } }
+        excerpt: { fi: 'Vaihe 1:n julkisivun maalaustyöt ovat käynnissä ja muiden vaiheiden rappaus- ja ikkunatyöt etenevät.', sv: 'Skede 1:s fasadmålning pågår och övriga skedens puts- och fönsterarbeten framskrider.', en: 'Phase 1 facade painting is under way and the rendering and window work of the other phases is progressing.' } },
+      { date: '16.6.2026', image: 'kuvat/referenssit/unioninkatu39.jpg',
+        category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
+        title: { fi: 'Tilannetiedote - maalaustyöt ja telineiden purku', sv: 'Lägesrapport - målning och ställningsrivning', en: 'Status update - painting and scaffold removal' },
+        excerpt: { fi: 'Vaiheiden 2 ja 3 julkisivujen maalaustyöt ovat valmiit ja vaiheen 1 maalaus on käynnissä. Ikkunoiden maalaustyöt etenevät. Seuraavaksi vaiheen 1 vesipeltien ja parvekkeiden maalaus sekä telineiden ja sääsuojan purkutyöt kaikissa vaiheissa.', sv: 'Målningen av fasaderna i etapp 2 och 3 är klar och etapp 1:s målning pågår. Fönstermålningen framskrider. Härnäst målning av vattenplåtar och balkonger i etapp 1 samt rivning av ställningar och väderskydd i alla etapper.', en: 'Facade painting in phases 2 and 3 is complete and phase 1 painting is under way. Window painting is progressing. Next: painting of the phase 1 flashings and balconies, plus removal of scaffolding and weather protection across all phases.' } },
+      { date: '25.6.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Meddelande', en: 'Resident notice' },
+        title: { fi: 'Vaihe 3 - ikkunapuitteiden takaisinasennus 29.–30.6.', sv: 'Etapp 3 - fönsterbågarna återmonteras 29–30.6', en: 'Phase 3 - window sashes reinstalled 29–30 June' },
+        excerpt: { fi: 'Vaiheen 3 A-rappukäytävän asunnoissa asennetaan kunnostetut ikkunapuitteet takaisin ma–ti 29.–30.6.2026. Jätäthän turvalukot auki, sillä asuntoihin tullaan yleisavaimella, ja varmista että ikkunan edessä on noin 1,5 m vapaata työtilaa.', sv: 'I bostäderna i trapphus A i etapp 3 återmonteras de renoverade fönsterbågarna mån–tis 29–30.6.2026. Lämna säkerhetslåsen öppna, eftersom bostäderna nås med huvudnyckel, och se till att det finns cirka 1,5 m fritt arbetsutrymme framför fönstret.', en: 'In the phase 3 stairwell A apartments, the restored window sashes are reinstalled on Mon–Tue 29–30 June 2026. Please leave safety locks open, as apartments are entered with a master key, and ensure about 1.5 m of clear working space in front of the window.' } }
+    ],
+    centrum: [
+      { date: '9.7.2026', image: 'kuvat/referenssit/kasarmikatu28.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Rappukäytävien parvekeovien ja -ikkunoiden kunnostus alkaa 9.7.', sv: 'Renovering av trapphusens balkongdörrar och -fönster börjar 9.7.', en: 'Renovation of stairwell balcony doors and windows starts 9 July' },
+        excerpt: { fi: 'To 9.7. alkavat rappukäytävien parvekeovien ja -ikkunoiden kunnostustyöt, aloitus D-rapusta. Kokonaiskesto n. 3 kk. Tuuletusparvekkeiden käyttö on urakan aikana kielletty, eikä asukkailta edellytetä toimenpiteitä.', sv: 'To 9.7 inleds renoveringen av trapphusens balkongdörrar och -fönster, med start i trapphus D. Total längd ca 3 mån. Vädringsbalkongerna får inte användas under entreprenaden och inga åtgärder krävs av de boende.', en: 'On Thu 9 July the renovation of the stairwells’ balcony doors and windows begins, starting from stairwell D. Total duration approx. 3 months. Ventilation balconies may not be used during the works and no action is required from residents.' } }
+    ],
+    soma: [
+      { date: '28.7.2026', image: 'kuvat/referenssit/merituuli.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Urakan aloitus - ikkunat ja katujulkisivut', sv: 'Entreprenaden inleds - fönster och gatufasader', en: 'Project start - windows and street facades' },
+        excerpt: { fi: 'Ikkunoiden uusiminen sekä katujulkisivujen rapattujen osien uusimis-, kunnostus- ja pintakäsittelytyöt ajoittuvat elokuusta marraskuuhun 2026. Ikkunat vaihdetaan asuntojen sisältä käsin, ja porrashuoneiden, sisäpihan ulko-ovien sekä saunarakennuksen ikkunat ja ovet kunnostetaan.', sv: 'Fönsterbytet samt förnyelse, renovering och ytbehandling av gatufasadernas putsade delar pågår från augusti till november 2026. Fönstren byts inifrån bostäderna, och trapphusens, gårdens ytterdörrars samt bastubyggnadens fönster och dörrar renoveras.', en: 'Window replacement and the renewal, repair and surface treatment of the rendered sections of the street facades run from August to November 2026. Windows are replaced from inside the apartments, and the stairwell, courtyard entrance and sauna building windows and doors are restored.' } },
+      { date: '28.7.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Mittauskierros', sv: 'Mätningsrunda', en: 'Measurement round' },
+        title: { fi: 'Ikkunoiden mittatarkastuskierros 5.8.', sv: 'Måttkontroll av fönster 5.8.', en: 'Window measurement check 5 Aug' },
+        excerpt: { fi: 'Asunnoissa tehdään ikkunoiden mittatarkastuskierros ke 5.8.2026 klo 8 alkaen. Kierros aloitetaan B-rapusta ylimmästä kerroksesta alaspäin ja kaikki raput käydään läpi. Käynti kestää noin 5 minuuttia asuntoa kohden – jätäthän turvalukot auki, sillä asuntoihin tullaan yleisavaimella.', sv: 'En måttkontroll av fönstren görs i bostäderna ons 5.8.2026 från kl. 8. Rundan börjar i trapphus B uppifrån och ned och alla trapphus gås igenom. Besöket tar cirka 5 minuter per bostad – lämna säkerhetslåsen öppna, eftersom bostäderna nås med huvudnyckel.', en: 'A window measurement check is carried out in the apartments on Wed 5 Aug 2026 from 8 a.m. The round starts in stairwell B from the top floor down and covers every stairwell. The visit takes about 5 minutes per apartment – please leave safety locks open, as apartments are entered with a master key.' } },
+      { date: '22.8.2026', image: 'kuvat/referenssit/merituuli.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Boendeinfo', en: 'Resident notice' },
+        title: { fi: 'Aikataulun päivitys - ikkuna-asennukset', sv: 'Tidtabellsuppdatering - fönstermontage', en: 'Schedule update - window installation' },
+        excerpt: { fi: 'Urakoitsija on päivittänyt ikkuna-asennusten aikataulun.', sv: 'Entreprenören har uppdaterat tidtabellen för fönstermontaget.', en: 'The contractor has updated the schedule for the window installation.' } },
+      { date: '18.8.2026', image: 'kuvat/sivut/ikkunat.jpg',
+        category: { fi: 'Asukastiedote', sv: 'Boendeinfo', en: 'Resident notice' },
+        title: { fi: 'Ikkunakaulureiden purkutyöt alkavat viikolla 35', sv: 'Rivningen av fönsterkragarna inleds vecka 35', en: 'Demolition of window collars starts in week 35' },
+        excerpt: { fi: 'Katujulkisivun ikkunakaulureiden purkutyöt alkavat viikolla 35 ja kestävät arviolta viikon. Ikkunat suojataan ulkopuolelta muovilla ja kennolevyllä. Rappukäytäviin jaetaan teippiä vapaaehtoista sisäpuolista suojausta varten.', sv: 'Rivningen av fönsterkragarna på gatufasaden inleds vecka 35 och tar uppskattningsvis en vecka. Fönstren skyddas utifrån med plast och kanalplast. Tejp delas ut i trapphusen för frivillig tejpning på insidan.', en: 'Demolition of the window collars on the street facade starts in week 35 and takes about one week. The windows are protected from the outside with plastic and twin-wall sheeting. Tape is handed out in the stairwells for voluntary sealing on the inside.' } }
+    ],
+    uudenmaankatu29: [
+      { date: '14.7.2026', image: 'kuvat/sivut/meritullinkatu6-peltikatto.jpg',
+        category: { fi: 'Aloitus', sv: 'Start', en: 'Kick-off' },
+        title: { fi: 'Urakan aloitus - sisäpihan rakennuksen vesikatto', sv: 'Entreprenaden inleds - gårdsbyggnadens tak', en: 'Project start - courtyard building roof' },
+        excerpt: { fi: 'Sisäpihan rakennuksen vesikaton uusiminen alkaa ma 20.7.2026 työmaan perustamisella ja telineiden pystytyksellä. Telineasennus kestää noin viikon, jonka ajan autopaikat ovat pois käytöstä. Parvekkeet on tyhjennettävä koko urakan ajaksi ja ullakoille jaetaan viikolla 29 suojamuovit komeroiden suojaukseen. Urakka valmistuu syyskuussa 2026.', sv: 'Förnyelsen av gårdsbyggnadens yttertak inleds mån 20.7.2026 med etablering och ställningsmontering. Ställningarna tar cirka en vecka och under den tiden är parkeringsplatserna ur bruk. Balkongerna måste tömmas för hela entreprenaden och skyddsplast delas ut till vindarna vecka 29. Entreprenaden blir klar i september 2026.', en: 'Renewal of the courtyard building roof starts on Mon 20 July 2026 with site setup and scaffolding. Scaffolding takes about a week, during which parking spaces are out of use. Balconies must be cleared for the whole project and protective plastic is distributed to the attics in week 29. The project completes in September 2026.' } }
     ]
   };
 
@@ -696,6 +963,116 @@
     });
   }
 
+  /* ---- Tiedotteiden kuvakaruselli (pääkuva + lightbox) ---- */
+  var GALLERIES = [];
+  var lb = null, lbItems = [], lbIndex = 0;
+
+  // Palauttaa tiedotteen kuvat: gallery jos on, muuten yksittäinen image.
+  function postImages(post) {
+    if (post.gallery && post.gallery.length) return post.gallery;
+    return post.image ? [post.image] : [];
+  }
+
+  // Klikattava pääkuva. data-gallery viittaa GALLERIES-taulukkoon, jotta
+  // polkuja ei tarvitse upottaa attribuuttiin.
+  function galleryFigure(post, alt, cls) {
+    var g = postImages(post);
+    if (!g.length) return '';
+    var idx = GALLERIES.push(g.map(function (src) { return base + src; })) - 1;
+    var badge = g.length > 1
+      ? '<span class="mg-count" aria-hidden="true">' + g.length + '</span>'
+      : '';
+    return '<button type="button" class="' + cls + ' mg-open" data-gallery="' + idx + '"' +
+      ' aria-label="' + esc(alt + ' - ' + t.openImages) + '">' +
+      '<img src="' + base + g[0] + '" alt="' + esc(alt) + '" loading="lazy">' +
+      badge + '</button>';
+  }
+
+  // Piilottaa pääkuvan jos tiedostoa ei ole (ei rikkinäisiä kuvakkeita).
+  function wireGalleries(root) {
+    var imgs = (root || document).querySelectorAll('.mg-open img');
+    Array.prototype.forEach.call(imgs, function (img) {
+      var hide = function () { if (img.parentNode) img.parentNode.style.display = 'none'; };
+      img.addEventListener('error', hide);
+      if (img.complete && img.naturalWidth === 0) hide();
+    });
+  }
+
+  function buildLightbox() {
+    if (lb) return lb;
+    lb = document.createElement('div');
+    lb.className = 'mg-lb';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.innerHTML =
+      '<button type="button" class="mg-lb-close" aria-label="' + esc(t.closeGallery) + '">&times;</button>' +
+      '<button type="button" class="mg-lb-nav mg-lb-prev" aria-label="' + esc(t.prevImage) + '">&#8249;</button>' +
+      '<figure class="mg-lb-stage"><img class="mg-lb-img" src="" alt=""></figure>' +
+      '<button type="button" class="mg-lb-nav mg-lb-next" aria-label="' + esc(t.nextImage) + '">&#8250;</button>' +
+      '<div class="mg-lb-counter"></div>';
+    document.body.appendChild(lb);
+    lb.querySelector('.mg-lb-close').addEventListener('click', closeLb);
+    lb.querySelector('.mg-lb-prev').addEventListener('click', function (e) { e.stopPropagation(); stepLb(-1); });
+    lb.querySelector('.mg-lb-next').addEventListener('click', function (e) { e.stopPropagation(); stepLb(1); });
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || (e.target.className && String(e.target.className).indexOf('mg-lb-stage') !== -1)) closeLb();
+    });
+    // Pyyhkäisy mobiilissa
+    var x0 = null;
+    lb.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 45) stepLb(dx < 0 ? 1 : -1);
+      x0 = null;
+    }, { passive: true });
+    return lb;
+  }
+
+  function showLb() {
+    var multi = lbItems.length > 1;
+    lb.querySelector('.mg-lb-img').src = lbItems[lbIndex];
+    lb.querySelector('.mg-lb-counter').textContent = (lbIndex + 1) + ' / ' + lbItems.length;
+    lb.querySelector('.mg-lb-prev').style.display = multi ? '' : 'none';
+    lb.querySelector('.mg-lb-next').style.display = multi ? '' : 'none';
+    lb.querySelector('.mg-lb-counter').style.display = multi ? '' : 'none';
+  }
+
+  function stepLb(d) {
+    lbIndex = (lbIndex + d + lbItems.length) % lbItems.length;
+    showLb();
+  }
+
+  function openLb(items, start) {
+    buildLightbox();
+    lbItems = items;
+    lbIndex = start || 0;
+    showLb();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLb() {
+    if (!lb) return;
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (!lb || lb.className.indexOf('open') === -1) return;
+    if (e.key === 'Escape') closeLb();
+    else if (e.key === 'ArrowLeft') stepLb(-1);
+    else if (e.key === 'ArrowRight') stepLb(1);
+  });
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target && e.target.closest ? e.target.closest('.mg-open') : null;
+    if (!btn) return;
+    e.preventDefault();
+    var g = GALLERIES[parseInt(btn.getAttribute('data-gallery'), 10)];
+    if (g && g.length) openLb(g, 0);
+  });
+
   /* ---- Renderers ---- */
   function projectCard(p) {
     return '<a class="aproj-card fade-in" href="' + base + 'projekti.html?p=' + p.slug + '" ' +
@@ -762,7 +1139,10 @@
     var title = post.title[lang] || post.title.fi;
     var excerpt = post.excerpt[lang] || post.excerpt.fi;
     var badge = isLatest ? '<span class="news-card-latest">' + t.latest + '</span>' : '';
-    return '<article class="news-card news-card--text fade-in">' +
+    var hasGallery = !!(post.gallery && post.gallery.length);
+    var figure = hasGallery ? galleryFigure(post, title, 'news-card-image') : '';
+    return '<article class="news-card ' + (hasGallery ? 'news-card--media' : 'news-card--text') + ' fade-in">' +
+      figure +
       '<div class="news-card-content">' +
       badge +
       '<div class="news-card-meta"><span class="news-card-category">' + esc(cat) + '</span>' +
@@ -824,6 +1204,7 @@
       '</div></section>';
 
     main.innerHTML = hero + introSec + posts;
+    wireGalleries(main);
     reveal(main);
   }
 
@@ -853,12 +1234,13 @@
     var article = '<section class="tiedote-body"><div class="section-container"><div class="tiedote-inner">' +
       '<div class="news-card-meta"><span class="news-card-category">' + esc(cat) + '</span>' +
       '<span class="news-card-date">' + esc(post.date) + '</span></div>' +
-      '<div class="tiedote-image"><img src="' + base + post.image + '" alt="' + esc(title) + '"></div>' +
+      galleryFigure(post, title, 'tiedote-image') +
       body.map(function (par) { return '<p>' + esc(par) + '</p>'; }).join('') +
       '<a class="project-back" href="' + base + 'projekti.html?p=' + p.slug + '">' + t.backToProject + '</a>' +
       '</div></div></section>';
 
     main.innerHTML = hero + article;
+    wireGalleries(main);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
