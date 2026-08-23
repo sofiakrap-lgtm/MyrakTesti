@@ -3016,7 +3016,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .news-card--media .news-card-image.mg-open {
-  height: 220px;
+  /* Työmaakuvat ovat useimmiten pystykuvia, joten kortin kuvalle annetaan
+     enemmän korkeutta kuin tavallisille 220px:n uutiskuville. */
+  height: 300px;
   overflow: hidden;
   flex-shrink: 0;
 }
