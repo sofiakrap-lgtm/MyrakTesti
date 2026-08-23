@@ -2982,3 +2982,168 @@ h1, h2, h3, h4, h5, h6 {
 }
 .invoice-value a { color: #b5281b; text-decoration: none; }
 .invoice-value a:hover { text-decoration: underline; }
+
+/* ==========================================================
+   Tiedotteiden kuvakaruselli: pääkuva + lightbox
+   ========================================================== */
+
+/* Pääkuva korttiin / tiedotesivulle - koko nappi on klikattava */
+.news-card-image.mg-open,
+.tiedote-image.mg-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  position: relative;
+}
+
+.tiedote-image.mg-open {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  max-height: 460px;
+}
+
+.news-card-image.mg-open img,
+.tiedote-image.mg-open img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.news-card--media .news-card-image.mg-open {
+  /* Työmaakuvat ovat useimmiten pystykuvia, joten kortin kuvalle annetaan
+     enemmän korkeutta kuin tavallisille 220px:n uutiskuville. */
+  height: 300px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.news-card:hover .news-card-image.mg-open img,
+.tiedote-image.mg-open:hover img {
+  transform: scale(1.04);
+}
+
+/* Kuvamäärän merkki oikeassa alakulmassa */
+.mg-count {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0, 0, 0, 0.62);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.28rem 0.6rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(3px);
+  pointer-events: none;
+}
+
+.mg-count::before {
+  content: '';
+  width: 11px;
+  height: 9px;
+  border: 1.5px solid currentColor;
+  border-radius: 1px;
+  box-shadow: 2px -2px 0 -0.5px currentColor;
+}
+
+/* Lightbox */
+.mg-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12, 12, 12, 0.94);
+  padding: 2.5rem 1rem 4rem;
+}
+
+.mg-lb.open { display: flex; }
+
+.mg-lb-stage {
+  margin: 0;
+  max-width: min(1100px, 92vw);
+  max-height: 84vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mg-lb-img {
+  max-width: 100%;
+  max-height: 84vh;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.6);
+}
+
+.mg-lb-nav,
+.mg-lb-close {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  line-height: 1;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.mg-lb-nav:hover,
+.mg-lb-close:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.mg-lb-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding-bottom: 0.3rem;
+}
+
+.mg-lb-prev { left: 1.25rem; }
+.mg-lb-next { right: 1.25rem; }
+
+.mg-lb-close {
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+}
+
+.mg-lb-counter {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 700px) {
+  .mg-lb { padding: 1rem 0.5rem 3.5rem; }
+  .mg-lb-nav { width: 2.5rem; height: 2.5rem; font-size: 1.6rem; }
+  .mg-lb-prev { left: 0.5rem; }
+  .mg-lb-next { right: 0.5rem; }
+  .mg-lb-stage { max-width: 96vw; }
+}
