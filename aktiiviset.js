@@ -36,7 +36,11 @@
       noNews: 'Tästä projektista ei ole vielä julkaistu tiedotteita.',
       sectionLabel: 'Ajankohtaista',
       sectionTitle: 'Aktiiviset projektit',
-      sectionSub: 'Vuoden 2026 käynnissä olevat kohteemme'
+      sectionSub: 'Vuoden 2026 käynnissä olevat kohteemme',
+      openImages: 'Avaa kuvat',
+      prevImage: 'Edellinen kuva',
+      nextImage: 'Seuraava kuva',
+      closeGallery: 'Sulje'
     },
     sv: {
       eyebrow: 'Aktivt projekt 2026',
@@ -53,7 +57,11 @@
       noNews: 'Inga meddelanden har ännu publicerats om detta projekt.',
       sectionLabel: 'Aktuellt',
       sectionTitle: 'Aktiva projekt',
-      sectionSub: 'Våra pågående objekt under 2026'
+      sectionSub: 'Våra pågående objekt under 2026',
+      openImages: 'Öppna bilder',
+      prevImage: 'Föregående bild',
+      nextImage: 'Nästa bild',
+      closeGallery: 'Stäng'
     },
     en: {
       eyebrow: 'Active project 2026',
@@ -70,7 +78,11 @@
       noNews: 'No bulletins have been published for this project yet.',
       sectionLabel: 'News',
       sectionTitle: 'Active projects',
-      sectionSub: 'Our ongoing sites in 2026'
+      sectionSub: 'Our ongoing sites in 2026',
+      openImages: 'Open images',
+      prevImage: 'Previous image',
+      nextImage: 'Next image',
+      closeGallery: 'Close'
     }
   };
   var t = UI[lang];
@@ -231,14 +243,17 @@
         title: { fi: 'Urakan aloitus - Ida Ekmannin tie 1 ja vinttikomeroiden tyhjennys', sv: 'Entreprenaden inleds - Ida Ekmans väg 1 och tömning av vindsförråd', en: 'Project start - Ida Ekmannin tie 1 and attic storage clearing' },
         excerpt: { fi: 'Ida Ekmannin tie 1 vesikaton uusiminen alkaa 10.8. telineiden pystytyksellä (n. 3 vk); pihaterassit ja ylimmät parvekkeet on tyhjennettävä. Samalla siivotaan vinttitilat - tyhjennä komerosi ja siirrä poistettavat tavarat käytävälle 17.8. mennessä.', sv: 'Takförnyelsen på Ida Ekmans väg 1 börjar 10.8 med ställningar (ca 3 v); gårdsterrasser och översta balkonger ska tömmas. Samtidigt städas vindsutrymmena - töm ditt förråd och för onödiga föremål till korridoren senast 17.8.', en: 'Roof renewal at Ida Ekmannin tie 1 starts 10 Aug with scaffolding (approx. 3 weeks); patios and top-floor balconies must be cleared. Attic spaces are also cleaned - clear your storage and move unwanted items to the corridor by 17 Aug.' } },
       { date: '3.8.2026', image: 'kuvat/sivut/peltikatto.jpg',
+        gallery: ['kuvat/tiedotteet/aitio-2026-08-03-1.jpg', 'kuvat/tiedotteet/aitio-2026-08-03-2.jpg', 'kuvat/tiedotteet/aitio-2026-08-03-3.jpg', 'kuvat/tiedotteet/aitio-2026-08-03-4.jpg', 'kuvat/tiedotteet/aitio-2026-08-03-5.jpg'],
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Tilannetiedote - vesikattotyöt käynnissä', sv: 'Lägesrapport - takarbetena pågår', en: 'Status update - roof work under way' },
         excerpt: { fi: 'Ida Ekmannin tie 5 peltityöt 50 % ja tie 3 alusta valmis (peltityöt 25 %). Tie 2 purku 50 % ja alustan kunnostus käynnissä. Tie 1 telineet asennetaan 10.8. alkaen.', sv: 'Ida Ekmans väg 5 plåtarbeten 50 % och väg 3 underlag klart (plåt 25 %). Väg 2 rivning 50 % och underlagsrenovering pågår. Väg 1 ställningar monteras från 10.8.', en: 'Ida Ekmannin tie 5 sheet-metal work 50% and tie 3 substrate complete (sheet-metal 25%). Tie 2 demolition 50% with substrate repair under way. Tie 1 scaffolding installed from 10 Aug.' } },
       { date: '20.8.2026', image: 'kuvat/sivut/meritullinkatu6-peltikatto.jpg',
+        gallery: ['kuvat/tiedotteet/aitio-2026-08-20-1.jpg', 'kuvat/tiedotteet/aitio-2026-08-20-2.jpg', 'kuvat/tiedotteet/aitio-2026-08-20-3.jpg'],
         category: { fi: 'Aloitus', sv: 'Uppstart', en: 'Project start' },
         title: { fi: 'Urakan aloitus - Aino Acktén tie 3 ja vinttikomeroiden tyhjennys', sv: 'Entreprenadstart - Aino Acktén tie 3 och tömning av vindsförråden', en: 'Project start - Aino Acktén tie 3 and attic storage clearance' },
         excerpt: { fi: 'Aino Acktén tie 3 vesikaton uusiminen alkaa viikolla 35 telineiden pystytyksellä (n. 3 vk). Autopaikat ovat pois käytöstä, ja pihaterassit sekä ylimmät parvekkeet on tyhjennettävä. Tyhjennä vinttikomerosi ja siirrä poistettavat tavarat käytävälle 7.9. mennessä.', sv: 'Takrenoveringen på Aino Acktén tie 3 inleds under vecka 35 med ställningsmontage som tar cirka 3 veckor. Alla parkeringsplatser är ur bruk och gårdsterrasser samt de översta balkongerna ska tömmas. Töm ditt vindsförråd och flytta det som ska slängas till korridoren senast 7.9.', en: 'Roof renewal at Aino Acktén tie 3 begins in week 35 with scaffolding, taking about 3 weeks. All parking spaces will be out of use, and yard terraces and top-floor balconies must be cleared. Empty your attic storage and move discarded items to the corridor by 7 September.' } },
       { date: '18.8.2026', image: 'kuvat/sivut/rikhardinkatu1-peltityot.jpg',
+        gallery: ['kuvat/tiedotteet/aitio-2026-08-18-1.jpg'],
         category: { fi: 'Tilannetiedote', sv: 'Lägesrapport', en: 'Status update' },
         title: { fi: 'Tilannetiedote - peltityöt ja telineasennukset', sv: 'Lägesrapport - plåtarbeten och ställningsmontage', en: 'Status update - sheet metal work and scaffolding' },
         excerpt: { fi: 'Ida Ekmannin tie 5 ja 3: vesikattopeltien asennus on loppuvaiheessa, ja katolle asennetaan lumiesteitä, kattosiltoja sekä riippukouruja. Tie 2: puutyöt käynnissä ja peltiasennus aloitettu. Tie 1: telineet ja sääsuoja asennuksessa.', sv: 'Ida Ekmannin tie 5 och 3: monteringen av takplåtar är i slutskedet, och snörasskydd, taksäkerhetsbryggor samt hängrännor installeras. Tie 2: träarbeten pågår och plåtmontaget har inletts. Tie 1: ställningar och väderskydd monteras.', en: 'Ida Ekmannin tie 5 and 3: roof sheet installation is in its final stage, with snow guards, roof walkways and gutters being fitted. Tie 2: carpentry underway and sheet installation started. Tie 1: scaffolding and weather protection being erected.' } }
@@ -948,6 +963,116 @@
     });
   }
 
+  /* ---- Tiedotteiden kuvakaruselli (pääkuva + lightbox) ---- */
+  var GALLERIES = [];
+  var lb = null, lbItems = [], lbIndex = 0;
+
+  // Palauttaa tiedotteen kuvat: gallery jos on, muuten yksittäinen image.
+  function postImages(post) {
+    if (post.gallery && post.gallery.length) return post.gallery;
+    return post.image ? [post.image] : [];
+  }
+
+  // Klikattava pääkuva. data-gallery viittaa GALLERIES-taulukkoon, jotta
+  // polkuja ei tarvitse upottaa attribuuttiin.
+  function galleryFigure(post, alt, cls) {
+    var g = postImages(post);
+    if (!g.length) return '';
+    var idx = GALLERIES.push(g.map(function (src) { return base + src; })) - 1;
+    var badge = g.length > 1
+      ? '<span class="mg-count" aria-hidden="true">' + g.length + '</span>'
+      : '';
+    return '<button type="button" class="' + cls + ' mg-open" data-gallery="' + idx + '"' +
+      ' aria-label="' + esc(alt + ' - ' + t.openImages) + '">' +
+      '<img src="' + base + g[0] + '" alt="' + esc(alt) + '" loading="lazy">' +
+      badge + '</button>';
+  }
+
+  // Piilottaa pääkuvan jos tiedostoa ei ole (ei rikkinäisiä kuvakkeita).
+  function wireGalleries(root) {
+    var imgs = (root || document).querySelectorAll('.mg-open img');
+    Array.prototype.forEach.call(imgs, function (img) {
+      var hide = function () { if (img.parentNode) img.parentNode.style.display = 'none'; };
+      img.addEventListener('error', hide);
+      if (img.complete && img.naturalWidth === 0) hide();
+    });
+  }
+
+  function buildLightbox() {
+    if (lb) return lb;
+    lb = document.createElement('div');
+    lb.className = 'mg-lb';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.innerHTML =
+      '<button type="button" class="mg-lb-close" aria-label="' + esc(t.closeGallery) + '">&times;</button>' +
+      '<button type="button" class="mg-lb-nav mg-lb-prev" aria-label="' + esc(t.prevImage) + '">&#8249;</button>' +
+      '<figure class="mg-lb-stage"><img class="mg-lb-img" src="" alt=""></figure>' +
+      '<button type="button" class="mg-lb-nav mg-lb-next" aria-label="' + esc(t.nextImage) + '">&#8250;</button>' +
+      '<div class="mg-lb-counter"></div>';
+    document.body.appendChild(lb);
+    lb.querySelector('.mg-lb-close').addEventListener('click', closeLb);
+    lb.querySelector('.mg-lb-prev').addEventListener('click', function (e) { e.stopPropagation(); stepLb(-1); });
+    lb.querySelector('.mg-lb-next').addEventListener('click', function (e) { e.stopPropagation(); stepLb(1); });
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || (e.target.className && String(e.target.className).indexOf('mg-lb-stage') !== -1)) closeLb();
+    });
+    // Pyyhkäisy mobiilissa
+    var x0 = null;
+    lb.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 45) stepLb(dx < 0 ? 1 : -1);
+      x0 = null;
+    }, { passive: true });
+    return lb;
+  }
+
+  function showLb() {
+    var multi = lbItems.length > 1;
+    lb.querySelector('.mg-lb-img').src = lbItems[lbIndex];
+    lb.querySelector('.mg-lb-counter').textContent = (lbIndex + 1) + ' / ' + lbItems.length;
+    lb.querySelector('.mg-lb-prev').style.display = multi ? '' : 'none';
+    lb.querySelector('.mg-lb-next').style.display = multi ? '' : 'none';
+    lb.querySelector('.mg-lb-counter').style.display = multi ? '' : 'none';
+  }
+
+  function stepLb(d) {
+    lbIndex = (lbIndex + d + lbItems.length) % lbItems.length;
+    showLb();
+  }
+
+  function openLb(items, start) {
+    buildLightbox();
+    lbItems = items;
+    lbIndex = start || 0;
+    showLb();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLb() {
+    if (!lb) return;
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (!lb || lb.className.indexOf('open') === -1) return;
+    if (e.key === 'Escape') closeLb();
+    else if (e.key === 'ArrowLeft') stepLb(-1);
+    else if (e.key === 'ArrowRight') stepLb(1);
+  });
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target && e.target.closest ? e.target.closest('.mg-open') : null;
+    if (!btn) return;
+    e.preventDefault();
+    var g = GALLERIES[parseInt(btn.getAttribute('data-gallery'), 10)];
+    if (g && g.length) openLb(g, 0);
+  });
+
   /* ---- Renderers ---- */
   function projectCard(p) {
     return '<a class="aproj-card fade-in" href="' + base + 'projekti.html?p=' + p.slug + '" ' +
@@ -1014,7 +1139,10 @@
     var title = post.title[lang] || post.title.fi;
     var excerpt = post.excerpt[lang] || post.excerpt.fi;
     var badge = isLatest ? '<span class="news-card-latest">' + t.latest + '</span>' : '';
-    return '<article class="news-card news-card--text fade-in">' +
+    var hasGallery = !!(post.gallery && post.gallery.length);
+    var figure = hasGallery ? galleryFigure(post, title, 'news-card-image') : '';
+    return '<article class="news-card ' + (hasGallery ? 'news-card--media' : 'news-card--text') + ' fade-in">' +
+      figure +
       '<div class="news-card-content">' +
       badge +
       '<div class="news-card-meta"><span class="news-card-category">' + esc(cat) + '</span>' +
@@ -1076,6 +1204,7 @@
       '</div></section>';
 
     main.innerHTML = hero + introSec + posts;
+    wireGalleries(main);
     reveal(main);
   }
 
@@ -1105,12 +1234,13 @@
     var article = '<section class="tiedote-body"><div class="section-container"><div class="tiedote-inner">' +
       '<div class="news-card-meta"><span class="news-card-category">' + esc(cat) + '</span>' +
       '<span class="news-card-date">' + esc(post.date) + '</span></div>' +
-      '<div class="tiedote-image"><img src="' + base + post.image + '" alt="' + esc(title) + '"></div>' +
+      galleryFigure(post, title, 'tiedote-image') +
       body.map(function (par) { return '<p>' + esc(par) + '</p>'; }).join('') +
       '<a class="project-back" href="' + base + 'projekti.html?p=' + p.slug + '">' + t.backToProject + '</a>' +
       '</div></div></section>';
 
     main.innerHTML = hero + article;
+    wireGalleries(main);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
