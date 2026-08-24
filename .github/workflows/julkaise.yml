@@ -10,9 +10,10 @@
 
 name: Julkaise myrak.fi
 
+# Automaattinen laukaisu on toistaiseksi pois paalta: kansion etsinta ei
+# toimi Zonerin FTP-palvelinta vasten, joten jokainen push tuottaisi vain
+# punaisen ajon ja turhan sahkopostin. Palautetaan kun polku on selvitetty.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
     inputs:
       dry_run:
