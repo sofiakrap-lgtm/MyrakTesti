@@ -1,13 +1,12 @@
 # Julkaisee myrak.fi:n Zonerille aina kun main-haaraan tulee muutoksia.
 #
-# Vaatii kolme salaisuutta (Settings -> Secrets and variables -> Actions):
+# Etsii sivuston juurikansion itse: kokeilee tunnetut vaihtoehdot ja valitsee
+# sen, josta loytyy index.html. Nain polkua ei tarvitse arvata kasin.
+#
+# Salaisuudet (Settings -> Secrets and variables -> Actions):
 #   FTP_SERVER    palvelimen osoite, esim. www76.zoner.fi
 #   FTP_USERNAME  FTP-kayttajatunnus
-#   FTP_PASSWORD  FTP-salasana
-#
-# Vapaaehtoiset muuttujat (sama sivu, Variables-valilehti):
-#   FTP_SERVER_DIR  sivuston juurikansio palvelimella, oletus alla
-#   FTP_PROTOCOL    ftps (oletus), ftp tai sftp
+#   FTP_PASSWORD  FTP-salasana (vain Secrets-valilehdelta)
 
 name: Julkaise myrak.fi
 
@@ -19,7 +18,7 @@ on:
       dry_run:
         description: "Kokeiluajo - nayta mita siirtyisi, ala siirra mitaan"
         type: boolean
-        default: true
+        default: false
 
 concurrency:
   group: julkaise-myrak
@@ -28,15 +27,15 @@ concurrency:
 jobs:
   julkaise:
     runs-on: ubuntu-latest
+    env:
+      S: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
+      U: ${{ secrets.FTP_USERNAME || vars.FTP_USERNAME }}
+      P: ${{ secrets.FTP_PASSWORD }}
     steps:
       - name: Hae repo
         uses: actions/checkout@v4
 
-      - name: Tarkista etta salaisuudet on asetettu
-        env:
-          S: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
-          U: ${{ secrets.FTP_USERNAME || vars.FTP_USERNAME }}
-          P: ${{ secrets.FTP_PASSWORD }}
+      - name: Tarkista salaisuudet
         run: |
           puuttuu=""
           [ -z "$S" ] && puuttuu="$puuttuu FTP_SERVER"
@@ -44,24 +43,52 @@ jobs:
           [ -z "$P" ] && puuttuu="$puuttuu FTP_PASSWORD"
           if [ -n "$puuttuu" ]; then
             echo "::error::Naita arvoja ei loydy:$puuttuu"
-            echo "Lisaa ne: Settings -> Secrets and variables -> Actions"
-            echo "FTP_SERVER ja FTP_USERNAME kelpaavat kummalta valilehdelta tahansa (Secrets tai Variables)."
-            echo "FTP_PASSWORD luetaan VAIN Secrets-valilehdelta - salasanaa ei saa laittaa Variables-puolelle,"
-            echo "koska muuttujat nakyvat selkokielisina kaikille joilla on paasy repoon."
             exit 1
           fi
-          echo "Salaisuudet kunnossa."
+          echo "Kunnossa."
+
+      # Kokeilee vaihtoehdot ja valitsee sen, josta loytyy index.html.
+      - name: Etsi sivuston juurikansio
+        id: etsi
+        run: |
+          loydetty=""
+          for d in "/public_html/" \
+                   "/domains/myrak.fi/public_html/" \
+                   "/home/deb02jage/domains/myrak.fi/public_html/" \
+                   "/" ; do
+            echo "--- kokeillaan: $d"
+            if curl -sS --ssl-reqd --list-only -u "$U:$P" "ftp://$S$d" \
+                 > /tmp/l.txt 2>/tmp/e.txt; then
+              tr -d '\r' < /tmp/l.txt > /tmp/lc.txt
+              echo "    listaus onnistui, $(wc -l < /tmp/lc.txt) rivia:"
+              head -12 /tmp/lc.txt | sed 's/^/      /'
+              if grep -qx "index.html" /tmp/lc.txt; then
+                echo "    >>> index.html loytyi - tama on sivuston juuri"
+                loydetty="$d"
+                break
+              fi
+              echo "    (ei index.html - ei tama)"
+            else
+              echo "    listaus ei onnistunut: $(head -2 /tmp/e.txt)"
+            fi
+          done
+          if [ -z "$loydetty" ]; then
+            echo "::error::Sivuston juurikansiota ei loytynyt - mistaan kokeillusta polusta ei loytynyt index.html-tiedostoa. Mitaan ei siirretty."
+            exit 1
+          fi
+          echo "kansio=$loydetty" >> "$GITHUB_OUTPUT"
+          echo ""
+          echo "Julkaistaan kansioon: $loydetty"
 
       - name: Siirra tiedostot Zonerille
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME || vars.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
-          server-dir: ${{ vars.FTP_SERVER_DIR || '/domains/myrak.fi/public_html/' }}
+          server: ${{ env.S }}
+          username: ${{ env.U }}
+          password: ${{ env.P }}
+          protocol: ftps
+          server-dir: ${{ steps.etsi.outputs.kansio }}
           dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
-          # Kehitystiedostot jaavat pois; kaikki sivuston oma sisalto menee mukaan.
           exclude: |
             **/.git*
             **/.git*/**
@@ -70,50 +97,20 @@ jobs:
             **/node_modules/**
             **/*.md
 
-      # Hakee sivuston suoraan verkosta. Ajopalvelimella ei ole selaimen
-      # valimuistia, joten tama kertoo mita myrak.fi oikeasti tarjoilee.
-      - name: Tarkista mita sivusto tarjoilee
+      # Hakee sivuston verkosta. Ajopalvelimella ei ole selaimen valimuistia,
+      # joten tama kertoo mita myrak.fi oikeasti tarjoilee.
+      - name: Tarkista lopputulos
         if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
-        continue-on-error: true
         run: |
-          echo "=== aktiiviset.js ==="
-          code=$(curl -sS -o /tmp/live.js -w "%{http_code}" \
-                 "https://myrak.fi/aktiiviset.js?v=$GITHUB_RUN_ID" || echo 000)
-          echo "HTTP $code, koko $(wc -c < /tmp/live.js 2>/dev/null || echo 0) tavua"
-          if grep -q "20.8.2026" /tmp/live.js 2>/dev/null; then
-            echo "OK: palvelimella on UUSI aktiiviset.js (20.8.2026 loytyi)."
-            echo "    -> jos selain nayttaa vanhaa, kyse on selaimen valimuistista."
-          else
-            echo "HUOM: palvelimella on VANHA aktiiviset.js."
-            echo "    -> siirto meni vaaraan kansioon."
-          fi
-          echo ""
-          echo "=== tiedotekuva ==="
+          curl -sS -o /tmp/live.js "https://myrak.fi/aktiiviset.js?v=$GITHUB_RUN_ID" || true
           img=$(curl -sS -o /dev/null -w "%{http_code}" \
                 "https://myrak.fi/kuvat/tiedotteet/aitio-2026-08-20-1.jpg" || echo 000)
-          echo "HTTP $img   (200 = kuva on palvelimella, 404 = ei ole)"
-
-      # Listaa FTP-kansiot. Virhekoodi naytetaan, jottei epaonnistuminen jaa
-      # huomaamatta niin kuin aiemmin.
-      - name: Listaa FTP-kansiot
-        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
-        continue-on-error: true
-        env:
-          S: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
-          U: ${{ secrets.FTP_USERNAME || vars.FTP_USERNAME }}
-          P: ${{ secrets.FTP_PASSWORD }}
-          D: ${{ vars.FTP_SERVER_DIR || '/public_html/' }}
-        run: |
-          for polku in "/" "$D"; do
-            echo "=== ftp://$S$polku ==="
-            curl -sS --ssl-reqd --list-only -u "$U:$P" "ftp://$S$polku" > /tmp/l.txt 2>/tmp/e.txt
-            rc=$?
-            echo "curl paluukoodi: $rc"
-            if [ "$rc" -ne 0 ]; then
-              echo "virhe: $(head -3 /tmp/e.txt)"
-            else
-              echo "tiedostoja: $(wc -l < /tmp/l.txt)"
-              head -25 /tmp/l.txt
-            fi
-            echo ""
-          done
+          echo "aktiiviset.js: $(wc -c < /tmp/live.js 2>/dev/null || echo 0) tavua"
+          echo "tiedotekuva:   HTTP $img"
+          echo ""
+          if grep -q "20.8.2026" /tmp/live.js 2>/dev/null && [ "$img" = "200" ]; then
+            echo "VALMIS: sivusto on ajan tasalla."
+          else
+            echo "::error::Siirto meni lapi mutta sivusto ei paivittynyt. Kansio: ${{ steps.etsi.outputs.kansio }}"
+            exit 1
+          fi
