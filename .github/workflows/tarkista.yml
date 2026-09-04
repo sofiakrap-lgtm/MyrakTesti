@@ -1,0 +1,47 @@
+# Tarkistaa mita myrak.fi oikeasti tarjoilee. Ei siirra mitaan.
+# Ajopalvelimella ei ole selaimen valimuistia, joten tulos on totuus.
+
+name: Tarkista myrak.fi
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tarkista:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hae sivusto ja vertaa
+        run: |
+          V=$GITHUB_RUN_ID
+          get () { curl -sS -o "$2" -w "%{http_code}" "https://myrak.fi/$1?v=$V" || echo 000; }
+
+          echo "=================== TIEDOTTEET ==================="
+          c=$(get aktiiviset.js /tmp/a.js)
+          echo "aktiiviset.js: HTTP $c, $(wc -c < /tmp/a.js) tavua"
+          echo "  (vanha = 135955, edellinen = 160162, uusin = 169372)"
+          if grep -q "kattorungon uusiminen" /tmp/a.js; then
+            echo "  OK  uusimmat tiedotteet 25.-31.8. ovat palvelimella"
+          elif grep -q "20.8.2026" /tmp/a.js; then
+            echo "  OSITTAIN  elokuun alun tiedotteet ovat, mutta 25.-31.8. puuttuvat"
+          else
+            echo "  EI  palvelimella on yha vanha tiedosto"
+          fi
+
+          echo ""
+          echo "=================== Y-TUNNUS ==================="
+          c=$(get laskutusohjeet.html /tmp/l.html)
+          echo "laskutusohjeet.html: HTTP $c"
+          grep -q "2802156-7" /tmp/l.html && echo "  OK  oikea Y-tunnus" || echo "  EI  vanha Y-tunnus 2855189-4"
+
+          echo ""
+          echo "=================== ETUSIVUN LAUSE ==================="
+          c=$(get index.html /tmp/i.html)
+          echo "index.html: HTTP $c"
+          grep -q "aliurakoitsijoita" /tmp/i.html && echo "  EI  lause on yha sivulla" || echo "  OK  lause on poistettu"
+
+          echo ""
+          echo "=================== YLIMAARAISET ==================="
+          z=$(curl -sS -o /dev/null -w "%{http_code}" "https://myrak.fi/myraksiirto.zip" || echo 000)
+          echo "myraksiirto.zip juuressa: HTTP $z  (404 = hyva, 200 = poista palvelimelta)"
+          s=$(curl -sS -o /dev/null -w "%{http_code}" "https://myrak.fi/myrak-siirto/index.html" || echo 000)
+          echo "myrak-siirto-alikansio:   HTTP $s  (404 = hyva, 200 = tiedostot menivat alikansioon)"
