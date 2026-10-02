@@ -11,37 +11,56 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hae sivusto ja vertaa
+        continue-on-error: true
+        shell: bash
         run: |
+          set +e
           V=$GITHUB_RUN_ID
-          get () { curl -sS -o "$2" -w "%{http_code}" "https://myrak.fi/$1?v=$V" || echo 000; }
+          hae () {
+            curl -sS --max-time 30 -o "$2" -w "%{http_code}" "https://myrak.fi/$1?v=$V" 2>/tmp/err
+            rc=$?
+            if [ $rc -ne 0 ]; then printf ' (curl virhe %s: %s)' "$rc" "$(head -1 /tmp/err)"; fi
+          }
 
           echo "=================== TIEDOTTEET ==================="
-          c=$(get aktiiviset.js /tmp/a.js)
-          echo "aktiiviset.js: HTTP $c, $(wc -c < /tmp/a.js) tavua"
-          echo "  (vanha = 135955, edellinen = 160162, uusin = 169372)"
-          if grep -q "kattorungon uusiminen" /tmp/a.js; then
-            echo "  OK  uusimmat tiedotteet 25.-31.8. ovat palvelimella"
-          elif grep -q "20.8.2026" /tmp/a.js; then
-            echo "  OSITTAIN  elokuun alun tiedotteet ovat, mutta 25.-31.8. puuttuvat"
+          : > /tmp/a.js
+          echo "aktiiviset.js: HTTP $(hae aktiiviset.js /tmp/a.js)"
+          echo "koko: $(wc -c < /tmp/a.js) tavua"
+          echo "  vertailu: elokuu = 169852, syyskuun paivitys = 213000 luokkaa"
+          if grep -q 'Tilannetiedote - telineiden purku ja loppusiivous' /tmp/a.js; then
+            echo "  OK   syyskuun tiedotteet ovat palvelimella"
+          elif grep -q 'kattorungon uusiminen' /tmp/a.js; then
+            echo "  OSIN elokuun loppu on, mutta syyskuu puuttuu"
+          elif grep -q '20.8.2026' /tmp/a.js; then
+            echo "  EI   palvelimella on elokuun alun versio"
           else
-            echo "  EI  palvelimella on yha vanha tiedosto"
+            echo "  EI   palvelimella on vanha tiedosto tai sita ei saatu"
           fi
+          echo "  tiedotteita tiedostossa: $(grep -o "date: '" /tmp/a.js | wc -l)"
 
           echo ""
           echo "=================== Y-TUNNUS ==================="
-          c=$(get laskutusohjeet.html /tmp/l.html)
-          echo "laskutusohjeet.html: HTTP $c"
-          grep -q "2802156-7" /tmp/l.html && echo "  OK  oikea Y-tunnus" || echo "  EI  vanha Y-tunnus 2855189-4"
+          : > /tmp/l.html
+          echo "laskutusohjeet.html: HTTP $(hae laskutusohjeet.html /tmp/l.html)"
+          if grep -q '2802156-7' /tmp/l.html; then echo "  OK  oikea Y-tunnus"; else echo "  EI  vanha Y-tunnus"; fi
 
           echo ""
           echo "=================== ETUSIVUN LAUSE ==================="
-          c=$(get index.html /tmp/i.html)
-          echo "index.html: HTTP $c"
-          grep -q "aliurakoitsijoita" /tmp/i.html && echo "  EI  lause on yha sivulla" || echo "  OK  lause on poistettu"
+          : > /tmp/i.html
+          echo "index.html: HTTP $(hae index.html /tmp/i.html)"
+          if grep -q 'aliurakoitsijoita' /tmp/i.html; then echo "  EI  lause on yha sivulla"; else echo "  OK  lause on poistettu"; fi
+
+          echo ""
+          echo "=================== RUOTSI JA ENGLANTI ==================="
+          : > /tmp/sv.html
+          echo "sv/ajankohtaista.html: HTTP $(hae sv/ajankohtaista.html /tmp/sv.html)"
+          : > /tmp/en.html
+          echo "en/ajankohtaista.html: HTTP $(hae en/ajankohtaista.html /tmp/en.html)"
 
           echo ""
           echo "=================== YLIMAARAISET ==================="
-          z=$(curl -sS -o /dev/null -w "%{http_code}" "https://myrak.fi/myraksiirto.zip" || echo 000)
-          echo "myraksiirto.zip juuressa: HTTP $z  (404 = hyva, 200 = poista palvelimelta)"
-          s=$(curl -sS -o /dev/null -w "%{http_code}" "https://myrak.fi/myrak-siirto/index.html" || echo 000)
-          echo "myrak-siirto-alikansio:   HTTP $s  (404 = hyva, 200 = tiedostot menivat alikansioon)"
+          for p in myrak-siirto.zip myraksiirto.zip myrak-siirto/index.html; do
+            echo "$p: HTTP $(curl -sS --max-time 20 -o /dev/null -w '%{http_code}' "https://myrak.fi/$p")"
+          done
+          echo "(404 = hyva)"
+          exit 0
